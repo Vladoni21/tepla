@@ -3,36 +3,23 @@ import {Course} from "./Course";
 const {DataTypes, Model, Op} = require('sequelize');
 
 
-import {sequelize} from "/server/db/modeles/sequelize.js"
+import {sequelize} from "/server/db/models/sequelize.js"
 
 // Valid Extending Model
 
-export class Mark extends Model {}
+export class Completion extends Model {}
 
-Mark.init({
+Completion.init({
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
         allowNull: false
     },
-    estimation: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
-    autor_id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
-    },
-    course_id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
-    },
+    // потом будет что-то новое
 }, {
     sequelize,
-    modelName: 'Marks',
+    modelName: 'Completions',
 
     // don't forget to enable timestamps!
     timestamps: true,
@@ -42,4 +29,4 @@ Mark.init({
     updatedAt: 'updateTimestamp'
 });
 
-module.exports = Mark
+module.exports = Completion
