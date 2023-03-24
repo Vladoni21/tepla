@@ -1,8 +1,8 @@
-import { Comment } from '/database/modeles/Comment'
-import { Course } from '/database/modeles/Course'
-import { Mark }from '/database/modeles/Mark'
-import { User } from '/database/modeles/User'
-import { Completion } from '/database/modeles/Completion'
+import { Comment } from '/server/db/modeles/Comment'
+import { Course } from '/server/db/modeles/Course'
+import { Mark }from '/server/db/modeles/Mark'
+import { User } from '/server/db/modeles/User'
+import { Completion } from '/server/db/modeles/Completion'
 // Как это автоматизировать like COGS в python?
 
 // Определяем автора курса (Человек может быть автором нескольки курсов)
