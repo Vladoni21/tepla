@@ -1,8 +1,8 @@
-import * as models from '/server/db/models/index'
+import * as models from '/server/db/models'
 
 
 // Определяем автора курса (Человек может быть автором нескольки курсов)
-models.Course.hasOne(models.User)
+Course.hasOne(models.User)
 models.User.belongsTo(models.Course)
 
 // Создаём промежуточную таблицу для записей прохождений курсов
