@@ -6,23 +6,24 @@ const sequelize = new Sequelize('sqlite::memory:', {
     define: {
         freezeTableName: true
     },
-    async Normalize() {
-        await Course.sync({ alter: true }) // This checks what is the current state of the table in the database
-        console.log("All modeles were synchronized successfully.");
-        console.log(Course === sequelize.models.Course);
+    async Normalize(model) {
+        await model.sync({ alter: true }) // This checks what is the current state of the table in the database
+        console.log("All models were synchronized successfully.");
+        console.log(model === sequelize.models.model);
     }
     // This behavior be defined globally for the sequelize instance
 }) // for sqlite3
 
 // Valid Extending Model
 
-class Course extends Model {}
+export class Course extends Model {}
 
 Course.init({
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
-        primaryKey: true
+        primaryKey: true,
+        allowNull: false
     },
     autor_id: {
         type: DataTypes.INTEGER,

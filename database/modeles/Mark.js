@@ -6,26 +6,27 @@ const sequelize = new Sequelize('sqlite::memory:', {
     define: {
         freezeTableName: true
     },
-    async Normalize() {
-        await Comment.sync({ alter: true }) // This checks what is the current state of the table in the database
-        console.log("All modeles were synchronized successfully.");
-        console.log(Comment === sequelize.models.Comment);
+    async Normalize(model) {
+        await model.sync({ alter: true }) // This checks what is the current state of the table in the database
+        console.log("All models were synchronized successfully.");
+        console.log(model === sequelize.models.model);
     }
     // This behavior be defined globally for the sequelize instance
 }) // for sqlite3
 
 // Valid Extending Model
 
-class Comment extends Model {}
+export class Mark extends Model {}
 
-Comment.init({
+Mark.init({
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
-        primaryKey: true
+        primaryKey: true,
+        allowNull: false
     },
-    filling: {
-        type: DataTypes.TEXT,
+    estimation: {
+        type: DataTypes.INTEGER,
         allowNull: false
     },
     autor_id: {
@@ -40,7 +41,7 @@ Comment.init({
     },
 }, {
     sequelize,
-    modelName: 'Comments',
+    modelName: 'Marks',
 
     // don't forget to enable timestamps!
     timestamps: true,

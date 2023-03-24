@@ -6,41 +6,29 @@ const sequelize = new Sequelize('sqlite::memory:', {
     define: {
         freezeTableName: true
     },
-    async Normalize() {
-        await Mark.sync({ alter: true }) // This checks what is the current state of the table in the database
-        console.log("All modeles were synchronized successfully.");
-        console.log(Mark === sequelize.models.Mark);
+    async Normalize(model) {
+        await model.sync({ alter: true }) // This checks what is the current state of the table in the database
+        console.log("All models were synchronized successfully.");
+        console.log(model === sequelize.models.model);
     }
     // This behavior be defined globally for the sequelize instance
 }) // for sqlite3
 
 // Valid Extending Model
 
-class Mark extends Model {}
+export class Completion extends Model {}
 
-Mark.init({
+Completion.init({
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
-        primaryKey: true
-    },
-    estimation: {
-        type: DataTypes.INTEGER,
+        primaryKey: true,
         allowNull: false
     },
-    autor_id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
-    },
-    course_id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
-    },
+    // потом будет что-то новое
 }, {
     sequelize,
-    modelName: 'Marks',
+    modelName: 'Completions',
 
     // don't forget to enable timestamps!
     timestamps: true,
@@ -49,4 +37,3 @@ Mark.init({
     // I want updatedAt to actually be called updateTimestamp
     updatedAt: 'updateTimestamp'
 });
-
