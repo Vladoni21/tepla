@@ -1,25 +1,21 @@
-import { Comment } from '/server/db/models/Comment'
-import { Course } from '/server/db/models/Course'
-import { Mark }from '/server/db/models/Mark'
-import { User } from '/server/db/models/User'
-import { Completion } from '/server/db/models/Completion'
-// Как это автоматизировать like COGS в python?
+import * as models from '/server/db/models/index'
+
 
 // Определяем автора курса (Человек может быть автором нескольки курсов)
-Course.hasOne(User)
-User.belongsTo(Course)
+models.Course.hasOne(models.User)
+models.User.belongsTo(models.Course)
 
 // Создаём промежуточную таблицу для записей прохождений курсов
 // Потом я расширю подгрузку прохождений
-Course.belongsToMany(User, {through: Completion})
-User.belongsToMany(Course, {through: Completion})
+models.Course.belongsToMany(models.User, {through: models.Completion})
+models.User.belongsToMany(models.Course, {through: models.Completion})
 
 // У каждого курса есть коментарии, а каждый коментарий относится
 // к одному курсу
-Course.hasMany(Comment)
-Comment.belongsTo(Course)
+models.Course.hasMany(models.Comment)
+models.Comment.belongsTo(models.Course)
 
 // У каждого курса есть отметки по пятибальной(шести xD) шкале,
 //  а каждая отметка относится к одному курсу
-Course.hasMany(Mark)
-Mark.belongsTo(Course)
+models.Course.hasMany(models.Mark)
+models.Mark.belongsTo(models.Course)

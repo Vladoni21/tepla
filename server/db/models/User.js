@@ -3,7 +3,7 @@ import {Course} from "./Course";
 const {DataTypes, Model, Op} = require('sequelize');
 
 
-import {sequelize} from "/server/db/models/sequelize.js"
+import {sequelize} from "/server/db/sequelize.js"
 
 // Valid Extending Model
 
