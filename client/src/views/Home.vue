@@ -1,41 +1,25 @@
 <template>
-  <div>
-    <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#">Панель навигации</b-navbar-brand>
-
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-          <b-nav-item href="#">Ссылка</b-nav-item>
-          <b-nav-item href="#" disabled>Отключено</b-nav-item>
-        </b-navbar-nav>
-
-        <!-- Right aligned nav items -->
-        <b-navbar-nav class="ml-auto">
-          <b-nav-form>
-            <b-form-input size="sm" class="mr-sm-2" placeholder="Поиск"></b-form-input>
-            <b-button size="sm" class="my-2 my-sm-0" type="submit">Поиск</b-button>
-          </b-nav-form>
-
-          <b-nav-item-dropdown text="Язык" right>
-            <b-dropdown-item href="#">EN</b-dropdown-item>
-            <b-dropdown-item href="#">ES</b-dropdown-item>
-            <b-dropdown-item href="#">RU</b-dropdown-item>
-            <b-dropdown-item href="#">FA</b-dropdown-item>
-          </b-nav-item-dropdown>
-
-          <b-nav-item-dropdown right>
-            <!-- Using 'button-content' slot -->
-            <template #button-content>
-              <em>Пользователь</em>
-            </template>
-            <b-dropdown-item href="#">Профиль</b-dropdown-item>
-            <b-dropdown-item href="#">Выйти</b-dropdown-item>
-          </b-nav-item-dropdown>
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
+  <div class="navbar">
+    <nav class="navbar fixed-top navbar-light bg-light">
+      <b-navbar>
+        <div class="logo">
+          <b-navbar-brand href="#">
+            <img
+                alt=""
+                class="teapla-logo-1"
+                src="https://static.overlay-tech.com/assets/d3d73cb5-9ecc-4dcf-a760-038a70420f7f.png"
+            />
+          </b-navbar-brand>
+        </div>
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+        <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav class="ml-auto">
+            <button type="submit" class="login_button">Login</button>
+            <button type="submit" class="signup_button">SignUp</button>
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
+    </nav>
   </div>
 </template>
 
@@ -46,5 +30,60 @@ export default {
 </script>
 
 <style scoped>
+.navbar {
+  min-width: 100%;
+  padding: 0;
+  background-color: #7BAE7F;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
 
+}
+
+.logo {
+  margin-left: 5px;
+  border-radius: 5px;
+  min-width: auto;
+}
+
+.login_button {
+  background-color: #73956F;
+  border: none;
+  border-radius: 10px;
+  padding-right: 5px;
+  margin-right: 5px;
+  height: 50px;
+  width: 70px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+.login_button:hover {
+  background-color: #95D7AE;
+  transition: 0.2s;
+}
+
+.login_button:active {
+  background-color: #73956F;
+}
+
+.signup_button {
+  background-color: #73956F;
+  border: none;
+  border-radius: 10px;
+  padding-right: 5px;
+  margin-right: 5px;
+  height: 50px;
+  width: 70px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+.signup_button:hover {
+  background-color: #95D7AE;
+  transition: 0.2s;
+}
+
+.signup_button:active {
+  background-color: #73956F;
+}
 </style>
