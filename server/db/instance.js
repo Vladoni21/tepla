@@ -1,6 +1,5 @@
 import * as models from '/server/db/models'
 
-
 // Определяем автора курса (Человек может быть автором нескольки курсов)
 Course.hasOne(models.User)
 models.User.belongsTo(models.Course)
