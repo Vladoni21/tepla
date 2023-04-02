@@ -14,8 +14,8 @@
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
-            <button type="submit" class="login_button">Login</button>
-            <button type="submit" class="signup_button">SignUp</button>
+            <button href="#" class="login_button">Login</button>
+            <button href="#" class="signup_button">SignUp</button>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>

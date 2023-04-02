@@ -1,7 +1,7 @@
 <template>
     <div class="box">
         <form>
-            <h2>Sign in</h2>
+            <h2>Login</h2>
             <div class="inputBox">
                 <input type="text" required="required">
                 <span>Username</span>
