@@ -14,7 +14,6 @@
           </div>
       </div>
   </div>
-
 </template>
 
 <script>
@@ -31,6 +30,7 @@ export default {
 
 <style>
   .container{
+      margin-top: 50px;
       display: flex;
       justify-content: center;
       align-items: center;

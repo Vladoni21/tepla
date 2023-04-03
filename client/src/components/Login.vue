@@ -1,27 +1,28 @@
 <template>
     <div class="box">
         <form>
-            <h2>Login</h2>
+            <h2>Вход</h2>
             <div class="inputBox">
                 <input type="text" required="required">
-                <span>Username</span>
+                <span>Имя пользователя</span>
                 <i></i>
             </div>
             <div class="inputBox">
                 <input type="password" required="required">
-                <span>Password</span>
+                <span>Пароль</span>
                 <i></i>
             </div>
             <div class="links">
-                <a href="#">Forgot Password</a>
-                <a href="#">SignUp</a>
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Регистрация</a>
             </div>
-            <input type="submit" value="Login">
+            <input type="submit" value="Войти">
         </form>
     </div>
 </template>
 
 <script>
+
 export default {
     name: "Login"
 }
