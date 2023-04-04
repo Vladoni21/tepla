@@ -10,19 +10,12 @@
               <li><a href="#">Поддержка</a></li>
           </ul>
       </div>
-      <img :src="image" alt="menu hamburger" class="menu-hamburger"/>
   </div>
 </template>
 
 <script>
-import menu from "./img/menu-btn.png";
 
 export default {
-    data(){
-        return{
-            image: menu
-        }
-    },
     name: "Navbar"
 }
 </script>
@@ -77,37 +70,4 @@ export default {
       height: 35px;
   }
 
-  /*@media screen and (max-width: 933px){*/
-  /*    .navbar {*/
-  /*        padding: 0;*/
-  /*    }*/
-  /*    .navbar .menu-hamburger {*/
-  /*        display: block;*/
-  /*    }*/
-  /*    .nav-links {*/
-  /*        margin-left: -40px;*/
-  /*        margin-top: -40px;*/
-  /*        top: 0;*/
-  /*        left: 0;*/
-  /*        position: absolute;*/
-  /*        background-color: #7BAE7FC0;*/
-  /*        backdrop-filter: blur(8px);*/
-  /*        border-radius: 5px;*/
-  /*        z-index: 3;*/
-  /*        width: 850px;*/
-  /*        height: 600px;*/
-  /*        display: flex;*/
-  /*        justify-content: center;*/
-  /*        align-items: center;*/
-  /*    }*/
-  /*    .nav-links ul{*/
-  /*        display: flex;*/
-  /*        flex-direction: column;*/
-  /*        align-items: center;*/
-  /*    }*/
-  /*    .navbar .nav-links ul li{*/
-  /*        margin: 25px 0;*/
-  /*        font-size: 1.2em;*/
-  /*    }*/
-  /*}*/
 </style>
