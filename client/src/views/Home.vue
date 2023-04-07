@@ -1,105 +1,108 @@
 <template>
-  <div class="navbar">
-      <Navbar></Navbar>
+  <div class="Home">
+      <div class="navbar">
+          <Navbar></Navbar>
+      </div>
+      <div class="login">
+          <div class="text">
+              <h2>Добро пожаловать!</h2>
+              <p>TEAPLA - это уникальная обучающая платформа, где вы можете научиться чему угодно в любое время и в любом месте. Узнайте что угодно: начиная от изучения языков и заканчивая программированием, маркетингом, финансами и
+                  предпринимательством. </p>
+          </div>
+          <div class="item">
+              <Login></Login>
+          </div>
+      </div>
+      <!--features-->
+      <section id="features">
+          <div class="fea-disc">
+              <h1>Наши преимущества</h1>
+              <div class="fea-base">
+                  <div class="fea-box">
+                      <fa icon="graduation-cap"/>
+                      <h3>Быстрое освоение программы</h3>
+                  </div>
+                  <div class="fea-box">
+                      <fa icon="certificate"/>
+                      <h3>Обучение происходит с помощью практики</h3>
+                  </div>
+                  <div class="fea-box">
+                      <fa icon="award"/>
+                      <h3>Сертификат государственного образца</h3>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!--Courses-->
+      <section id="course">
+          <h1>Наши популярные курсы</h1>
+          <div class="course-box">
+              <div class="courses">
+                  <fa icon="code"/>
+                  <div class="details">
+                      <h6>Django разработчик</h6>
+                  </div>
+              </div>
+              <div class="courses">
+                  <fa icon="code"/>
+                  <div class="details">
+                      <h6>Python разработчик</h6>
+                  </div>
+              </div>
+              <div class="courses">
+                  <fa icon="code"/>
+                  <div class="details">
+                      <h6>JavaScript разработчик</h6>
+                  </div>
+              </div>
+              <div class="courses">
+                  <fa icon="calculator"/>
+                  <div class="details">
+                      <h6>Математика</h6>
+                  </div>
+              </div>
+              <div class="courses">
+                  <fa icon="globe"/>
+                  <div class="details">
+                      <h6>Английский язык</h6>
+                  </div>
+              </div>
+              <div class="courses">
+                  <fa icon="globe"/>
+                  <div class="details">
+                      <h6>Немецкий язык</h6>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!--Profiles-->
+      <section id="experts">
+          <h1>Наши лучшие преподаватели</h1>
+          <div class="expert-box">
+              <div class="profile">
+                  <img :src="image" alt="" class="expert">
+                  <h6>Райан Гослинг</h6>
+                  <p>Data science аналитик</p>
+              </div>
+              <div class="profile">
+                  <img :src="image" alt="" class="expert">
+                  <h6>Райан Гослинг</h6>
+                  <p>Сдал профильную метематику на 100 баллов</p>
+              </div>
+              <div class="profile">
+                  <img :src="image" alt="" class="expert">
+                  <h6>Райан Гослинг</h6>
+                  <p>JavaScript разработчик</p>
+              </div>
+              <div class="profile">
+                  <img :src="image" alt="" class="expert">
+                  <h6>Райан Гослинг</h6>
+                  <p>Дед немец, поэтому учитель немецкого</p>
+              </div>
+          </div>
+      </section>
   </div>
-  <div class="login">
-      <div class="text">
-          <h2>Добро пожаловать!</h2>
-          <p>TEAPLA - это уникальная обучающая платформа, где вы можете научиться чему угодно в любое время и в любом месте. Узнайте что угодно: начиная от изучения языков и заканчивая программированием, маркетингом, финансами и
-              предпринимательством. </p>
-      </div>
-      <div class="item">
-          <Login></Login>
-      </div>
-  </div>
-  <!--features-->
-  <section id="features">
-      <div class="fea-disc">
-          <h1>Наши преимущества</h1>
-        <div class="fea-base">
-            <div class="fea-box">
-              <fa icon="graduation-cap"/>
-              <h3>Быстрое освоение программы</h3>
-            </div>
-            <div class="fea-box">
-                <fa icon="certificate"/>
-                <h3>Обучение происходит с помощью практики</h3>
-            </div>
-            <div class="fea-box">
-                <fa icon="award"/>
-                <h3>Сертификат государственного образца</h3>
-            </div>
-        </div>
-      </div>
-  </section>
-  <!--Courses-->
-  <section id="course">
-      <h1>Наши популярные курсы</h1>
-      <div class="course-box">
-          <div class="courses">
-            <fa icon="code"/>
-            <div class="details">
-                <h6>Django разработчик</h6>
-            </div>
-          </div>
-          <div class="courses">
-              <fa icon="code"/>
-              <div class="details">
-                  <h6>Python разработчик</h6>
-              </div>
-          </div>
-          <div class="courses">
-              <fa icon="code"/>
-              <div class="details">
-                  <h6>JavaScript разработчик</h6>
-              </div>
-          </div>
-          <div class="courses">
-              <fa icon="calculator"/>
-              <div class="details">
-                  <h6>Математика</h6>
-              </div>
-          </div>
-          <div class="courses">
-              <fa icon="globe"/>
-              <div class="details">
-                  <h6>Английский язык</h6>
-              </div>
-          </div>
-          <div class="courses">
-              <fa icon="globe"/>
-              <div class="details">
-                  <h6>Немецкий язык</h6>
-              </div>
-          </div>
-      </div>
-  </section>
-  <!--Profiles-->
-  <section id="experts">
-      <h1>Наши лучшие преподаватели</h1>
-      <div class="expert-box">
-          <div class="profile">
-          <img :src="image" alt="" class="expert">
-          <h6>Райан Гослинг</h6>
-          <p>Data science аналитик</p>
-      </div>
-          <div class="profile">
-              <img :src="image" alt="" class="expert">
-              <h6>Райан Гослинг</h6>
-              <p>Сдал профильную метематику на 100 баллов</p>
-          </div>
-          <div class="profile">
-              <img :src="image" alt="" class="expert">
-              <h6>Райан Гослинг</h6>
-              <p>JavaScript разработчик</p>
-          </div>
-          <div class="profile">
-              <img :src="image" alt="" class="expert">
-              <h6>Райан Гослинг</h6>
-              <p>Дед немец, поэтому учитель немецкого</p>
-          </div>
-      </div>
-  </section>
+
 </template>
 
 <script>
@@ -121,6 +124,11 @@ export default {
 </script>
 
 <style scoped>
+  .Home{
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem;
+  }
   .login{
       margin-top: 50px;
       padding-right: 20px;
