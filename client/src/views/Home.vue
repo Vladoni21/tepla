@@ -3,15 +3,13 @@
       <Navbar></Navbar>
   </div>
   <div class="login">
-      <div class="container">
-          <div class="text">
-              <h2>Добро пожаловать!</h2>
-              <p>TEAPLA - это уникальная обучающая платформа, где вы можете научиться чему угодно в любое время и в любом месте. Узнайте что угодно: начиная от изучения языков и заканчивая программированием, маркетингом, финансами и
-                  предпринимательством. </p>
-          </div>
-          <div class="item">
-              <Login></Login>
-          </div>
+      <div class="text">
+          <h2>Добро пожаловать!</h2>
+          <p>TEAPLA - это уникальная обучающая платформа, где вы можете научиться чему угодно в любое время и в любом месте. Узнайте что угодно: начиная от изучения языков и заканчивая программированием, маркетингом, финансами и
+              предпринимательством. </p>
+      </div>
+      <div class="item">
+          <Login></Login>
       </div>
   </div>
   <!--features-->
@@ -122,18 +120,20 @@ export default {
 }
 </script>
 
-<style>
-  .container{
+<style scoped>
+  .login{
       margin-top: 50px;
+      padding-right: 20px;
+      padding-left: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
       min-width: 800px;
-      width: 800px;
       height: 450px;
       background: #7BAE7F;
-      border-radius: 8px;
+      border: 1px solid white;
+      border-radius: 5px;
   }
   .item{
       position: relative;
@@ -157,6 +157,7 @@ export default {
       padding-bottom: 5px;
       text-align: center;
       min-width: 800px;
+      border: 1px solid white;
   }
   #features{
       min-width: 800px;
@@ -203,17 +204,16 @@ export default {
       border-radius: 5px;
       font-family: 'Open Sans', sans-serif;
       color: white;
-      padding-left: 25px;
-      padding-right: 25px;
       padding-bottom: 25px;
       min-width: 800px;
+      border: 1px solid white;
   }
   #course .course-box{
       min-width: 800px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       grid-gap: 1rem;
-      padding-top: 25px;
+      padding: 25px 25px 20px;
   }
   #course .courses{
       font-size: 2.3rem;
@@ -240,17 +240,16 @@ export default {
       border-radius: 5px;
       font-family: 'Open Sans', sans-serif;
       color: white;
-      padding-left: 25px;
-      padding-right: 25px;
       padding-bottom: 25px;
       min-width: 800px;
+      border: 1px solid white;
   }
   #experts .expert-box{
       min-width: 800px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       grid-gap: 1rem;
-      padding-top: 25px;
+      padding: 25px 25px 20px;
   }
   #experts .expert-box .profile{
       font-size: 1em;

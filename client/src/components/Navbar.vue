@@ -61,13 +61,4 @@ export default {
       color: #454851;
       font-weight: 600;
   }
-  .navbar .menu-hamburger{
-      z-index: 3;
-      display: none;
-      position: absolute;
-      right: 50px;
-      width: 35px;
-      height: 35px;
-  }
-
 </style>
