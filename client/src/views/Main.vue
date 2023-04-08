@@ -2,6 +2,9 @@
 <!--header-->
   <header class="header">
       <section class="flex">
+        <div class="sd-bar">
+            <div @click="showSidebar" id="user-btn"><fa icon="bars"/></div>
+        </div>
         <a href="#" class="logo">TEAPLA</a>
         <form action="" method="post" class="search-form">
             <input type="text" name="search_box" placeholder="Поиск курсов" required maxlength="100">
@@ -11,6 +14,7 @@
         </form>
         <div class="icons">
             <div @click="showProfile" id="user-btn"><fa icon="user"/></div>
+
         </div>
         <div v-if="isProfileVisible" class="profile">
             <img :src="image" alt="" class="expert">
@@ -24,6 +28,25 @@
         </div>
       </section>
   </header>
+  <!--side bar-->
+  <div v-if="isSidebarVisible" class="side-bar">
+      <div class="profile">
+          <img :src="image" alt="" class="expert">
+          <h3>Райан Гослинг</h3>
+          <span>Ученик</span>
+          <a href="#" class="btn">Профиль</a>
+      </div>
+      <nav class="navbar">
+          <div class="icons">
+              <a href="#"><fa icon="home"/><span>Домой</span></a>
+              <a href="#"><fa icon="question"/><span>О нас</span></a>
+              <a href="#"><fa icon="graduation-cap"/><span>Курсы</span></a>
+              <a href="#"><fa icon="chalkboard-user"/><span>Учителя</span></a>
+              <a href="#"><fa icon="headset"/><span>Поддержка</span></a>
+          </div>
+
+      </nav>
+  </div>
 </template>
 
 <script>
@@ -33,12 +56,16 @@ export default {
     data(){
         return{
             image: expert,
-            isProfileVisible: false
+            isProfileVisible: false,
+            isSidebarVisible: false
         }
     },
     methods: {
         showProfile() {
             this.isProfileVisible = !this.isProfileVisible
+        },
+        showSidebar() {
+            this.isSidebarVisible = !this.isSidebarVisible
         }
     },
     name: "Main"
@@ -78,6 +105,20 @@ section{
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+.sd-bar{
+    font-size: 1.5rem;
+    color: #454851;
+    border-radius: .5rem;
+    height: 3rem;
+    cursor: pointer;
+    width: 3rem;
+    line-height: 3rem;
+    background-color: #7BAE7F;
+    text-align: center;
+}
+.sd-bar:hover{
+    background-color: white;
 }
 .btn,
 .option-btn,
@@ -227,4 +268,55 @@ section{
     color: #454851;
     font-size: 1.5rem;
 }
+.side-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 30rem;
+    background-color: #95D7AE;
+    border-right: white;
+    margin-top: 100px;
+}
+.side-bar .profile{
+    padding: 3rem 2rem;
+    text-align: center;
+}
+.side-bar .profile .expert{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: .5rem;
+}
+.side-bar .profile h3{
+    font-size: 2rem;
+    color: white;
+}
+.side-bar .profile span{
+    color: #454851;
+    font-size: 1.5rem;
+}
+.side-bar .navbar{
+    margin-top: 1rem;
+}
+.side-bar .navbar a{
+    display: flex;
+    padding-left: 40%;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+
+}
+.side-bar .navbar a span{
+    color: white;
+    padding-left: 5px;
+}
+.side-bar .navbar a:hover i{
+    margin-right: 2.5rem;
+
+}
+.side-bar .icons a{
+    color: white;
+}
+
 </style>
