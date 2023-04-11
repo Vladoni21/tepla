@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../../../../Desktop/desgin/css/style.css">
 <template>
 <!--header-->
   <header class="header">
@@ -47,6 +48,49 @@
 
       </nav>
   </div>
+    <!--side bar-->
+    <section class="home-grid">
+        <div class="box-container">
+            <div class="box">
+                <h3 class="title">Лайки и коментарии</h3>
+                <p class="likes">Всего лайков: <span>25</span></p>
+                <a href="#" class="inline-btn">Посмотреть лайки</a>
+                <p class="likes">Всего коментариев: <span>12</span></p>
+                <a href="#" class="inline-btn">Коментарии</a>
+                <p class="likes">Сохраненные записи: <span>4</span></p>
+                <a href="#" class="inline-btn">Записи</a>
+            </div>
+            <div class="box">
+                <h3 class="title">Топ категорий</h3>
+                <div class="flex">
+                    <a href="#"><i><fa icon="code"/></i><span>Разработка</span></a>
+                    <a href="#"><i><fa icon="chart-simple"/></i><span>Бизнес</span></a>
+                    <a href="#"><i><fa icon="pen"/></i><span>Дизайн</span></a>
+                    <a href="#"><i><fa icon="chart-line"/></i><span>Маркетинг</span></a>
+                    <a href="#"><i><fa icon="music"/></i><span>Музыка</span></a>
+                    <a href="#"><i><fa icon="camera"/></i><span>Фото</span></a>
+                    <a href="#"><i><fa icon="cog"/></i><span>ПО</span></a>
+                    <a href="#"><i><fa icon="vial"/></i><span>Наука</span></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3 class="title">Популярные курсы</h3>
+                <div class="flex">
+                    <a href="#"><i><fa icon="code"/></i><span>HTML</span></a>
+                    <a href="#"><i><fa icon="code"/></i><span>CSS</span></a>
+                    <a href="#"><i><fa icon="code"/></i><span>javascript</span></a>
+                    <a href="#"><i><fa icon="code"/></i><span>react</span></a>
+                    <a href="#"><i><fa icon="code"/></i><span>PHP</span></a>
+                    <a href="#"><i><fa icon="code"/></i><span>bootstrap</span></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3 class="title">Стать преподавателем</h3>
+                <p class="tutor">Рыбий текст</p>
+                <a href="teachers.html" class="inline-btn">Начать</a>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -277,6 +321,7 @@ section{
     background-color: #95D7AE;
     border-right: white;
     margin-top: 100px;
+    z-index: 100;
 }
 .side-bar .profile{
     padding: 3rem 2rem;
@@ -317,6 +362,77 @@ section{
 }
 .side-bar .icons a{
     color: white;
+}
+.home-grid .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 25rem);
+    gap:1rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.home-grid .box-container .box{
+    background-color: #95D7AE;
+    border-radius: .5rem;
+    padding:1rem;
+    height: auto;
+    width: auto;
+}
+
+.home-grid .box-container .box .title{
+    font-size: 2rem;
+    color: white;
+}
+
+.home-grid .box-container .box .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+.home-grid .box-container .flex a{
+    background-color: #7BAE7F;
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+}
+
+.home-grid .box-container .flex a i{
+    margin-right: 1rem;
+    color: white;
+}
+
+.home-grid .box-container .flex a span{
+    color: white;
+}
+
+.home-grid .box-container .flex a:hover{
+    background-color: #73956F;
+}
+
+.home-grid .box-container .flex a:hover span{
+    color:white;
+}
+
+.home-grid .box-container .flex a:hover i{
+    color: white;
+}
+
+.home-grid .box-container .tutor{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: white;
+    line-height: 2;
+}
+
+.home-grid .box-container .likes{
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.home-grid .box-container .likes span{
+    color: #7BAE7F;
 }
 
 </style>
