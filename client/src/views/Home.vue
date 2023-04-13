@@ -1,5 +1,5 @@
 <template>
-  <div class="Home">
+  <article class="Home">
     <div class="navbar">
       <Navbar></Navbar>
     </div>
@@ -201,7 +201,7 @@
         <!--a href="courses.html" class="inline-option-btn">view all courses</a-->
       </div>
     </section>
-  </div>
+  </article>
 
 </template>
 
