@@ -1,54 +1,68 @@
 <link rel="stylesheet" href="../../../../Desktop/desgin/css/style.css">
 <template>
-<!--header-->
-  <header class="header">
-      <section class="flex">
-        <div class="sd-bar">
-            <div @click="showSidebar" id="user-btn"><fa icon="bars"/></div>
-        </div>
-        <a href="#" class="logo">TEAPLA</a>
-        <form action="" method="post" class="search-form">
-            <input type="text" name="search_box" placeholder="Поиск курсов" required maxlength="100">
-            <button type="submit" class="search_box" name="search_box">
-                <fa icon="search"/>
-            </button>
-        </form>
-        <div class="icons">
-            <div @click="showProfile" id="user-btn"><fa icon="user"/></div>
+  <!--header-->
+    <header class="header">
+        <section class="flex">
+            <div class="sd-bar">
+                <div @click="showSidebar" id="user-btn">
+                    <fa icon="bars"/>
+                </div>
+            </div>
+            <a href="#" class="logo">TEAPLA</a>
+            <form action="" method="post" class="search-form">
+                <input type="text" name="search_box" placeholder="Поиск курсов" required maxlength="100">
+                <button type="submit" class="search_box" name="search_box">
+                    <fa icon="search"/>
+                </button>
+            </form>
+            <div class="icons">
+                <div @click="showProfile" id="user-btn">
+                    <fa icon="user"/>
+                </div>
 
-        </div>
-        <div v-if="isProfileVisible" class="profile">
+            </div>
+            <div v-if="isProfileVisible" class="profile">
+                <img :src="image" alt="" class="expert">
+                <h3>Райан Гослинг</h3>
+                <span>Ученик</span>
+                <a href="#" class="btn">Профиль</a>
+                <div class="flex-btn">
+                    <a href="#" class="option-btn">Войти</a>
+                    <a href="#" class="option-btn">Регистрация</a>
+                </div>
+            </div>
+        </section>
+    </header>
+  <!--side bar-->
+    <div v-if="isSidebarVisible" class="side-bar">
+        <div class="profile">
             <img :src="image" alt="" class="expert">
             <h3>Райан Гослинг</h3>
             <span>Ученик</span>
             <a href="#" class="btn">Профиль</a>
-            <div class="flex-btn">
-                <a href="#" class="option-btn">Войти</a>
-                <a href="#" class="option-btn">Регистрация</a>
-            </div>
         </div>
-      </section>
-  </header>
-  <!--side bar-->
-  <div v-if="isSidebarVisible" class="side-bar">
-      <div class="profile">
-          <img :src="image" alt="" class="expert">
-          <h3>Райан Гослинг</h3>
-          <span>Ученик</span>
-          <a href="#" class="btn">Профиль</a>
-      </div>
-      <nav class="navbar">
-          <div class="icons">
-              <a href="#"><fa icon="home"/><span>Домой</span></a>
-              <a href="#"><fa icon="question"/><span>О нас</span></a>
-              <a href="#"><fa icon="graduation-cap"/><span>Курсы</span></a>
-              <a href="#"><fa icon="chalkboard-user"/><span>Учителя</span></a>
-              <a href="#"><fa icon="headset"/><span>Поддержка</span></a>
-          </div>
+        <nav class="navbar">
+            <div class="icons">
+                <a href="#">
+                    <fa icon="home"/>
+                    <span>Домой</span></a>
+                <a href="#">
+                    <fa icon="question"/>
+                    <span>О нас</span></a>
+                <a href="#">
+                    <fa icon="graduation-cap"/>
+                    <span>Курсы</span></a>
+                <a href="#">
+                    <fa icon="chalkboard-user"/>
+                    <span>Учителя</span></a>
+                <a href="#">
+                    <fa icon="headset"/>
+                    <span>Поддержка</span></a>
+            </div>
 
-      </nav>
-  </div>
-    <!--side bar-->
+        </nav>
+    </div>
+  <!--side bar-->
     <section class="home-grid">
         <div class="box-container">
             <div class="box">
@@ -83,8 +97,8 @@ import LinkGrid from "../components/gears/LinkGrid.vue";
 
 export default {
     components: {LinkGrid},
-    data(){
-        return{
+    data() {
+        return {
             image: expert,
             isProfileVisible: false,
             isSidebarVisible: false,
@@ -122,7 +136,7 @@ export default {
 </script>
 
 <style scoped>
-*{
+* {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
@@ -131,30 +145,37 @@ export default {
     border: none;
     text-decoration: none;
 }
-*::selection{
+
+*::selection {
     background-color: #7BAE7F;
     color: white;
 }
-*::-webkit-scrollbar{
+
+*::-webkit-scrollbar {
     height: .5rem;
     width: 1rem;
 }
-*::-webkit-scrollbar-track{
+
+*::-webkit-scrollbar-track {
     background-color: transparent;
 }
-*::-webkit-scrollbar-thumb{
+
+*::-webkit-scrollbar-thumb {
     background-color: #7BAE7F;
 }
-html{
+
+html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
-section{
+
+section {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
-.sd-bar{
+
+.sd-bar {
     font-size: 1.5rem;
     color: #454851;
     border-radius: .5rem;
@@ -165,15 +186,17 @@ section{
     background-color: #7BAE7F;
     text-align: center;
 }
-.sd-bar:hover{
+
+.sd-bar:hover {
     background-color: white;
 }
+
 .btn,
 .option-btn,
 .delete-btn,
 .inline-btn,
 .inline-option-btn,
-.inline-delete-btn{
+.inline-delete-btn {
     border-radius: .5rem;
     padding: 1rem 3rem;
     font-size: 1.5rem;
@@ -186,29 +209,29 @@ section{
 
 .btn,
 .option-btn,
-.delete-btn{
+.delete-btn {
     display: block;
     width: 100%;
 }
 
 .inline-btn,
 .inline-option-btn,
-.inline-delete-btn{
+.inline-delete-btn {
     display: inline-block;
 }
 
 .btn,
-.inline-btn{
+.inline-btn {
     background-color: #7BAE7F;
 }
 
 .option-btn,
-.inline-option-btn{
+.inline-option-btn {
     background-color: #7BAE7F;
 }
 
 .delete-btn,
-.inline-delete-btn{
+.inline-delete-btn {
     background-color: red;
 }
 
@@ -217,16 +240,17 @@ section{
 .delete-btn:hover,
 .inline-btn:hover,
 .inline-option-btn:hover,
-.inline-delete-btn:hover{
+.inline-delete-btn:hover {
     background-color: #73956F;
     color: white;
 }
 
-.flex-btn{
+.flex-btn {
     display: flex;
     gap: 0.5rem
 }
-.header{
+
+.header {
     background-color: #95D7AE;
     border-bottom: white;
     position: sticky;
@@ -237,19 +261,22 @@ section{
     padding: 0;
 
 }
-.header .flex{
+
+.header .flex {
     padding: 1.5rem 2rem;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.header .flex .logo{
+
+.header .flex .logo {
     font-size: 2rem;
     color: white;
     font-weight: bolder;
 }
-.header .flex .search-form{
+
+.header .flex .search-form {
     width: 50rem;
     border-radius: .5rem;
     display: flex;
@@ -258,22 +285,26 @@ section{
     padding: 0.5rem 1rem;
     background-color: #7BAE7F;
 }
-.header .flex .search-form input{
+
+.header .flex .search-form input {
     width: 100%;
     background: none;
     font-size: 1rem;
     color: white;
 }
-.header .flex .search-form button{
+
+.header .flex .search-form button {
     font-size: 1.5rem;
     color: white;
     cursor: pointer;
     background: none;
 }
-.header .flex .search-form button:hover{
+
+.header .flex .search-form button:hover {
     color: #454851;
 }
-.header .flex .icons div{
+
+.header .flex .icons div {
     font-size: 1.5rem;
     color: #454851;
     border-radius: .5rem;
@@ -285,11 +316,12 @@ section{
     text-align: center;
     margin-left: 1rem;
 }
-.header .flex .icons div:hover{
+
+.header .flex .icons div:hover {
     background-color: white;
 }
 
-.header .flex .profile{
+.header .flex .profile {
     position: absolute;
     top: 120%;
     right: 2rem;
@@ -300,7 +332,7 @@ section{
     width: 30rem;
 }
 
-.header .flex .profile .expert{
+.header .flex .profile .expert {
     height: 10rem;
     width: 10rem;
     border-radius: 50%;
@@ -308,15 +340,18 @@ section{
     margin-bottom: .5rem;
 
 }
-.header .flex .profile h3{
+
+.header .flex .profile h3 {
     font-size: 2rem;
     color: white;
 }
-.header .flex .profile span{
+
+.header .flex .profile span {
     color: #454851;
     font-size: 1.5rem;
 }
-.side-bar{
+
+.side-bar {
     position: fixed;
     top: 0;
     left: 0;
@@ -327,115 +362,126 @@ section{
     margin-top: 100px;
     z-index: 100;
 }
-.side-bar .profile{
+
+.side-bar .profile {
     padding: 3rem 2rem;
     text-align: center;
 }
-.side-bar .profile .expert{
+
+.side-bar .profile .expert {
     height: 10rem;
     width: 10rem;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: .5rem;
 }
-.side-bar .profile h3{
+
+.side-bar .profile h3 {
     font-size: 2rem;
     color: white;
 }
-.side-bar .profile span{
+
+.side-bar .profile span {
     color: #454851;
     font-size: 1.5rem;
 }
-.side-bar .navbar{
+
+.side-bar .navbar {
     margin-top: 1rem;
 }
-.side-bar .navbar a{
+
+.side-bar .navbar a {
     display: flex;
     padding-left: 40%;
     padding-top: 2rem;
     font-size: 1.2rem;
 
 }
-.side-bar .navbar a span{
+
+.side-bar .navbar a span {
     color: white;
     padding-left: 5px;
 }
-.side-bar .navbar a:hover i{
+
+.side-bar .navbar a:hover i {
     margin-right: 2.5rem;
 
 }
-.side-bar .icons a{
+
+.side-bar .icons a {
     color: white;
 }
-.home-grid .box-container{
+
+.home-grid .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, 25rem);
-    gap:1rem;
+    gap: 1rem;
     justify-content: center;
     align-items: flex-start;
 }
 
-.home-grid .box-container .box{
+.home-grid .box-container .box {
     background-color: #95D7AE;
     border-radius: .5rem;
-    padding:1rem;
+    padding: 1rem;
     height: auto;
     width: auto;
 }
 
-.home-grid .box-container .box .title{
+.home-grid .box-container .box .title {
     font-size: 2rem;
     color: white;
 }
 
-.home-grid .box-container .box .flex{
+.home-grid .box-container .box .flex {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 1rem;
 }
-.home-grid .box-container .flex a{
+
+.home-grid .box-container .flex a {
     background-color: #7BAE7F;
     border-radius: .5rem;
     padding: 1rem 1.5rem;
     font-size: 1.5rem;
 }
 
-.home-grid .box-container .flex a i{
+.home-grid .box-container .flex a i {
     margin-right: 1rem;
     color: white;
 }
 
-.home-grid .box-container .flex a span{
+.home-grid .box-container .flex a span {
     color: white;
 }
 
-.home-grid .box-container .flex a:hover{
+.home-grid .box-container .flex a:hover {
     background-color: #73956F;
 }
 
-.home-grid .box-container .flex a:hover span{
-    color:white;
-}
-
-.home-grid .box-container .flex a:hover i{
+.home-grid .box-container .flex a:hover span {
     color: white;
 }
 
-.home-grid .box-container .tutor{
+.home-grid .box-container .flex a:hover i {
+    color: white;
+}
+
+.home-grid .box-container .tutor {
     padding: 1rem 0;
     font-size: 1.5rem;
     color: white;
     line-height: 2;
 }
 
-.home-grid .box-container .likes{
+.home-grid .box-container .likes {
     color: white;
     font-size: 1.5rem;
     margin-top: 1.5rem;
 }
 
-.home-grid .box-container .likes span{
+.home-grid .box-container .likes span {
     color: #7BAE7F;
 }
 
