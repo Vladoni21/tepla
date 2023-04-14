@@ -63,6 +63,7 @@
             <div class="box">
                 <h3 class="title">Топ категорий</h3>
                 <div class="flex">
+                    <LinkGrid v-bind:arr="sidebar_top_categories"/>
                     <a href="#"><i><fa icon="code"/></i><span>Разработка</span></a>
                     <a href="#"><i><fa icon="chart-simple"/></i><span>Бизнес</span></a>
                     <a href="#"><i><fa icon="pen"/></i><span>Дизайн</span></a>
@@ -76,6 +77,7 @@
             <div class="box">
                 <h3 class="title">Популярные курсы</h3>
                 <div class="flex">
+                    <LinkGrid v-bind:arr="sidebar_top_courses"/>
                     <a href="#"><i><fa icon="code"/></i><span>HTML</span></a>
                     <a href="#"><i><fa icon="code"/></i><span>CSS</span></a>
                     <a href="#"><i><fa icon="code"/></i><span>javascript</span></a>
@@ -95,13 +97,33 @@
 
 <script>
 import expert from "./img/expert.jpg";
+import LinkGrid from "../components/gears/LinkGrid.vue";
 
 export default {
+    components: {LinkGrid},
     data(){
         return{
             image: expert,
             isProfileVisible: false,
-            isSidebarVisible: false
+            isSidebarVisible: false,
+            sidebar_top_categories: [
+                {id: 1, title: "Разработка", icon: "code", href: "#"},
+                {id: 2, title: "Бизнес", icon: "chart-simple", href: "#"},
+                {id: 3, title: "Дизайн", icon: "pen", href: "#"},
+                {id: 4, title: "Маркетинг", icon: "chart-line", href: "#"},
+                {id: 5, title: "Музыка", icon: "music", href: "#"},
+                {id: 6, title: "Фото", icon: "camera", href: "#"},
+                {id: 7, title: "ПО", icon: "cog", href: "#"},
+                {id: 8, title: "Наука", icon: "vial", href: "#"},
+            ],
+            sidebar_top_courses: [
+                {id: 1, title: "HTML", icon: "code", href: "#"},
+                {id: 2, title: "CSS", icon: "code", href: "#"},
+                {id: 3, title: "javascript", icon: "code", href: "#"},
+                {id: 4, title: "react", icon: "code", href: "#"},
+                {id: 5, title: "PHP", icon: "code", href: "#"},
+                {id: 6, title: "bootstrap", icon: "code", href: "#"},
+            ]
         }
     },
     methods: {
