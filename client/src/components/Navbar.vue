@@ -1,26 +1,36 @@
 <template>
-    <div class="navbar">
-        <a href="#" class="logo">TEAPLA</a>
-        <div class="nav-links">
-            <ul>
-                <li class="active"><a href="#">Главная</a></li>
-                <li><a href="#">Курсы</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Поддержка</a></li>
-            </ul>
+    <section class="lined">
+        <div class="navbar">
+            <a href="#" class="logo">TEAPLA</a>
+            <Logo></Logo>
+            <nav class="nav-links">
+                <ul>
+                    <li class="active"><a href="#">Главная</a></li>
+                    <li><a href="#">Курсы</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Поддержка</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
+import Logo from "../components/Logo.vue"
+
 
 export default {
-    name: "Navbar"
+    name: "Navbar",
+    components: {Logo}
 }
 </script>
 
 <style scoped>
+.lined {
+    height: 100px;
+}
+
 .navbar {
     position: absolute;
     padding: 0;
@@ -52,10 +62,13 @@ a:hover {
     font-size: 2em;
     font-weight: bold;
     text-decoration: none;
+    z-index: 1;
 }
 
 .navbar .nav-links ul {
     display: flex;
+    padding-right: 20px;
+    padding-top: 30px;
 }
 
 .navbar .nav-links ul li {
