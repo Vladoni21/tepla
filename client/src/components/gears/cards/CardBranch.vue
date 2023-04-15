@@ -1,41 +1,5 @@
 <template>
-    <section>
-        <article class="grid">
-            <div class="card">
-        <span class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
-                 stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.5 3.5C14.5 3.5 14.5 5.5 12 5.5C9.5 5.5 9.5 3.5 9.5 3.5H7.5L4.20711 6.79289C3.81658 7.18342 3.81658 7.81658 4.20711 8.20711L6.5 10.5V20.5H17.5V10.5L19.7929 8.20711C20.1834 7.81658 20.1834 7.18342 19.7929 6.79289L16.5 3.5H14.5Z"/>
-            </svg>
-        </span>
-                <h4>Products</h4>
-                <p>
-                    Standard chunk of Lorem Ipsum used since the 1500s is showed below
-                    for those interested.
-                </p>
-                <div class="shine"></div>
-                <div class="background">
-                    <div class="tiles">
-                        <div class="tile tile-1"></div>
-                        <div class="tile tile-2"></div>
-                        <div class="tile tile-3"></div>
-                        <div class="tile tile-4"></div>
-
-                        <div class="tile tile-5"></div>
-                        <div class="tile tile-6"></div>
-                        <div class="tile tile-7"></div>
-                        <div class="tile tile-8"></div>
-
-                        <div class="tile tile-9"></div>
-                        <div class="tile tile-10"></div>
-                    </div>
-
-                    <div class="line line-1"></div>
-                    <div class="line line-2"></div>
-                    <div class="line line-3"></div>
-                </div>
-            </div>
-            <div class="card">
+    <div class="card">
         <span class="icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
                  stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
@@ -72,68 +36,21 @@
                     <div class="line line-3"></div>
                 </div>
             </div>
-        </article>
-    </section>
 </template>
 
 <script>
 export default {
-    name: "CardBranch"
+    name: "CardBranch",
+    props: {
+        item: {
+            type: Object,
+            required: true
+        }
+    }
 }
 </script>
 
 <style scoped>
-
-section {
-    --background-color: #fafafa;
-    --text-color: #52525b;
-    --card-background-color: transparent;
-    --card-border-color: rgba(24, 24, 27, 0.08);
-    --card-box-shadow-1: rgba(24, 24, 27, 0.02);
-    --card-box-shadow-1-y: 3px;
-    --card-box-shadow-1-blur: 6px;
-    --card-box-shadow-2: rgba(24, 24, 27, 0.04);
-    --card-box-shadow-2-y: 2px;
-    --card-box-shadow-2-blur: 7px;
-    --card-label-color: #18181b;
-    --card-icon-color: #18181b;
-    --card-icon-background-color: rgba(24, 24, 27, 0.04);
-    --card-icon-border-color: rgba(24, 24, 27, 0.1);
-    --card-shine-opacity: 0.3;
-    --card-shine-gradient: conic-gradient(
-            from 205deg at 50% 50%,
-            rgba(16, 185, 129, 0) 0deg,
-            #10b981 25deg,
-            rgba(52, 211, 153, 0.18) 295deg,
-            rgba(16, 185, 129, 0) 360deg
-    );
-    --card-line-color: #e9e9e7;
-    --card-tile-color: rgba(16, 185, 129, 0.18);
-    --card-hover-border-color: rgba(24, 24, 27, 0.15);
-    --card-hover-box-shadow-1: rgba(24, 24, 27, 0.05);
-    --card-hover-box-shadow-1-y: 3px;
-    --card-hover-box-shadow-1-blur: 6px;
-    --card-hover-box-shadow-2: rgba(24, 24, 27, 0.1);
-    --card-hover-box-shadow-2-y: 8px;
-    --card-hover-box-shadow-2-blur: 15px;
-    --card-hover-icon-color: #34d399;
-    --card-hover-icon-background-color: rgba(52, 211, 153, 0.1);
-    --card-hover-icon-border-color: rgba(52, 211, 153, 0.2);
-    --blur-opacity: 0.1;
-}
-
-section.toggle .grid * {
-    transition-duration: 0s !important;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 240px);
-    grid-gap: 32px;
-    position: relative;
-    z-index: 1;
-}
-
 .card {
     background-color: var(--background-color);
     box-shadow: 0px var(--card-box-shadow-1-y) var(--card-box-shadow-1-blur) var(--card-box-shadow-1), 0px var(--card-box-shadow-2-y) var(--card-box-shadow-2-blur) var(--card-box-shadow-2), 0 0 0 1px var(--card-border-color);

@@ -1,4 +1,4 @@
-<template>
+<template xmlns="http://www.w3.org/1999/html">
     <article class="Home">
         <div class="navbar">
             <Navbar></Navbar>
@@ -150,7 +150,9 @@
             </div>
         </section>
     </article>
-
+    <article>
+        <Card v-bind:arr="test"/>
+    </article>
 </template>
 
 <script>
@@ -158,7 +160,7 @@ import Navbar from "../components/Navbar.vue";
 import Login from "../components/Login.vue";
 import expert from "../components/img/expert.jpg";
 import Grid from "../components/Grid.vue";
-
+import Card from "../components/Card.vue";
 
 export default {
     data() {
@@ -177,6 +179,13 @@ export default {
                 {id: 2, name: "Райан Гослинг", description: "Сдал профильную метематику на 100 баллов", img: expert, alt: "", href: "#", class: "top_experts", gear: "LinkExpert"},
                 {id: 3, name: "Райан Гослинг", description: "JavaScript разработчик", img: expert, alt: "", href: "#", class: "top_experts", gear: "LinkExpert"},
                 {id: 4, name: "Райан Гослинг", description: "Дед немец, поэтому учитель немецкого", img: expert, alt: "", href: "#", class: "top_experts", gear: "LinkExpert"}
+            ],
+            test: [
+                {id: 1, gear: "CardBenefit", grid: "grid_benefit", class: "bg-green-box"},
+                {id: 2, gear: "CardBenefit", grid: "grid_benefit", class: "bg-white-box"},
+                {id: 3, gear: "CardBenefit", grid: "grid_benefit", class: "bg-yellow-box"},
+                {id: 4, gear: "CardBenefit", grid: "grid_benefit", class: "bg-blue-box"},
+                {id: 5, gear: "CardBranch", grid: "grid_branch", class: ""}
             ]
         }
     },
@@ -184,7 +193,8 @@ export default {
     components: {
         Navbar,
         Login,
-        Grid
+        Grid,
+        Card
     }
 }
 </script>
