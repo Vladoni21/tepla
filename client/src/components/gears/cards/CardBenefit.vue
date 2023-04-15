@@ -1,11 +1,9 @@
 <template>
     <section>
-        <div class="container">
-            <p class="container-title">Here are the features<br>we’re proud of</p>
-
+        <article class="container">
             <div class="gradient-cards">
                 <div class="card">
-                    <div class="container-card bg-box">
+                    <div class="container-card bg-green-box">
                         <svg width="80" height="80" viewBox="0 0 120 120" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <rect x="1" y="1" width="118" height="118" rx="24" fill="url(#paint0_linear_1366_4547)"
@@ -36,7 +34,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="container-card bg-box">
+                    <div class="container-card bg-blue-box">
                         <svg width="80" height="80" viewBox="0 0 120 120" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <rect x="1" y="1" width="118" height="118" rx="24" fill="url(#paint0_linear_1366_4565)"
@@ -78,7 +76,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="container-card bg-box">
+                    <div class="container-card bg-yellow-box">
                         <svg width="80" height="80" viewBox="0 0 120 120" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <rect x="1" y="1" width="118" height="118" rx="24" fill="url(#paint0_linear_1366_4557)"
@@ -107,7 +105,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="container-card bg-box">
+                    <div class="container-card bg-white-box">
                         <svg width="80" height="80" viewBox="0 0 120 120" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <rect x="1" y="1" width="118" height="118" rx="24" fill="url(#paint0_linear_1366_4582)"
@@ -137,7 +135,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     </section>
 </template>
 
@@ -194,7 +192,7 @@ export default {
     border: 0;
     width: 100%;
     margin-inline: auto;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
 }
 
 .container-card {
@@ -211,18 +209,25 @@ export default {
 
     left: 0;
     background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(0px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     z-index: 1;
     transform: 0.5s;
     color: #fff;
 }
 
-.bg-box {
+.bg-green-box,
+.bg-white-box,
+.bg-yellow-box,
+.bg-blue-box {
     position: relative;
 }
 
-.bg-box::after {
+
+.bg-green-box::after,
+.bg-white-box::after,
+.bg-yellow-box::after,
+.bg-blue-box::after {
     position: absolute;
     top: -1px;
     bottom: -1px;
@@ -231,10 +236,23 @@ export default {
     content: "";
     z-index: -1;
     border-radius: 45px;
-    background: linear-gradient(71deg, rgba(18, 18, 18, 0.22), rgba(61, 161, 119, 0.02), rgba(18, 18, 18, 0.22));
 }
 
+.bg-green-box::after {
+    background: linear-gradient(71deg, rgba(61, 161, 119, 0.32), rgba(61, 161, 119, 0.72), rgba(61, 161, 119, 0.32));
+}
 
+.bg-white-box::after {
+    background: linear-gradient(71deg, rgba(165, 210, 247, 0.32), rgba(165, 210, 247, 0.72), rgba(165, 210, 247, 0.32));
+}
+
+.bg-yellow-box::after {
+    background: linear-gradient(71deg, rgba(175, 162, 32, 0.32), rgba(175, 162, 32, 0.72), rgba(175, 162, 32, 0.32));
+}
+
+.bg-blue-box::after {
+    background: linear-gradient(71deg, rgba(128, 92, 212, 0.32), rgba(128, 92, 212, 0.72), rgba(128, 92, 212, 0.32));
+}
 
 .card-title {
     font-weight: 600;
