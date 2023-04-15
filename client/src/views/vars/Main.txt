@@ -16,9 +16,9 @@
                 {id: 5, title: "PHP", icon: "code", href: "#", class: "default"},
 ]
 [
-                {id: 1, title: "Домой", icon: "home", href: "#", class: "navbar"},
-                {id: 2, title: "О нас", icon: "question", href: "#", class: "navbar"},
-                {id: 3, title: "Курсы", icon: "graduation-cap", href: "#", class: "navbar"},
-                {id: 4, title: "Учителя", icon: "chalkboard-user", href: "#", class: "navbar"},
-                {id: 5, title: "Поддержка", icon: "headset", href: "#", class: "navbar"},
+                {id: 1, title: "Домой", icon: "home", href: "#", class: "nav_link"},
+                {id: 2, title: "О нас", icon: "question", href: "#", class: "nav_link"},
+                {id: 3, title: "Курсы", icon: "graduation-cap", href: "#", class: "nav_link"},
+                {id: 4, title: "Учителя", icon: "chalkboard-user", href: "#", class: "nav_link"},
+                {id: 5, title: "Поддержка", icon: "headset", href: "#", class: "nav_link"},
 ]

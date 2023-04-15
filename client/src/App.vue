@@ -6,7 +6,8 @@
     <main id="app">
         <Main></Main>
         <Home></Home>
-        <Loader></Loader>
+        <LoaderDB></LoaderDB>
+        <LoaderIMG></LoaderIMG>
         <!--RouterView/>
         <keep-alive>
           <index-view></index-view>
@@ -20,16 +21,19 @@
 import Main from "./views/Main.vue";
 import Home from './views/Home.vue'
 import About from "./views/About.vue";
-import Loader from "./components/Loader.vue";
+import LoaderDB from "./components/loaders/db_loader.vue";
+import LoaderIMG from "./components/loaders/img_loader.vue";
 
 
 export default {
     name: 'app',
     components: {
-        Loader,
         Main,
         Home,
-        About
+        About,
+
+        LoaderDB,
+        LoaderIMG
     }
 }
 </script>

@@ -44,19 +44,16 @@ export default {
 }
 
 
-.navbar {
+.nav_link {
+    color: white;
     display: flex;
     padding-left: 40%;
     padding-top: 2rem;
     font-size: 1.2rem;
 
 }
-.navbar span {
+.nav_link span {
     color: white;
     padding-left: 5px;
-}
-
-.navbar:hover i {
-    margin-right: 2.5rem;
 }
 </style>
