@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import expert from "../img/expert.jpg";
+import expert from "../../img/expert.jpg";
 
 
 export default {

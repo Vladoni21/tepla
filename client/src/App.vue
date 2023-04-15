@@ -1,13 +1,10 @@
-<!--script setup>
-  import {RouterView} from "vue-router"
-</script-->
-
 <template>
     <main id="app">
-        <Main></Main>
-        <Home></Home>
-        <LoaderDB></LoaderDB>
-        <LoaderIMG></LoaderIMG>
+        <Main/>
+        <Home/>
+
+        <CardBenefit/>
+        <CardBranch/>
         <!--RouterView/>
         <keep-alive>
           <index-view></index-view>
@@ -19,21 +16,18 @@
 
 
 import Main from "./views/Main.vue";
-import Home from './views/Home.vue'
-import About from "./views/About.vue";
-import LoaderDB from "./components/loaders/db_loader.vue";
-import LoaderIMG from "./components/loaders/img_loader.vue";
+import Home from './views/Home.vue';
+import CardBranch from "./components/gears/cards/CardBranch.vue";
+import CardBenefit from "./components/gears/cards/CardBenefit.vue";
 
 
 export default {
     name: 'app',
     components: {
+        CardBenefit,
+        CardBranch,
         Main,
         Home,
-        About,
-
-        LoaderDB,
-        LoaderIMG
     }
 }
 </script>
