@@ -47,26 +47,7 @@
         <section id="experts">
             <h1>Наши лучшие преподаватели</h1>
             <div class="expert-box">
-                <div class="profile">
-                    <img :src="image" alt="" class="expert">
-                    <h6>Райан Гослинг</h6>
-                    <p>Data science аналитик</p>
-                </div>
-                <div class="profile">
-                    <img :src="image" alt="" class="expert">
-                    <h6>Райан Гослинг</h6>
-                    <p>Сдал профильную метематику на 100 баллов</p>
-                </div>
-                <div class="profile">
-                    <img :src="image" alt="" class="expert">
-                    <h6>Райан Гослинг</h6>
-                    <p>JavaScript разработчик</p>
-                </div>
-                <div class="profile">
-                    <img :src="image" alt="" class="expert">
-                    <h6>Райан Гослинг</h6>
-                    <p>Дед немец, поэтому учитель немецкого</p>
-                </div>
+                <Grid v-bind:arr="top_experts"/>
             </div>
         </section>
         <!-- Courses -->
@@ -175,7 +156,7 @@
 <script>
 import Navbar from "../components/Navbar.vue";
 import Login from "../components/Login.vue";
-import expert from "./img/expert.jpg";
+import expert from "../components/img/expert.jpg";
 import Grid from "../components/Grid.vue";
 
 
@@ -190,6 +171,12 @@ export default {
                 {id: 4, title: "Математика", icon: "calculator", href: "#", class: "top_courses", gear: "LinkCourse"},
                 {id: 5, title: "Английский язык", icon: "globe", href: "#", class: "top_courses", gear: "LinkCourse"},
                 {id: 6, title: "Немецкий язык", icon: "globe", href: "#", class: "top_courses", gear: "LinkCourse"}
+            ],
+            top_experts: [
+                {id: 1, name: "Райан Гослинг", description: "Data science аналитик", img: expert, alt: "", href: "#", class: "top_experts", gear: "LinkExpert"},
+                {id: 2, name: "Райан Гослинг", description: "Сдал профильную метематику на 100 баллов", img: expert, alt: "", href: "#", class: "top_experts", gear: "LinkExpert"},
+                {id: 3, name: "Райан Гослинг", description: "JavaScript разработчик", img: expert, alt: "", href: "#", class: "top_experts", gear: "LinkExpert"},
+                {id: 4, name: "Райан Гослинг", description: "Дед немец, поэтому учитель немецкого", img: expert, alt: "", href: "#", class: "top_experts", gear: "LinkExpert"}
             ]
         }
     },

@@ -81,7 +81,7 @@
 </template>
 
 <script>
-import expert from "./img/expert.jpg";
+import expert from "../components/img/expert.jpg";
 import Grid from "../components/Grid.vue";
 
 

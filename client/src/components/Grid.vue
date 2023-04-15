@@ -5,12 +5,13 @@
 <script>
 import LinkButton from "./gears/LinkButton.vue";
 import LinkCourse from "./gears/LinkCourse.vue";
+import LinkExpert from "./gears/LinkExpert.vue";
 
 
 export default {
     name: "Grid",
     props: ['arr'],
-    components: {LinkButton, LinkCourse}
+    components: {LinkButton, LinkCourse, LinkExpert}
 }
 </script>
 
