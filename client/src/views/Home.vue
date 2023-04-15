@@ -40,42 +40,7 @@
         <section id="course">
             <h1>Наши популярные курсы</h1>
             <div class="course-box">
-                <div class="courses">
-                    <fa icon="code"/>
-                    <div class="details">
-                        <h6>Django разработчик</h6>
-                    </div>
-                </div>
-                <div class="courses">
-                    <fa icon="code"/>
-                    <div class="details">
-                        <h6>Python разработчик</h6>
-                    </div>
-                </div>
-                <div class="courses">
-                    <fa icon="code"/>
-                    <div class="details">
-                        <h6>JavaScript разработчик</h6>
-                    </div>
-                </div>
-                <div class="courses">
-                    <fa icon="calculator"/>
-                    <div class="details">
-                        <h6>Математика</h6>
-                    </div>
-                </div>
-                <div class="courses">
-                    <fa icon="globe"/>
-                    <div class="details">
-                        <h6>Английский язык</h6>
-                    </div>
-                </div>
-                <div class="courses">
-                    <fa icon="globe"/>
-                    <div class="details">
-                        <h6>Немецкий язык</h6>
-                    </div>
-                </div>
+                <Grid v-bind:arr="top_courses"/>
             </div>
         </section>
         <!--Profiles-->
@@ -211,17 +176,28 @@
 import Navbar from "../components/Navbar.vue";
 import Login from "../components/Login.vue";
 import expert from "./img/expert.jpg";
+import Grid from "../components/Grid.vue";
+
 
 export default {
     data() {
         return {
-            image: expert
+            image: expert,
+            top_courses: [
+                {id: 1, title: "Django разработчик", icon: "code", href: "#", class: "top_courses", gear: "LinkCourse"},
+                {id: 2, title: "Python разработчик", icon: "code", href: "#", class: "top_courses", gear: "LinkCourse"},
+                {id: 3, title: "JavaScript разработчик", icon: "code", href: "#", class: "top_courses", gear: "LinkCourse"},
+                {id: 4, title: "Математика", icon: "calculator", href: "#", class: "top_courses", gear: "LinkCourse"},
+                {id: 5, title: "Английский язык", icon: "globe", href: "#", class: "top_courses", gear: "LinkCourse"},
+                {id: 6, title: "Немецкий язык", icon: "globe", href: "#", class: "top_courses", gear: "LinkCourse"}
+            ]
         }
     },
     name: "Home",
     components: {
         Navbar,
-        Login
+        Login,
+        Grid
     }
 }
 </script>

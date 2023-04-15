@@ -43,7 +43,7 @@
         </div>
         <nav class="navbar">
             <div class="icons">
-                <LinkGrid v-bind:arr="sidebar_menu"/>
+                <Grid v-bind:arr="sidebar_menu"/>
             </div>
         </nav>
     </div>
@@ -62,13 +62,13 @@
             <div class="box">
                 <h3 class="title">Топ категорий</h3>
                 <div class="flex">
-                    <LinkGrid v-bind:arr="sidebar_top_categories"/>
+                    <Grid v-bind:arr="sidebar_top_categories"/>
                 </div>
             </div>
             <div class="box">
                 <h3 class="title">Популярные курсы</h3>
                 <div class="flex">
-                    <LinkGrid v-bind:arr="sidebar_top_courses"/>
+                    <Grid v-bind:arr="sidebar_top_courses"/>
                 </div>
             </div>
             <div class="box">
@@ -82,39 +82,40 @@
 
 <script>
 import expert from "./img/expert.jpg";
-import LinkGrid from "../components/gears/LinkGrid.vue";
+import Grid from "../components/Grid.vue";
+
 
 export default {
-    components: {LinkGrid},
+    components: {Grid},
     data() {
         return {
             image: expert,
             isProfileVisible: false,
             isSidebarVisible: false,
             sidebar_top_categories: [
-                {id: 1, title: "Разработка", icon: "code", href: "#", class: "default"},
-                {id: 2, title: "Бизнес", icon: "chart-simple", href: "#", class: "default"},
-                {id: 3, title: "Дизайн", icon: "pen", href: "#", class: "default"},
-                {id: 4, title: "Маркетинг", icon: "chart-line", href: "#", class: "default"},
-                {id: 5, title: "Музыка", icon: "music", href: "#", class: "default"},
-                {id: 6, title: "Фото", icon: "camera", href: "#", class: "default"},
-                {id: 7, title: "ПО", icon: "cog", href: "#", class: "default"},
-                {id: 8, title: "Наука", icon: "vial", href: "#", class: "default"},
+                {id: 1, title: "Разработка", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 2, title: "Бизнес", icon: "chart-simple", href: "#", class: "default", gear: "LinkButton"},
+                {id: 3, title: "Дизайн", icon: "pen", href: "#", class: "default", gear: "LinkButton"},
+                {id: 4, title: "Маркетинг", icon: "chart-line", href: "#", class: "default", gear: "LinkButton"},
+                {id: 5, title: "Музыка", icon: "music", href: "#", class: "default", gear: "LinkButton"},
+                {id: 6, title: "Фото", icon: "camera", href: "#", class: "default", gear: "LinkButton"},
+                {id: 7, title: "ПО", icon: "cog", href: "#", class: "default", gear: "LinkButton"},
+                {id: 8, title: "Наука", icon: "vial", href: "#", class: "default", gear: "LinkButton"}
             ],
             sidebar_top_courses: [
-                {id: 1, title: "HTML", icon: "code", href: "#", class: "default"},
-                {id: 2, title: "CSS", icon: "code", href: "#", class: "default"},
-                {id: 3, title: "javascript", icon: "code", href: "#", class: "default"},
-                {id: 4, title: "react", icon: "code", href: "#", class: "default"},
-                {id: 5, title: "PHP", icon: "code", href: "#", class: "default"},
-                {id: 6, title: "bootstrap", icon: "code", href: "#", class: "default"},
+                {id: 1, title: "HTML", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 2, title: "CSS", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 3, title: "javascript", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 4, title: "react", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 5, title: "PHP", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 6, title: "bootstrap", icon: "code", href: "#", class: "default", gear: "LinkButton"}
             ],
             sidebar_menu: [
-                {id: 1, title: "Домой", icon: "home", href: "#", class: "nav_link"},
-                {id: 2, title: "О нас", icon: "question", href: "#", class: "nav_link"},
-                {id: 3, title: "Курсы", icon: "graduation-cap", href: "#", class: "nav_link"},
-                {id: 4, title: "Учителя", icon: "chalkboard-user", href: "#", class: "nav_link"},
-                {id: 5, title: "Поддержка", icon: "headset", href: "#", class: "nav_link"},
+                {id: 1, title: "Домой", icon: "home", href: "#", class: "nav_link", gear: "LinkButton"},
+                {id: 2, title: "О нас", icon: "question", href: "#", class: "nav_link", gear: "LinkButton"},
+                {id: 3, title: "Курсы", icon: "graduation-cap", href: "#", class: "nav_link", gear: "LinkButton"},
+                {id: 4, title: "Учителя", icon: "chalkboard-user", href: "#", class: "nav_link", gear: "LinkButton"},
+                {id: 5, title: "Поддержка", icon: "headset", href: "#", class: "nav_link", gear: "LinkButton"}
             ]
         }
     },
