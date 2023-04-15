@@ -24,7 +24,7 @@ export default {
     font-size: 2.3rem;
     border-radius: 5px;
     text-align: center;
-    background: #95D7AE;
+    background: #62B6CB;
     height: 100%;
 }
 </style>

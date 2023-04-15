@@ -24,7 +24,7 @@ export default {
 <style scoped>
 .top_experts {
     font-size: 1em;
-    background: #95D7AE;
+    background: #62B6CB;
     padding-top: 30px;
     border-radius: 5px;
 }

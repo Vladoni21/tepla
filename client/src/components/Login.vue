@@ -30,27 +30,23 @@ export default {
 
 <style>
 {
-    display: flex
-;
-    justify-content: center
-;
-    align-items: center
-;
-    min-height: 100vh
-;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 .box {
     position: relative;
     width: 380px;
     height: 420px;
-    background: #7BAE7F;
+    background: #FFFFFF;
     border-radius: 8px;
 }
 
 .box form {
     position: absolute;
     inset: 4px;
-    background: #95D7AE;
+    background: #62B6CB;
     padding: 50px 40px;
     border-radius: 8px;
     z-index: 2;

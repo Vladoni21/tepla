@@ -77,7 +77,7 @@ export default {
 
 .grid_benefit {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 32px;
     padding: 30px;
     @media screen and (max-width: 991px) {

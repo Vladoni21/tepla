@@ -50,105 +50,6 @@
                 <Grid v-bind:arr="top_experts"/>
             </div>
         </section>
-        <!-- Courses -->
-        <section id="courses">
-            <h1 class="heading">our courses</h1>
-            <div class="box-container">
-                <div class="box">
-                    <div class="tutor">
-                        <!--img src="images/pic-2.jpg" alt=""-->
-                        <div class="info">
-                            <h3>john deo</h3>
-                            <span>21-10-2022</span>
-                        </div>
-                    </div>
-                    <div class="thumb">
-                        <!--img src="images/thumb-1.png" alt=""-->
-                        <span>10 videos</span>
-                    </div>
-                    <h3 class="title">complete HTML tutorial</h3>
-                    <!--a href="playlist.html" class="inline-btn">view playlist</a-->
-                </div>
-                <div class="box">
-                    <div class="tutor">
-                        <!--img src="images/pic-3.jpg" alt=""-->
-                        <div class="info">
-                            <h3>john deo</h3>
-                            <span>21-10-2022</span>
-                        </div>
-                    </div>
-                    <div class="thumb">
-                        <!--img src="images/thumb-2.png" alt=""-->
-                        <span>10 videos</span>
-                    </div>
-                    <h3 class="title">complete CSS tutorial</h3>
-                    <!--a href="playlist.html" class="inline-btn">view playlist</a-->
-                </div>
-                <div class="box">
-                    <div class="tutor">
-                        <!--img src="images/pic-4.jpg" alt=""-->
-                        <div class="info">
-                            <h3>john deo</h3>
-                            <span>21-10-2022</span>
-                        </div>
-                    </div>
-                    <div class="thumb">
-                        <!--img src="images/thumb-3.png" alt=""-->
-                        <span>10 videos</span>
-                    </div>
-                    <h3 class="title">complete JS tutorial</h3>
-                    <!--a href="playlist.html" class="inline-btn">view playlist</a-->
-                </div>
-                <div class="box">
-                    <div class="tutor">
-                        <!--img src="images/pic-5.jpg" alt=""-->
-                        <div class="info">
-                            <h3>john deo</h3>
-                            <span>21-10-2022</span>
-                        </div>
-                    </div>
-                    <div class="thumb">
-                        <!--img src="images/thumb-4.png" alt=""-->
-                        <span>10 videos</span>
-                    </div>
-                    <h3 class="title">complete Boostrap tutorial</h3>
-                    <!--a href="playlist.html" class="inline-btn">view playlist</a-->
-                </div>
-                <div class="box">
-                    <div class="tutor">
-                        <!--img src="images/pic-6.jpg" alt=""-->
-                        <div class="info">
-                            <h3>john deo</h3>
-                            <span>21-10-2022</span>
-                        </div>
-                    </div>
-                    <div class="thumb">
-                        <!--img src="images/thumb-5.png" alt=""-->
-                        <span>10 videos</span>
-                    </div>
-                    <h3 class="title">complete JQuery tutorial</h3>
-                    <!--a href="playlist.html" class="inline-btn">view playlist</a-->
-                </div>
-                <div class="box">
-                    <div class="tutor">
-                        <!--img src="images/pic-7.jpg" alt=""-->
-                        <div class="info">
-                            <h3>john deo</h3>
-                            <span>21-10-2022</span>
-                        </div>
-                    </div>
-                    <div class="thumb">
-                        <!--img src="images/thumb-6.png" alt=""-->
-                        <span>10 videos</span>
-                    </div>
-                    <h3 class="title">complete SASS tutorial</h3>
-                    <!--a href="playlist.html" class="inline-btn">view playlist</a-->
-                </div>
-            </div>
-            <div class="more-btn">
-                <!--a href="courses.html" class="inline-option-btn">view all courses</a-->
-            </div>
-        </section>
     </article>
     <article>
         <Card v-bind:arr="test"/>
@@ -202,9 +103,9 @@ export default {
 <style scoped>
 
 :root {
-    --main-color: #8e44ad;
-    --red: #e74c3c;
-    --orange: #f39c12;
+    --main-color: #CAE9FF;
+    --blue: #5FA8D3;
+    --light-blue: #62B6CB;
     --light-color: #888;
     --light-bg: #eee;
     --black: #2c3e50;
@@ -228,7 +129,7 @@ export default {
     position: relative;
     min-width: 800px;
     height: 450px;
-    background: #7BAE7F;
+    background: #5FA8D3;
     border: 1px solid white;
     border-radius: 5px;
 }
@@ -248,7 +149,7 @@ export default {
 
 /* features */
 #features .fea-disc {
-    background-color: #7BAE7F;
+    background-color: #5FA8D3;
     border-radius: 5px;
     font-family: 'Open Sans', sans-serif;
     color: white;
@@ -278,7 +179,7 @@ export default {
 
 #features .fea-box {
     border-radius: 5px;
-    background: #95D7AE;
+    background: #62B6CB;
     text-align: center;
 }
 
@@ -306,7 +207,7 @@ export default {
 #course {
     margin-top: 50px;
     text-align: center;
-    background-color: #7BAE7F;
+    background-color: #5FA8D3;
     border-radius: 5px;
     font-family: 'Open Sans', sans-serif;
     color: white;
@@ -327,7 +228,7 @@ export default {
     font-size: 2.3rem;
     border-radius: 5px;
     text-align: center;
-    background: #95D7AE;
+    background: #62B6CB;
     height: 100%;
 }
 
@@ -346,7 +247,7 @@ export default {
 #experts {
     margin-top: 50px;
     text-align: center;
-    background-color: #7BAE7F;
+    background-color: #5FA8D3;
     border-radius: 5px;
     font-family: 'Open Sans', sans-serif;
     color: white;
@@ -365,7 +266,7 @@ export default {
 
 #experts .expert-box .profile {
     font-size: 1em;
-    background: #95D7AE;
+    background: #5FA8D3;
     padding-top: 30px;
     border-radius: 5px;
 }
@@ -374,78 +275,5 @@ export default {
     font-size: 1.2em;
 }
 
-/* courses */
-#courses .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-#courses .box-container .box {
-    border-radius: .5rem;
-    background-color: var(--white);
-    padding: 2rem;
-}
-
-#courses .box-container .box .tutor {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
-}
-
-#courses .box-container .box .tutor img {
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-#courses .box-container .box .tutor h3 {
-    font-size: 1.8rem;
-    color: var(--black);
-    margin-bottom: .2rem;
-}
-
-#courses .box-container .box .tutor span {
-    font-size: 1.3rem;
-    color: var(--light-color);
-}
-
-#courses .box-container .box .thumb {
-    position: relative;
-}
-
-#courses .box-container .box .thumb span {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    border-radius: .5rem;
-    padding: .5rem 1.5rem;
-    background-color: rgba(0, 0, 0, .3);
-    color: #fff;
-    font-size: 1.5rem;
-}
-
-#courses .box-container .box .thumb img {
-    width: 100%;
-    height: 20rem;
-    object-fit: cover;
-    border-radius: .5rem;
-}
-
-#courses .box-container .box .title {
-    font-size: 2rem;
-    color: var(--black);
-    padding-bottom: .5rem;
-    padding-top: 1rem;
-}
-
-#courses .more-btn {
-    text-align: center;
-    margin-top: 2rem;
-}
 
 </style>

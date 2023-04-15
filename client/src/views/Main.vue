@@ -78,6 +78,106 @@
             </div>
         </div>
     </section>
+    <!-- Courses -->
+    <section id="courses">
+        <h1 class="heading">our courses</h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="tutor">
+                    <!--img src="images/pic-2.jpg" alt=""-->
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <!--img src="images/thumb-1.png" alt=""-->
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete HTML tutorial</h3>
+                <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+            </div>
+            <div class="box">
+                <div class="tutor">
+                    <!--img src="images/pic-3.jpg" alt=""-->
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <!--img src="images/thumb-2.png" alt=""-->
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete CSS tutorial</h3>
+                <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+            </div>
+            <div class="box">
+                <div class="tutor">
+                    <!--img src="images/pic-4.jpg" alt=""-->
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <!--img src="images/thumb-3.png" alt=""-->
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete JS tutorial</h3>
+                <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+            </div>
+            <div class="box">
+                <div class="tutor">
+                    <!--img src="images/pic-5.jpg" alt=""-->
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <!--img src="images/thumb-4.png" alt=""-->
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete Boostrap tutorial</h3>
+                <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+            </div>
+            <div class="box">
+                <div class="tutor">
+                    <!--img src="images/pic-6.jpg" alt=""-->
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <!--img src="images/thumb-5.png" alt=""-->
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete JQuery tutorial</h3>
+                <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+            </div>
+            <div class="box">
+                <div class="tutor">
+                    <!--img src="images/pic-7.jpg" alt=""-->
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>21-10-2022</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <!--img src="images/thumb-6.png" alt=""-->
+                    <span>10 videos</span>
+                </div>
+                <h3 class="title">complete SASS tutorial</h3>
+                <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+            </div>
+        </div>
+        <div class="more-btn">
+            <!--a href="courses.html" class="inline-option-btn">view all courses</a-->
+        </div>
+    </section>
+
 </template>
 
 <script>
@@ -144,7 +244,7 @@ export default {
 }
 
 *::selection {
-    background-color: #7BAE7F;
+    background-color: #62B6CB;
     color: white;
 }
 
@@ -158,7 +258,7 @@ export default {
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #7BAE7F;
+    background-color: #62B6CB;
 }
 
 html {
@@ -180,12 +280,12 @@ section {
     cursor: pointer;
     width: 3rem;
     line-height: 3rem;
-    background-color: #7BAE7F;
+    background-color: #62B6CB;
     text-align: center;
 }
 
 .sd-bar:hover {
-    background-color: white;
+    background-color: #5FA8D3;
 }
 
 .btn,
@@ -219,12 +319,12 @@ section {
 
 .btn,
 .inline-btn {
-    background-color: #7BAE7F;
+    background-color: #62B6CB;
 }
 
 .option-btn,
 .inline-option-btn {
-    background-color: #7BAE7F;
+    background-color: #62B6CB;
 }
 
 .delete-btn,
@@ -238,7 +338,7 @@ section {
 .inline-btn:hover,
 .inline-option-btn:hover,
 .inline-delete-btn:hover {
-    background-color: #73956F;
+    background-color: #5FA8D3;
     color: white;
 }
 
@@ -248,7 +348,7 @@ section {
 }
 
 .header {
-    background-color: #95D7AE;
+    background-color: #5FA8D3;
     border-bottom: white;
     position: sticky;
     top: 0;
@@ -280,7 +380,7 @@ section {
     align-content: center;
     gap: 2rem;
     padding: 0.5rem 1rem;
-    background-color: #7BAE7F;
+    background-color: #62B6CB;
 }
 
 .header .flex .search-form input {
@@ -309,20 +409,20 @@ section {
     cursor: pointer;
     width: 3rem;
     line-height: 3rem;
-    background-color: #7BAE7F;
+    background-color: #62B6CB;
     text-align: center;
     margin-left: 1rem;
 }
 
 .header .flex .icons div:hover {
-    background-color: white;
+    background-color: #5FA8D3;
 }
 
 .header .flex .profile {
     position: absolute;
     top: 120%;
     right: 2rem;
-    background-color: #95D7AE;
+    background-color: #5FA8D3;
     border-radius: .5rem;
     padding: 2rem;
     text-align: center;
@@ -354,7 +454,7 @@ section {
     left: 0;
     height: 100vh;
     width: 30rem;
-    background-color: #95D7AE;
+    background-color: #5FA8D3;
     border-right: white;
     margin-top: 100px;
     z-index: 100;
@@ -418,7 +518,7 @@ section {
 }
 
 .home-grid .box-container .box {
-    background-color: #95D7AE;
+    background-color: #5FA8D3;
     border-radius: .5rem;
     padding: 1rem;
     height: auto;
@@ -438,7 +538,7 @@ section {
 }
 
 .home-grid .box-container .flex a {
-    background-color: #7BAE7F;
+    background-color: #62B6CB;
     border-radius: .5rem;
     padding: 1rem 1.5rem;
     font-size: 1.5rem;
@@ -454,7 +554,7 @@ section {
 }
 
 .home-grid .box-container .flex a:hover {
-    background-color: #73956F;
+    background-color: #62B6CB;
 }
 
 .home-grid .box-container .flex a:hover span {
@@ -479,7 +579,80 @@ section {
 }
 
 .home-grid .box-container .likes span {
-    color: #7BAE7F;
+    color: #FFFFFF;
+}
+/* courses */
+#courses .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#courses .box-container .box {
+    border-radius: .5rem;
+    background-color: var(--white);
+    padding: 2rem;
+}
+
+#courses .box-container .box .tutor {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+#courses .box-container .box .tutor img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#courses .box-container .box .tutor h3 {
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: .2rem;
+}
+
+#courses .box-container .box .tutor span {
+    font-size: 1.3rem;
+    color: var(--light-color);
+}
+
+#courses .box-container .box .thumb {
+    position: relative;
+}
+
+#courses .box-container .box .thumb span {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    background-color: rgba(0, 0, 0, .3);
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#courses .box-container .box .thumb img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+#courses .box-container .box .title {
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+    padding-top: 1rem;
+}
+
+#courses .more-btn {
+    text-align: center;
+    margin-top: 2rem;
 }
 
 </style>
