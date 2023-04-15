@@ -1,7 +1,5 @@
 <template>
-    <div class="flex">
-        <LinkButton v-for="i of arr" v-bind:item="i"/>
-    </div>
+    <LinkButton v-for="i of arr" v-bind:item="i"/>
 </template>
 
 <script>

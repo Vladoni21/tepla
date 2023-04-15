@@ -24,6 +24,7 @@ export default {
     padding: 1rem 1.5rem;
     font-size: 1.5rem;
 }
+
 .default i{
     margin-right: 1rem;
     color: white;
@@ -35,41 +36,24 @@ export default {
 .default a:hover{
     background-color: #73956F;
 }
-
 .default a:hover span{
     color:white;
 }
-
 .default a:hover i{
     color: white;
 }
-/*
-.home-grid .box-container .flex a{
-    background-color: #7BAE7F;
-    border-radius: .5rem;
-    padding: 1rem 1.5rem;
-    font-size: 1.5rem;
-}
 
-.home-grid .box-container .flex a i{
-    margin-right: 1rem;
+
+.nav_link {
     color: white;
-}
+    display: flex;
+    padding-left: 40%;
+    padding-top: 2rem;
+    font-size: 1.2rem;
 
-.home-grid .box-container .flex a span{
+}
+.nav_link span {
     color: white;
+    padding-left: 5px;
 }
-
-.home-grid .box-container .flex a:hover{
-    background-color: #73956F;
-}
-
-.home-grid .box-container .flex a:hover span{
-    color:white;
-}
-
-.home-grid .box-container .flex a:hover i{
-    color: white;
-}
-*/
 </style>

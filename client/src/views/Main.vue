@@ -43,23 +43,8 @@
         </div>
         <nav class="navbar">
             <div class="icons">
-                <a href="#">
-                    <fa icon="home"/>
-                    <span>Домой</span></a>
-                <a href="#">
-                    <fa icon="question"/>
-                    <span>О нас</span></a>
-                <a href="#">
-                    <fa icon="graduation-cap"/>
-                    <span>Курсы</span></a>
-                <a href="#">
-                    <fa icon="chalkboard-user"/>
-                    <span>Учителя</span></a>
-                <a href="#">
-                    <fa icon="headset"/>
-                    <span>Поддержка</span></a>
+                <LinkGrid v-bind:arr="sidebar_menu"/>
             </div>
-
         </nav>
     </div>
   <!--side bar-->
@@ -76,11 +61,15 @@
             </div>
             <div class="box">
                 <h3 class="title">Топ категорий</h3>
-                <LinkGrid v-bind:arr="sidebar_top_categories"/>
+                <div class="flex">
+                    <LinkGrid v-bind:arr="sidebar_top_categories"/>
+                </div>
             </div>
             <div class="box">
                 <h3 class="title">Популярные курсы</h3>
-                <LinkGrid v-bind:arr="sidebar_top_courses"/>
+                <div class="flex">
+                    <LinkGrid v-bind:arr="sidebar_top_courses"/>
+                </div>
             </div>
             <div class="box">
                 <h3 class="title">Стать преподавателем</h3>
@@ -119,6 +108,13 @@ export default {
                 {id: 4, title: "react", icon: "code", href: "#", class: "default"},
                 {id: 5, title: "PHP", icon: "code", href: "#", class: "default"},
                 {id: 6, title: "bootstrap", icon: "code", href: "#", class: "default"},
+            ],
+            sidebar_menu: [
+                {id: 1, title: "Домой", icon: "home", href: "#", class: "nav_link"},
+                {id: 2, title: "О нас", icon: "question", href: "#", class: "nav_link"},
+                {id: 3, title: "Курсы", icon: "graduation-cap", href: "#", class: "nav_link"},
+                {id: 4, title: "Учителя", icon: "chalkboard-user", href: "#", class: "nav_link"},
+                {id: 5, title: "Поддержка", icon: "headset", href: "#", class: "nav_link"},
             ]
         }
     },
