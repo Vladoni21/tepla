@@ -5,7 +5,7 @@
                 <li>
                     <a href="#">
                         <svg class="icon icon--2x">
-                            <use xlink:href="#icon-home"/>
+                            <fa icon="home"/>
                         </svg>
                         <span class="invisible">Home</span>
                     </a>
@@ -13,15 +13,7 @@
                 <li>
                     <a href="#">
                         <svg class="icon icon--2x">
-                            <use xlink:href="#icon-home"/>
-                        </svg>
-                        <span class="invisible">Search</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <svg class="icon icon--2x">
-                            <use xlink:href="#icon-cart"/>
+                            <fa icon="shopping-cart"/>
                         </svg>
                         <span class="invisible">Products</span>
                     </a>
@@ -29,7 +21,7 @@
                 <li>
                     <a href="#">
                         <svg class="icon icon--2x">
-                            <use xlink:href="#icon-bell"/>
+                            <fa icon="bell"/>
                         </svg>
                         <span class="invisible">Notifications</span>
                     </a>
@@ -37,7 +29,7 @@
                 <li>
                     <a href="#">
                         <svg class="icon icon--2x">
-                            <use xlink:href="#icon-user"/>
+                            <fa icon="user"/>
                         </svg>
                         <span class="invisible">Profile</span>
                     </a>

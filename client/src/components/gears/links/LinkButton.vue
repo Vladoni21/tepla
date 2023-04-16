@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
 .default {
-    background-color: #7BAE7F;
+    background-color: #62B6CB;
     border-radius: .5rem;
     padding: 1rem 1.5rem;
     font-size: 1.5rem;
@@ -34,7 +34,7 @@ export default {
 }
 
 .default a:hover{
-    background-color: #73956F;
+    background-color: #5FA8D3;
 }
 .default a:hover span{
     color:white;
@@ -42,7 +42,6 @@ export default {
 .default a:hover i{
     color: white;
 }
-
 
 .nav_link {
     color: white;

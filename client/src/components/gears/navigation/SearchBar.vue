@@ -4,7 +4,7 @@
                aria-describedby="search-addon"/>
               <a href="#" class="button">
                   <svg class="icon icon--2x">
-                      <use xlink:href="#icon-search"/>
+                      <fa icon="search"/>
                   </svg>
               </a>
     </section>
