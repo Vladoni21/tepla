@@ -51,7 +51,7 @@
             </div>
         </section>
     </article>
-    <article>
+    <article class="Home">
         <Card v-bind:arr="test"/>
     </article>
 </template>
@@ -82,11 +82,12 @@ export default {
                 {id: 4, name: "Райан Гослинг", description: "Дед немец, поэтому учитель немецкого", img: expert, alt: "", href: "#", class: "top_experts", gear: "LinkExpert"}
             ],
             test: [
-                {id: 1, gear: "CardBenefit", grid: "grid_benefit", class: "bg-green-box"},
-                {id: 2, gear: "CardBenefit", grid: "grid_benefit", class: "bg-white-box"},
-                {id: 3, gear: "CardBenefit", grid: "grid_benefit", class: "bg-yellow-box"},
-                {id: 4, gear: "CardBenefit", grid: "grid_benefit", class: "bg-blue-box"},
-                {id: 5, gear: "CardBranch", grid: "grid_branch", class: ""}
+                {id: 1, gear: "CardBenefit", grid: "grid_benefit", class: "bg-green-box", description: "Hubble lets users borrow USDH for a one-time 0.5% fee. No variable\n" +
+                        " rates. No interest charged, ever.", title: "Zero-cost Possibilities", icon: ""},
+                {id: 2, gear: "CardBenefit", grid: "grid_benefit", class: "bg-white-box", description: "Deposit a variety of assets on Hubble, raise your collateral ratio, and unlock the liquidity in your wallet.", title: "Multi-Asset Collateral", icon: ""},
+                {id: 3, gear: "CardBenefit", grid: "grid_benefit", class: "bg-yellow-box", description: "While your collateral is deposited, delegate it to earn the highest yield available in the Solana ecosystem.", title: "Get Yield on Deposits", icon: ""},
+                {id: 4, gear: "CardBenefit", grid: "grid_benefit", class: "bg-blue-box", description: "Hubble’s capital-efficient 110% collateral ratio lets users leverage up to 11x on their deposits.", title: "Get up to 11x Leverage", icon: ""},
+                {id: 5, gear: "CardBranch", grid: "grid_branch", class: "", icon: ""}
             ]
         }
     },

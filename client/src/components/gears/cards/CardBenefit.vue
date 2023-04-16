@@ -24,9 +24,8 @@
                     </radialGradient>
                 </defs>
             </svg>
-            <p class="card-title">Zero-cost Possibilities</p>
-            <p class="card-description">Hubble lets users borrow USDH for a one-time 0.5% fee. No variable
-                rates. No interest charged, ever.</p>
+            <p class="card-title">{{item.title}}</p>
+            <p class="card-description">{{item.description}}</p>
         </div>
     </div>
 </template>
@@ -45,9 +44,9 @@ export default {
 
 <style scoped>
 .card {
-    max-width: 550px;
+    min-width: 500px;
     border: 0;
-    width: 100%;
+    width: 40%;
     margin-inline: auto;
     background: rgba(0, 0, 0, 0);
 }

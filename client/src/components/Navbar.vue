@@ -1,9 +1,10 @@
 <template>
     <section class="lined">
         <div class="navbar">
-            <a href="#" class="logo">TEAPLA</a>
-            <Logo></Logo>
-            <nav class="nav-links">
+            <Logo/>
+            <SearchBar/>
+            <NavIcon/>
+            <!--nav class="nav-links">
                 <ul>
                     <li class="active"><a href="#">Главная</a></li>
                     <li><a href="#">Курсы</a></li>
@@ -11,18 +12,20 @@
                     <li><a href="#">Контакты</a></li>
                     <li><a href="#">Поддержка</a></li>
                 </ul>
-            </nav>
+            </nav-->
         </div>
     </section>
 </template>
 
 <script>
-import Logo from "../components/Logo.vue"
+import NavIcon from "./gears/navigation/NavIcon.vue";
+import Logo from "./gears/navigation/Logo.vue";
+import SearchBar from "./gears/navigation/SearchBar.vue";
 
 
 export default {
     name: "Navbar",
-    components: {Logo}
+    components: {SearchBar, NavIcon, Logo}
 }
 </script>
 
@@ -43,6 +46,8 @@ export default {
     font-family: 'Open Sans', sans-serif;
 }
 
+
+
 .navbar a {
     color: white;
     text-decoration: none;
@@ -58,11 +63,12 @@ a:hover {
     background-size: 100% 2px;
 }
 
-.navbar .logo {
-    font-size: 2em;
-    font-weight: bold;
-    text-decoration: none;
-    z-index: 1;
+.navbar .nav-links {
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    width: fit-content;
+    overflow: hidden;
 }
 
 .navbar .nav-links ul {

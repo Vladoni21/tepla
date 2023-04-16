@@ -73,10 +73,17 @@ export default {
         padding: 0 !important;
         width: auto !important;
     }
+
+    display: flex;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .grid_benefit {
     display: grid;
+    width: min-content;
     grid-template-columns: repeat(1, 1fr);
     gap: 32px;
     padding: 30px;

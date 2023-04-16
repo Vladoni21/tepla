@@ -28,7 +28,7 @@ export default {
 <style scoped>
 .mosaic-loader {
     --cell-size: 16px;
-    --cell-spacing: 1px;
+    --cell-spacing: 0px;
     --border-width: 0px;
     --cells: 4;
     --total-size: calc(
@@ -39,9 +39,12 @@ export default {
     flex-wrap: wrap;
     width: var(--total-size);
     height: var(--total-size);
+    justify-content: center;
 
     position: absolute;
     z-index: 0;
+    top: 4px;
+    left: 4px;
 }
 .mosaic-loader > .cell {
     --cell-color: white;
