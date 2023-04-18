@@ -1,8 +1,5 @@
 <template xmlns="http://www.w3.org/1999/html">
     <article class="Home">
-        <div class="navbar">
-            <Navbar></Navbar>
-        </div>
         <div class="login">
             <div class="text">
                 <h2>Добро пожаловать!</h2>

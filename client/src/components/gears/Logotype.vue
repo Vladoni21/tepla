@@ -43,8 +43,6 @@ export default {
 
     position: absolute;
     z-index: 0;
-    top: 4px;
-    left: 4px;
 }
 .mosaic-loader > .cell {
     --cell-color: white;

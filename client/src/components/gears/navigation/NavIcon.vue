@@ -98,7 +98,7 @@ section ul {
 
 section a {
     display: block;
-    padding: 20px;
+    padding: 15px 20px;
     position: relative;
     text-decoration: none;
 }

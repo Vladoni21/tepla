@@ -2,7 +2,8 @@
 <template>
   <!--header-->
     <header class="header">
-        <section class="flex">
+      <Navbar/>
+        <!--section class="flex">
             <div class="sd-bar">
                 <div @click="showSidebar" id="user-btn">
                     <fa icon="bars"/>
@@ -31,7 +32,7 @@
                     <a href="#" class="option-btn">Регистрация</a>
                 </div>
             </div>
-        </section>
+        </section-->
     </header>
   <!--side bar-->
     <div v-if="isSidebarVisible" class="side-bar">
@@ -183,10 +184,11 @@
 <script>
 import expert from "../components/img/expert.jpg";
 import Grid from "../components/Grid.vue";
+import Navbar from "../components/Navbar.vue";
 
 
 export default {
-    components: {Grid},
+    components: {Navbar, Grid},
     data() {
         return {
             image: expert,

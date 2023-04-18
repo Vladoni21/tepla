@@ -41,8 +41,11 @@ export default {
 
 .logo {
     display: flex;
+    /*
     box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 1);
+
+   */
     border-radius: 10px;
     width: fit-content;
     overflow: hidden;
@@ -54,6 +57,7 @@ export default {
     text-decoration: none;
     z-index: 1;
     padding: 10px;
-    color: rgba(45, 160, 249, 1);
+    /* color: rgba(45, 160, 249, 1); */
+    color: white;
 }
 </style>

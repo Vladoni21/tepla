@@ -28,11 +28,12 @@ section {
     width: 626px;
 }
 .icon {
-    block-size: 1em;
+    block-size: 0.8em;
     display: inline-block;
     fill: currentcolor;
     inline-size: 1em;
     vertical-align: middle;
+    transition: 0.5s;
 }
 
 .icon--2x {
@@ -46,12 +47,13 @@ section {
     padding-left: 30px;
     font-size: 20px;
     border-bottom: 3px solid rgba(0,0,0,0);
+    transition: 0.5s;
 }
 .input:hover {
     border-bottom: 3px solid #5FA8D3;
 }
 .button {
-    padding: 20px;
+    padding: 15px;
     background-color: rgba(96,160,210,0.1);
 }
 </style>

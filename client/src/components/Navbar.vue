@@ -1,19 +1,9 @@
 <template>
-    <section class="lined">
-        <div class="navbar">
-            <Logo/>
-            <SearchBar/>
-            <NavIcon/>
-            <!--nav class="nav-links">
-                <ul>
-                    <li class="active"><a href="#">Главная</a></li>
-                    <li><a href="#">Курсы</a></li>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Поддержка</a></li>
-                </ul>
-            </nav-->
-        </div>
+    <section class="navbar">
+        <Logo/>
+        <SearchBar/>
+        <NavIcon/>
+        <LogBtn/>
     </section>
 </template>
 
@@ -21,32 +11,31 @@
 import NavIcon from "./gears/navigation/NavIcon.vue";
 import Logo from "./gears/navigation/Logo.vue";
 import SearchBar from "./gears/navigation/SearchBar.vue";
+import LogBtn from "./gears/navigation/LogBtn.vue";
 
 
 export default {
     name: "Navbar",
-    components: {SearchBar, NavIcon, Logo}
+    components: {LogBtn, SearchBar, NavIcon, Logo}
 }
 </script>
 
 <style scoped>
-.lined {
-    height: 100px;
-}
 
 .navbar {
-    position: absolute;
+    /* position: absolute; */
     padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 800px;
     width: 100%;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    background-color: #5FA8D3;
+    border-bottom: white;
+    min-width: 1400px;
+    min-height: 100px;
 }
-
-
 
 .navbar a {
     color: white;
