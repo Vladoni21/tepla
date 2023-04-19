@@ -1,23 +1,23 @@
 <template xmlns="http://www.w3.org/1999/html">
-    <article class="Home">
+    <section class="Home">
         <div class="navbar">
             <Navbar></Navbar>
         </div>
-        <div class="login">
+        <article class="login">
             <div class="text">
-                <h2>Добро пожаловать!</h2>
-                <p>TEAPLA - это уникальная обучающая платформа, где вы можете научиться чему угодно в любое время и в
-                    любом
-                    месте. Узнайте что угодно: начиная от изучения языков и заканчивая программированием, маркетингом,
-                    финансами и
-                    предпринимательством. </p>
+              <h2>Добро пожаловать!</h2>
+              <p>TEAPLA - это уникальная обучающая платформа, где вы можете научиться чему угодно в любое время и в
+                любом
+                месте. Узнайте что угодно: начиная от изучения языков и заканчивая программированием, маркетингом,
+                финансами и
+                предпринимательством. </p>
             </div>
             <div class="item">
-                <Login></Login>
+              <LoginNew/>
             </div>
-        </div>
+        </article>
         <!--features-->
-        <section id="features">
+        <article id="features">
             <div class="fea-disc">
                 <h1>Наши преимущества</h1>
                 <div class="fea-base">
@@ -35,33 +35,33 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </article>
         <!--Courses-->
-        <section id="course">
+        <article id="course">
             <h1>Наши популярные курсы</h1>
             <div class="course-box">
                 <Grid v-bind:arr="top_courses"/>
             </div>
-        </section>
+        </article>
         <!--Profiles-->
-        <section id="experts">
+        <article id="experts">
             <h1>Наши лучшие преподаватели</h1>
             <div class="expert-box">
                 <Grid v-bind:arr="top_experts"/>
             </div>
-        </section>
-    </article>
-    <article class="Home">
+        </article>
+    </section>
+    <section class="Home">
         <Card v-bind:arr="test"/>
-    </article>
+    </section>
 </template>
 
 <script>
 import Navbar from "../components/Navbar.vue";
-import Login from "../components/Login.vue";
 import expert from "../components/img/expert.jpg";
 import Grid from "../components/Grid.vue";
 import Card from "../components/Card.vue";
+import LoginNew from "../components/LoginNew.vue";
 
 export default {
     data() {
@@ -93,8 +93,8 @@ export default {
     },
     name: "Home",
     components: {
+        LoginNew,
         Navbar,
-        Login,
         Grid,
         Card
     }
@@ -129,10 +129,11 @@ export default {
     align-items: center;
     position: relative;
     min-width: 800px;
-    height: 450px;
+    height: 550px;
     background: #5FA8D3;
-    border: 1px solid white;
-    border-radius: 5px;
+    background: linear-gradient(71deg, #5FA8D3, rgba(19, 88, 220, 0.35), #5FA8D3);
+    box-shadow: 0px 0px 24px #a0dfee;
+    border-radius: 15px;
 }
 
 .item {
