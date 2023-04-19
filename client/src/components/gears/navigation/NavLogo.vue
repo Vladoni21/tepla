@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import Logotype from "../Logotype.vue"
+import Logotype from "../Logo.vue"
 
 export default {
     name: "SiteLogo",

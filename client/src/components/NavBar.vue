@@ -9,7 +9,7 @@
 <script>
 import Logo from "./gears/navigation/NavLogo.vue";
 import SearchBar from "./gears/navigation/NavSearch.vue";
-import LogBtn from "./gears/navigation/LogBtn.vue";
+import LogBtn from "./gears/navigation/NavBtn.vue";
 
 
 export default {

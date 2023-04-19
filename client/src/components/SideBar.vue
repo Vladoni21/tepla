@@ -7,7 +7,7 @@
       </div>
       <div class="settings"></div>
       <div class="scrollbar" id="style-1">
-
+        <Tag v-bind:arr="nav_list" tag="ul"/>
         <ul>
           <li>
             <a href="http://startific.com">
@@ -116,7 +116,6 @@ margin-left: 56px;top:3px;">
             </a>
           </li>
         </ul>
-
         <ul class="logout">
           <li>
             <a href="http://startific.com">
@@ -139,17 +138,20 @@ margin-left: 56px;top:3px;">
 </template>
 
 <script>
-import NavItem from "./gears/navigation/NavSearch.vue";
+import Tag from "./gears/Tag.vue";
+import Grid from "./Grid.vue";
 
 export default {
   name: "SideBar",
-  components: {NavItem},
+  components: {Grid, Tag},
   data() {
     return {
       nav_list: [
-        { title: "", icon: "", class: "", href: "" },
-        { title: "", icon: "", class: "", href: "" },
+        { title: "Home", icon: "home", class: "123", href: "#", gear: "NavItem" },
         // e.t.c.
+      ],
+      test: [
+        {id: 1, title: "Django разработчик", icon: "code", href: "#", class: "top_courses", gear: "LinkCourse"}
       ]
     }
   }
@@ -158,11 +160,27 @@ export default {
 
 <style scoped>
 
+nav {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  -o-user-select:none;
+  user-select:none;
+
+}
+
+nav ul, nav li {
+  outline:0;
+  margin:0;
+  padding:0;
+  text-transform: uppercase;
+}
+
 .logo{
 }
 
 .settings {
-  height:80px;
+  height:100px;
   float:left;
   background-repeat:no-repeat;
   width:250px;
@@ -211,26 +229,6 @@ export default {
 }
 /* Scrollbar End */
 
-
-
-
-.fa-lg {
-  font-size: 1em;
-
-}
-.fa {
-  position: relative;
-  display: table-cell;
-  width: 55px;
-  height: 36px;
-  text-align: center;
-  top:12px;
-  font-size:20px;
-
-}
-
-
-
 .main-menu:hover, nav.main-menu.expanded {
   width:250px;
   overflow:hidden;
@@ -255,18 +253,39 @@ export default {
   z-index: 999;
 }
 
+.no-touch .scrollable.hover {
+  overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+  overflow-y:auto;
+  overflow:visible;
+}
+
+
+
+.fa-lg {
+  font-size: 1em;
+}
+.fa {
+  position: relative;
+  display: table-cell;
+  width: 55px;
+  height: 36px;
+  text-align: center;
+  top:12px;
+  font-size:20px;
+}
+
+
 .main-menu>ul {
   margin:7px 0;
-
 }
 
 .main-menu li {
   position:relative;
   display:block;
   width:250px;
-
-
-
 }
 
 .main-menu li>a {
@@ -287,18 +306,6 @@ export default {
   text-shadow: 1px 1px 1px  #fff;
 }
 
-
-
-.main-menu .nav-icon {
-  position:relative;
-  display:table-cell;
-  width:55px;
-  height:36px;
-  text-align:center;
-  vertical-align:middle;
-  font-size:18px;
-}
-
 .main-menu .nav-text  {
 
   position:relative;
@@ -308,17 +315,6 @@ export default {
   font-family: 'Titillium Web', sans-serif;
 }
 
-.main-menu .share {
-}
-
-
-
-.main-menu .fb-like {
-
-  left: 180px;
-  position:absolute;
-  top: 15px;
-}
 
 .main-menu>ul.logout {
   position:absolute;
@@ -327,16 +323,6 @@ export default {
 
 }
 
-.no-touch .scrollable.hover {
-  overflow-y:hidden;
-
-}
-
-.no-touch .scrollable.hover:hover {
-  overflow-y:auto;
-  overflow:visible;
-
-}
 
 
 /* Logo Hover Property
@@ -357,34 +343,13 @@ export default {
 }
 */
 
-a:hover,a:focus {
-  text-decoration:none;
-  border-left:0px solid #F7F7F7;
-
-
-
-}
-
-nav {
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  -o-user-select:none;
-  user-select:none;
-
-}
-
-nav ul, nav li {
-  outline:0;
-  margin:0;
-  padding:0;
-  text-transform: uppercase;
-}
 
 
 
 
-/* Darker element side menu Start*/
+
+
+/* Del */
 
 
 .darkerli
@@ -421,12 +386,6 @@ nav ul, nav li {
   color:#fff;
   background-color:#00bbbb;
   text-shadow: 0px 0px 0px;
-}
-.area {
-  float: left;
-  background: #e2e2e2;
-  width: 100%;
-  height: 100%;
 }
 @font-face {
   font-family: 'Titillium Web';
