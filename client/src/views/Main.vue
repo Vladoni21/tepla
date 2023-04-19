@@ -3,192 +3,152 @@
   <!--header-->
     <header class="header">
       <Navbar/>
-        <!--section class="flex">
-            <div class="sd-bar">
-                <div @click="showSidebar" id="user-btn">
-                    <fa icon="bars"/>
-                </div>
-            </div>
-            <a href="#" class="logo">TEAPLA</a>
-            <form action="" method="post" class="search-form">
-                <input type="text" name="search_box" placeholder="Поиск курсов" required maxlength="100">
-                <button type="submit" class="search_box" name="search_box">
-                    <fa icon="search"/>
-                </button>
-            </form>
-            <div class="icons">
-                <div @click="showProfile" id="user-btn">
-                    <fa icon="user"/>
-                </div>
-
-            </div>
-            <div v-if="isProfileVisible" class="profile">
-                <img :src="image" alt="" class="expert">
-                <h3>Райан Гослинг</h3>
-                <span>Ученик</span>
-                <a href="#" class="btn">Профиль</a>
-                <div class="flex-btn">
-                    <a href="#" class="option-btn">Войти</a>
-                    <a href="#" class="option-btn">Регистрация</a>
-                </div>
-            </div>
-        </section-->
     </header>
-  <!--side bar-->
-    <div v-if="isSidebarVisible" class="side-bar">
-        <div class="profile">
-            <img :src="image" alt="" class="expert">
-            <h3>Райан Гослинг</h3>
-            <span>Ученик</span>
-            <a href="#" class="btn">Профиль</a>
-        </div>
-        <nav class="navbar">
-            <div class="icons">
-                <Grid v-bind:arr="sidebar_menu"/>
-            </div>
-        </nav>
-    </div>
-  <!--side bar-->
-    <section class="home-grid">
+    <main>
+      <SideBar/>
+      <section class="home-grid">
         <div class="box-container">
-            <div class="box">
-                <h3 class="title">Лайки и коментарии</h3>
-                <p class="likes">Всего лайков: <span>25</span></p>
-                <a href="#" class="inline-btn">Посмотреть лайки</a>
-                <p class="likes">Всего коментариев: <span>12</span></p>
-                <a href="#" class="inline-btn">Коментарии</a>
-                <p class="likes">Сохраненные записи: <span>4</span></p>
-                <a href="#" class="inline-btn">Записи</a>
+          <div class="box">
+            <h3 class="title">Лайки и коментарии</h3>
+            <p class="likes">Всего лайков: <span>25</span></p>
+            <a href="#" class="inline-btn">Посмотреть лайки</a>
+            <p class="likes">Всего коментариев: <span>12</span></p>
+            <a href="#" class="inline-btn">Коментарии</a>
+            <p class="likes">Сохраненные записи: <span>4</span></p>
+            <a href="#" class="inline-btn">Записи</a>
+          </div>
+          <div class="box">
+            <h3 class="title">Топ категорий</h3>
+            <div class="flex">
+              <Grid v-bind:arr="sidebar_top_categories"/>
             </div>
-            <div class="box">
-                <h3 class="title">Топ категорий</h3>
-                <div class="flex">
-                    <Grid v-bind:arr="sidebar_top_categories"/>
-                </div>
+          </div>
+          <div class="box">
+            <h3 class="title">Популярные курсы</h3>
+            <div class="flex">
+              <Grid v-bind:arr="sidebar_top_courses"/>
             </div>
-            <div class="box">
-                <h3 class="title">Популярные курсы</h3>
-                <div class="flex">
-                    <Grid v-bind:arr="sidebar_top_courses"/>
-                </div>
-            </div>
-            <div class="box">
-                <h3 class="title">Стать преподавателем</h3>
-                <p class="tutor">Рыбий текст</p>
-                <a href="teachers.html" class="inline-btn">Начать</a>
-            </div>
+          </div>
+          <div class="box">
+            <h3 class="title">Стать преподавателем</h3>
+            <p class="tutor">Рыбий текст</p>
+            <a href="teachers.html" class="inline-btn">Начать</a>
+          </div>
         </div>
-    </section>
-    <!-- Courses -->
-    <section id="courses">
+      </section>
+      <!-- Courses -->
+      <section id="courses">
         <h1 class="heading">our courses</h1>
         <div class="box-container">
-            <div class="box">
-                <div class="tutor">
-                    <!--img src="images/pic-2.jpg" alt=""-->
-                    <div class="info">
-                        <h3>john deo</h3>
-                        <span>21-10-2022</span>
-                    </div>
-                </div>
-                <div class="thumb">
-                    <!--img src="images/thumb-1.png" alt=""-->
-                    <span>10 videos</span>
-                </div>
-                <h3 class="title">complete HTML tutorial</h3>
-                <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+          <div class="box">
+            <div class="tutor">
+              <!--img src="images/pic-2.jpg" alt=""-->
+              <div class="info">
+                <h3>john deo</h3>
+                <span>21-10-2022</span>
+              </div>
             </div>
-            <div class="box">
-                <div class="tutor">
-                    <!--img src="images/pic-3.jpg" alt=""-->
-                    <div class="info">
-                        <h3>john deo</h3>
-                        <span>21-10-2022</span>
-                    </div>
-                </div>
-                <div class="thumb">
-                    <!--img src="images/thumb-2.png" alt=""-->
-                    <span>10 videos</span>
-                </div>
-                <h3 class="title">complete CSS tutorial</h3>
-                <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+            <div class="thumb">
+              <!--img src="images/thumb-1.png" alt=""-->
+              <span>10 videos</span>
             </div>
-            <div class="box">
-                <div class="tutor">
-                    <!--img src="images/pic-4.jpg" alt=""-->
-                    <div class="info">
-                        <h3>john deo</h3>
-                        <span>21-10-2022</span>
-                    </div>
-                </div>
-                <div class="thumb">
-                    <!--img src="images/thumb-3.png" alt=""-->
-                    <span>10 videos</span>
-                </div>
-                <h3 class="title">complete JS tutorial</h3>
-                <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+            <h3 class="title">complete HTML tutorial</h3>
+            <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+          </div>
+          <div class="box">
+            <div class="tutor">
+              <!--img src="images/pic-3.jpg" alt=""-->
+              <div class="info">
+                <h3>john deo</h3>
+                <span>21-10-2022</span>
+              </div>
             </div>
-            <div class="box">
-                <div class="tutor">
-                    <!--img src="images/pic-5.jpg" alt=""-->
-                    <div class="info">
-                        <h3>john deo</h3>
-                        <span>21-10-2022</span>
-                    </div>
-                </div>
-                <div class="thumb">
-                    <!--img src="images/thumb-4.png" alt=""-->
-                    <span>10 videos</span>
-                </div>
-                <h3 class="title">complete Boostrap tutorial</h3>
-                <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+            <div class="thumb">
+              <!--img src="images/thumb-2.png" alt=""-->
+              <span>10 videos</span>
             </div>
-            <div class="box">
-                <div class="tutor">
-                    <!--img src="images/pic-6.jpg" alt=""-->
-                    <div class="info">
-                        <h3>john deo</h3>
-                        <span>21-10-2022</span>
-                    </div>
-                </div>
-                <div class="thumb">
-                    <!--img src="images/thumb-5.png" alt=""-->
-                    <span>10 videos</span>
-                </div>
-                <h3 class="title">complete JQuery tutorial</h3>
-                <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+            <h3 class="title">complete CSS tutorial</h3>
+            <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+          </div>
+          <div class="box">
+            <div class="tutor">
+              <!--img src="images/pic-4.jpg" alt=""-->
+              <div class="info">
+                <h3>john deo</h3>
+                <span>21-10-2022</span>
+              </div>
             </div>
-            <div class="box">
-                <div class="tutor">
-                    <!--img src="images/pic-7.jpg" alt=""-->
-                    <div class="info">
-                        <h3>john deo</h3>
-                        <span>21-10-2022</span>
-                    </div>
-                </div>
-                <div class="thumb">
-                    <!--img src="images/thumb-6.png" alt=""-->
-                    <span>10 videos</span>
-                </div>
-                <h3 class="title">complete SASS tutorial</h3>
-                <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+            <div class="thumb">
+              <!--img src="images/thumb-3.png" alt=""-->
+              <span>10 videos</span>
             </div>
+            <h3 class="title">complete JS tutorial</h3>
+            <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+          </div>
+          <div class="box">
+            <div class="tutor">
+              <!--img src="images/pic-5.jpg" alt=""-->
+              <div class="info">
+                <h3>john deo</h3>
+                <span>21-10-2022</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <!--img src="images/thumb-4.png" alt=""-->
+              <span>10 videos</span>
+            </div>
+            <h3 class="title">complete Boostrap tutorial</h3>
+            <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+          </div>
+          <div class="box">
+            <div class="tutor">
+              <!--img src="images/pic-6.jpg" alt=""-->
+              <div class="info">
+                <h3>john deo</h3>
+                <span>21-10-2022</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <!--img src="images/thumb-5.png" alt=""-->
+              <span>10 videos</span>
+            </div>
+            <h3 class="title">complete JQuery tutorial</h3>
+            <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+          </div>
+          <div class="box">
+            <div class="tutor">
+              <!--img src="images/pic-7.jpg" alt=""-->
+              <div class="info">
+                <h3>john deo</h3>
+                <span>21-10-2022</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <!--img src="images/thumb-6.png" alt=""-->
+              <span>10 videos</span>
+            </div>
+            <h3 class="title">complete SASS tutorial</h3>
+            <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+          </div>
         </div>
         <div class="more-btn">
-            <!--a href="courses.html" class="inline-option-btn">view all courses</a-->
+          <!--a href="courses.html" class="inline-option-btn">view all courses</a-->
         </div>
-    </section>
+      </section>
+    </main>
+
 
 </template>
 
 <script>
 import expert from "../components/img/expert.jpg";
 import Grid from "../components/Grid.vue";
-import Navbar from "../components/Navbar.vue";
+import Navbar from "../components/NavBar.vue";
+import SideBar from "../components/SideBar.vue";
 
 
 export default {
-    components: {Navbar, Grid},
+    components: {SideBar, Navbar, Grid},
     data() {
         return {
             image: expert,

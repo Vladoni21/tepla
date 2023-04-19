@@ -2,21 +2,19 @@
     <section class="navbar">
         <Logo/>
         <SearchBar/>
-        <NavIcon/>
         <LogBtn/>
     </section>
 </template>
 
 <script>
-import NavIcon from "./gears/navigation/NavIcon.vue";
-import Logo from "./gears/navigation/Logo.vue";
-import SearchBar from "./gears/navigation/SearchBar.vue";
+import Logo from "./gears/navigation/NavLogo.vue";
+import SearchBar from "./gears/navigation/NavSearch.vue";
 import LogBtn from "./gears/navigation/LogBtn.vue";
 
 
 export default {
     name: "Navbar",
-    components: {LogBtn, SearchBar, NavIcon, Logo}
+    components: {LogBtn, SearchBar, Logo}
 }
 </script>
 
@@ -34,7 +32,7 @@ export default {
     background-color: #5FA8D3;
     border-bottom: white;
     min-width: 1400px;
-    min-height: 100px;
+    min-height: 80px;
 }
 
 .navbar a {

@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import Navbar from "../components/Navbar.vue";
+import Navbar from "../components/NavBar.vue";
 import Login from "../components/Login.vue";
 import expert from "../components/img/expert.jpg";
 import Grid from "../components/Grid.vue";
