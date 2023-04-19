@@ -9,32 +9,11 @@
       <div class="scrollbar" id="style-1">
         <Tag v-bind:arr="nav_list" tag="ul"/>
         <ul>
-          <li>
-            <a href="http://startific.com">
-              <i class="fa fa-home fa-lg"></i>
-              <span class="nav-text">Home</span>
-            </a>
-          </li>
-          <li>
-            <a href="http://startific.com">
-              <i class="fa fa-user fa-lg"></i>
-              <span class="nav-text">Login</span>
-            </a>
-          </li>
-          <li>
-            <a href="http://startific.com">
-              <i class="fa fa-envelope-o fa-lg"></i>
-              <span class="nav-text">Contact</span>
-            </a>
-          </li>
-          <li>
+          <li class="">
             <a href="http://startific.com">
               <i class="fa fa-heart-o fa-lg"></i>
-
               <span class="share">
-
               <div class="addthis_default_style addthis_32x32_style"></div>
-
                 <div style="position:absolute;
 margin-left: 56px;top:3px;">
                   <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" class="share-popup"><img  alt="" src="http://icons.iconarchive.com/icons/danleech/simple/512/facebook-icon.png" width="30px" height="30px"/></a>
@@ -43,94 +22,11 @@ margin-left: 56px;top:3px;">
                   </a>
                   <a href="https://plusone.google.com/_/+1/confirm?hl=en&url=_URL_&title=_TITLE_" target="_blank" class="share-popup"><img  alt="" src="http://icons.iconarchive.com/icons/danleech/simple/512/google-plus-icon.png" width="30px" height="30px"/></a>
                 </div>
-
               </span>
-            </a>
-          </li>
-          <li class="darkerlishadow">
-            <a href="http://startific.com">
-              <i class="fa fa-clock-o fa-lg"></i>
-              <span class="nav-text">News</span>
-            </a>
-          </li>
-          <li class="darkerli">
-            <a href="http://startific.com">
-              <i class="fa fa-desktop fa-lg"></i>
-              <span class="nav-text">Technology</span>
-            </a>
-          </li>
-          <li class="darkerli">
-            <a href="http://startific.com">
-              <i class="fa fa-plane fa-lg"></i>
-              <span class="nav-text">Travel</span>
-            </a>
-          </li>
-          <li class="darkerli">
-            <a href="http://startific.com">
-              <i class="fa fa-shopping-cart"></i>
-              <span class="nav-text">Shopping</span>
-            </a>
-          </li>
-          <li class="darkerli">
-            <a href="http://startific.com">
-              <i class="fa fa-microphone fa-lg"></i>
-              <span class="nav-text">Film & Music</span>
-            </a>
-          </li>
-          <li class="darkerli">
-            <a href="http://startific.com">
-              <i class="fa fa-flask fa-lg"></i>
-              <span class="nav-text">Web Tools</span>
-            </a>
-          </li>
-          <li class="darkerli">
-            <a href="http://startific.com">
-              <i class="fa fa-picture-o fa-lg"></i>
-              <span class="nav-text">Art & Design</span>
-            </a>
-          </li>
-          <li class="darkerli">
-            <a href="http://startific.com">
-              <i class="fa fa-align-left fa-lg"></i>
-              <span class="nav-text">Magazines
-            </span>
-            </a>
-          </li>
-          <li class="darkerli">
-            <a href="http://startific.com">
-              <i class="fa fa-gamepad fa-lg"></i>
-              <span class="nav-text">Games</span>
-            </a>
-          </li>
-          <li class="darkerli">
-            <a href="http://startific.com">
-              <i class="fa fa-glass fa-lg"></i>
-              <span class="nav-text">Life & Style
-            </span>
-            </a>
-          </li>
-          <li class="darkerlishadowdown">
-            <a href="http://startific.com">
-              <i class="fa fa-rocket fa-lg"></i>
-              <span class="nav-text">Fun</span>
             </a>
           </li>
         </ul>
         <ul class="logout">
-          <li>
-            <a href="http://startific.com">
-              <i class="fa fa-lightbulb-o fa-lg"></i>
-              <span class="nav-text">
-              BLOG
-            </span>
-            </a>
-          </li>
-          <li>
-            <a href="http://startific.com">
-              <i class="fa fa-question-circle fa-lg"></i>
-              <span class="nav-text">Help</span>
-            </a>
-          </li>
         </ul>
       </div>
     </nav>
@@ -147,7 +43,19 @@ export default {
   data() {
     return {
       nav_list: [
-        { title: "Home", icon: "home", class: "123", href: "#", gear: "NavItem" },
+        { title: "Главная", icon: "home", class: "darkeli", href: "#", gear: "NavItem" },
+        { title: "Войти", icon: "lock", class: "darkeli", href: "#", gear: "NavItem" },
+        { title: "Контакты", icon: "phone", class: "darkelishadow", href: "#", gear: "NavItem" },
+        { title: "Новости", icon: "newspaper", class: "darkeli", href: "#", gear: "NavItem" },
+        { title: "Технологии", icon: "flask", class: "darkeli", href: "#", gear: "NavItem" },
+        { title: "Корзина", icon: "shopping-cart", class: "darkeli", href: "#", gear: "NavItem" },
+        { title: "Музыка", icon: "music", class: "darkeli", href: "#", gear: "NavItem" },
+        { title: "Разработка", icon: "code", class: "darkeli", href: "#", gear: "NavItem" },
+        { title: "Искусство", icon: "brush", class: "darkeli", href: "#", gear: "NavItem" },
+        { title: "Магазин", icon: "shop", class: "darkeli", href: "#", gear: "NavItem" },
+        { title: "Игры", icon: "gamepad", class: "darkelishadowdown", href: "#", gear: "NavItem" },
+        { title: "Блог", icon: "blog", class: "darkeli", href: "#", gear: "NavItem" },
+        { title: "Помощь", icon: "question", class: "darkeli", href: "#", gear: "NavItem" },
         // e.t.c.
       ],
       test: [
@@ -173,6 +81,7 @@ nav ul, nav li {
   outline:0;
   margin:0;
   padding:0;
+  font-size: 10px;
   text-transform: uppercase;
 }
 

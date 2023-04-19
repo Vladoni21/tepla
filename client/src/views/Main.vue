@@ -38,96 +38,96 @@
       </section>
       <!-- Courses -->
       <section id="courses">
-        <h1 class="heading">our courses</h1>
+        <h1 class="heading">Наши курсы</h1>
         <div class="box-container">
           <div class="box">
             <div class="tutor">
               <!--img src="images/pic-2.jpg" alt=""-->
               <div class="info">
-                <h3>john deo</h3>
+                <h3>Райан Гослинг</h3>
                 <span>21-10-2022</span>
               </div>
             </div>
             <div class="thumb">
               <!--img src="images/thumb-1.png" alt=""-->
-              <span>10 videos</span>
+              <span>10 видео</span>
             </div>
-            <h3 class="title">complete HTML tutorial</h3>
+            <h3 class="title">Курс HTML</h3>
             <!--a href="playlist.html" class="inline-btn">view playlist</a-->
           </div>
           <div class="box">
             <div class="tutor">
               <!--img src="images/pic-3.jpg" alt=""-->
               <div class="info">
-                <h3>john deo</h3>
+                <h3>Райан Гослинг</h3>
                 <span>21-10-2022</span>
               </div>
             </div>
             <div class="thumb">
               <!--img src="images/thumb-2.png" alt=""-->
-              <span>10 videos</span>
+              <span>10 видео</span>
             </div>
-            <h3 class="title">complete CSS tutorial</h3>
+            <h3 class="title">Курс CSS</h3>
             <!--a href="playlist.html" class="inline-btn">view playlist</a-->
           </div>
           <div class="box">
             <div class="tutor">
               <!--img src="images/pic-4.jpg" alt=""-->
               <div class="info">
-                <h3>john deo</h3>
+                <h3>Райан Гослинг</h3>
                 <span>21-10-2022</span>
               </div>
             </div>
             <div class="thumb">
               <!--img src="images/thumb-3.png" alt=""-->
-              <span>10 videos</span>
+              <span>10 видео</span>
             </div>
-            <h3 class="title">complete JS tutorial</h3>
+            <h3 class="title">Курс JS</h3>
             <!--a href="playlist.html" class="inline-btn">view playlist</a-->
           </div>
           <div class="box">
             <div class="tutor">
               <!--img src="images/pic-5.jpg" alt=""-->
               <div class="info">
-                <h3>john deo</h3>
+                <h3>Райан Гослинг</h3>
                 <span>21-10-2022</span>
               </div>
             </div>
             <div class="thumb">
               <!--img src="images/thumb-4.png" alt=""-->
-              <span>10 videos</span>
+              <span>10 видео</span>
             </div>
-            <h3 class="title">complete Boostrap tutorial</h3>
+            <h3 class="title">Курс Boostrap</h3>
             <!--a href="playlist.html" class="inline-btn">view playlist</a-->
           </div>
           <div class="box">
             <div class="tutor">
               <!--img src="images/pic-6.jpg" alt=""-->
               <div class="info">
-                <h3>john deo</h3>
+                <h3>Райан Гослинг</h3>
                 <span>21-10-2022</span>
               </div>
             </div>
             <div class="thumb">
               <!--img src="images/thumb-5.png" alt=""-->
-              <span>10 videos</span>
+              <span>10 видео</span>
             </div>
-            <h3 class="title">complete JQuery tutorial</h3>
+            <h3 class="title">Курс JQuery</h3>
             <!--a href="playlist.html" class="inline-btn">view playlist</a-->
           </div>
           <div class="box">
             <div class="tutor">
               <!--img src="images/pic-7.jpg" alt=""-->
               <div class="info">
-                <h3>john deo</h3>
+                <h3>Райан Гослинг</h3>
                 <span>21-10-2022</span>
               </div>
             </div>
             <div class="thumb">
               <!--img src="images/thumb-6.png" alt=""-->
-              <span>10 videos</span>
+              <span>10 видео</span>
             </div>
-            <h3 class="title">complete SASS tutorial</h3>
+            <h3 class="title">Курс SASS</h3>
             <!--a href="playlist.html" class="inline-btn">view playlist</a-->
           </div>
         </div>
@@ -544,17 +544,26 @@ section {
     color: #FFFFFF;
 }
 /* courses */
+#courses h1{
+    color: #FFFFFF;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: .5rem;
+    background-color: #5FA8D3;
+}
 #courses .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
     justify-content: center;
     align-items: flex-start;
+    margin-left: 100px;
 }
 
 #courses .box-container .box {
     border-radius: .5rem;
-    background-color: var(--white);
+    background-color: #5FA8D3;
     padding: 2rem;
 }
 
@@ -574,7 +583,7 @@ section {
 
 #courses .box-container .box .tutor h3 {
     font-size: 1.8rem;
-    color: var(--black);
+    color: #FFFFFF;
     margin-bottom: .2rem;
 }
 
@@ -589,8 +598,8 @@ section {
 
 #courses .box-container .box .thumb span {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 12rem;
+    left: 10rem;
     border-radius: .5rem;
     padding: .5rem 1.5rem;
     background-color: rgba(0, 0, 0, .3);
@@ -607,7 +616,7 @@ section {
 
 #courses .box-container .box .title {
     font-size: 2rem;
-    color: var(--black);
+    color: #FFFFFF;
     padding-bottom: .5rem;
     padding-top: 1rem;
 }
@@ -616,5 +625,4 @@ section {
     text-align: center;
     margin-top: 2rem;
 }
-
 </style>

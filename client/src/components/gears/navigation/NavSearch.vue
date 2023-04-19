@@ -1,6 +1,6 @@
 <template>
     <section>
-        <input type="search" class="input" placeholder="Search" aria-label="Search"
+        <input type="search" class="input" placeholder="Поиск" aria-label="Search"
                aria-describedby="search-addon"/>
               <a href="#" class="button">
                   <svg class="icon icon--2x">
