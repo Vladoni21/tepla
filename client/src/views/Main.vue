@@ -32,7 +32,7 @@
           <div class="box">
             <h3 class="title">Стать преподавателем</h3>
             <p class="tutor">Рыбий текст</p>
-            <a href="teachers.html" class="inline-btn">Начать</a>
+            <a href="#" class="inline-btn">Начать</a>
           </div>
         </div>
       </section>
@@ -136,8 +136,12 @@
         </div>
       </section>
     </main>
-
-
+    <Transition name="welcome">
+      <WelCome v-if="isWelComeVisible" v-bind:showModal="showWelCome"/> <!-- @close="isWelComeVisible = false"-->
+    </Transition>
+    <footer>
+      <button id="show-modal" @click="showWelCome">Show Modal</button>
+    </footer>
 </template>
 
 <script>
@@ -145,13 +149,14 @@ import expert from "../components/img/expert.jpg";
 import Grid from "../components/Grid.vue";
 import Navbar from "../components/NavBar.vue";
 import SideBar from "../components/SideBar.vue";
-
+import WelCome from "../components/WelCome.vue";
 
 export default {
-    components: {SideBar, Navbar, Grid},
+    components: {WelCome, SideBar, Navbar, Grid},
     data() {
         return {
             image: expert,
+            isWelComeVisible: false,
             isProfileVisible: false,
             isSidebarVisible: false,
             sidebar_top_categories: [
@@ -187,11 +192,13 @@ export default {
         },
         showSidebar() {
             this.isSidebarVisible = !this.isSidebarVisible
+        },
+        showWelCome() {
+            this.isWelComeVisible = !this.isWelComeVisible
         }
     },
     name: "Main"
 }
-
 </script>
 
 <style scoped>
@@ -624,5 +631,19 @@ section {
 #courses .more-btn {
     text-align: center;
     margin-top: 2rem;
+}
+
+.welcome-enter {
+  opacity: 0;
+}
+
+.welcome-leave-active {
+  opacity: 0;
+}
+
+.welcome-enter .modal-container,
+.welcome-leave-active .modal-container {
+  --webkit--transform: scale(1.1);
+  transform: scale(1.1);
 }
 </style>
