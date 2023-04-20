@@ -1,5 +1,6 @@
 <template>
   <section class="modal-mask" style="max-width: 100%">
+    <article class="sub_container" @click="showModal"/>
     <article class="container" id="container">
       <div class="form-container sign-up-container">
         <form action="#">
@@ -178,12 +179,17 @@ input {
   width: 100%;
 }
 
+.sub_container {
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25),
   0 10px 10px rgba(0,0,0,0.22);
-  position: relative;
+  position: absolute;
   overflow: hidden;
   width: 768px;
   max-width: 100%;
