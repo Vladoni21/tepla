@@ -548,6 +548,7 @@ section {
     color: #FFFFFF;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    margin-left: 100px;
     text-align: center;
     border-radius: .5rem;
     background-color: #5FA8D3;
@@ -598,8 +599,7 @@ section {
 
 #courses .box-container .box .thumb span {
     position: absolute;
-    top: 12rem;
-    left: 10rem;
+    left: 17rem;
     border-radius: .5rem;
     padding: .5rem 1.5rem;
     background-color: rgba(0, 0, 0, .3);
