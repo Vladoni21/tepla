@@ -5,32 +5,30 @@
       <article class="container" id="container">
       <div class="form-container sign-up-container">
         <form action="#">
-          <h1>Create Account</h1>
+          <h1>Создать Аккаунт</h1>
           <div class="social-container">
             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
           </div>
-          <span>or use your email for registration</span>
-          <input type="text" placeholder="Name" />
+          <input type="text" placeholder="Имя" />
           <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <button>Sign Up</button>
+          <input type="password" placeholder="Пароль" />
+          <button>Войти</button>
         </form>
       </div>
       <div class="form-container sign-in-container">
         <form action="#">
-          <h1>Sign in</h1>
+          <h1>Войти</h1>
           <div class="social-container">
             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
           </div>
-          <span>or use your account</span>
           <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <a href="#">Forgot your password?</a>
-          <button>Sign In</button>
+          <input type="password" placeholder="Пароль" />
+          <a href="#">Забыли пароль?</a>
+          <button>Войти</button>
         </form>
       </div>
       <div class="overlay-container">
@@ -39,14 +37,14 @@
         </div>
         <div class="overlay">
           <div class="overlay-panel overlay-left">
-            <h1>Welcome Back!</h1>
-            <p>To keep connected with us please login with your personal info</p>
-            <button class="ghost" id="signIn" @click="signIn">Sign In</button>
+            <h1>Впервые на нашей платформе?</h1>
+            <p>Для регистрации на образовательной платфоре введите данные, приведенные в форме</p>
+            <button class="ghost" id="signIn" @click="signIn">Войти</button>
           </div>
           <div class="overlay-panel overlay-right">
-            <h1>Hello, Friend!</h1>
-            <p>Enter your personal details and start journey with us</p>
-            <button class="ghost" id="signUp" @click="signUp">Sign Up</button>
+            <h1>Приветсвуем!</h1>
+            <p>Для входа на образовательную платфору введите данные, приведенные в форме</p>
+            <button class="ghost" id="signUp" @click="signUp">Регистрация</button>
           </div>
         </div>
       </div>
@@ -138,8 +136,8 @@ a {
 
 button {
   border-radius: 20px;
-  border: 1px solid #FF4B2B;
-  background-color: #FF4B2B;
+  border: none;
+  background-color: #51b09a;
   color: #FFFFFF;
   font-size: 12px;
   font-weight: bold;
@@ -257,9 +255,8 @@ input {
 }
 
 .overlay {
-  background: #FF416C;
-  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  background: -webkit-linear-gradient(to right, #62B6CB, #51b09a);
+  background: linear-gradient(to right, #62B6CB, #51b09a);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
