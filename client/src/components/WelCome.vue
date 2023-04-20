@@ -1,7 +1,8 @@
 <template>
   <section class="modal-mask" style="max-width: 100%">
     <article class="sub_container" @click="showModal"/>
-    <article class="container" id="container">
+    <Transition name="popup">
+      <article class="container" id="container">
       <div class="form-container sign-up-container">
         <form action="#">
           <h1>Create Account</h1>
@@ -50,6 +51,7 @@
         </div>
       </div>
     </article>
+    </Transition>
   </section>
 </template>
 
@@ -346,5 +348,21 @@ footer a {
   text-decoration: none;
 }
 
-
+.popup-enter {
+  animation: popup-in 0.5s;
+}
+.popup-leave-active {
+  animation: popup-in 0.5s reverse;
+}
+@keyframes popup-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 </style>
