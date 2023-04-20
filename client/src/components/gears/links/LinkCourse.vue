@@ -24,7 +24,8 @@ export default {
     font-size: 2.3rem;
     border-radius: 5px;
     text-align: center;
-    background: #62B6CB;
+    background: linear-gradient(71deg, #62B6CB, #45c5c5, #62B6CB);
+    box-shadow: 0px 0px 24px #4cbbb2;
     height: 100%;
 }
 </style>

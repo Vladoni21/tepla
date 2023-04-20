@@ -462,7 +462,8 @@ section {
 }
 
 .home-grid .box-container .box {
-    background-color: #5FA8D3;
+    background: linear-gradient(71deg, #5FA8D3, rgba(19, 88, 220, 0.35), #5FA8D3);
+    box-shadow: 0px 0px 24px #a0dfee;
     border-radius: .5rem;
     padding: 1rem;
     height: auto;
@@ -533,7 +534,8 @@ section {
     margin-left: 100px;
     text-align: center;
     border-radius: .5rem;
-    background-color: #5FA8D3;
+    background: linear-gradient(71deg, #5FA8D3, rgba(19, 88, 220, 0.35), #5FA8D3);
+    box-shadow: 0px 0px 24px #a0dfee;
 }
 #courses .box-container {
     display: grid;
@@ -546,7 +548,8 @@ section {
 
 #courses .box-container .box {
     border-radius: .5rem;
-    background-color: #5FA8D3;
+    background: linear-gradient(71deg, #5FA8D3, rgba(19, 88, 220, 0.35), #5FA8D3);
+    box-shadow: 0px 0px 24px #a0dfee;
     padding: 2rem;
 }
 

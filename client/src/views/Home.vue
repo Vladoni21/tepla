@@ -148,7 +148,8 @@ export default {
 
 /* features */
 #features .fea-disc {
-    background-color: #5FA8D3;
+    background: linear-gradient(71deg, #5FA8D3, rgba(19, 88, 220, 0.35), #5FA8D3);
+    box-shadow: 0px 0px 24px #a0dfee;
     border-radius: 5px;
     font-family: 'Open Sans', sans-serif;
     color: white;
@@ -178,7 +179,8 @@ export default {
 
 #features .fea-box {
     border-radius: 5px;
-    background: #62B6CB;
+    background: linear-gradient(71deg, #62B6CB, #45c5c5, #62B6CB);
+    box-shadow: 0px 0px 24px #4cbbb2;
     text-align: center;
 }
 
@@ -206,7 +208,8 @@ export default {
 #course {
     margin-top: 50px;
     text-align: center;
-    background-color: #5FA8D3;
+    background: linear-gradient(71deg, #5FA8D3, rgba(19, 88, 220, 0.35), #5FA8D3);
+    box-shadow: 0px 0px 24px #a0dfee;
     border-radius: 5px;
     font-family: 'Open Sans', sans-serif;
     color: white;
@@ -227,7 +230,6 @@ export default {
     font-size: 2.3rem;
     border-radius: 5px;
     text-align: center;
-    background: #62B6CB;
     height: 100%;
 }
 
@@ -246,7 +248,8 @@ export default {
 #experts {
     margin-top: 50px;
     text-align: center;
-    background-color: #5FA8D3;
+    background: linear-gradient(71deg, #5FA8D3, rgba(19, 88, 220, 0.35), #5FA8D3);
+    box-shadow: 0px 0px 24px #a0dfee;
     border-radius: 5px;
     font-family: 'Open Sans', sans-serif;
     color: white;
