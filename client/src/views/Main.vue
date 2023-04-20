@@ -205,24 +205,6 @@ export default {
     text-decoration: none;
 }
 
-*::selection {
-    background-color: #62B6CB;
-    color: white;
-}
-
-*::-webkit-scrollbar {
-    height: .5rem;
-    width: 1rem;
-}
-
-*::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: #62B6CB;
-}
-
 html {
     font-size: 62.5%;
     overflow-x: hidden;
