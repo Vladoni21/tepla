@@ -23,20 +23,21 @@ export default {
 
 .frame {
   width: 55px;
+  height: 45px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .icon {
-  block-size: 1.5em;
+  block-size: 32px;
   font-size: 2rem;
-  width: 2em;
   display: inline-block;
   fill: currentcolor;
   inline-size: 1em;
   vertical-align: middle;
   transition: 0.5s;
-  padding: 2px;
+  padding: 3px;
 }
 
 

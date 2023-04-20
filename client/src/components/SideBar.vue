@@ -5,28 +5,24 @@
         <a class="logo" href="http://startific.com">
         </a>
       </div>
-      <div class="settings"></div>
+      <div class="settings"/>
       <div class="scrollbar" id="style-1">
         <Tag v-bind:arr="nav_list" tag="ul"/>
-        <ul>
-          <li class="">
+        <ul class="social">
+          <li>
             <a href="http://startific.com">
               <i class="fa fa-heart-o fa-lg"></i>
-              <span class="share">
-              <div class="addthis_default_style addthis_32x32_style"></div>
-                <div style="position:absolute;
-margin-left: 56px;top:3px;">
+              <div class="addthis_default_style addthis_32x32_style">
+                <div style="position:absolute; margin-left: 66px; bottom:3px; height: 27px;">
                   <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" class="share-popup"><img  alt="" src="http://icons.iconarchive.com/icons/danleech/simple/512/facebook-icon.png" width="30px" height="30px"/></a>
                   <a href="https://twitter.com/share" target="_blank" class="share-popup">
                     <img src="https://cdn1.iconfinder.com/data/icons/metro-ui-dock-icon-set--icons-by-dakirby/512/Twitter_alt.png" width="30px" height="30px" alt=""/>
                   </a>
                   <a href="https://plusone.google.com/_/+1/confirm?hl=en&url=_URL_&title=_TITLE_" target="_blank" class="share-popup"><img  alt="" src="http://icons.iconarchive.com/icons/danleech/simple/512/google-plus-icon.png" width="30px" height="30px"/></a>
                 </div>
-              </span>
+              </div>
             </a>
           </li>
-        </ul>
-        <ul class="logout">
         </ul>
       </div>
     </nav>
@@ -43,23 +39,20 @@ export default {
   data() {
     return {
       nav_list: [
-        { title: "Главная", icon: "home", class: "darkeli", href: "#", gear: "NavItem" },
-        { title: "Войти", icon: "lock", class: "darkeli", href: "#", gear: "NavItem" },
-        { title: "Контакты", icon: "phone", class: "darkelishadow", href: "#", gear: "NavItem" },
-        { title: "Новости", icon: "newspaper", class: "darkeli", href: "#", gear: "NavItem" },
-        { title: "Технологии", icon: "flask", class: "darkeli", href: "#", gear: "NavItem" },
-        { title: "Корзина", icon: "shopping-cart", class: "darkeli", href: "#", gear: "NavItem" },
-        { title: "Музыка", icon: "music", class: "darkeli", href: "#", gear: "NavItem" },
-        { title: "Разработка", icon: "code", class: "darkeli", href: "#", gear: "NavItem" },
-        { title: "Искусство", icon: "brush", class: "darkeli", href: "#", gear: "NavItem" },
-        { title: "Магазин", icon: "shop", class: "darkeli", href: "#", gear: "NavItem" },
-        { title: "Игры", icon: "gamepad", class: "darkelishadowdown", href: "#", gear: "NavItem" },
-        { title: "Блог", icon: "blog", class: "darkeli", href: "#", gear: "NavItem" },
-        { title: "Помощь", icon: "question", class: "darkeli", href: "#", gear: "NavItem" },
+        { title: "Главная", icon: "home", class: "", href: "#", gear: "NavItem" },
+        { title: "Войти", icon: "lock", class: "", href: "#", gear: "NavItem" },
+        { title: "Контакты", icon: "phone", class: "", href: "#", gear: "NavItem" },
+        { title: "Новости", icon: "newspaper", class: "darkerlishadow", href: "#", gear: "NavItem" },
+        { title: "Технологии", icon: "flask", class: "darkerli", href: "#", gear: "NavItem" },
+        { title: "Корзина", icon: "shopping-cart", class: "darkerli", href: "#", gear: "NavItem" },
+        { title: "Музыка", icon: "music", class: "darkerli", href: "#", gear: "NavItem" },
+        { title: "Разработка", icon: "code", class: "darkerli", href: "#", gear: "NavItem" },
+        { title: "Искусство", icon: "brush", class: "darkerli", href: "#", gear: "NavItem" },
+        { title: "Магазин", icon: "shop", class: "darkerli", href: "#", gear: "NavItem" },
+        { title: "Игры", icon: "gamepad", class: "darkerlishadowdown", href: "#", gear: "NavItem" },
+        { title: "Блог", icon: "blog", class: "", href: "#", gear: "NavItem" },
+        { title: "Помощь", icon: "question", class: "", href: "#", gear: "NavItem" },
         // e.t.c.
-      ],
-      test: [
-        {id: 1, title: "Django разработчик", icon: "code", href: "#", class: "top_courses", gear: "LinkCourse"}
       ]
     }
   }
@@ -171,65 +164,10 @@ nav ul, nav li {
   overflow:visible;
 }
 
-
-
-.fa-lg {
-  font-size: 1em;
-}
-.fa {
-  position: relative;
-  display: table-cell;
-  width: 55px;
-  height: 36px;
-  text-align: center;
-  top:12px;
-  font-size:20px;
-}
-
-
-.main-menu>ul {
-  margin:7px 0;
-}
-
-.main-menu li {
-  position:relative;
-  display:block;
-  width:250px;
-}
-
-.main-menu li>a {
-  position:relative;
-  width:255px;
-  display:table;
-  border-collapse:collapse;
-  border-spacing:0;
-  color:#8a8a8a;
-  font-size: 13px;
-  text-decoration:none;
-  -webkit-transform:translateZ(0) scale(1,1);
-  -webkit-transition:all .14s linear;
-  transition:all .14s linear;
-  font-family: 'Strait', sans-serif;
-  border-top:1px solid #f2f2f2;
-
-  text-shadow: 1px 1px 1px  #fff;
-}
-
-.main-menu .nav-text  {
-
-  position:relative;
-  display:table-cell;
-  vertical-align:middle;
-  width:190px;
-  font-family: 'Titillium Web', sans-serif;
-}
-
-
-.main-menu>ul.logout {
+.main-menu>ul.social {
   position:absolute;
   left:0;
   bottom:0;
-
 }
 
 
@@ -252,50 +190,6 @@ nav ul, nav li {
 }
 */
 
-
-
-
-
-
-
-/* Del */
-
-
-.darkerli
-{
-  background-color:#ededed;
-  text-transform:capitalize;
-}
-
-.darkerlishadow
-{
-  background-color:#ededed;
-  text-transform:capitalize;
-  -webkit-box-shadow: inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
-  -moz-box-shadow:    inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
-  box-shadow:         inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
-}
-
-
-.darkerlishadowdown
-{
-  background-color:#ededed;
-  text-transform:capitalize;
-  -webkit-box-shadow: inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
-  -moz-box-shadow:    inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
-  box-shadow:         inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
-}
-
-/* Darker element side menu End*/
-
-
-
-
-.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
-  color:#fff;
-  background-color:#00bbbb;
-  text-shadow: 0px 0px 0px;
-}
 @font-face {
   font-family: 'Titillium Web';
   font-style: normal;
