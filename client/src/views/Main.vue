@@ -137,16 +137,9 @@
       </section>
     </main>
     <footer>
-      <button id="show-modal" @click="showWelCome">Show Modal</button>
+      <button id="show-modal" @click="showWelcome">Show Modal</button>
     </footer>
-    <slot name="pop-up-menu">
-      <Transition name="shadow">
-        <article class="mask" v-if="isWelComeVisible"/>
-      </Transition>
-      <Transition name="popup">
-        <WelCome v-if="isWelComeVisible" v-bind:showModal="showWelCome"/> <!-- @close="isWelComeVisible = false"-->
-      </Transition>
-    </slot>
+    <PopUp is="Welcome" v-bind:func="showWelcome" v-bind:req="isWelcomeVisible"/>
 </template>
 
 <script>
@@ -154,16 +147,14 @@ import expert from "../components/img/expert.jpg";
 import Grid from "../components/Grid.vue";
 import Navbar from "../components/NavBar.vue";
 import SideBar from "../components/SideBar.vue";
-import WelCome from "../components/WelCome.vue";
+import PopUp from "../components/PopUp.vue";
 
 export default {
-    components: {WelCome, SideBar, Navbar, Grid},
+    components: {PopUp, SideBar, Navbar, Grid},
     data() {
         return {
             image: expert,
-            isWelComeVisible: false,
-            isProfileVisible: false,
-            isSidebarVisible: false,
+            isWelcomeVisible: false,
             sidebar_top_categories: [
                 {id: 1, title: "Разработка", icon: "code", href: "#", class: "default", gear: "LinkButton"},
                 {id: 2, title: "Бизнес", icon: "chart-simple", href: "#", class: "default", gear: "LinkButton"},
@@ -192,14 +183,8 @@ export default {
         }
     },
     methods: {
-        showProfile() {
-            this.isProfileVisible = !this.isProfileVisible
-        },
-        showSidebar() {
-            this.isSidebarVisible = !this.isSidebarVisible
-        },
-        showWelCome() {
-            this.isWelComeVisible = !this.isWelComeVisible
+        showWelcome() {
+            this.isWelcomeVisible = !this.isWelcomeVisible
         }
     },
     name: "Main"

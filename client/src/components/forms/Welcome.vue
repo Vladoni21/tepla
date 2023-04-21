@@ -1,6 +1,4 @@
 <template>
-  <section class="blank" style="max-width: 100%">
-    <article class="escape" @click="showModal"/>
     <article class="container" id="container">
       <div class="form-container sign-up-container">
         <form action="#">
@@ -53,14 +51,13 @@
         <span class="screen__background__shape screen__background__shape1"></span>
       </div>
     </article>
-  </section>
 </template>
 
 <script>
 
 
 export default {
-  name: "WelCome",
+  name: "Welcome",
   props: ["showModal"],
   methods: {
     signUp: function() {
