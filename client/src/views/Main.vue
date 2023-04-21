@@ -136,9 +136,15 @@
         </div>
       </section>
     </main>
-    <Transition name="welcome">
-      <WelCome v-if="isWelComeVisible" v-bind:showModal="showWelCome"/> <!-- @close="isWelComeVisible = false"-->
-    </Transition>
+    <slot name="pop-up-menu">
+      <Transition name="welcome">
+        <article class="pop-up-mask" v-if="isWelComeVisible"/>
+      </Transition>
+      <!--article v-if="isWelComeVisible" style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; position: absolute; top: 0; left: 0; z-index: 1000" @click="isWelComeVisible = false"/-->
+      <Transition name="popup">
+        <WelCome v-if="isWelComeVisible" v-bind:showModal="showWelCome"/> <!-- @close="isWelComeVisible = false"-->
+      </Transition>
+    </slot>
     <footer>
       <button id="show-modal" @click="showWelCome">Show Modal</button>
     </footer>
@@ -633,6 +639,29 @@ section {
     margin-top: 2rem;
 }
 
+
+
+
+.pop-up-mask {
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+
+
+
+
 .welcome-enter {
   opacity: 0;
 }
@@ -645,5 +674,23 @@ section {
 .welcome-leave-active .modal-container {
   --webkit--transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.popup-enter-active {
+  animation: popup-in 0.5s;
+}
+.popup-leave-active {
+  animation: popup-in 0.5s reverse;
+}
+@keyframes popup-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>

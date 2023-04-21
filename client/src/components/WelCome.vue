@@ -1,8 +1,6 @@
 <template>
   <section class="modal-mask" style="max-width: 100%">
-    <article class="sub_container" @click="showModal"/>
-    <Transition name="popup">
-      <article class="container" id="container">
+    <article class="container" id="container">
       <div class="form-container sign-up-container">
         <form action="#">
           <h1>Создать Аккаунт</h1>
@@ -49,7 +47,6 @@
         </div>
       </div>
     </article>
-    </Transition>
   </section>
 </template>
 
@@ -94,13 +91,13 @@ export default {
 
 .modal-mask {
   position: fixed;
-  z-index: 1000;
+  z-index: 1001;
   top: 0;
   left: 0;
+  max-width: 100%;
+  max-height: 100%;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,17 +176,13 @@ input {
   width: 100%;
 }
 
-.sub_container {
-  width: 100%;
-  height: 100%;
-}
-
 .container {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25),
   0 10px 10px rgba(0,0,0,0.22);
   position: absolute;
+  z-index: 999;
   overflow: hidden;
   width: 768px;
   max-width: 100%;
