@@ -5,15 +5,12 @@
       <div class="form-container sign-up-container">
         <form action="#">
           <h1>Создать Аккаунт</h1>
-          <div class="social-container">
-            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          <div style="margin: 10px 0;">
+            <input type="text" placeholder="Имя" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Пароль" />
           </div>
-          <input type="text" placeholder="Имя" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Пароль" />
-          <button>Войти</button>
+          <button>Поехали</button>
         </form>
       </div>
       <div class="form-container sign-in-container">
@@ -46,6 +43,14 @@
             <button class="ghost" id="signUp" @click="signUp">Регистрация</button>
           </div>
         </div>
+      </div>
+      <div class="screen__background">
+        <span class="screen__background__shape screen__background__shape6"></span>
+        <span class="screen__background__shape screen__background__shape5"></span>
+        <span class="screen__background__shape screen__background__shape4"></span>
+        <span class="screen__background__shape screen__background__shape3"></span>
+        <span class="screen__background__shape screen__background__shape2"></span>
+        <span class="screen__background__shape screen__background__shape1"></span>
       </div>
     </article>
   </section>
@@ -154,6 +159,7 @@ button {
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: transform 80ms ease-in;
+  z-index: 1002;
 }
 
 button:active {
@@ -180,12 +186,26 @@ form {
   text-align: center;
 }
 
+input:hover {
+  outline: none;
+  border-bottom-color: white;
+  background-size: 100% 2px;
+}
+
 input {
   background-color: #eee;
   border: none;
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
+
+  user-select: none;
+  text-decoration: none;
+  background-image: linear-gradient(#d1d1d4, #4FE1DDFF);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
 }
 
 .container {
@@ -248,7 +268,7 @@ input {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 50%;
+  width: 51%;
   height: 100%;
   overflow: hidden;
   transition: transform 0.6s ease-in-out;
@@ -366,5 +386,74 @@ footer a {
   100% {
     transform: scale(1);
   }
+}
+
+.screen__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+}
+
+.screen__background__shape {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.screen__background__shape1 {
+  height: 325px;
+  width: 365px;
+  background: linear-gradient(130deg, #69dde8, #51b09a);
+  top: -135px;
+  right: 430px;
+  border-radius: 72px;
+}
+
+.screen__background__shape2 {
+  height: 220px;
+  width: 220px;
+  background: #6d82d5;
+  top: -120px;
+  right: 90px;
+  border-radius: 32px;
+}
+
+.screen__background__shape3 {
+  height: 540px;
+  width: 190px;
+  background: linear-gradient(270deg, #69dde8, #51b09a);
+  top: -24px;
+  right: 0;
+  border-radius: 32px;
+}
+
+.screen__background__shape4 {
+  height: 400px;
+  width: 200px;
+  background: rgba(68, 110, 217, 0.93);
+  top: 420px;
+  right: 50px;
+  border-radius: 60px;
+}
+
+.screen__background__shape5 {
+  height: 367px;
+  width: 182px;
+  background: rgba(68, 110, 217, 0.93);
+  top: 270px;
+  right: 465px;
+  border-radius: 60px;
+}
+.screen__background__shape6 {
+  height: 220px;
+  width: 220px;
+  background: #6d82d5;
+  top: 220px;
+  right: 700px;
+  border-radius: 32px;
 }
 </style>
