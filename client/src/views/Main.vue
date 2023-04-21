@@ -32,7 +32,7 @@
           <div class="box">
             <h3 class="title">Стать преподавателем</h3>
             <p class="tutor">Рыбий текст</p>
-            <a href="teachers.html" class="inline-btn">Начать</a>
+            <a href="#" class="inline-btn">Начать</a>
           </div>
         </div>
       </section>
@@ -136,8 +136,17 @@
         </div>
       </section>
     </main>
-
-
+    <footer>
+      <button id="show-modal" @click="showWelCome">Show Modal</button>
+    </footer>
+    <slot name="pop-up-menu">
+      <Transition name="shadow">
+        <article class="mask" v-if="isWelComeVisible"/>
+      </Transition>
+      <Transition name="popup">
+        <WelCome v-if="isWelComeVisible" v-bind:showModal="showWelCome"/> <!-- @close="isWelComeVisible = false"-->
+      </Transition>
+    </slot>
 </template>
 
 <script>
@@ -145,13 +154,14 @@ import expert from "../components/img/expert.jpg";
 import Grid from "../components/Grid.vue";
 import Navbar from "../components/NavBar.vue";
 import SideBar from "../components/SideBar.vue";
-
+import WelCome from "../components/WelCome.vue";
 
 export default {
-    components: {SideBar, Navbar, Grid},
+    components: {WelCome, SideBar, Navbar, Grid},
     data() {
         return {
             image: expert,
+            isWelComeVisible: false,
             isProfileVisible: false,
             isSidebarVisible: false,
             sidebar_top_categories: [
@@ -187,11 +197,13 @@ export default {
         },
         showSidebar() {
             this.isSidebarVisible = !this.isSidebarVisible
+        },
+        showWelCome() {
+            this.isWelComeVisible = !this.isWelComeVisible
         }
     },
     name: "Main"
 }
-
 </script>
 
 <style scoped>
@@ -609,5 +621,43 @@ section {
 #courses .more-btn {
     text-align: center;
     margin-top: 2rem;
+}
+
+.mask {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
+}
+
+.shadow-enter,
+.shadow-leave-active {
+  opacity: 0;
+  --webkit--transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.popup-enter-active {
+  animation: popup-in 0.5s;
+}
+.popup-leave-active {
+  animation: popup-in 0.5s reverse;
+}
+@keyframes popup-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>
