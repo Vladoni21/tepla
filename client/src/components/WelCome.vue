@@ -1,5 +1,6 @@
 <template>
-  <section class="modal-mask" style="max-width: 100%">
+  <section class="blank" style="max-width: 100%">
+    <article class="escape" @click="showModal"/>
     <article class="container" id="container">
       <div class="form-container sign-up-container">
         <form action="#">
@@ -79,6 +80,17 @@ export default {
   color: white;
 }
 
+.escape {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .close {
   height: 38px;
   width: 38px;
@@ -89,7 +101,7 @@ export default {
   border-radius: 100%;
 }
 
-.modal-mask {
+.blank {
   position: fixed;
   z-index: 1001;
   top: 0;
@@ -133,7 +145,7 @@ a {
 
 button {
   border-radius: 20px;
-  border: none;
+  border: 1px solid white;
   background-color: #51b09a;
   color: #FFFFFF;
   font-size: 12px;
@@ -182,7 +194,7 @@ input {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25),
   0 10px 10px rgba(0,0,0,0.22);
   position: absolute;
-  z-index: 999;
+  z-index: 1001;
   overflow: hidden;
   width: 768px;
   max-width: 100%;

@@ -136,18 +136,17 @@
         </div>
       </section>
     </main>
+    <footer>
+      <button id="show-modal" @click="showWelCome">Show Modal</button>
+    </footer>
     <slot name="pop-up-menu">
-      <Transition name="welcome">
-        <article class="pop-up-mask" v-if="isWelComeVisible"/>
+      <Transition name="shadow">
+        <article class="mask" v-if="isWelComeVisible"/>
       </Transition>
-      <!--article v-if="isWelComeVisible" style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; position: absolute; top: 0; left: 0; z-index: 1000" @click="isWelComeVisible = false"/-->
       <Transition name="popup">
         <WelCome v-if="isWelComeVisible" v-bind:showModal="showWelCome"/> <!-- @close="isWelComeVisible = false"-->
       </Transition>
     </slot>
-    <footer>
-      <button id="show-modal" @click="showWelCome">Show Modal</button>
-    </footer>
 </template>
 
 <script>
@@ -639,12 +638,9 @@ section {
     margin-top: 2rem;
 }
 
-
-
-
-.pop-up-mask {
+.mask {
   position: fixed;
-  z-index: 1001;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
@@ -655,23 +651,9 @@ section {
   transition: opacity 0.3s ease;
 }
 
-
-
-
-
-
-
-
-.welcome-enter {
+.shadow-enter,
+.shadow-leave-active {
   opacity: 0;
-}
-
-.welcome-leave-active {
-  opacity: 0;
-}
-
-.welcome-enter .modal-container,
-.welcome-leave-active .modal-container {
   --webkit--transform: scale(1.1);
   transform: scale(1.1);
 }
