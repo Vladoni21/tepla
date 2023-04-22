@@ -6,7 +6,7 @@
     <Transition name="popup">
       <section class="blank" v-if="req" >
         <article class="escape" @click="func"/>
-        <component v-bind:is="is"/>
+        <component v-bind:is="is" style="z-index: 1002"/>
       </section>
     </Transition>
   </slot>
@@ -14,11 +14,12 @@
 
 <script>
 import Welcome from "./forms/Welcome.vue"
+import Register from "./forms/Register.vue";
 
 export default {
   name: "PopUp",
   props: ["is", "func", "req"],
-  components: {Welcome}
+  components: {Register, Welcome}
 }
 </script>
 

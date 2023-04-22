@@ -82,17 +82,6 @@ export default {
   color: white;
 }
 
-.escape {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .close {
   height: 38px;
   width: 38px;
@@ -101,20 +90,6 @@ export default {
   right: 10px;
   z-index: 1001;
   border-radius: 100%;
-}
-
-.blank {
-  position: fixed;
-  z-index: 1001;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 h1 {
@@ -156,7 +131,6 @@ button {
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: transform 80ms ease-in;
-  z-index: 1002;
 }
 
 button:active {
@@ -211,7 +185,6 @@ input {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25),
   0 10px 10px rgba(0,0,0,0.22);
   position: absolute;
-  z-index: 1001;
   overflow: hidden;
   width: 768px;
   max-width: 100%;

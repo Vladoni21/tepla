@@ -139,7 +139,7 @@
     <footer>
       <button id="show-modal" @click="showWelcome">Show Modal</button>
     </footer>
-    <PopUp is="Welcome" v-bind:func="showWelcome" v-bind:req="isWelcomeVisible"/>
+    <PopUp is="Register" v-bind:func="showWelcome" v-bind:req="isWelcomeVisible"/>
 </template>
 
 <script>
@@ -148,6 +148,8 @@ import Grid from "../components/Grid.vue";
 import Navbar from "../components/NavBar.vue";
 import SideBar from "../components/SideBar.vue";
 import PopUp from "../components/PopUp.vue";
+import Register from "../components/forms/Register.vue";
+
 
 export default {
     components: {PopUp, SideBar, Navbar, Grid},
