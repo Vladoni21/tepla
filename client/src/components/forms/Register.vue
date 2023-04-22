@@ -37,21 +37,21 @@
                              aria-hidden="false">
                         <div class="inner">
                             <div class="wizard-header">
-                                <h3 class="heading">Peronal Infomation</h3>
+                                <h3 class="heading">Основная Информация</h3>
                                 <p>Please enter your infomation and proceed to the next step so we can build your
                                     accounts. </p>
                             </div>
                             <div class="form-row">
                                 <div class="form-holder">
                                     <fieldset>
-                                        <legend>First Name</legend>
+                                        <legend>Название</legend>
                                         <input type="text" class="form-control" id="first-name" name="first-name"
                                                placeholder="First Name" required="">
                                     </fieldset>
                                 </div>
                                 <div class="form-holder">
                                     <fieldset>
-                                        <legend>Last Name</legend>
+                                        <legend>Тег</legend>
                                         <input type="text" class="form-control" id="last-name" name="last-name"
                                                placeholder="Last Name" required="">
                                     </fieldset>
@@ -217,11 +217,19 @@
                 </div>
                 <div class="actions clearfix">
                     <ul role="menu" aria-label="Pagination">
-                        <li class="disabled" aria-disabled="true"><a href="#previous" role="menuitem">Back Step</a></li>
-                        <li aria-hidden="false" aria-disabled="false"><a href="#next" role="menuitem"><i
-                                class="zmdi zmdi-arrow-right"></i></a></li>
-                        <li aria-hidden="true" style="display: none;"><a href="#finish" role="menuitem"><i
-                                class="zmdi zmdi-check"></i></a></li>
+                        <li class="disabled" aria-disabled="true" @click="previous">
+                            <a href="#previous" role="menuitem">Back Step</a>
+                        </li>
+                        <li aria-hidden="false" aria-disabled="false" @click="next">
+                            <a href="#next" role="menuitem">
+                                <i class="zmdi zmdi-arrow-right"/>
+                            </a>
+                        </li>
+                        <li aria-hidden="true" style="display: none;" @click="finish">
+                            <a href="#finish" role="menuitem">
+                                <i class="zmdi zmdi-check"/>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -231,9 +239,42 @@
 
 <script>
 
-
 export default {
     name: "Register",
+    data() {
+        return {
+            isInfoDone: false,
+            isTagDone: false,
+            isPlanDone: false,
+            progress: 0
+        }
+    },
+    methods: {
+        next: function () {
+            if (this.progress < 2) {
+                this.progress++;
+                if (this.progress === 1) {
+                    document.getElementById('form-total-p-0').style.display = "none";
+                    document.getElementById('form-total-p-1').style.display = "block";
+                } else if (this.progress === 2) {
+                    document.getElementById('form-total-p-1').style.display = "none";
+                    document.getElementById('form-total-p-2').style.display = "block";
+                }
+            }
+        },
+        previous: function () {
+            if (this.progress > 0) {
+                this.progress--;
+                if (this.progress === 1) {
+                    document.getElementById('form-total-p-2').style.display = "none";
+                    document.getElementById('form-total-p-1').style.display = "block";
+                } else if (this.progress === 0) {
+                    document.getElementById('form-total-p-1').style.display = "none";
+                    document.getElementById('form-total-p-0').style.display = "block";
+                }
+            }
+        },
+    },
 }
 </script>
 
