@@ -9,21 +9,21 @@
                                 class="current-info audible"> </span>
                             <div class="title">
                                 <p class="step-icon"><span>01</span></p>
-                                <span class="step-text">Peronal Infomation</span>
+                                <span class="step-text">Основная информация</span>
                             </div>
                         </a></li>
                         <li role="tab" aria-disabled="false"><a id="form-total-t-1" href="#form-total-h-1"
                                                                 aria-controls="form-total-p-1">
                             <div class="title">
                                 <p class="step-icon"><span>02</span></p>
-                                <span class="step-text">Connect Bank Account</span>
+                                <span class="step-text">Тематика курса</span>
                             </div>
                         </a></li>
                         <li role="tab" aria-disabled="false" class="last"><a id="form-total-t-2" href="#form-total-h-2"
                                                                              aria-controls="form-total-p-2">
                             <div class="title">
                                 <p class="step-icon"><span>03</span></p>
-                                <span class="step-text">Set Financial Goals</span>
+                                <span class="step-text">Уровень сложности</span>
                             </div>
                         </a></li>
                     </ul>
@@ -38,31 +38,30 @@
                         <div class="inner">
                             <div class="wizard-header">
                                 <h3 class="heading">Основная Информация</h3>
-                                <p>Please enter your infomation and proceed to the next step so we can build your
-                                    accounts. </p>
+                                <p>Укажите основную информацию вашего курса и приступайте к следующему шагу</p>
                             </div>
                             <div class="form-row">
                                 <div class="form-holder">
                                     <fieldset>
                                         <legend>Название</legend>
                                         <input type="text" class="form-control" id="first-name" name="first-name"
-                                               placeholder="First Name" required="">
+                                               placeholder="Название курса" required="">
                                     </fieldset>
                                 </div>
                                 <div class="form-holder">
                                     <fieldset>
                                         <legend>Тег</legend>
                                         <input type="text" class="form-control" id="last-name" name="last-name"
-                                               placeholder="Last Name" required="">
+                                               placeholder="Тег" required="">
                                     </fieldset>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-holder form-holder-2">
                                     <fieldset>
-                                        <legend>Your Email</legend>
+                                        <legend>Ссылка на видеоурок</legend>
                                         <input type="text" name="your_email" id="your_email" class="form-control"
-                                               pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="example@email.com"
+                                               pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="example.com"
                                                required="">
                                     </fieldset>
                                 </div>
@@ -70,9 +69,9 @@
                             <div class="form-row">
                                 <div class="form-holder form-holder-2">
                                     <fieldset>
-                                        <legend>Phone Number</legend>
+                                        <legend>Описание</legend>
                                         <input type="text" class="form-control" id="phone" name="phone"
-                                               placeholder="+1 888-999-7777" required="">
+                                               placeholder="Описание курса" required="">
                                     </fieldset>
                                 </div>
                             </div>
@@ -120,13 +119,12 @@
                              aria-hidden="true" style="display: none;">
                         <div class="inner">
                             <div class="wizard-header">
-                                <h3 class="heading">Connect Bank Account</h3>
-                                <p>Please enter your infomation and proceed to the next step so we can build your
-                                    accounts.</p>
+                                <h3 class="heading">Выберите тематику вашего курса</h3>
+                                <p>Из предложенных ниже карточек выберите наиболее подходящую для вашего курса или укажите иной вариант в поле выше</p>
                             </div>
                             <div class="form-row">
                                 <div class="form-holder form-holder-1">
-                                    <input type="text" name="find_bank" id="find_bank" placeholder="Find Your Bank"
+                                    <input type="text" name="find_bank" id="find_bank" placeholder="Укажите тематику вашего курса"
                                            class="form-control" required="">
                                 </div>
                             </div>
@@ -176,9 +174,7 @@
                              aria-hidden="true" style="display: none;">
                         <div class="inner">
                             <div class="wizard-header">
-                                <h3 class="heading">Set Financial Goals</h3>
-                                <p>Please enter your infomation and proceed to the next step so we can build your
-                                    accounts.</p>
+                                <h3 class="heading">Выберите уровень сложности для вашего курса</h3>
                             </div>
                             <div class="form-row">
                                 <div class="form-holder form-holder-2">
@@ -187,18 +183,16 @@
                                         <img src="images/form-v1-icon-2.png" alt="pay-1">
                                     </label>
                                     <div class="plan-total">
-                                        <span class="plan-title">Specific Plan</span>
-                                        <p class="plan-text">Pellentesque nec nam aliquam sem et volutpat consequat
-                                            mauris nunc congue nisi.</p>
+                                        <span class="plan-title">Школьный уровень</span>
+                                        <p class="plan-text">Наиболее простой уровень сложности для понимания основ</p>
                                     </div>
                                     <input type="radio" class="radio" name="radio1" id="plan-2" value="plan-2">
                                     <label class="plan-icon plan-2-label" for="plan-2">
                                         <img src="images/form-v1-icon-2.png" alt="pay-1">
                                     </label>
                                     <div class="plan-total">
-                                        <span class="plan-title">Medium Plan</span>
-                                        <p class="plan-text">Pellentesque nec nam aliquam sem et volutpat consequat
-                                            mauris nunc congue nisi.</p>
+                                        <span class="plan-title">Продвинутый уровень</span>
+                                        <p class="plan-text">Средний уровень, подходящий для большинства обучающихся. Более углубленное изучение в предметной области</p>
                                     </div>
                                     <input type="radio" class="radio" name="radio1" id="plan-3" value="plan-3"
                                            checked="">
@@ -206,9 +200,8 @@
                                         <img src="images/form-v1-icon-3.png" alt="pay-2">
                                     </label>
                                     <div class="plan-total">
-                                        <span class="plan-title">Special Plan</span>
-                                        <p class="plan-text">Pellentesque nec nam aliquam sem et volutpat consequat
-                                            mauris nunc congue nisi.</p>
+                                        <span class="plan-title">Экспертный уровень</span>
+                                        <p class="plan-text">Наиболее сложный уровень для полного понимания предметной области на профессиональном уровне</p>
                                     </div>
                                 </div>
                             </div>
