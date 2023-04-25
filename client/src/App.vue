@@ -1,7 +1,6 @@
 <template>
     <main id="app">
-        <Main/>
-        <Home/>
+        <Error/>
         <!--RouterView/>
         <keep-alive>
           <index-view></index-view>
@@ -11,7 +10,7 @@
 
 <script>
 
-
+import Error from "./views/404.vue"
 import Main from "./views/Main.vue";
 import Home from './views/Home.vue';
 
@@ -19,6 +18,7 @@ import Home from './views/Home.vue';
 export default {
     name: 'app',
     components: {
+        Error,
         Main,
         Home,
     }

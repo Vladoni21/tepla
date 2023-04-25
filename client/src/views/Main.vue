@@ -148,11 +148,10 @@ import Grid from "../components/Grid.vue";
 import Navbar from "../components/NavBar.vue";
 import SideBar from "../components/SideBar.vue";
 import PopUp from "../components/PopUp.vue";
-import Register from "../components/forms/Register.vue";
 
 
 export default {
-    components: {PopUp, SideBar, Navbar, Grid},
+    components: {Error, PopUp, SideBar, Navbar, Grid},
     data() {
         return {
             image: expert,
