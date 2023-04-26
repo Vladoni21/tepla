@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import ErrorLogo from "./ErrorLogo.vue";
+import ErrorLogo from "../components/gears/ErrorLogo.vue";
 
 export default {
 name: "Error",

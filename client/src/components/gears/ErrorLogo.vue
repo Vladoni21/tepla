@@ -42,17 +42,42 @@ export default {
           this.size = 3;
           this.baseX = this.x;
           this.baseY = this.y;
-          this.density = ((Math.random() * 25) + 1);
+          this.density = ((Math.random() * 60) + 1.5);
           this.random = Math.random();
           this.angle = Math.random() * 2;
-
+          this.distance;
         }
 
         draw() {
           if (this.random > 0.05) {
-            ctx.fillStyle = 'white';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.strokeStyle = 'rgba(34, 147, 214, 1)';
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+
+            if (this.distance < mouse.radius - 5) {
+              this.size = 4;
+              ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+              ctx.stroke();
+              ctx.closePath();
+              ctx.beginPath();
+              ctx.arc(this.x-3, this.y-3, this.size/2.1, 0, Math.PI * 2);
+              ctx.arc(this.x+2, this.y+2, this.size/3.1, 0, Math.PI * 2);
+            } else if (this.distance <= mouse.radius) {
+              this.size = 6;
+              ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+              ctx.stroke();
+              ctx.closePath();
+              ctx.beginPath();
+              ctx.arc(this.x - 2, this.y - 2, this.size / 3, 0, Math.PI * 2);
+            } else {
+              this.size = 7;
+              ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+              ctx.stroke();
+              ctx.closePath();
+              ctx.beginPath();
+              ctx.arc(this.x - 1, this.y - 1, this.size / 3, 0, Math.PI * 2);
+
+            }
             ctx.closePath();
             ctx.fill();
           } else {
@@ -69,6 +94,7 @@ export default {
           let dx = mouse.x - this.x;
           let dy = mouse.y - this.y;
           let distance = Math.sqrt(dx * dx + dy * dy);
+          this.distance = distance
           let forceDirectionX = dx / distance;
           let forceDirectionY = dy / distance;
           // distance past which the force is zero
