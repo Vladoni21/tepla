@@ -10,7 +10,7 @@
 
 <script>
 
-import Error from "./views/404.vue"
+import Error from "./views/Error.vue"
 import Main from "./views/Main.vue";
 import Home from './views/Home.vue';
 
