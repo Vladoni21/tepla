@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import Welcome from "./forms/Welcome.vue"
-import Register from "./forms/Register.vue";
+import Welcome from "../forms/Welcome.vue"
+import Register from "../forms/Register.vue";
 
 export default {
   name: "PopUp",

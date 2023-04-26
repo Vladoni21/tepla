@@ -1,13 +1,26 @@
 <template>
   <section>
-    <a href="#">Log In</a>
-    <button>Sing Up</button>
+    <button id="show-modal" @click="showWel">Sing In/Up</button>
   </section>
+  <PopUp is="Welcome" v-bind:func="showWel" v-bind:req="isWelVisible"/>
 </template>
 
 <script>
+import PopUp from "../PopUp.vue";
+
 export default {
-  name: "LogBtn"
+  name: "LogBtn",
+  components: {PopUp},
+  data() {
+    return {
+      isWelVisible: false
+    }
+  },
+  methods: {
+    showWel() {
+      this.isWelVisible = !this.isWelVisible
+    }
+  },
 }
 </script>
 
@@ -42,7 +55,7 @@ button {
   border-radius: 15px;
   padding: 10px;
   height: 40px;
-  width: 90px;
+  width: inherit;
   box-shadow: 0 2px 4px darkslategray;
   cursor: pointer;
   transition: all 0.2s ease;

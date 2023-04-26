@@ -26,7 +26,7 @@ export default {
     z-index: 3;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     box-sizing: border-box;

@@ -133,9 +133,9 @@
           <!--a href="courses.html" class="inline-option-btn">view all courses</a-->
         </div>
       </section>
-      <button id="show-modal" @click="showWelcome">Show Modal</button>
+      <button id="show-modal" @click="showReg">Show Modal</button>
     </section>
-    <PopUp is="Register" v-bind:func="showWelcome" v-bind:req="isWelcomeVisible"/>
+    <PopUp is="Register" v-bind:func="showReg" v-bind:req="isRegVisible"/>
 </template>
 
 <script>
@@ -143,7 +143,7 @@ import expert from "../components/img/expert.jpg";
 import Grid from "../components/Grid.vue";
 import Navbar from "../components/NavBar.vue";
 import SideBar from "../components/SideBar.vue";
-import PopUp from "../components/PopUp.vue";
+import PopUp from "../components/gears/PopUp.vue";
 
 
 export default {
@@ -151,7 +151,7 @@ export default {
     data() {
         return {
             image: expert,
-            isWelcomeVisible: false,
+            isRegVisible: false,
             sidebar_top_categories: [
                 {id: 1, title: "Разработка", icon: "code", href: "#", class: "default", gear: "LinkButton"},
                 {id: 2, title: "Бизнес", icon: "chart-simple", href: "#", class: "default", gear: "LinkButton"},
@@ -180,8 +180,8 @@ export default {
         }
     },
     methods: {
-        showWelcome() {
-            this.isWelcomeVisible = !this.isWelcomeVisible
+        showReg() {
+            this.isRegVisible = !this.isRegVisible
         }
     },
     name: "Main"
