@@ -1,241 +1,182 @@
 <template>
-  <section id='container'>
-    <canvas id="canvas1"/>
-    <footer>Whoops 404!! The page is not available. <a href="#" @click.prevent="back">Go back</a> @2023!</footer>
+  <section class="container">
+    <ErrorLogo/>
+    <article class="field">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="message">
+        <h1>404</h1>
+        <p>It looks like you're lost...<br/>That's a trouble?</p>
+        <button type="button">Go back</button>
+      </div>
+    </article>
   </section>
 </template>
+
 <script>
+import ErrorLogo from "./ErrorLogo.vue";
+
 export default {
-  methods: {
-    back() {
-      this.$router.go(-1);
-    },
-    async AnimText() {
-      const canvas = document.getElementById("canvas1");
-      const ctx = canvas.getContext("2d");
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      let particleArray = [];
-      let adjustX = canvas.width / 200;
-      let adjustY = canvas.height / 200;
-
-// get mouse mouse position //
-      let mouse = {
-        x: null,
-        y: null,
-        radius: 150
-      }
-      window.addEventListener('mousemove',
-          function (event) {
-            mouse.x = event.x + canvas.clientLeft / 2;
-            mouse.y = event.y + canvas.clientTop / 2;
-          });
-
-      ctx.font = 'bold 20px Verdana';
-      ctx.fillText('404', 0, 40);
-      const data = ctx.getImageData(0, 0, canvas.width, 100);
-
-      class Particle {
-        constructor(x, y) {
-          this.x = x + 200;
-          this.y = y - 100;
-          this.size = 3;
-          this.baseX = this.x;
-          this.baseY = this.y;
-          this.density = ((Math.random() * 30) + 1);
-          this.random = Math.random();
-          this.angle = Math.random() * 2;
-
-        }
-
-        draw() {
-          if (this.random > 0.05) {
-            ctx.fillStyle = 'white';
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.closePath();
-            ctx.fill();
-          } else {
-            ctx.save();
-            ctx.translate(this.x, this.y);
-            ctx.rotate(this.angle);
-            ctx.restore();
-          }
-
-        }
-
-        update() {
-          // check mouse position/particle position - collision detection
-          let dx = mouse.x - this.x;
-          let dy = mouse.y - this.y;
-          let distance = Math.sqrt(dx * dx + dy * dy);
-          let forceDirectionX = dx / distance;
-          let forceDirectionY = dy / distance;
-          // distance past which the force is zero
-          var maxDistance = mouse.radius;
-          // convert (0...maxDistance) range into a (1...0).
-          // Close is near 1, far is near 0
-          // for example:
-          //   250 => 0.75
-          //   100 => 0.9
-          //   10  => 0.99
-          var force = (maxDistance - distance) / maxDistance;
-
-          // if we went below zero, set it to zero.
-          if (force < 0) force = 0;
-
-          let directionX = (forceDirectionX * force * this.density)
-          let directionY = (forceDirectionY * force * this.density);
-
-          if (distance < mouse.radius + this.size) {
-            this.x -= directionX;
-            this.y -= directionY;
-          } else {
-            if (this.x !== this.baseX) {
-              let dx = this.x - this.baseX;
-              this.x -= dx / 10;
-            }
-            if (this.y !== this.baseY) {
-              let dy = this.y - this.baseY;
-              this.y -= dy / 10;
-            }
-          }
-        }
-      }
-
-      function init() {
-        particleArray = [];
-
-        for (var y = 0, y2 = data.height; y < y2; y++) {
-          for (var x = 0, x2 = data.width; x < x2; x++) {
-            if (data.data[(y * 4 * data.width) + (x * 4) + 3] > 128) {
-              let positionX = x + adjustX;
-              let positionY = y + adjustY;
-              //let positionX = x;
-              //let positionY = y;
-              particleArray.push(new Particle(positionX * 15, positionY * 15));
-            }
-          }
-        }
-
-      }
-
-      function animate() {
-        //ctx.fillStyle = 'rgba(0,0,0,0.5)';
-        //ctx.fillRect(0,0,innerWidth,innerHeight);
-        ctx.clearRect(0, 0, innerWidth, innerHeight);
-        connect();
-        for (let i = 0; i < particleArray.length; i++) {
-          particleArray[i].update();
-          particleArray[i].draw();
-        }
-
-        requestAnimationFrame(animate);
-      }
-
-      init();
-      animate();
-
-// RESIZE SETTING - empty and refill particle array every time window changes size + change canvas size
-      window.addEventListener('resize',
-          function () {
-            canvas.width = innerWidth;
-            canvas.height = innerHeight;
-            adjustX = -60 + canvas.width / 30;
-            adjustY = -32 + canvas.height / 30;
-            init();
-          });
-
-
-      function connect() {
-        let opacityValue = 1;
-        for (let a = 0; a < particleArray.length; a++) {
-          for (let b = a; b < particleArray.length; b++) {
-            let distance = ((particleArray[a].x - particleArray[b].x) * (particleArray[a].x - particleArray[b].x))
-                + ((particleArray[a].y - particleArray[b].y) * (particleArray[a].y - particleArray[b].y));
-
-            if (distance < 2600) {
-              opacityValue = 1 - (distance / 2600);
-              let dx = mouse.x - particleArray[a].x;
-              let dy = mouse.y - particleArray[a].y;
-              let mouseDistance = Math.sqrt(dx * dx + dy * dy);
-              if (mouseDistance < mouse.radius / 2) {
-                ctx.strokeStyle = 'rgba(255,255,0,' + opacityValue + ')';
-              } else if (mouseDistance < mouse.radius - 50) {
-                ctx.strokeStyle = 'rgba(255,255,140,' + opacityValue + ')';
-              } else if (mouseDistance < mouse.radius + 20) {
-                ctx.strokeStyle = 'rgba(255,255,210,' + opacityValue + ')';
-              } else {
-                ctx.strokeStyle = 'rgba(255,255,255,' + opacityValue + ')';
-              }
-              ctx.lineWidth = 1;
-              ctx.beginPath();
-              ctx.moveTo(particleArray[a].x, particleArray[a].y);
-              ctx.lineTo(particleArray[b].x, particleArray[b].y);
-              ctx.stroke();
-            }
-          }
-
-        }
-      }
-
-    }
-  },
-  mounted() {
-    this.AnimText()
-    // let AnimScript = document.createElement('script')
-    // AnimScript.setAttribute('src', './views/error.js')
-    // document.head.appendChild(AnimScript)
-  }
+name: "Error",
+  components: {ErrorLogo}
 }
 </script>
-<style scoped>
 
-h1 {
-  color: white;
+<style scoped>
+.container, .field {
+  height: 100vh;
+}
+
+.container:before, .container:after, .field:before, .field:after {
+  content: "";
+  background: linear-gradient(#203075, #233581);
+  border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-#container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: black;
-  width: 100%;
-  height: 100%;
+.container:before, .field:before {
+  background: linear-gradient(#233581, #203075);
 }
 
-#canvas1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /*filter: blur(10px) contrast(10);*/
+
+.container:before {
+  height: 105vmax;
+  width: 105vmax;
+  z-index: -4;
+}
+.container:after {
+  height: 80vmax;
+  width: 80vmax;
+  z-index: -3;
 }
 
-footer, article {
-  font-family: 'Helvetica', sans-serif;
-  width: 100%;
-  color: white;
-  font-size: 20px;
-  text-shadow: 1px 1px 1px #737373;
-  background: rgba(255, 255, 255, 0.4);
-  left: 0;
-  bottom: 20px;
-  width: 100%;
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  text-shadow: 0 30px 10px rgba(0, 0, 0, 0.15);
+}
+.field:before {
+  height: 60vmax;
+  width: 60vmax;
+  z-index: -2;
+}
+.field:after {
+  height: 40vmax;
+  width: 40vmax;
+  z-index: -1;
+}
+
+.message {
+  /* width: 40%;
+  height: 60%;
+  border-radius: 30px;
+  background: #61a5e8; */
   text-align: center;
-  height: 30px;
-  line-height: 30px;
-  padding-right: 20px;
+  z-index: 5;
 }
 
-footer a {
-  color: gold;
+p {
+  font-size: 18px;
+  margin-top: 0;
 }
 
+h1 {
+  font-size: 95px;
+  margin: 0;
+}
 
+button {
+  background: linear-gradient(#EC5DC1, #D61A6F);
+  padding: 0 12px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 30px 15px rgba(0, 0, 0, 0.15);
+  outline: none;
+  color: #FFF;
+  font: 400 16px/2.5 Nunito, "Varela Round", Sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.bubble {
+  background: linear-gradient(#EC5DC1, #D61A6F);
+  border-radius: 50%;
+  box-shadow: 0 30px 15px rgba(0, 0, 0, 0.15);
+  position: absolute;
+}
+.bubble:before, .bubble:after {
+  content: "";
+  background: linear-gradient(#EC5DC1, #D61A6F);
+  border-radius: 50%;
+  box-shadow: 0 30px 15px rgba(0, 0, 0, 0.15);
+  position: absolute;
+}
+.bubble:nth-child(1) {
+  top: 15vh;
+  left: 15vw;
+  height: 22vmin;
+  width: 22vmin;
+}
+.bubble:nth-child(1):before {
+  width: 13vmin;
+  height: 13vmin;
+  bottom: -25vh;
+  right: -10vmin;
+}
+.bubble:nth-child(2) {
+  top: 20vh;
+  left: 38vw;
+  height: 10vmin;
+  width: 10vmin;
+}
+.bubble:nth-child(2):before {
+  width: 5vmin;
+  height: 5vmin;
+  bottom: -10vh;
+  left: -8vmin;
+}
+.bubble:nth-child(3) {
+  top: 12vh;
+  right: 30vw;
+  height: 13vmin;
+  width: 13vmin;
+}
+.bubble:nth-child(3):before {
+  width: 3vmin;
+  height: 3vmin;
+  bottom: -15vh;
+  left: -18vmin;
+  z-index: 6;
+}
+.bubble:nth-child(4) {
+  top: 25vh;
+  right: 18vw;
+  height: 18vmin;
+  width: 18vmin;
+}
+.bubble:nth-child(4):before {
+  width: 7vmin;
+  height: 7vmin;
+  bottom: -10vmin;
+  left: -15vmin;
+}
+.bubble:nth-child(5) {
+  top: 60vh;
+  right: 18vw;
+  height: 28vmin;
+  width: 28vmin;
+}
+.bubble:nth-child(5):before {
+  width: 10vmin;
+  height: 10vmin;
+  bottom: 5vmin;
+  left: -25vmin;
+}
 </style>
