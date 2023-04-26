@@ -1,6 +1,6 @@
 <template>
   <section>
-    <button id="show-modal" @click="showWel">Sing In/Up</button>
+    <button id="show-modal" @click="showWel"><fa v-bind:icon="icon" class="fa"/></button>
   </section>
   <PopUp is="Welcome" v-bind:func="showWel" v-bind:req="isWelVisible"/>
 </template>
@@ -10,6 +10,7 @@ import PopUp from "../PopUp.vue";
 
 export default {
   name: "LogBtn",
+  props: ["icon"],
   components: {PopUp},
   data() {
     return {
@@ -35,6 +36,7 @@ section {
   height: 100%;
   overflow: hidden;
   display: flex;
+  margin: 0 5px;
 }
 a {
   text-align: center;
@@ -48,14 +50,13 @@ a:hover {
   text-decoration: none;
 }
 button {
-  margin: 10px;
   background-color: white;
   color: #48abe0;
   border: none;
-  border-radius: 15px;
+  border-radius: 60px;
   padding: 10px;
-  height: 40px;
-  width: inherit;
+  height: 56px;
+  width: 56px;
   box-shadow: 0 2px 4px darkslategray;
   cursor: pointer;
   transition: all 0.2s ease;

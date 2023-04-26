@@ -1,15 +1,17 @@
 <template>
     <section class="navbar">
         <Logo/>
-        <SearchBar/>
-        <LogBtn/>
+        <div style="margin: 0 -10px 0 0; height: 60px; width: 430px; display: flex; justify-content: space-around">
+          <SearchBar/>
+          <LogBtn icon="user"/>
+        </div>
     </section>
 </template>
 
 <script>
 import Logo from "./gears/navigation/NavLogo.vue";
-import SearchBar from "./gears/navigation/NavSearch.vue";
 import LogBtn from "./gears/navigation/NavBtn.vue";
+import SearchBar from "./gears/navigation/NewSearch.vue";
 
 
 export default {
@@ -21,7 +23,6 @@ export default {
 <style scoped>
 
 .navbar {
-    /* position: absolute; */
     position: absolute;
     z-index: 3;
     padding: 0;
