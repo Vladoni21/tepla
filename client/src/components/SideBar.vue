@@ -140,7 +140,7 @@ nav ul, nav li {
 
 .main-menu {
   background:#F7F7F7;
-  position:absolute;
+  position:fixed;
   top:0;
   bottom:0;
   height:100%;
@@ -152,7 +152,7 @@ nav ul, nav li {
   -webkit-transform:translateZ(0) scale(1,1);
   box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
   opacity:1;
-  z-index: 999;
+  z-index: 2;
 }
 
 .no-touch .scrollable.hover {

@@ -22,6 +22,8 @@ export default {
 
 .navbar {
     /* position: absolute; */
+    position: absolute;
+    z-index: 3;
     padding: 0;
     display: flex;
     justify-content: space-between;

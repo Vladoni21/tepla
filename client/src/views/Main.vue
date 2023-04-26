@@ -1,11 +1,9 @@
 <link rel="stylesheet" href="../../../../Desktop/desgin/css/style.css">
 <template>
-  <!--header-->
-    <header class="header">
+    <!--header class="header">
       <Navbar/>
-    </header>
-    <main>
-      <SideBar/>
+    </header-->
+    <section class="Main">
       <section class="home-grid">
         <div class="box-container">
           <div class="box">
@@ -135,10 +133,8 @@
           <!--a href="courses.html" class="inline-option-btn">view all courses</a-->
         </div>
       </section>
-    </main>
-    <footer>
       <button id="show-modal" @click="showWelcome">Show Modal</button>
-    </footer>
+    </section>
     <PopUp is="Register" v-bind:func="showWelcome" v-bind:req="isWelcomeVisible"/>
 </template>
 
@@ -206,6 +202,12 @@ export default {
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+}
+
+.Main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 section {

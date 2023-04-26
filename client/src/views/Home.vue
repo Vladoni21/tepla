@@ -48,9 +48,9 @@
             </div>
         </article>
     </section>
-    <section class="Home">
+    <!--section class="Home">
         <Card v-bind:arr="test"/>
-    </section>
+    </section-->
 </template>
 
 <script>
