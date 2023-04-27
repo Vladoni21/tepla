@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import LinkButton from "./links/LinkButton.vue";
-import LinkCourse from "./links/LinkCourse.vue";
-import LinkExpert from "./links/LinkExpert.vue";
-import NavItem from "./navigation/NavItem.vue";
+import LinkButton from "../gears/links/LinkButton.vue";
+import LinkCourse from "../gears/links/LinkCourse.vue";
+import LinkExpert from "../gears/links/LinkExpert.vue";
+import NavItem from "../gears/navigation/NavItem.vue";
 
 
 export default {

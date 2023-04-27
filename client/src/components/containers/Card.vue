@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import CardBenefit from "./gears/cards/CardBenefit.vue";
-import CardBranch from "./gears/cards/CardBranch.vue";
+import CardBenefit from "../gears/cards/CardBenefit.vue";
+import CardBranch from "../gears/cards/CardBranch.vue";
 
 
 export default {

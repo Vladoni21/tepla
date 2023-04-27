@@ -5,8 +5,7 @@
     <main id="app">
         <SideBar/>
         <slot>
-            <Main/>
-            <Home/>
+            <Error/>
         </slot>
         <!--RouterView/>
         <keep-alive>
@@ -23,11 +22,13 @@ import SideBar from "./components/SideBar.vue";
 import Error from "./views/Error.vue"
 import Main from "./views/Main.vue";
 import Home from './views/Home.vue';
+import Preloader from "./components/gears/loaders/PreLoaderNew.vue";
 
 
 export default {
     name: 'app',
     components: {
+        Preloader,
         NavBar,
         SideBar,
         Error,

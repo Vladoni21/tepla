@@ -3,9 +3,9 @@
 </template>
 
 <script>
-import LinkButton from "./gears/links/LinkButton.vue";
-import LinkCourse from "./gears/links/LinkCourse.vue";
-import LinkExpert from "./gears/links/LinkExpert.vue";
+import LinkButton from "../gears/links/LinkButton.vue";
+import LinkCourse from "../gears/links/LinkCourse.vue";
+import LinkExpert from "../gears/links/LinkExpert.vue";
 
 
 export default {

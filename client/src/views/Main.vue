@@ -140,10 +140,10 @@
 
 <script>
 import expert from "../components/img/expert.jpg";
-import Grid from "../components/Grid.vue";
+import Grid from "../components/containers/Grid.vue";
 import Navbar from "../components/NavBar.vue";
 import SideBar from "../components/SideBar.vue";
-import PopUp from "../components/gears/PopUp.vue";
+import PopUp from "../components/containers/PopUp.vue";
 
 
 export default {
@@ -189,20 +189,7 @@ export default {
 </script>
 
 <style scoped>
-* {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-}
 
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
 
 .Main {
   max-width: 1280px;
@@ -210,7 +197,7 @@ html {
   padding: 2rem;
 }
 
-section {
+.Main section {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
