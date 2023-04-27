@@ -1,0 +1,25 @@
+sidebar_top_categories: [
+                {id: 1, title: "Разработка", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 2, title: "Бизнес", icon: "chart-simple", href: "#", class: "default", gear: "LinkButton"},
+                {id: 3, title: "Дизайн", icon: "pen", href: "#", class: "default", gear: "LinkButton"},
+                {id: 4, title: "Маркетинг", icon: "chart-line", href: "#", class: "default", gear: "LinkButton"},
+                {id: 5, title: "Музыка", icon: "music", href: "#", class: "default", gear: "LinkButton"},
+                {id: 6, title: "Фото", icon: "camera", href: "#", class: "default", gear: "LinkButton"},
+                {id: 7, title: "ПО", icon: "cog", href: "#", class: "default", gear: "LinkButton"},
+                {id: 8, title: "Наука", icon: "vial", href: "#", class: "default", gear: "LinkButton"},
+],
+sidebar_top_courses: [
+                {id: 1, title: "HTML", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 2, title: "CSS", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 3, title: "javascript", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 4, title: "react", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 5, title: "PHP", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 6, title: "bootstrap", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+],
+sidebar_menu: [
+                {id: 1, title: "Домой", icon: "home", href: "#", class: "nav_link", gear: "LinkButton"},
+                {id: 2, title: "О нас", icon: "question", href: "#", class: "nav_link", gear: "LinkButton"},
+                {id: 3, title: "Курсы", icon: "graduation-cap", href: "#", class: "nav_link", gear: "LinkButton"},
+                {id: 4, title: "Учителя", icon: "chalkboard-user", href: "#", class: "nav_link", gear: "LinkButton"},
+                {id: 5, title: "Поддержка", icon: "headset", href: "#", class: "nav_link", gear: "LinkButton"},
+]
