@@ -1,0 +1,51 @@
+version: '3.9'
+services:
+  database:
+    build:
+      context: database
+    volumes:
+      - data:/var/lib/postgresql/data:./database/data
+      - postgresql_socket:/var/run/postgresql
+    env_file:
+      - .env
+    networks:
+      - database_bridge
+    ports:
+      - "5432"
+    restart: always
+  backend:
+    depends_on:
+      - database
+    build:
+      context: server
+    volumes:
+      - postgresql_socket:/var/run/postgresql
+    env_file:
+      - .env
+    networks:
+      - database_bridge
+      - default
+    ports:
+      - "3000:3000"
+    links:
+      - database
+    restart: always
+  frontend:
+    depends_on:
+      - backend
+    build:
+      context: client
+    networks:
+      - default
+    ports:
+      - "80:80"
+    restart: always
+volumes:
+  data:
+  postgresql_socket:
+networks:
+  database_bridge:
+    name: express-postgres
+    driver: bridge
+  default:
+    driver: bridge
