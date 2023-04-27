@@ -154,20 +154,20 @@ export default {
             isRegVisible: false,
             sidebar_top_categories: [
                 {id: 1, title: "Разработка", icon: "code", href: "#", class: "default", gear: "LinkButton"},
-                {id: 2, title: "Бизнес", icon: "chart-simple", href: "#", class: "default", gear: "LinkButton"},
-                {id: 3, title: "Дизайн", icon: "pen", href: "#", class: "default", gear: "LinkButton"},
-                {id: 4, title: "Маркетинг", icon: "chart-line", href: "#", class: "default", gear: "LinkButton"},
-                {id: 5, title: "Музыка", icon: "music", href: "#", class: "default", gear: "LinkButton"},
+                {id: 2, title: "Бизнес", icon: "sell", href: "#", class: "default", gear: "LinkButton"},
+                {id: 3, title: "Дизайн", icon: "design_services", href: "#", class: "default", gear: "LinkButton"},
+                {id: 4, title: "Маркетинг", icon: "trending_up", href: "#", class: "default", gear: "LinkButton"},
+                {id: 5, title: "Музыка", icon: "music_note", href: "#", class: "default", gear: "LinkButton"},
                 {id: 6, title: "Фото", icon: "camera", href: "#", class: "default", gear: "LinkButton"},
-                {id: 7, title: "ПО", icon: "cog", href: "#", class: "default", gear: "LinkButton"},
-                {id: 8, title: "Наука", icon: "vial", href: "#", class: "default", gear: "LinkButton"}
+                {id: 7, title: "ПО", icon: "web_asset", href: "#", class: "default", gear: "LinkButton"},
+                {id: 8, title: "Наука", icon: "science", href: "#", class: "default", gear: "LinkButton"}
             ],
             sidebar_top_courses: [
-                {id: 1, title: "HTML", icon: "code", href: "#", class: "default", gear: "LinkButton"},
-                {id: 2, title: "CSS", icon: "code", href: "#", class: "default", gear: "LinkButton"},
-                {id: 3, title: "javascript", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 1, title: "", icon: "html", href: "#", class: "default", gear: "LinkButton"},
+                {id: 2, title: "", icon: "css", href: "#", class: "default", gear: "LinkButton"},
+                {id: 3, title: "", icon: "javascript", href: "#", class: "default", gear: "LinkButton"},
                 {id: 4, title: "react", icon: "code", href: "#", class: "default", gear: "LinkButton"},
-                {id: 5, title: "PHP", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 5, title: "", icon: "php", href: "#", class: "default", gear: "LinkButton"},
                 {id: 6, title: "bootstrap", icon: "code", href: "#", class: "default", gear: "LinkButton"}
             ],
             sidebar_menu: [

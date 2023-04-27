@@ -40,18 +40,18 @@ export default {
     return {
       nav_list: [
         { title: "Главная", icon: "home", class: "", href: "#", gear: "NavItem" },
-        { title: "Войти", icon: "lock", class: "", href: "#", gear: "NavItem" },
-        { title: "Контакты", icon: "phone", class: "", href: "#", gear: "NavItem" },
+        { title: "Войти", icon: "login", class: "", href: "#", gear: "NavItem" },
+        { title: "Контакты", icon: "contacts", class: "", href: "#", gear: "NavItem" },
         { title: "Новости", icon: "newspaper", class: "darkerlishadow", href: "#", gear: "NavItem" },
-        { title: "Технологии", icon: "flask", class: "darkerli", href: "#", gear: "NavItem" },
-        { title: "Корзина", icon: "shopping-cart", class: "darkerli", href: "#", gear: "NavItem" },
-        { title: "Музыка", icon: "music", class: "darkerli", href: "#", gear: "NavItem" },
+        { title: "Технологии", icon: "science", class: "darkerli", href: "#", gear: "NavItem" },
+        { title: "Корзина", icon: "shopping_cart", class: "darkerli", href: "#", gear: "NavItem" },
+        { title: "Музыка", icon: "music_note", class: "darkerli", href: "#", gear: "NavItem" },
         { title: "Разработка", icon: "code", class: "darkerli", href: "#", gear: "NavItem" },
         { title: "Искусство", icon: "brush", class: "darkerli", href: "#", gear: "NavItem" },
-        { title: "Магазин", icon: "shop", class: "darkerli", href: "#", gear: "NavItem" },
-        { title: "Игры", icon: "gamepad", class: "darkerlishadowdown", href: "#", gear: "NavItem" },
-        { title: "Блог", icon: "blog", class: "", href: "#", gear: "NavItem" },
-        { title: "Помощь", icon: "question", class: "", href: "#", gear: "NavItem" },
+        { title: "Магазин", icon: "store", class: "darkerli", href: "#", gear: "NavItem" },
+        { title: "Игры", icon: "sports_esports", class: "darkerlishadowdown", href: "#", gear: "NavItem" },
+        { title: "Блог", icon: "rss_feed", class: "", href: "#", gear: "NavItem" },
+        { title: "Помощь", icon: "help", class: "", href: "#", gear: "NavItem" },
         // e.t.c.
       ]
     }
