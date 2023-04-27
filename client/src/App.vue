@@ -5,7 +5,8 @@
     <main id="app">
         <SideBar/>
         <slot>
-          <Preloader/>
+          <Main/>
+          <Home/>
         </slot>
         <!--RouterView/>
         <keep-alive>
