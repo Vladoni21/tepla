@@ -56,8 +56,8 @@
 <script>
 import Navbar from "../components/NavBar.vue";
 import expert from "../components/img/expert.jpg";
-import Grid from "../components/Grid.vue";
-import Card from "../components/Card.vue";
+import Grid from "../components/containers/Grid.vue";
+import Card from "../components/containers/Card.vue";
 import Login from "../components/Login.vue";
 
 export default {
