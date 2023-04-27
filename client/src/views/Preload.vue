@@ -39,7 +39,7 @@ export default {
 .container {
   display: flex;
   align-items: center;
-  position: relative;
+  position: static;
   background: linear-gradient(to bottom right, #070630 0%, #060454 100%);
   min-height: 100vh;
   justify-content: center;
@@ -47,7 +47,7 @@ export default {
   max-width: initial;
   padding: 0;
   margin: 0;
-  z-index: -7;
+  z-index: -9;
 }
 
 .container:before, .container:after, .field:before, .field:after {
@@ -58,7 +58,7 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -6;
+  z-index: 1;
 }
 .container:before, .field:before {
   background: linear-gradient(#233581, #203075);
@@ -99,6 +99,7 @@ export default {
   border-radius: 50%;
   box-shadow: 0 30px 15px rgba(0, 0, 0, 0.15);
   position: absolute;
+  z-index: 2;
 }
 .bubble:before, .bubble:after {
   content: "";
