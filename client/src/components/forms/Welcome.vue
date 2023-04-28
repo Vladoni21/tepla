@@ -27,7 +27,7 @@
       </div>
       <div class="overlay-container">
         <div class="close" @click="showModal">
-          <i class="material-icons">close</i>
+          <fa icon="remove" class="fa"/>
         </div>
         <div class="overlay">
           <div class="overlay-panel overlay-left">

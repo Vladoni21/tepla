@@ -1,12 +1,12 @@
 <template>
   <section>
-    <button id="show-modal" @click="showWel" class="material-icons">person</button>
+    <button id="show-modal" @click="showWel"><fa v-bind:icon="icon" class="fa"/></button>
   </section>
   <PopUp is="Welcome" v-bind:func="showWel" v-bind:req="isWelVisible"/>
 </template>
 
 <script>
-import PopUp from "../../containers/PopUp.vue";
+import PopUp from "../PopUp.vue";
 
 export default {
   name: "LogBtn",
