@@ -1,6 +1,6 @@
 <template>
   <section>
-    <button id="show-modal" @click="showWel"><fa v-bind:icon="icon" class="fa"/></button>
+      <button id="show-modal" @click="showWel" class="material-icons">person</button>
   </section>
   <PopUp is="Welcome" v-bind:func="showWel" v-bind:req="isWelVisible"/>
 </template>

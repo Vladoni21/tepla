@@ -4,16 +4,16 @@
             <div class="screen__content">
                 <form class="login">
                     <div class="login__field">
-                        <i><fa icon="user"/></i>
+                        <i class="material-icons">person</i>
                         <input type="text" class="login__input" placeholder="Логин / Email">
                     </div>
                     <div class="login__field">
-                        <i><fa icon="lock"/></i>
+                        <i class="material-icons">key</i>
                         <input type="password" class="login__input" placeholder="Пароль">
                     </div>
                     <button class="button login__submit">
                         <span class="button__text">Войти</span>
-                        <i><fa icon="chevron-right"/></i>
+                        <i class="material-icons">login</i>
                     </button>
                 </form>
                 <div class="social-login">
