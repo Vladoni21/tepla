@@ -1,7 +1,6 @@
 <template>
   <form>
     <div class="select animated zoomIn">
-      <!-- You can toggle select (disabled) -->
       <input type="radio" name="option">
       <i class="toggle icon icon-arrow-down"></i>
       <i class="toggle icon icon-arrow-up"></i>
@@ -22,35 +21,6 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  text-align: center;
-  color: #fff;
-  font-weight: 600;
-  font-size: 3em;
-  letter-spacing: 0px;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.02), 2px 2px rgba(0, 0, 0, 0.02), 3px 3px rgba(0, 0, 0, 0.02), 4px 4px rgba(0, 0, 0, 0.02), 5px 5px rgba(0, 0, 0, 0.02), 6px 6px rgba(0, 0, 0, 0.02), 7px 7px rgba(0, 0, 0, 0.02);
-}
-h1 i {
-  position: relative;
-  font-size: 70px;
-}
-
-p {
-  text-align: center;
-  color: #fff;
-  font-size: 14px;
-  margin-bottom: 2em;
-  line-height: 30px;
-}
-p img {
-  position: relative;
-  top: 8px;
-  right: 10px;
-}
-
-label {
-  margin-bottom: 0rem;
-}
 
 .select {
   position: relative;
@@ -59,10 +29,10 @@ label {
   margin: auto;
   width: 330px;
 
-  border-bottom: 0px;
+  border-bottom: 0;
   border-radius: 3px;
   font-size: 12px;
-  box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1em 2em -1.5em rgba(0, 0, 0, 0.5);
 }
 .select > i.toggle {
   position: absolute;
@@ -71,7 +41,7 @@ label {
   top: 1.6em;
   color: #ccc;
 }
-.select .title,
+
 .select .placeholder {
   position: relative;
   display: block;
@@ -84,8 +54,8 @@ label {
 }
 .select > input {
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -99,15 +69,11 @@ label {
 .select > input:checked ~ i.toggle.icon-arrow-up {
   display: block;
 }
-.select > input:checked div.options label.option .title {
-  display: none !important;
-}
+
 .select > input:not(:checked) {
   z-index: 4;
 }
-.select > input:not(:checked) ~ label.option > span.title {
-  display: none;
-}
+
 .select > input:not(:checked) ~ i.toggle.icon-arrow-up {
   display: none;
 }
@@ -123,8 +89,13 @@ label {
   display: inline-block;
   width: 100%;
   color: #999;
-  border-top: 0px;
+  border-top: 0;
 }
+
+.select label.option input {
+  display: none;
+}
+/*
 .select label.option {
   display: block;
   z-index: 1;
@@ -136,18 +107,26 @@ label {
   z-index: 2;
   transition: background 0.3s ease-out;
 }
-.select label.option span.title i.icon {
-  padding-right: 8px;
-  color: #92a8d1;
-}
+
 .select label.option span.title:hover {
   color: #fff;
   background: rgba(255, 255, 255, 0.3);
   box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
 }
-.select label.option input {
+
+.select > input:not(:checked) ~ label.option > span.title {
   display: none;
 }
+
+.select > input:checked div.options label.option .title {
+  display: none !important;
+}
+
+.select label.option span.title i.icon {
+  padding-right: 8px;
+  color: #92a8d1;
+}
+
 .select label.option input:checked ~ span.title {
   position: absolute;
   display: block;
@@ -160,6 +139,7 @@ label {
   color: inherit;
   width: 100%;
 }
+
 .select label.option input:disabled ~ span.title {
   background: #f9f9f9 !important;
   color: #aaa;
@@ -169,19 +149,7 @@ label {
   background: none;
   cursor: no-drop;
 }
-
-.select2 {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  margin: auto;
-  width: 330px;
-  height: 100%;
-  border-bottom: 0px;
-  border-radius: 3px;
-  font-size: 12px;
-  box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, 0.5);
-}
+*/
 .select2 i.toggle {
   position: absolute;
   z-index: 4;
@@ -189,7 +157,7 @@ label {
   top: 1.6em;
   color: #ccc;
 }
-.select2 .title,
+
 .select2 .placeholder {
   position: relative;
   display: block;
@@ -200,6 +168,7 @@ label {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   cursor: pointer;
 }
+/*
 .select2 > label > input {
   position: absolute;
   left: 0px;
@@ -211,6 +180,7 @@ label {
   opacity: 0;
   cursor: pointer;
 }
+
 .select2 > label > input:checked {
   z-index: 2;
 }
@@ -285,4 +255,5 @@ label {
   background: none;
   cursor: no-drop;
 }
+*/
 </style>
