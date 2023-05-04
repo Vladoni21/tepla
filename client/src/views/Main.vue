@@ -31,6 +31,7 @@
             <h3 class="title">Селектор</h3>
             <div class="flex">
               <selector style="width: 300px; height: 45px" v-bind:arr="sel"/>
+              <answer/>
             </div>
           </div>
           <div class="box">
@@ -151,9 +152,10 @@ import Navbar from "../components/NavBar.vue";
 import SideBar from "../components/SideBar.vue";
 import PopUp from "../components/containers/PopUp.vue";
 import selector from "../components/blocks/puzzle/selector.vue";
+import answer from "../components/blocks/puzzle/answer.vue";
 
 export default {
-    components: {selector, PopUp, SideBar, Navbar, Grid},
+    components: {answer, selector, PopUp, SideBar, Navbar, Grid},
     data() {
         return {
             image: expert,
