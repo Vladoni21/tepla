@@ -1,79 +1,27 @@
 <template>
-  <form id="select-cover">
-    <div id="select-box">
-      <input type="checkbox" id="options-view-button">
-      <div id="select-button" class="brd">
-        <div id="selected-value">
-          <span>Select a platform</span>
-        </div>
-        <div id="chevrons">
-          <i class="fas fa-chevron-up"></i>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-      </div>
-      <div id="options">
-        <selector-item v-for="i of arr" v-bind:item="i"/>
-        <div id="option-bg"></div>
-      </div>
-    </div>
-  </form>
+  <div class="option">
+    <input class="s-c top" type="radio" name="platform" v-bind:value="item.value">
+    <input class="s-c bottom" type="radio" name="platform" value="codepen">
+    <i class="fab" v-bind:class="item.icon"></i>
+    <span class="label">{{item.title }}</span>
+    <span class="opt-val">{{item.title }}</span>
+  </div>
 </template>
 
 <script>
-import SelectorItem from "./selector-item.vue";
-
 export default {
-  name: "selector",
-  components: {SelectorItem},
-  props: ["arr"]
+  name: "selector-item",
+  props: {
+    item: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 
 <style scoped>
-.brd {
-  border: 1px solid #e2eded;
-  /* border-color: #eaf1f1 #e4eded #dbe7e7 #e4eded; */
-}
 
-#select-cover {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 300px;
-  height: 42px;
-  margin: 100px auto 0 auto;
-  z-index: 1;
-}
-
-#select-button {
-  position: relative;
-  height: 16px;
-  padding: 12px 14px;
-  background-color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#options-view-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 3;
-}
-
-#selected-value {
-  font-size: 16px;
-  line-height: 1;
-  margin-right: 26px;
-}
 
 .option i {
   width: 16px;
@@ -86,15 +34,6 @@ export default {
   font-size: 16px;
 }
 
-#chevrons {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 12px;
-  padding: 9px 14px;
-}
-
 #chevrons i {
   display: block;
   height: 50%;
@@ -105,23 +44,6 @@ export default {
 
 #options-view-button:checked + #select-button #chevrons i {
   color: #2d3667;
-}
-
-.options {
-  position: absolute;
-  left: 0;
-  width: 250px;
-}
-
-#options {
-  position: absolute;
-  top: 42px;
-  right: 0;
-  left: 0;
-  width: 298px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 4px;
 }
 
 #options-view-button:checked ~ #options {
@@ -268,11 +190,7 @@ input[type="radio"] {
   z-index: -1;
 }
 
-#options-view-button:not(:checked)
-~ #options
-.option
-input[type="radio"]:checked
-~ .opt-val {
+#options-view-button:not(:checked) ~ #options .option input[type="radio"]:checked ~ .opt-val {
   top: -30px;
 }
 
@@ -350,16 +268,6 @@ input[type="radio"]:checked
   color: #006400;
 }
 
-#option-bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 40px;
-  transition: 0.3s ease all;
-  z-index: 1;
-  display: none;
-}
 
 #options-view-button:checked ~ #options #option-bg {
   display: block;

@@ -22,11 +22,13 @@ import Main from "./views/Main.vue";
 import Home from './views/Home.vue';
 import Plug from "./views/Plug.vue";
 import expert from "./components/img/expert.jpg";
+import Selector from "./components/blocks/puzzle/selector.vue";
 
 
 export default {
   name: 'app',
   components: {
+    Selector,
     Plug,
     NavBar,
     SideBar,
