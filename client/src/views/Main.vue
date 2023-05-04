@@ -140,10 +140,10 @@
 
 <script>
 import expert from "../components/img/expert.jpg";
-import Grid from "../components/Grid.vue";
+import Grid from "../components/containers/Grid.vue";
 import Navbar from "../components/NavBar.vue";
 import SideBar from "../components/SideBar.vue";
-import PopUp from "../components/gears/PopUp.vue";
+import PopUp from "../components/containers/PopUp.vue";
 
 
 export default {
