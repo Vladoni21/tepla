@@ -1,17 +1,17 @@
 <template>
-    <header>
-        <NavBar v-if="false"/>
-    </header>
-    <main id="app">
-        <SideBar v-if="false"/>
-        <Plug v-if="true"/>
-        <slot v-if="false">
-          <Main/>
-          <Home/>
-        </slot>
-    </main>
+  <header>
+    <NavBar v-if="!isPlugVisible"/>
+  </header>
+  <main id="app">
+    <SideBar v-if="!isPlugVisible"/>
+    <Plug v-if="isPlugVisible"/>
+    <slot v-if="!isPlugVisible">
+      <Main/>
+      <Home/>
+    </slot>
+  </main>
 
-    <footer/>
+  <footer/>
 </template>
 
 <script>
@@ -21,18 +21,24 @@ import SideBar from "./components/SideBar.vue";
 import Main from "./views/Main.vue";
 import Home from './views/Home.vue';
 import Plug from "./views/Plug.vue";
+import expert from "./components/img/expert.jpg";
 
 
 export default {
-    name: 'app',
-    components: {
-        Plug,
-        NavBar,
-        SideBar,
-        Error,
-        Main,
-        Home,
+  name: 'app',
+  components: {
+    Plug,
+    NavBar,
+    SideBar,
+    Main,
+    Home,
+  },
+  data() {
+    return {
+      is: expert,
+      isPlugVisible: false,
     }
+  }
 }
 </script>
 

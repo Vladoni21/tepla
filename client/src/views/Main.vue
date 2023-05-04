@@ -207,7 +207,7 @@ html {
 .Main {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 6rem 2rem;
 }
 
 section {
