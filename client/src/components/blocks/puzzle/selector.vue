@@ -4,7 +4,7 @@
       <input type="radio" name="option">
       <i class="toggle icon icon-arrow-down"></i>
       <i class="toggle icon icon-arrow-up"></i>
-      <span class="placeholder">Choose...</span>
+      <span class="placeholder">Ответ...</span>
       <selector-item v-for="i of arr" v-bind:item="i"/>
     </div>
   </form>
@@ -34,6 +34,7 @@ export default {
   font-size: 12px;
   box-shadow: 0 1em 2em -1.5em rgba(0, 0, 0, 0.5);
 }
+
 .select > i.toggle {
   position: absolute;
   z-index: 4;
@@ -95,62 +96,8 @@ export default {
 .select label.option input {
   display: none;
 }
-/*
-.select label.option {
-  display: block;
-  z-index: 1;
-  width: 100%;
-  transition: all 1s ease-out;
-}
-.select label.option span.title {
-  position: relative;
-  z-index: 2;
-  transition: background 0.3s ease-out;
-}
 
-.select label.option span.title:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
-}
-
-.select > input:not(:checked) ~ label.option > span.title {
-  display: none;
-}
-
-.select > input:checked div.options label.option .title {
-  display: none !important;
-}
-
-.select label.option span.title i.icon {
-  padding-right: 8px;
-  color: #92a8d1;
-}
-
-.select label.option input:checked ~ span.title {
-  position: absolute;
-  display: block;
-  z-index: 3;
-  top: 0px;
-  font-size: 12px;
-  background: #fff;
-  border-top: 0px;
-  box-shadow: none;
-  color: inherit;
-  width: 100%;
-}
-
-.select label.option input:disabled ~ span.title {
-  background: #f9f9f9 !important;
-  color: #aaa;
-}
-.select label.option input:disabled ~ span.title:hover {
-  color: #aaa;
-  background: none;
-  cursor: no-drop;
-}
-*/
-.select2 i.toggle {
+i.toggle {
   position: absolute;
   z-index: 4;
   right: 1.5em;
@@ -158,7 +105,7 @@ export default {
   color: #ccc;
 }
 
-.select2 .placeholder {
+.placeholder {
   position: relative;
   display: block;
   width: 100%;
@@ -168,92 +115,4 @@ export default {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   cursor: pointer;
 }
-/*
-.select2 > label > input {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  display: block;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.select2 > label > input:checked {
-  z-index: 2;
-}
-.select2 > label > input:checked ~ i.toggle.icon-plus {
-  display: none;
-}
-.select2 > label > input:checked ~ i.toggle.icon-minus {
-  display: block;
-}
-.select2 > label > input:not(:checked) ~ i.toggle.icon-minus {
-  display: none;
-}
-.select2 > label > input:not(:checked) ~ i.toggle.icon-plus {
-  display: block;
-}
-.select2 > label > input:not(:checked) ~ label.option input:not(:checked) ~ .title {
-  display: none !important;
-}
-.select2 > label > input:disabled {
-  cursor: no-drop;
-}
-.select2 label > span.placeholder {
-  position: relative;
-  z-index: 0;
-  display: inline-block;
-  width: 100%;
-  color: #999;
-  border-top: 0px;
-}
-.select2 label.option {
-  display: block;
-  overflow: hidden;
-  z-index: 1;
-  width: 100%;
-  transition: all 1s ease-out;
-}
-.select2 label.option span.title {
-  position: relative;
-  z-index: 2;
-  transition: background 0.3s ease-out;
-}
-.select2 label.option span.title i.icon {
-  padding-right: 8px;
-  color: #92a8d1;
-}
-.select2 label.option span.title:hover {
-  color: #fff;
-  background: rgba(146, 168, 209, 0.5);
-  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
-}
-.select2 label.option input {
-  display: none;
-}
-.select2 label.option input:checked ~ span.title {
-  position: absolute;
-  display: block;
-  z-index: 1;
-  top: 0px;
-  font-size: 12px;
-  background: #fff;
-  border-top: 0px;
-  box-shadow: none;
-  color: inherit;
-  width: 100%;
-}
-.select2 label.option input:disabled ~ span.title {
-  background: #f9f9f9 !important;
-  color: #aaa;
-}
-.select2 label.option input:disabled ~ span.title:hover {
-  color: #aaa;
-  background: none;
-  cursor: no-drop;
-}
-*/
 </style>
