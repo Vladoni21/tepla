@@ -2,7 +2,10 @@
   <section>
     <section class="figure">
       <article class="container">
-      <Error></Error>
+      <slot>
+          <Error v-if="true"/>
+          <Preload v-if="false"/>
+      </slot>
       <div class="message">
           <h1>404</h1>
           <p>It looks like you're lost...<br/>That's a trouble?</p>
@@ -22,10 +25,11 @@
 
 <script>
 import Error from "../components/gears/Error.vue";
+import Preload from "../components/gears/Preload.vue";
 
 export default {
   name: "Plug",
-  components: {Error}
+  components: {Preload, Error}
 }
 </script>
 

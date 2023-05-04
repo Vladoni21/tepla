@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import PopUp from "../PopUp.vue";
+import PopUp from "../containers/PopUp.vue";
 
 export default {
   name: "LogBtn",
