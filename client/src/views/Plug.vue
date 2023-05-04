@@ -1,28 +1,31 @@
 <template>
-  <section class="figure">
-    <article class="container">
+  <section>
+    <section class="figure">
+      <article class="container">
+      <Error></Error>
+      <div class="message">
+          <h1>404</h1>
+          <p>It looks like you're lost...<br/>That's a trouble?</p>
+          <button type="button">Go back</button>
+        </div>
       <article class="field">
         <div class="bubble"></div>
         <div class="bubble"></div>
         <div class="bubble"></div>
         <div class="bubble"></div>
         <div class="bubble"></div>
-        <div class="message">
-          <h1>404</h1>
-          <p>It looks like you're lost...<br/>That's a trouble?</p>
-          <button type="button">Go back</button>
-        </div>
       </article>
     </article>
+    </section>
   </section>
 </template>
 
 <script>
-import ErrorLogo from "../components/gears/ErrorLogo.vue";
+import Error from "../components/gears/Error.vue";
 
 export default {
-  name: "Error",
-  components: {ErrorLogo}
+  name: "Plug",
+  components: {Error}
 }
 </script>
 
@@ -40,6 +43,9 @@ export default {
 .container, .field {
   height: 100vh;
   width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container:before, .container:after, .field:before, .field:after {
@@ -62,18 +68,19 @@ export default {
 
 
 .container:before {
-  height: 100vmax;
-  width: 100vmax;
+  width: 101vmax;
+  height: 61vmax;
   z-index: -4;
 }
 
 .container:after {
-  height: 80vmax;
-  width: 80vmax;
+  height: 50vmax;
+  width: 50vmax;
   z-index: -3;
 }
 
 .field {
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,14 +89,14 @@ export default {
 }
 
 .field:before {
-  height: 60vmax;
-  width: 60vmax;
+  height: 35vmax;
+  width: 35vmax;
   z-index: -2;
 }
 
 .field:after {
-  height: 40vmax;
-  width: 40vmax;
+  height: 20vmax;
+  width: 20vmax;
   z-index: -1;
 }
 
@@ -98,18 +105,10 @@ export default {
   height: 60%;
   border-radius: 30px;
   background: #61a5e8; */
+  position: absolute;
   text-align: center;
-  z-index: 5;
-}
-
-p {
-  font-size: 18px;
-  margin-top: 0;
-}
-
-h1 {
-  font-size: 95px;
-  margin: 0;
+  z-index: 8;
+  color: white;
 }
 
 button {
