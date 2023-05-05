@@ -3,7 +3,7 @@
     <section class="figure">
       <article class="container">
         <slot>
-          <Error v-if="false"/>
+          <Error v-if="true"/>
           <Preload v-if="true"/>
         </slot>
         <div class="message" v-if="false">

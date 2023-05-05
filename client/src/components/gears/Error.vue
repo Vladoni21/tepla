@@ -32,7 +32,7 @@ export default {
           });
 
       ctx.font = 'bold 20px Verdana';
-      ctx.fillText('404', 0, 40);
+      ctx.fillText('teapla 1love', 0, 40);
       const data = ctx.getImageData(0, 0, canvas.width, 100);
 
       class Particle {
