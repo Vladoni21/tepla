@@ -28,6 +28,18 @@
             </div>
           </div>
           <div class="box">
+            <h3 class="title">Селектор</h3>
+            <div class="flex">
+              <selector style="width: 300px; height: 45px" v-bind:arr="sel"/>
+            </div>
+          </div>
+            <div class="box">
+                <h3 class="title">Ответы</h3>
+                <div class="flex">
+                    <answer/>
+                </div>
+            </div>
+          <div class="box">
             <h3 class="title">Стать преподавателем</h3>
             <p class="tutor">Рыбий текст</p>
             <a href="#" class="inline-btn">Начать</a>
@@ -144,10 +156,11 @@ import Grid from "../components/containers/Grid.vue";
 import Navbar from "../components/NavBar.vue";
 import SideBar from "../components/SideBar.vue";
 import PopUp from "../components/containers/PopUp.vue";
-
+import selector from "../components/blocks/puzzle/selector.vue";
+import answer from "../components/blocks/puzzle/answer.vue";
 
 export default {
-    components: {Error, PopUp, SideBar, Navbar, Grid},
+    components: {answer, selector, PopUp, SideBar, Navbar, Grid},
     data() {
         return {
             image: expert,
@@ -176,6 +189,10 @@ export default {
                 {id: 3, title: "Курсы", icon: "graduation-cap", href: "#", class: "nav_link", gear: "LinkButton"},
                 {id: 4, title: "Учителя", icon: "chalkboard-user", href: "#", class: "nav_link", gear: "LinkButton"},
                 {id: 5, title: "Поддержка", icon: "headset", href: "#", class: "nav_link", gear: "LinkButton"}
+            ],
+            sel: [
+              {id: 1, title: "Помоги мне", icon: "home", value: "a"},
+              {id: 1, title: "Пожалуйста", icon: "home", value: "b"}
             ]
         }
     },
