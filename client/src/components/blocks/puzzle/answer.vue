@@ -1,117 +1,46 @@
 <template>
-    <div class="container">
-        <div class="answer">
-            <input class="effect-8" style="text-align: center;" type="text" placeholder="Placeholder Text">
-            <span class="focus-border"><i></i></span>
-        </div>
-    </div>
+    <section class="container">
+        <input type="search" class="input" placeholder="..." aria-label="Search"
+               aria-describedby="search-addon"/>
+        <a href="#" class="button">Ответить</a>
+    </section>
 </template>
 
 <script>
 export default {
-    name: "answer"
+    name: "SearchBar"
 }
 </script>
 
 <style scoped>
 
 .container {
+    display: flex;
     padding: 0;
-    width: inherit;
-    height: 66px;
-    background-color: #FFFFFF;
-    border-radius: 50px;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 300px;
 }
 
-:focus {
-    outline: none;
-}
-
-/* necessary to give position: relative to parent. */
-input[type="text"] {
-    font: 15px/24px 'Muli', sans-serif;
-    color: #333;
+.input {
+    outline:none;
+    border: rgba(0,0,0,0);
     width: 100%;
-    box-sizing: border-box;
-    letter-spacing: 1px;
+    text-align: start;
+    padding-left: 30px;
+    font-size: 20px;
+    border-bottom: 3px solid rgba(0,0,0,0);
+    transition: 0.5s;
 }
-
-.answer {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.input:hover {
+    border-bottom: 3px solid #5FA8D3;
 }
-
-/* necessary to give position: relative to parent. */
-input[type="text"] {
-    font: 15px/24px "Lato", Arial, sans-serif;
-    color: #333;
-    width: 100%;
-    box-sizing: border-box;
-    letter-spacing: 1px;
+.button {
+    padding: 15px 25px;
+    background-color: rgba(96,160,210,0.1);
+    margin: 0;
 }
-
-.effect-8 {
-    border: 0 solid #ccc;
-    padding: 7px;
-    background: transparent;
-    transition: 0.4s;
-}
-
-.effect-8 ~ .focus-border {
-    border-radius: 50px;
-}
-
-.effect-8 ~ .focus-border:before,
-.effect-8 ~ .focus-border:after {
-    content: "";
-    position: absolute;
-    border-radius: 50px;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #4caf50;
-    transition: 0.3s;
-}
-
-.effect-8 ~ .focus-border:after {
-    top: auto;
-    bottom: 0;
-    left: auto;
-    right: 0;
-}
-
-.effect-8 ~ .focus-border i:before,
-.effect-8 ~ .focus-border i:after {
-    content: "";
-    position: absolute;
-    border-radius: 50px;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 0;
-    background-color: #4caf50;
-    transition: 0.4s;
-}
-
-.effect-8 ~ .focus-border i:after {
-    left: auto;
-    right: 0;
-    top: auto;
-    bottom: 0;
-}
-
-.effect-8:focus ~ .focus-border:before,
-.effect-8:focus ~ .focus-border:after {
-    width: 100%;
-    transition: 0.3s;
-}
-
-.effect-8:focus ~ .focus-border i:before,
-.effect-8:focus ~ .focus-border i:after {
-    height: 100%;
-    transition: 0.4s;
-}
-
 </style>
