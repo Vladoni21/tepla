@@ -3,14 +3,12 @@
     <NavBar v-if="!isPlugVisible"/>
   </header>
   <main id="app">
-    <SideBar v-if="!isPlugVisible"/>
     <Plug v-if="isPlugVisible"/>
-    <slot v-if="!isPlugVisible">
-      <Main/>
-      <Home/>
-    </slot>
+    <section class="content" v-if="!isPlugVisible">
+      <SideBar/>
+      <Profile/>
+    </section>
   </main>
-
   <footer/>
 </template>
 
@@ -23,11 +21,13 @@ import Home from './views/Home.vue';
 import Plug from "./views/Plug.vue";
 import expert from "./components/img/expert.jpg";
 import Selector from "./components/blocks/puzzle/selector.vue";
+import Profile from "./views/Profile.vue";
 
 
 export default {
   name: 'app',
   components: {
+    Profile,
     Selector,
     Plug,
     NavBar,
@@ -45,5 +45,11 @@ export default {
 </script>
 
 <style>
-
+.content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+}
 </style>
