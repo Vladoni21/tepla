@@ -31,9 +31,14 @@
             <h3 class="title">Селектор</h3>
             <div class="flex">
               <selector style="width: 300px; height: 45px" v-bind:arr="sel"/>
-              <answer/>
             </div>
           </div>
+            <div class="box">
+                <h3 class="title">Ответы</h3>
+                <div class="flex">
+                    <answer/>
+                </div>
+            </div>
           <div class="box">
             <h3 class="title">Стать преподавателем</h3>
             <p class="tutor">Рыбий текст</p>
