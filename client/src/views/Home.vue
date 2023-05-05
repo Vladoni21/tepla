@@ -9,9 +9,6 @@
                 финансами и
                 предпринимательством. </p>
             </div>
-            <div class="item">
-              <Login></Login>
-            </div>
         </article>
         <!--features-->
         <article id="features">
@@ -58,7 +55,6 @@ import Navbar from "../components/NavBar.vue";
 import expert from "../components/img/expert.jpg";
 import Grid from "../components/containers/Grid.vue";
 import Card from "../components/containers/Card.vue";
-import Login from "../components/old/Login.vue";
 
 export default {
     data() {
@@ -90,7 +86,6 @@ export default {
     },
     name: "Home",
     components: {
-        Login,
         Navbar,
         Grid,
         Card

@@ -1,6 +1,9 @@
 <template>
-    <section class="container">
-        <form>
+    <section class="grid">
+        <article>
+        </article>
+        <article class="container">
+            <form>
             <div class="row">
                 <h4>Account</h4>
                 <div class="input-group input-group-icon">
@@ -42,6 +45,7 @@
                 </div>
             </div>
         </form>
+        </article>
     </section>
 </template>
 
@@ -52,6 +56,12 @@ export default {
 </script>
 
 <style scoped>
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+}
 
 h4 {
     color: #f0a500;
