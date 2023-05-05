@@ -1,6 +1,7 @@
 <template>
     <section class="grid">
         <article>
+            <Image/>
         </article>
         <article class="container">
             <form>
@@ -44,18 +45,51 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <button type="submit" style="background: rgb(59, 130, 246);" class="button transition ease-in duration-300">
+                    Подтвердить
+                </button>
+            </div>
         </form>
         </article>
     </section>
 </template>
 
 <script>
+import Image from "../components/containers/Image.vue";
+
 export default {
-    name: "Profile"
+    name: "Profile",
+    components: {Image}
 }
 </script>
 
 <style scoped>
+
+.button {
+    width: 100%;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding: 1rem;
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    --tw-text-opacity: 1;
+    background: rgb(59 130 246 / var(--tw-text-opacity));
+    color: rgb(243 244 246 / var(--tw-text-opacity));
+
+    --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+    letter-spacing: 0.025em;
+    font-weight: 600;
+}
 
 .grid {
     display: flex;
@@ -64,7 +98,7 @@ export default {
 }
 
 h4 {
-    color: #f0a500;
+    color: rgb(59, 130, 246);
 }
 input,
 input[type="radio"] + label,
@@ -85,13 +119,10 @@ select {
 }
 input:focus {
     outline: 0;
-    border-color: #bd8200;
+    border-color: rgb(59, 130, 246);
 }
-input:focus + .input-icon i {
-    color: #f0a500;
-}
-input:focus + .input-icon:after {
-    border-right-color: #f0a500;
+input:focus + .input-icon:after + .input-icon i {
+    border-right-color: rgb(59, 130, 246);
 }
 input[type="radio"] {
     display: none;
@@ -119,9 +150,9 @@ input[type="radio"]:checked + label,
 input:checked + label:before,
 select:focus,
 select:active {
-    background-color: #f0a500;
+    background-color: rgb(59, 130, 246);
     color: #fff;
-    border-color: #bd8200;
+    border-color: rgb(23, 93, 208);
 }
 input[type="checkbox"] {
     display: none;
