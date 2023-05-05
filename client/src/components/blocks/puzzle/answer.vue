@@ -1,18 +1,8 @@
 <template>
-    <div class="mahi_holder">
-        <div class="container">
-            <div class="row bg_1">
-                <div class="col-3">
-                    <input class="effect-8" type="text" placeholder="Placeholder Text">
-                    <span class="focus-border"><i></i></span>
-                </div>
-            </div>
-            <div class="row bg_2">
-                <div class="col-3">
-                    <input class="effect-15" type="text" placeholder="Placeholder Text">
-                    <span class="focus-bg"></span>
-                </div>
-            </div>
+    <div class="container">
+        <div class="answer">
+            <input class="effect-8" style="text-align: center;" type="text" placeholder="Placeholder Text">
+            <span class="focus-border"><i></i></span>
         </div>
     </div>
 </template>
@@ -25,6 +15,13 @@ export default {
 
 <style scoped>
 
+.container {
+    padding: 0;
+    width: inherit;
+    height: 66px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+}
 
 :focus {
     outline: none;
@@ -39,15 +36,10 @@ input[type="text"] {
     letter-spacing: 1px;
 }
 
-:focus {
-    outline: none;
-}
-
-.col-3 {
-    float: left;
-    width: 27.33%;
-    margin: 40px 3%;
+.answer {
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 /* necessary to give position: relative to parent. */
@@ -60,15 +52,21 @@ input[type="text"] {
 }
 
 .effect-8 {
-    border: 1px solid #ccc;
-    padding: 7px 14px 9px;
+    border: 0 solid #ccc;
+    padding: 7px;
+    background: transparent;
     transition: 0.4s;
+}
+
+.effect-8 ~ .focus-border {
+    border-radius: 50px;
 }
 
 .effect-8 ~ .focus-border:before,
 .effect-8 ~ .focus-border:after {
     content: "";
     position: absolute;
+    border-radius: 50px;
     top: 0;
     left: 0;
     width: 0;
@@ -88,6 +86,7 @@ input[type="text"] {
 .effect-8 ~ .focus-border i:after {
     content: "";
     position: absolute;
+    border-radius: 50px;
     top: 0;
     left: 0;
     width: 2px;
@@ -113,50 +112,6 @@ input[type="text"] {
 .effect-8:focus ~ .focus-border i:after {
     height: 100%;
     transition: 0.4s;
-}
-
-.effect-15 {
-    border: 0;
-    padding: 7px 15px;
-    border: 1px solid #ccc;
-    position: relative;
-    background: transparent;
-}
-
-.effect-15 ~ .focus-bg:before,
-.effect-15 ~ .focus-bg:after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 0;
-    height: 0;
-    background-color: #ededed;
-    transition: 0.3s;
-    z-index: -1;
-}
-
-.effect-15:focus ~ .focus-bg:before {
-    transition: 0.3s;
-    width: 50%;
-    left: 0;
-    top: 0;
-    height: 100%;
-}
-
-.effect-15 ~ .focus-bg:after {
-    left: auto;
-    right: 50%;
-    top: auto;
-    bottom: 50%;
-}
-
-.effect-15:focus ~ .focus-bg:after {
-    transition: 0.3s;
-    width: 50%;
-    height: 100%;
-    bottom: 0;
-    right: 0;
 }
 
 </style>
