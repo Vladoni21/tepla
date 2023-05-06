@@ -52,15 +52,19 @@
             </div>
         </form>
         </article>
+        <article class="container">
+            <Badge/>
+        </article>
     </section>
 </template>
 
 <script>
 import Image from "../components/containers/Image.vue";
+import Badge from "../components/containers/Badge.vue";
 
 export default {
     name: "Profile",
-    components: {Image}
+    components: {Image, Badge}
 }
 </script>
 
@@ -179,7 +183,6 @@ input[type="checkbox"] + label:after {
     font-size: 0.8em;
     color: #fff;
     opacity: 0;
-    font-family: FontAwesome;
     content: "\f00c";
 }
 input:checked + label:after {
