@@ -8,7 +8,7 @@
 import LinkButton from "../gears/links/LinkButton.vue";
 import LinkCourse from "../gears/links/LinkCourse.vue";
 import LinkExpert from "../gears/links/LinkExpert.vue";
-import NavItem from "../navigation/NavItem.vue";
+import NavItem from "../templates/sub/navigation/NavItem.vue";
 
 
 export default {

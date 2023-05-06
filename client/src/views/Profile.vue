@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import Image from "../components/containers/Image.vue";
-import Badge from "../components/containers/Badge.vue";
-import Account from "../components/containers/Account.vue";
+import Image from "../components/templates/Profile/Image.vue";
+import Badge from "../components/templates/Profile/Badge.vue";
+import Account from "../components/templates/Profile/Account.vue";
 
 export default {
     name: "Profile",
