@@ -1,7 +1,7 @@
 <template>
   <li v-bind:class="item.class">
     <a v-bind:href="item.href">
-        <div class="frame"><i class="material-icons" v-bind:icon="item.icon">{{item.icon}}</i></div>
+        <div class="frame"><i class="material-icons">{{item.icon}}</i></div>
       <span class="nav-text" v-text="item.title"/>
     </a>
   </li>

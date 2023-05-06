@@ -3,7 +3,7 @@
         <Logo/>
         <div style="margin: 0 -10px 0 0; height: 60px; width: 430px; display: flex; justify-content: space-around">
           <SearchBar/>
-          <LogBtn icon="user"/>
+          <LogBtn icon="person"/>
         </div>
     </section>
 </template>

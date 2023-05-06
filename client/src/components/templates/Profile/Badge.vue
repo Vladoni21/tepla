@@ -1,23 +1,29 @@
 <template>
   <section>
+    <Icon/>
     <div class="form-group">
       <span>ФИО</span>
       <input class="form-field" type="text" placeholder="Отображаемое имя">
     </div>
     <div class="form-group">
       <span>@</span>
-      <input class="form-field" type="text" placeholder="Тег">
+      <input class="form-field" type="text" placeholder="Ссылка">
     </div>
     <div class="form-group">
       <span>#</span>
       <input class="form-field" type="email" placeholder="Статус">
     </div>
+    <Button color="blue" text="Сохранить"/>
   </section>
 </template>
 
 <script>
+import Icon from "./icon.vue"
+import Button from "./button.vue"
+
 export default {
-  name: "Badge"
+  name: "Profile_Badge",
+  components: {Icon, Button}
 }
 </script>
 
@@ -119,6 +125,6 @@ body .form-group {
   max-width: 360px;
 }
 body .form-group:not(:last-child) {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 </style>

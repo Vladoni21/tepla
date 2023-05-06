@@ -2,23 +2,23 @@
   <section>
     <form>
       <div class="row">
-        <h4>Account</h4>
+        <h4>Ваш Аккаунт</h4>
         <div class="input-group input-group-icon">
-          <input type="text" placeholder="Full Name"/>
+          <input type="text" placeholder="Логин"/>
           <div class="input-icon"><i class="fa fa-user"></i></div>
         </div>
         <div class="input-group input-group-icon">
-          <input type="email" placeholder="Email Adress"/>
+          <input type="email" placeholder="Почта"/>
           <div class="input-icon"><i class="fa fa-envelope"></i></div>
         </div>
         <div class="input-group input-group-icon">
-          <input type="password" placeholder="Password"/>
+          <input type="password" placeholder="Пароль"/>
           <div class="input-icon"><i class="fa fa-key"></i></div>
         </div>
       </div>
       <div class="row">
         <div class="col-half">
-          <h4>Date of Birth</h4>
+          <h4>Дата рождения</h4>
           <div class="input-group">
             <div class="col-third">
               <input type="text" placeholder="DD"/>
@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="col-half">
-          <h4>Gender</h4>
+          <h4>Пол</h4>
           <div class="input-group">
             <input id="gender-male" type="radio" name="gender" value="male"/>
             <label for="gender-male">Male</label>
@@ -42,17 +42,18 @@
         </div>
       </div>
       <div class="row">
-        <button type="submit" style="background: rgb(59, 130, 246);" class="button transition ease-in duration-300">
-          Подтвердить
-        </button>
+        <Button color="blue" text="Подтвердить"/>
       </div>
     </form>
   </section>
 </template>
 
 <script>
+import Button from "./button.vue";
+
 export default {
-  name: "Account"
+  name: "Profile_Account",
+  components: {Button}
 }
 </script>
 
@@ -89,6 +90,7 @@ export default {
 }
 
 h4 {
+  padding-top: 0.2em;
   color: rgb(59, 130, 246);
 }
 input,

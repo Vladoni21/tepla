@@ -23,18 +23,18 @@
         <span>Тип файлов: png, jpeg</span>
       </p>
       <div>
-        <button type="submit" style="background: rgb(59, 130, 246);" class="button transition ease-in duration-300">
-          Сохранить
-        </button>
+        <Button color="blue" text="Загрузить"/>
       </div>
     </form>
   </section>
 </template>
 
 <script>
+import Button from "./button.vue"
 
 export default {
-  name: "ProfileImage"
+  name: "Profile_Image",
+  components: {Button}
 }
 </script>
 
@@ -195,7 +195,6 @@ a {
 
 [type=button], [type=reset], [type=submit], button {
   -webkit-appearance: button;
-  background-color: transparent;
   background-image: none;
 }
 
