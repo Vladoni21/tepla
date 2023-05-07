@@ -9,6 +9,9 @@
     <article style="max-width: 550px;">
       <Account/>
     </article>
+    <section style="min-width: 1370px;" class="scope">
+      <Courses/>
+    </section>
   </section>
 </template>
 
@@ -16,10 +19,11 @@
 import Image from "../components/templates/Profile/Image.vue";
 import Badge from "../components/templates/Profile/Badge.vue";
 import Account from "../components/templates/Profile/Account.vue";
+import Courses from "../components/templates/Profile/Courses.vue";
 
 export default {
   name: "Profile",
-  components: {Account, Image, Badge}
+  components: {Courses, Account, Image, Badge}
 }
 </script>
 
@@ -43,6 +47,11 @@ export default {
   box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
 }
 
+.grid .scope {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 @media only screen and (max-width: 540px) {
   .col-half {
     width: 100%;
