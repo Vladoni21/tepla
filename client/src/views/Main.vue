@@ -145,9 +145,7 @@
           <!--a href="courses.html" class="inline-option-btn">view all courses</a-->
         </div>
       </section>
-      <button id="show-modal" @click="showReg">Show Modal</button>
     </section>
-    <PopUp is="Register" v-bind:func="showReg" v-bind:req="isRegVisible"/>
 </template>
 
 <script>
@@ -164,7 +162,6 @@ export default {
     data() {
         return {
             image: expert,
-            isRegVisible: false,
             sidebar_top_categories: [
                 {id: 1, title: "Разработка", icon: "code", href: "#", class: "default", gear: "LinkButton"},
                 {id: 2, title: "Бизнес", icon: "sell", href: "#", class: "default", gear: "LinkButton"},
@@ -194,11 +191,6 @@ export default {
               {id: 1, title: "Помоги мне", icon: "home", value: "a"},
               {id: 1, title: "Пожалуйста", icon: "home", value: "b"}
             ]
-        }
-    },
-    methods: {
-        showReg() {
-            this.isRegVisible = !this.isRegVisible
         }
     },
     name: "Main"

@@ -1,8 +1,8 @@
 <template>
-  <section>
+  <article class="card-list card">
     <div class="text-center">
       <h2>
-        Ваша аватарка
+        Создать новый курс
       </h2>
     </div>
     <form class="space-y-3" action="#" method="POST">
@@ -10,33 +10,60 @@
         <label class="dropdown">
           <div class="cover">
             <div class="cover">
-              <div class="frame"><i class="material-icons" style="font-size: 3rem;">upload_file</i></div>
+              <div class="frame"><i class="material-icons" style="font-size: 3rem;">library_add</i></div>
             </div>
-            <p class="pointer-none"><span>Перетащите</span> фаил сюда <br/> или <a style="text-decoration: underline; color: rgb(59, 130, 246);" class="text-blue-600 hover:underline">кликните</a> тут</p>
+            <p class="pointer-none"><span>Нажмите, </span> чтобы настроить <br/> или <a style="text-decoration: underline; color: rgb(59, 130, 246);" class="text-blue-600 hover:underline">кликните</a> тут</p>
           </div>
-          <input type="file" style="visibility: hidden;">
+          <input @click="showReg" style="visibility: hidden;">
         </label>
       </div>
-      <p style="" class="sub">
-        <span>Тип файлов: png, jpeg</span>
-      </p>
-      <div>
-        <Button color="blue" text="Применить"/>
-      </div>
     </form>
-  </section>
+  </article>
+  <PopUp is="Register" v-bind:func="showReg" v-bind:req="isRegVisible"/>
 </template>
 
 <script>
-import Button from "./button.vue"
+import PopUp from "../../containers/PopUp.vue";
 
 export default {
   name: "Profile_Image",
-  components: {Button}
+  components: {PopUp},
+  methods: {
+    showReg() {
+      this.isRegVisible = !this.isRegVisible
+    }
+  },
+  data() {
+    return {
+      isRegVisible: false
+    }
+  },
 }
 </script>
 
 <style scoped>
+
+.card-list {
+  width: 100%;
+  max-width: 400px;
+  height: 440px;
+  margin-right: 2rem;
+}
+
+.card {
+  background-color: #FFF;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 20px 50px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 1.25rem;
+  position: relative;
+  transition: 0.15s ease-in;
+}
+
+.card:hover, .card:focus-within {
+  box-shadow: 0 0 0 2px rgb(59 130 246), 0 10px 60px 0 rgba(0, 0, 0, 0.1);
+  transform: translatey(-5px);
+}
 
 .frame {
   width: 55px;
@@ -96,21 +123,6 @@ label, p {
   padding: 20px;
 }
 
-img, video {
-  max-width: 100%;
-  height: auto;
-}
-
-audio, canvas, embed, iframe, img, object, svg, video {
-  display: block;
-  vertical-align: middle;
-}
-
-
-blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
-  margin: 0;
-}
-
 a {
   color: inherit;
   text-decoration: inherit;
@@ -124,13 +136,6 @@ a {
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
-.sub {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
 
 [type=button], [type=reset], [type=submit], button {
   -webkit-appearance: button;

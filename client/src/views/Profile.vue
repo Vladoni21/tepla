@@ -11,6 +11,7 @@
     </article>
     <section style="min-width: 1370px;" class="scope">
       <Courses/>
+      <Creator/>
     </section>
   </section>
 </template>
@@ -20,10 +21,11 @@ import Image from "../components/templates/Profile/Image.vue";
 import Badge from "../components/templates/Profile/Badge.vue";
 import Account from "../components/templates/Profile/Account.vue";
 import Courses from "../components/templates/Profile/Courses.vue";
+import Creator from "../components/templates/Profile/Creator.vue"
 
 export default {
   name: "Profile",
-  components: {Courses, Account, Image, Badge}
+  components: {Creator, Courses, Account, Image, Badge}
 }
 </script>
 
@@ -38,7 +40,8 @@ export default {
 
 }
 
-.grid article {
+.grid>article {
+  height: 525px;
   max-width: 36em;
   padding: 1em 3em 2em 3em;
   margin: 0 auto;
@@ -48,6 +51,7 @@ export default {
 }
 
 .grid .scope {
+  margin-top: 3em;
   display: flex;
   justify-content: flex-start;
   align-items: center;
