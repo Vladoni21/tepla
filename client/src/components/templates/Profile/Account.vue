@@ -41,7 +41,8 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row panel">
+        <Button color="grey" text="Редактировать"/>
         <Button color="blue" text="Подтвердить"/>
       </div>
     </form>
@@ -58,35 +59,11 @@ export default {
 </script>
 
 <style scoped>
-.button {
-  width: 100%;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  padding: 1rem;
-  border-radius: 50px;
 
-  cursor: pointer;
-
+.panel {
   display: flex;
-  justify-content: center;
   align-items: center;
-
-  --tw-text-opacity: 1;
-  background: rgb(59 130 246 / var(--tw-text-opacity));
-  color: rgb(243 244 246 / var(--tw-text-opacity));
-
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #000000), var(--tw-shadow);
-
-  letter-spacing: 0.025em;
-  font-weight: 600;
-}
-
-.grid {
-  display: flex;
-  justify-content: space-between;
-  width: 1140px;
+  justify-content: flex-end;
 }
 
 h4 {
@@ -224,6 +201,10 @@ select option {
   line-height: 3.4em;
   text-align: center;
   pointer-events: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .input-group-icon .input-icon:after {
   position: absolute;
@@ -283,9 +264,12 @@ select option {
   padding-right: 0;
 }
 .material-icons {
-    padding-top: 12px;
-    font-size: 2rem;
-    color: #454851;
+    font-size: 1.5rem;
+    color: #7d7e85;
+}
+.input-group-icon>input:focus ~ .input-icon .material-icons {
+  font-size: 1.5rem;
+  color: rgb(23, 93, 208);
 }
 
 </style>

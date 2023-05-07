@@ -11,9 +11,7 @@ export default {
 
 <style scoped>
 .p-button {
-  width: 100%;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin: 1.25rem 0.2rem;
   padding: 1rem;
   border-radius: 50px;
 
@@ -44,5 +42,9 @@ export default {
 .blue {
   background: rgb(59 130 246);
   color: rgb(243 244 246);
+}
+.grey {
+  background: #e5e5e5;
+  color: #000000;
 }
 </style>

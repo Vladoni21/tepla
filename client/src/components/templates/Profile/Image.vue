@@ -23,7 +23,7 @@
         <span>Тип файлов: png, jpeg</span>
       </p>
       <div>
-        <Button color="blue" text="Загрузить"/>
+        <Button color="blue" text="Отправить"/>
       </div>
     </form>
   </section>

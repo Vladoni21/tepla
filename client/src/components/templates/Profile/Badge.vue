@@ -69,6 +69,7 @@ export default {
 .form-field:focus {
   outline: none;
   border-color: #275efe;
+  background-color: #ffffff;
 }
 
 .form-group {
