@@ -6,18 +6,18 @@
       <Sidebar/>
       <Profile/>
     </section>
-    <Footer/>
+    <Footer v-if="!isPlugVisible"/>
   </main>
 </template>
 
 <script>
 
+import expert from "./components/img/expert.jpg";
 import Header from "./components/Header.vue";
 import Sidebar from "./components/Sidebar.vue";
 import Main from "./views/Main.vue";
 import Home from './views/Home.vue';
 import Plug from "./views/Plug.vue";
-import expert from "./components/img/expert.jpg";
 import Selector from "./components/blocks/puzzle/selector.vue";
 import Profile from "./views/Profile.vue";
 import Footer from "./components/Footer.vue";
@@ -38,7 +38,19 @@ export default {
   data() {
     return {
       is: expert,
-      isPlugVisible: false,
+      isPlugVisible: true
+    }
+  },
+  mounted() {
+    this.showPreloader()
+  },
+  methods: {
+    showPreloader() {
+      setTimeout(
+          () => {
+            this.isPlugVisible = false
+          }, 2000
+      )
     }
   }
 }
