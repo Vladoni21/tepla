@@ -56,6 +56,7 @@ img {
   width: 90%;
   max-width: 400px;
   margin-right: 2rem;
+  max-height: 440px;
 }
 
 .card {
@@ -68,7 +69,7 @@ img {
   transition: 0.15s ease-in;
 }
 .card:hover, .card:focus-within {
-  box-shadow: 0 0 0 2px #16C79A, 0 10px 60px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 2px rgb(59 130 246), 0 10px 60px 0 rgba(0, 0, 0, 0.1);
   transform: translatey(-5px);
 }
 
@@ -91,6 +92,8 @@ img {
   text-decoration: none;
   color: inherit;
   will-change: transform;
+  max-height: 55px;
+  overflow: hidden;
 }
 .card-header a:after {
   content: "";
