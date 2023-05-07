@@ -5,15 +5,15 @@
         <h4>Ваш Аккаунт</h4>
         <div class="input-group input-group-icon">
           <input type="text" placeholder="Логин"/>
-          <div class="input-icon"><i class="fa fa-user"></i></div>
+          <div class="input-icon"><i class="material-icons">person</i></div>
         </div>
         <div class="input-group input-group-icon">
           <input type="email" placeholder="Почта"/>
-          <div class="input-icon"><i class="fa fa-envelope"></i></div>
+          <div class="input-icon"><i class="material-icons">mail</i></div>
         </div>
         <div class="input-group input-group-icon">
           <input type="password" placeholder="Пароль"/>
-          <div class="input-icon"><i class="fa fa-key"></i></div>
+          <div class="input-icon"><i class="material-icons">lock</i></div>
         </div>
       </div>
       <div class="row">
@@ -21,13 +21,13 @@
           <h4>Дата рождения</h4>
           <div class="input-group">
             <div class="col-third">
-              <input type="text" placeholder="DD"/>
+              <input type="text" placeholder="ДД"/>
             </div>
             <div class="col-third">
-              <input type="text" placeholder="MM"/>
+              <input type="text" placeholder="ММ"/>
             </div>
             <div class="col-third">
-              <input type="text" placeholder="YYYY"/>
+              <input type="text" placeholder="ГГГГ"/>
             </div>
           </div>
         </div>
@@ -35,9 +35,9 @@
           <h4>Пол</h4>
           <div class="input-group">
             <input id="gender-male" type="radio" name="gender" value="male"/>
-            <label for="gender-male">Male</label>
+            <label for="gender-male">Мужской</label>
             <input id="gender-female" type="radio" name="gender" value="female"/>
-            <label for="gender-female">Female</label>
+            <label for="gender-female">Женский</label>
           </div>
         </div>
       </div>
@@ -281,6 +281,11 @@ select option {
 }
 .col-third:last-of-type {
   padding-right: 0;
+}
+.material-icons {
+    padding-top: 12px;
+    font-size: 2rem;
+    color: #454851;
 }
 
 </style>
