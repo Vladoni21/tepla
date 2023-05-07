@@ -25,10 +25,10 @@
         </ul>
         <ul class="box">
           <li class="link_name">Сервисы</li>
-          <li><a href="#">App design</a></li>
-          <li><a href="#">Web design</a></li>
-          <li><a href="#">Logo design</a></li>
-          <li><a href="#">Banner design</a></li>
+          <li><a href="#">Дизайн</a></li>
+          <li><a href="#">Анализ данных</a></li>
+          <li><a href="#">Вёрстка сайтов</a></li>
+          <li><a href="#">Программирование</a></li>
         </ul>
         <ul class="box">
           <li class="link_name">Аккаунт</li>
@@ -42,18 +42,18 @@
           <li><a href="#">HTML & CSS</a></li>
           <li><a href="#">JavaScript</a></li>
           <li><a href="#">Django</a></li>
-          <li><a href="#">Photoshop</a></li>
+          <li><a href="#">Python</a></li>
         </ul>
         <ul class="box input-box">
           <li class="link_name">Узнать больше</li>
-          <li><input type="text" placeholder="Введите ваш email"></li>
+          <li><input type="text" placeholder="Введите вашу почту"></li>
           <li><input type="button" value="Подписаться"></li>
         </ul>
       </div>
     </div>
     <div class="bottom-details">
       <div class="bottom_text">
-        <span class="copyright_text">Copyright © 2021 <a href="#">TeaPLA</a>All rights reserved</span>
+        <span class="copyright_text">Copyright © 2023 <a href="#">TeaPLA</a>All rights reserved</span>
         <span class="policy_terms">
           <a href="#">Privacy policy</a>
           <a href="#">Terms & condition</a>
