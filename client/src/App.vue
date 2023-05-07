@@ -1,37 +1,37 @@
 <template>
-  <header>
-    <NavBar v-if="!isPlugVisible"/>
-  </header>
   <main id="app">
+    <Header v-if="!isPlugVisible"/>
     <Plug v-if="isPlugVisible"/>
     <section class="content" v-if="!isPlugVisible">
-      <SideBar/>
+      <Sidebar/>
       <Profile/>
     </section>
+    <Footer/>
   </main>
-  <footer/>
 </template>
 
 <script>
 
-import NavBar from "./components/NavBar.vue";
-import SideBar from "./components/SideBar.vue";
+import Header from "./components/Header.vue";
+import Sidebar from "./components/Sidebar.vue";
 import Main from "./views/Main.vue";
 import Home from './views/Home.vue';
 import Plug from "./views/Plug.vue";
 import expert from "./components/img/expert.jpg";
 import Selector from "./components/blocks/puzzle/selector.vue";
 import Profile from "./views/Profile.vue";
+import Footer from "./components/Footer.vue";
 
 
 export default {
   name: 'app',
   components: {
+    Footer,
     Profile,
     Selector,
     Plug,
-    NavBar,
-    SideBar,
+    Header,
+    Sidebar,
     Main,
     Home,
   },

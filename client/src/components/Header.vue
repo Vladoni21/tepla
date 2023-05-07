@@ -1,11 +1,11 @@
 <template>
-    <section class="navbar">
+    <header class="header">
         <Logo/>
         <div style="margin: 0 -10px 0 0; height: 60px; width: 430px; display: flex; justify-content: space-around">
           <SearchBar/>
           <LogBtn icon="person"/>
         </div>
-    </section>
+    </header>
 </template>
 
 <script>
@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
 
-.navbar {
+.header {
     position: absolute;
     z-index: 3;
     padding: 0;
@@ -38,7 +38,7 @@ export default {
     min-height: 80px;
 }
 
-.navbar a {
+.header a {
     color: white;
     text-decoration: none;
     background-image: linear-gradient(currentColor, currentColor);
@@ -53,7 +53,7 @@ a:hover {
     background-size: 100% 2px;
 }
 
-.navbar .nav-links {
+.header .nav-links {
     box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 1);
     border-radius: 10px;
@@ -61,18 +61,18 @@ a:hover {
     overflow: hidden;
 }
 
-.navbar .nav-links ul {
+.header .nav-links ul {
     display: flex;
     padding-right: 20px;
     padding-top: 30px;
 }
 
-.navbar .nav-links ul li {
+.header .nav-links ul li {
     display: flex;
     margin: 0 25px;
 }
 
-.navbar .nav-links ul li.active a {
+.header .nav-links ul li.active a {
     color: #454851;
     font-weight: 600;
 }

@@ -153,8 +153,8 @@
 <script>
 import expert from "../components/img/expert.jpg";
 import Grid from "../components/containers/Grid.vue";
-import Navbar from "../components/NavBar.vue";
-import SideBar from "../components/SideBar.vue";
+import Navbar from "../components/Header.vue";
+import SideBar from "../components/Sidebar.vue";
 import PopUp from "../components/containers/PopUp.vue";
 import selector from "../components/blocks/puzzle/selector.vue";
 import answer from "../components/blocks/puzzle/answer.vue";
@@ -444,11 +444,11 @@ section {
     font-size: 1.5rem;
 }
 
-.side-bar .navbar {
+.side-bar .header {
     margin-top: 1rem;
 }
 
-.side-bar .navbar a {
+.side-bar .header a {
     display: flex;
     padding-left: 40%;
     padding-top: 2rem;
@@ -456,12 +456,12 @@ section {
 
 }
 
-.side-bar .navbar a span {
+.side-bar .header a span {
     color: white;
     padding-left: 5px;
 }
 
-.side-bar .navbar a:hover i {
+.side-bar .header a:hover i {
     margin-right: 2.5rem;
 
 }
