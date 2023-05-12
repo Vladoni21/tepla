@@ -1,31 +1,24 @@
 <template>
   <section class="container">
-  <div class="animation-container">
-    <div class="lightning-container">
-      <div class="lightning white"></div>
-      <div class="lightning red"></div>
+    <div class="animation-container">
+      <div class="lightning-container">
+        <div class="lightning white"></div>
+        <div class="lightning red"></div>
+      </div>
+      <div class="boom-container">
+        <div class="shape circle big white"></div>
+        <div class="shape circle white"></div>
+        <div class="shape triangle big yellow"></div>
+        <div class="shape disc white"></div>
+        <div class="shape triangle blue"></div>
+      </div>
+      <div class="boom-container second">
+        <div class="shape circle big white"></div>
+        <div class="shape circle white"></div>
+        <div class="shape disc white"></div>
+        <div class="shape triangle blue"></div>
+      </div>
     </div>
-    <div class="boom-container">
-      <div class="shape circle big white"></div>
-      <div class="shape circle white"></div>
-      <div class="shape triangle big yellow"></div>
-      <div class="shape disc white"></div>
-      <div class="shape triangle blue"></div>
-    </div>
-    <div class="boom-container second">
-      <div class="shape circle big white"></div>
-      <div class="shape circle white"></div>
-      <div class="shape disc white"></div>
-      <div class="shape triangle blue"></div>
-    </div>
-  </div>
-    <article class="field">
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-    </article>
   </section>
 </template>
 
@@ -40,16 +33,14 @@ export default {
   display: flex;
   align-items: center;
   position: static;
-  background: linear-gradient(to bottom right, #070630 0%, #060454 100%);
   min-height: 100vh;
   justify-content: center;
   align-content: center;
   max-width: initial;
   padding: 0;
   margin: 0;
-  z-index: -9;
 }
-
+/*
 .container:before, .container:after, .field:before, .field:after {
   content: "";
   background: linear-gradient(#203075, #233581);
@@ -60,6 +51,7 @@ export default {
   transform: translate(-50%, -50%);
   z-index: 1;
 }
+
 .container:before, .field:before {
   background: linear-gradient(#233581, #203075);
 }
@@ -68,112 +60,13 @@ export default {
   height: 50vmax;
   width: 50vmax;
 }
+
 .container:after {
   height: 30vmax;
   width: 30vmax;
 }
 
-
-
-.field {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #FFF;
-  text-shadow: 0 30px 10px rgba(0, 0, 0, 0.15);
-}
-.field:before {
-  height: 55vmax;
-  width: 55vmax;
-  z-index: -2;
-}
-.field:after {
-  height: 40vmax;
-  width: 40vmax;
-  z-index: -1;
-}
-
-
-.bubble {
-  background: linear-gradient(#EC5DC1, #D61A6F);
-  border-radius: 50%;
-  box-shadow: 0 30px 15px rgba(0, 0, 0, 0.15);
-  position: absolute;
-  z-index: 2;
-}
-.bubble:before, .bubble:after {
-  content: "";
-  background: linear-gradient(#EC5DC1, #D61A6F);
-  border-radius: 50%;
-  box-shadow: 0 30px 15px rgba(0, 0, 0, 0.15);
-  position: absolute;
-}
-.bubble:nth-child(1) {
-  top: 15vh;
-  left: 15vw;
-  height: 22vmin;
-  width: 22vmin;
-}
-.bubble:nth-child(1):before {
-  width: 13vmin;
-  height: 13vmin;
-  bottom: -25vh;
-  right: -10vmin;
-}
-.bubble:nth-child(2) {
-  top: 20vh;
-  left: 38vw;
-  height: 10vmin;
-  width: 10vmin;
-}
-.bubble:nth-child(2):before {
-  width: 5vmin;
-  height: 5vmin;
-  bottom: -10vh;
-  left: -8vmin;
-}
-.bubble:nth-child(3) {
-  top: 12vh;
-  right: 30vw;
-  height: 13vmin;
-  width: 13vmin;
-}
-.bubble:nth-child(3):before {
-  width: 3vmin;
-  height: 3vmin;
-  bottom: -15vh;
-  left: -18vmin;
-  z-index: 6;
-}
-.bubble:nth-child(4) {
-  top: 25vh;
-  right: 18vw;
-  height: 18vmin;
-  width: 18vmin;
-}
-.bubble:nth-child(4):before {
-  width: 7vmin;
-  height: 7vmin;
-  bottom: -10vmin;
-  left: -15vmin;
-}
-.bubble:nth-child(5) {
-  top: 60vh;
-  right: 18vw;
-  height: 28vmin;
-  width: 28vmin;
-}
-.bubble:nth-child(5):before {
-  width: 10vmin;
-  height: 10vmin;
-  bottom: 5vmin;
-  left: -25vmin;
-}
-
-
-
-
-
+*/
 
 .animation-container {
   display: block;
@@ -213,12 +106,12 @@ export default {
 
 .animation-container .lightning-container .lightning.white {
   background-color: white;
-  box-shadow: 0px 50px 50px 0px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 50px 50px 0 rgba(255, 255, 255, 0.3);
 }
 
 .animation-container .lightning-container .lightning.red {
   background-color: #fc7171;
-  box-shadow: 0px 50px 50px 0px rgba(252, 113, 113, 0.3);
+  box-shadow: 0 50px 50px 0 rgba(252, 113, 113, 0.3);
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
@@ -305,7 +198,7 @@ export default {
 .animation-container .boom-container .shape.circle.big {
   width: 40px;
   height: 40px;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 .animation-container .boom-container .shape.circle.big.white {
@@ -513,18 +406,5 @@ export default {
     opacity: 0;
     transform: scale(2) translate(-70px, -30px);
   }
-}
-
-.footer {
-  color: white;
-  font-size: 10px;
-  position: fixed;
-  bottom: 0;
-  font-weight: 200;
-  padding: 10px 20px;
-}
-
-.footer a, .footer a:hover, .footer a:focus, .footer a:visited {
-  color: #c6c6c6;
 }
 </style>

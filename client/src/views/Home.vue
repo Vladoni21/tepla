@@ -9,9 +9,6 @@
                 финансами и
                 предпринимательством. </p>
             </div>
-            <div class="item">
-              <Login></Login>
-            </div>
         </article>
         <!--features-->
         <article id="features">
@@ -19,15 +16,15 @@
                 <h1>Наши преимущества</h1>
                 <div class="fea-base">
                     <div class="fea-box">
-                        <fa icon="graduation-cap"/>
+                        <i class="material-icons">school</i>
                         <h3>Быстрое освоение программы</h3>
                     </div>
                     <div class="fea-box">
-                        <fa icon="certificate"/>
+                        <i class="material-icons">new_releases</i>
                         <h3>Обучение происходит с помощью практики</h3>
                     </div>
                     <div class="fea-box">
-                        <fa icon="award"/>
+                        <i class="material-icons">badge</i>
                         <h3>Сертификат государственного образца</h3>
                     </div>
                 </div>
@@ -54,11 +51,10 @@
 </template>
 
 <script>
-import Navbar from "../components/NavBar.vue";
+import Navbar from "../components/Header.vue";
 import expert from "../components/img/expert.jpg";
-import Grid from "../components/Grid.vue";
-import Card from "../components/Card.vue";
-import Login from "../components/Login.vue";
+import Grid from "../components/containers/Grid.vue";
+import Card from "../components/containers/Card.vue";
 
 export default {
     data() {
@@ -68,9 +64,9 @@ export default {
                 {id: 1, title: "Django разработчик", icon: "code", href: "#", class: "top_courses", gear: "LinkCourse"},
                 {id: 2, title: "Python разработчик", icon: "code", href: "#", class: "top_courses", gear: "LinkCourse"},
                 {id: 3, title: "JavaScript разработчик", icon: "code", href: "#", class: "top_courses", gear: "LinkCourse"},
-                {id: 4, title: "Математика", icon: "calculator", href: "#", class: "top_courses", gear: "LinkCourse"},
-                {id: 5, title: "Английский язык", icon: "globe", href: "#", class: "top_courses", gear: "LinkCourse"},
-                {id: 6, title: "Немецкий язык", icon: "globe", href: "#", class: "top_courses", gear: "LinkCourse"}
+                {id: 4, title: "Математика", icon: "calculate", href: "#", class: "top_courses", gear: "LinkCourse"},
+                {id: 5, title: "Английский язык", icon: "translate", href: "#", class: "top_courses", gear: "LinkCourse"},
+                {id: 6, title: "Немецкий язык", icon: "translate", href: "#", class: "top_courses", gear: "LinkCourse"}
             ],
             top_experts: [
                 {id: 1, name: "Райан Гослинг", description: "Data science аналитик", img: expert, alt: "", href: "#", class: "top_experts", gear: "LinkExpert"},
@@ -90,7 +86,6 @@ export default {
     },
     name: "Home",
     components: {
-        Login,
         Navbar,
         Grid,
         Card
@@ -203,7 +198,10 @@ export default {
     color: white;
     padding-left: 5px;
 }
-
+.material-icons {
+    padding-top: 5px;
+    font-size: 3rem;
+}
 /* course */
 #course {
     margin-top: 50px;

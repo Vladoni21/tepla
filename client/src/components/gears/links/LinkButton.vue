@@ -1,6 +1,6 @@
 <template>
     <a v-bind:class="item.class" v-bind:href="item.href">
-        <i><fa v-bind:icon="item.icon"/></i>
+        <i class="material-icons" v-bind:icon="item.icon">{{item.icon}}</i>
         <span v-text="item.title"/>
     </a>
 </template>
@@ -54,5 +54,9 @@ export default {
 .nav_link span {
     color: white;
     padding-left: 5px;
+}
+.material-icons {
+    padding-top: 5px;
+    font-size: 3rem;
 }
 </style>

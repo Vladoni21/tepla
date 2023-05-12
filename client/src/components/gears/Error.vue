@@ -1,17 +1,17 @@
 <template>
   <section id='container'>
-    <canvas id="canvas1"/>
+    <canvas id="error"/>
   </section>
 </template>
 <script>
 export default {
-  name: "ErrorLogo",
+  name: "Error",
   methods: {
     back() {
       this.$router.go(-1);
     },
     async AnimText() {
-      const canvas = document.getElementById("canvas1");
+      const canvas = document.getElementById("error");
       const ctx = canvas.getContext("2d");
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -32,7 +32,7 @@ export default {
           });
 
       ctx.font = 'bold 20px Verdana';
-      ctx.fillText('404', 0, 40);
+      ctx.fillText('teapla 1love', 0, 40);
       const data = ctx.getImageData(0, 0, canvas.width, 100);
 
       class Particle {
@@ -230,12 +230,10 @@ h1 {
   height: 100%;
 }
 
-#canvas1 {
+#error {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   z-index: 4;
   /*filter: blur(10px) contrast(10);*/
 }

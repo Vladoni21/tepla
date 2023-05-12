@@ -28,6 +28,18 @@
             </div>
           </div>
           <div class="box">
+            <h3 class="title">Селектор</h3>
+            <div class="flex">
+              <selector style="width: 300px; height: 45px" v-bind:arr="sel"/>
+            </div>
+          </div>
+            <div class="box">
+                <h3 class="title">Ответы</h3>
+                <div class="flex">
+                    <answer/>
+                </div>
+            </div>
+          <div class="box">
             <h3 class="title">Стать преподавателем</h3>
             <p class="tutor">Рыбий текст</p>
             <a href="#" class="inline-btn">Начать</a>
@@ -133,41 +145,39 @@
           <!--a href="courses.html" class="inline-option-btn">view all courses</a-->
         </div>
       </section>
-      <button id="show-modal" @click="showReg">Show Modal</button>
     </section>
-    <PopUp is="Register" v-bind:func="showReg" v-bind:req="isRegVisible"/>
 </template>
 
 <script>
 import expert from "../components/img/expert.jpg";
-import Grid from "../components/Grid.vue";
-import Navbar from "../components/NavBar.vue";
-import SideBar from "../components/SideBar.vue";
-import PopUp from "../components/gears/PopUp.vue";
-
+import Grid from "../components/containers/Grid.vue";
+import Navbar from "../components/Header.vue";
+import SideBar from "../components/Sidebar.vue";
+import PopUp from "../components/containers/PopUp.vue";
+import selector from "../components/blocks/puzzle/selector.vue";
+import answer from "../components/blocks/puzzle/answer.vue";
 
 export default {
-    components: {Error, PopUp, SideBar, Navbar, Grid},
+    components: {answer, selector, PopUp, SideBar, Navbar, Grid},
     data() {
         return {
             image: expert,
-            isRegVisible: false,
             sidebar_top_categories: [
                 {id: 1, title: "Разработка", icon: "code", href: "#", class: "default", gear: "LinkButton"},
-                {id: 2, title: "Бизнес", icon: "chart-simple", href: "#", class: "default", gear: "LinkButton"},
-                {id: 3, title: "Дизайн", icon: "pen", href: "#", class: "default", gear: "LinkButton"},
-                {id: 4, title: "Маркетинг", icon: "chart-line", href: "#", class: "default", gear: "LinkButton"},
-                {id: 5, title: "Музыка", icon: "music", href: "#", class: "default", gear: "LinkButton"},
+                {id: 2, title: "Бизнес", icon: "sell", href: "#", class: "default", gear: "LinkButton"},
+                {id: 3, title: "Дизайн", icon: "design_services", href: "#", class: "default", gear: "LinkButton"},
+                {id: 4, title: "Маркетинг", icon: "trending_up", href: "#", class: "default", gear: "LinkButton"},
+                {id: 5, title: "Музыка", icon: "music_note", href: "#", class: "default", gear: "LinkButton"},
                 {id: 6, title: "Фото", icon: "camera", href: "#", class: "default", gear: "LinkButton"},
-                {id: 7, title: "ПО", icon: "cog", href: "#", class: "default", gear: "LinkButton"},
-                {id: 8, title: "Наука", icon: "vial", href: "#", class: "default", gear: "LinkButton"}
+                {id: 7, title: "ПО", icon: "web_asset", href: "#", class: "default", gear: "LinkButton"},
+                {id: 8, title: "Наука", icon: "science", href: "#", class: "default", gear: "LinkButton"}
             ],
             sidebar_top_courses: [
-                {id: 1, title: "HTML", icon: "code", href: "#", class: "default", gear: "LinkButton"},
-                {id: 2, title: "CSS", icon: "code", href: "#", class: "default", gear: "LinkButton"},
-                {id: 3, title: "javascript", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 1, title: "", icon: "html", href: "#", class: "default", gear: "LinkButton"},
+                {id: 2, title: "", icon: "css", href: "#", class: "default", gear: "LinkButton"},
+                {id: 3, title: "", icon: "javascript", href: "#", class: "default", gear: "LinkButton"},
                 {id: 4, title: "react", icon: "code", href: "#", class: "default", gear: "LinkButton"},
-                {id: 5, title: "PHP", icon: "code", href: "#", class: "default", gear: "LinkButton"},
+                {id: 5, title: "", icon: "php", href: "#", class: "default", gear: "LinkButton"},
                 {id: 6, title: "bootstrap", icon: "code", href: "#", class: "default", gear: "LinkButton"}
             ],
             sidebar_menu: [
@@ -176,12 +186,11 @@ export default {
                 {id: 3, title: "Курсы", icon: "graduation-cap", href: "#", class: "nav_link", gear: "LinkButton"},
                 {id: 4, title: "Учителя", icon: "chalkboard-user", href: "#", class: "nav_link", gear: "LinkButton"},
                 {id: 5, title: "Поддержка", icon: "headset", href: "#", class: "nav_link", gear: "LinkButton"}
+            ],
+            sel: [
+              {id: 1, title: "Помоги мне", icon: "home", value: "a"},
+              {id: 1, title: "Пожалуйста", icon: "home", value: "b"}
             ]
-        }
-    },
-    methods: {
-        showReg() {
-            this.isRegVisible = !this.isRegVisible
         }
     },
     name: "Main"
@@ -207,7 +216,7 @@ html {
 .Main {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 6rem 2rem;
 }
 
 section {
@@ -427,11 +436,11 @@ section {
     font-size: 1.5rem;
 }
 
-.side-bar .navbar {
+.side-bar .header {
     margin-top: 1rem;
 }
 
-.side-bar .navbar a {
+.side-bar .header a {
     display: flex;
     padding-left: 40%;
     padding-top: 2rem;
@@ -439,12 +448,12 @@ section {
 
 }
 
-.side-bar .navbar a span {
+.side-bar .header a span {
     color: white;
     padding-left: 5px;
 }
 
-.side-bar .navbar a:hover i {
+.side-bar .header a:hover i {
     margin-right: 2.5rem;
 
 }
