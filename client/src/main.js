@@ -15,4 +15,7 @@ import './app.scss'
 Vue.config.productionTip = false
 
 library.add(fas)
-createApp(App).component('fa', FontAwesomeIcon).mount('#app')
+
+const app = createApp(App)
+app.component('fa', FontAwesomeIcon)
+app.mount('#app')
