@@ -1,15 +1,8 @@
-import Course from "./Course";
-
 const {DataTypes, Model, Op} = require('sequelize');
-
 
 import sequelize from "../sequelize.js"
 
-// Valid Extending Model
-
-export default class Comment extends Model {}
-
-Comment.init({
+export default sequelize.define('Comment', {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -34,10 +27,7 @@ Comment.init({
     sequelize,
     modelName: 'Comments',
 
-    // don't forget to enable timestamps!
     timestamps: true,
-    // I want createdAt
     createdAt: true,
-    // I want updatedAt to actually be called updateTimestamp
     updatedAt: 'updateTimestamp'
 });

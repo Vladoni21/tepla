@@ -1,15 +1,8 @@
-import Course from "./Course";
-
 const {DataTypes, Model, Op} = require('sequelize');
-
 
 import sequelize from "../sequelize.js"
 
-// Valid Extending Model
-
-export default class Completion extends Model {}
-
-Completion.init({
+export default sequelize.define({
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -21,10 +14,7 @@ Completion.init({
     sequelize,
     modelName: 'Completions',
 
-    // don't forget to enable timestamps!
     timestamps: true,
-    // I want createdAt
     createdAt: true,
-    // I want updatedAt to actually be called updateTimestamp
     updatedAt: 'updateTimestamp'
 });
