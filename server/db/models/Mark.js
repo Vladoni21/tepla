@@ -13,7 +13,7 @@ export default sequelize.define('Mark', {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    autor_id: {
+    author_id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true

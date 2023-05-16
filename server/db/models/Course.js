@@ -9,7 +9,7 @@ export default sequelize.define('Course', {
         primaryKey: true,
         allowNull: false
     },
-    autor_id: {
+    author_id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
