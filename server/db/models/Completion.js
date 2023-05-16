@@ -2,7 +2,7 @@ const {DataTypes, Model, Op} = require('sequelize');
 
 import sequelize from "../sequelize.js"
 
-export default sequelize.define({
+export default sequelize.define('Completion', {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
