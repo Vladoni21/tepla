@@ -5,7 +5,7 @@ import {sequelize} from "/server/db/sequelize.js"
 
 // Valid Extending Model
 
-export class Course extends Model {}
+export default class Course extends Model {}
 
 Course.init({
     id: {
@@ -51,5 +51,3 @@ Course.init({
     // I want updatedAt to actually be called updateTimestamp
     updatedAt: 'updateTimestamp'
 });
-
-module.exports = Course

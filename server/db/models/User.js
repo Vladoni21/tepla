@@ -1,11 +1,11 @@
 const {DataTypes, Model, Op} = require('sequelize');
 
-import {Course} from "./Course";
-import {sequelize} from "/server/db/sequelize.js"
+import Course from "./Course";
+import {sequelize} from "../sequelize"
 
 // Valid Extending Model
 
-export class User extends Model {
+export default class User extends Model {
     // id  - this field will shadow sequelize's getter & setter. It should be removed.
     // declare id: number; - just not working right
     // created_at  - This way, the current date/time will be used to populate this column (at the moment of insertion)
@@ -48,5 +48,3 @@ User.init({
     // I want updatedAt to actually be called updateTimestamp
     updatedAt: 'updateTimestamp'
 });
-
-module.exports = User

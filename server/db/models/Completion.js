@@ -1,4 +1,4 @@
-import {Course} from "./Course";
+import Course from "./Course";
 
 const {DataTypes, Model, Op} = require('sequelize');
 
@@ -7,7 +7,7 @@ import {sequelize} from "/server/db/sequelize.js"
 
 // Valid Extending Model
 
-export class Completion extends Model {}
+export default class Completion extends Model {}
 
 Completion.init({
     id: {
@@ -28,5 +28,3 @@ Completion.init({
     // I want updatedAt to actually be called updateTimestamp
     updatedAt: 'updateTimestamp'
 });
-
-module.exports = Completion
