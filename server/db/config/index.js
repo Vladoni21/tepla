@@ -3,5 +3,6 @@ export default {
     password: process.env.DB_PASSWORD || "postgres",
     database: process.env.DB_NAME || "teapla",
     host: process.env.DB_HOST || "localhost",
+    port: process.env.DB_PORT || 5432,
     dialect: process.env.DB_DIALECT || "postgresql"
 }
