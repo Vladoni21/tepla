@@ -1,13 +1,16 @@
-const {Sequelize} = require('sequelize');
+import {Sequelize} from "sequelize";
+import config from "./config";
 
-// Passing a connection URI
-// const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname')
-export const sequelize = new Sequelize(
-    'database', 'username', 'password', {
-        host: 'localhost',
-        dialect: 'postgres',
+export default new Sequelize(
+    config.host, config.username, config.password, {
+        host: config.host,
+        port: config.port,
+        dialect: config.dialect,
+        logging: true,
         define: {
+            charset: 'utf8',
+            collate: 'utf8_general_ci',
             freezeTableName: true
         },
     },
-); // This behavior be defined globally for the sequelize instance
+);
