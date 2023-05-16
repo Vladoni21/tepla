@@ -1,6 +1,6 @@
 const {DataTypes, Model, Op} = require('sequelize');
 
-import sequelize from "../sequelize.js"
+import sequelize from "../sequelize"
 
 export default sequelize.define('Comment', {
     id: {
