@@ -24,10 +24,7 @@ export default sequelize.define('Mark', {
         primaryKey: true
     },
 }, {
-    sequelize,
-    modelName: 'Marks',
-
-    timestamps: true,
     createdAt: true,
+    timestamps: true,
     updatedAt: 'updateTimestamp'
 });

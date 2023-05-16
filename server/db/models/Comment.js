@@ -24,10 +24,7 @@ export default sequelize.define('Comment', {
         primaryKey: true
     },
 }, {
-    sequelize,
-    modelName: 'Comments',
-
-    timestamps: true,
     createdAt: true,
+    timestamps: true,
     updatedAt: 'updateTimestamp'
 });

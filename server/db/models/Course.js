@@ -36,10 +36,7 @@ export default sequelize.define('Course', {
         default: 0
     }
 }, {
-    sequelize,
-    modelName: 'Courses',
-
-    timestamps: true,
     createdAt: true,
+    timestamps: true,
     updatedAt: 'updateTimestamp'
 });

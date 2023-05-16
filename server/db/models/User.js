@@ -26,10 +26,7 @@ export default sequelize.define('User', {
         allowNull: false
     }
 }, {
-    sequelize,
-    modelName: 'Users',
-
-    timestamps: true,
     createdAt: true,
+    timestamps: true,
     updatedAt: 'updateTimestamp'
 });

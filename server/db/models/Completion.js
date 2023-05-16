@@ -11,10 +11,7 @@ export default sequelize.define({
     },
     // потом будет что-то новое
 }, {
-    sequelize,
-    modelName: 'Completions',
-
-    timestamps: true,
     createdAt: true,
+    timestamps: true,
     updatedAt: 'updateTimestamp'
 });
