@@ -1,7 +1,7 @@
 const {DataTypes, Model, Op} = require('sequelize');
 
 import Course from "./Course";
-import {sequelize} from "../sequelize"
+import sequelize from "../sequelize"
 
 // Valid Extending Model
 
