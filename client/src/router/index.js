@@ -8,5 +8,10 @@ export default createRouter({
             path: '/',
             component: () => import('../views/Index.vue')
         },
+        {
+            name: 'plug',
+            path: '/test',
+            component: () => import('../views/Course.vue')
+        },
     ]
 })

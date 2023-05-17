@@ -21,11 +21,13 @@ import Plug from "./Plug.vue";
 import Selector from "../components/blocks/puzzle/selector.vue";
 import Profile from "./Profile.vue";
 import Footer from "../components/bars/Footer.vue";
+import Course from "../views/Course.vue";
 
 
 export default {
   name: 'app',
   components: {
+    Course,
     Footer,
     Profile,
     Selector,
