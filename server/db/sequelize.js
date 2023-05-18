@@ -1,7 +1,10 @@
 import {Sequelize} from 'sequelize';
-import config from './config';
 
-export default new Sequelize(
+import config from './config';
+import * as modelAdders from './models';
+import addAssociations from './associations';
+
+const db = new Sequelize(
     config.host, config.username, config.password, {
         host: config.host,
         port: config.port,
@@ -14,3 +17,10 @@ export default new Sequelize(
         },
     },
 );
+
+for (const modelAdder of Object.values(modelAdders)) {
+    modelAdder(db);
+}
+addAssociations(db);
+
+export default db;
