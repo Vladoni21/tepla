@@ -1,6 +1,6 @@
 <template>
   <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8">
-    <div class="align-middle rounded-tl-lg rounded-tr-lg inline-block w-full py-4 overflow-hidden bg-white shadow-lg px-12">
+    <div class="f_div">
       <div class="flex justify-between">
         <div class="inline-flex border rounded w-7/12 px-2 lg:px-6 h-12 bg-transparent">
           <div class="flex flex-wrap items-stretch w-full h-full mb-6 relative">
@@ -17,17 +17,17 @@
         </div>
       </div>
     </div>
-    <div class="align-middle inline-block min-w-full shadow overflow-hidden bg-white shadow-dashboard px-8 pt-3 rounded-bl-lg rounded-br-lg">
+    <div class="s_div">
       <table class="min-w-full">
         <thead>
         <tr>
-          <th class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">ID</th>
-          <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">Fullname</th>
-          <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">Email</th>
-          <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">Phone</th>
-          <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">Status</th>
-          <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">Created At</th>
-          <th class="px-6 py-3 border-b-2 border-gray-300"></th>
+          <th class="f_lo">ID</th>
+          <th class="f_lo">Fullname</th>
+          <th class="f_lo">Email</th>
+          <th class="f_lo">Phone</th>
+          <th class="f_lo">Status</th>
+          <th class="f_lo">Created At</th>
+          <th class="f_lo"></th>
         </tr>
         </thead>
         <tbody class="bg-white">
@@ -42,16 +42,40 @@
           <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
             <div class="text-sm leading-5 text-blue-900">Damilare Anjorin</div>
           </td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">damilareanjorin1@gmail.com</td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">+2348106420637</td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">
+          <td class="uuuu">damilareanjorin1@gmail.com</td>
+          <td class="uuuu">+2348106420637</td>
+          <td class="uuuu">
                                         <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                                         <span class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
                                         <span class="relative text-xs">active</span>
                                     </span>
           </td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-blue-900 text-sm leading-5">September 12</td>
-          <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5">
+          <td class="uuuu">September 12</td>
+          <td class="li_btn">
+            <button class="px-5 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">View Details</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="uuuu">
+            <div class="flex items-center">
+              <div>
+                <div class="text-sm leading-5 text-gray-800">#1</div>
+              </div>
+            </div>
+          </td>
+          <td class="uuuu">
+            <div class="text-sm leading-5 text-blue-900">Damilare Anjorin</div>
+          </td>
+          <td class="uuuu">damilareanjorin1@gmail.com</td>
+          <td class="uuuu">+2348106420637</td>
+          <td class="uuuu">
+                                        <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                                        <span class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
+                                        <span class="relative text-xs">active</span>
+                                    </span>
+          </td>
+          <td class="li_data">September 12</td>
+          <td class="li_btn">
             <button class="px-5 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">View Details</button>
           </td>
         </tr>
@@ -66,40 +90,16 @@
           <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
             <div class="text-sm leading-5 text-blue-900">Damilare Anjorin</div>
           </td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">damilareanjorin1@gmail.com</td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">+2348106420637</td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">
-                                        <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                                        <span class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                                        <span class="relative text-xs">active</span>
-                                    </span>
-          </td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-blue-900 text-sm leading-5">September 12</td>
-          <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5">
-            <button class="px-5 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">View Details</button>
-          </td>
-        </tr>
-        <tr>
-          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-            <div class="flex items-center">
-              <div>
-                <div class="text-sm leading-5 text-gray-800">#1</div>
-              </div>
-            </div>
-          </td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-            <div class="text-sm leading-5 text-blue-900">Damilare Anjorin</div>
-          </td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">damilareanjorin1@gmail.com</td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">+2348106420637</td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">
+          <td class="uuuu">damilareanjorin1@gmail.com</td>
+          <td class="uuuu">+2348106420637</td>
+          <td class="uuuu">
                                         <span class="relative inline-block px-3 py-1 font-semibold text-red-900 leading-tight">
                                         <span class="absolute inset-0 bg-red-200 opacity-50 rounded-full"></span>
                                         <span class="relative text-xs">not active</span>
                                     </span>
           </td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-blue-900 text-sm leading-5">September 12</td>
-          <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5">
+          <td class="li_data">September 12</td>
+          <td class="li_btn">
             <button class="px-5 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">View Details</button>
           </td>
         </tr>
@@ -114,16 +114,16 @@
           <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
             <div class="text-sm leading-5 text-blue-900">Damilare Anjorin</div>
           </td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">damilareanjorin1@gmail.com</td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">+2348106420637</td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">
+          <td class="uuuu">damilareanjorin1@gmail.com</td>
+          <td class="uuuu">+2348106420637</td>
+          <td class="uuuu">
                                         <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                                         <span class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
                                         <span class="relative text-xs">active</span>
                                     </span>
           </td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-blue-900 text-sm leading-5">September 12</td>
-          <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5">
+          <td class="li_data">September 12</td>
+          <td class="li_btn">
             <button class="px-5 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">View Details</button>
           </td>
         </tr>
@@ -138,16 +138,16 @@
           <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
             <div class="text-sm leading-5 text-blue-900">Damilare Anjorin</div>
           </td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">damilareanjorin1@gmail.com</td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">+2348106420637</td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">
+          <td class="uuuu">damilareanjorin1@gmail.com</td>
+          <td class="uuuu">+2348106420637</td>
+          <td class="uuuu">
                                         <span class="relative inline-block px-3 py-1 font-semibold text-orange-900 leading-tight">
                                         <span class="absolute inset-0 bg-orange-200 opacity-50 rounded-full"></span>
                                         <span class="relative text-xs">disabled</span>
                                     </span>
           </td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-blue-900 text-sm leading-5">September 12</td>
-          <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5">
+          <td class="li_data">September 12</td>
+          <td class="li_btn">
             <button class="px-5 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">View Details</button>
           </td>
         </tr>
@@ -206,46 +206,18 @@ export default {
 </script>
 
 <style scoped>
-.w-full {
+.f_div {
   width: 100%;
-}
-.align-middle {
   vertical-align: middle;
-}
-.shadow-lg {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
-}
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-.overflow-hidden {
+  padding: 1rem 3rem;
   overflow: hidden;
-}
-.inline-block {
   display: inline-block;
-}
-.rounded-tr-lg {
   border-top-right-radius: 0.5rem;
-}
-.rounded-tl-lg {
   border-top-left-radius: 0.5rem;
-}
-.bg-white {
-  --bg-opacity: 1;
   background-color: #fff;
-  background-color: rgba(255,255,255,var(--bg-opacity));
 }
-*, ::after, ::before {
-  box-sizing: border-box;
-  border-width: 0;
-  border-style: solid;
-  border-color: #e2e8f0;
-}
+
 
 .justify-between {
   justify-content: space-between;
@@ -275,7 +247,6 @@ export default {
 .bg-transparent {
   background-color: transparent;
 }
-
 
 .w-full {
   width: 100%;
@@ -340,7 +311,22 @@ export default {
   background-color: transparent;
 }
 
-
+.li_data {
+  white-space: nowrap;
+  --text-opacity: 1;
+  color: #2a4365;
+  color: rgba(42,67,101,var(--text-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1.25rem;
+  font-size: .875rem;
+  border-bottom-width: 1px;
+  --border-opacity: 1;
+  border-color: #a0aec0;
+  border-color: rgba(160,174,192,var(--border-opacity));
+}
 
 
 .w-px {
@@ -396,41 +382,19 @@ export default {
   border-radius: 0.25rem;
 }
 
-
-.align-middle {
+.s_div {
   vertical-align: middle;
-}
-.shadow {
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
-}
-.pt-3 {
   padding-top: 0.75rem;
-}
-.px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
-}
-.overflow-hidden {
   overflow: hidden;
-}
-.min-w-full {
   min-width: 100%;
-}
-.inline-block {
   display: inline-block;
-}
-.rounded-bl-lg {
   border-bottom-left-radius: 0.5rem;
-}
-.rounded-br-lg {
   border-bottom-right-radius: 0.5rem;
-}
-.bg-white {
-  --bg-opacity: 1;
   background-color: #fff;
-  background-color: rgba(255,255,255,var(--bg-opacity));
 }
-
 .min-w-full {
   min-width: 100%;
 }
@@ -438,94 +402,81 @@ table {
   border-collapse: collapse;
 }
 
-.tracking-wider {
-  letter-spacing: .05em;
+.li_btn {
+  white-space: nowrap;
+  text-align: right;
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  line-height: 1.25rem;
+
+  font-size: .875rem;
+
+  border-bottom-width: 1px;
+
+  --border-opacity: 1;
+  border-color: #a0aec0;
+  border-color: rgba(160,174,192,var(--border-opacity));
 }
-.text-blue-500 {
+
+
+
+
+.f_lo {
+  letter-spacing: .05em;
   --text-opacity: 1;
   color: #4299e1;
   color: rgba(66,153,225,var(--text-opacity));
-}
-.text-left {
   text-align: left;
-}
-.px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-.py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-.leading-4 {
   line-height: 1rem;
-}
-.border-b-2 {
-  border-bottom-width: 2px;
-}
-.border-gray-300 {
   --border-opacity: 1;
   border-color: #e2e8f0;
   border-color: rgba(226,232,240,var(--border-opacity));
-}
-*, ::after, ::before {
   box-sizing: border-box;
-  border-width: 0;
   border-style: solid;
   border-color: #e2e8f0;
-}
-th {
   display: table-cell;
   vertical-align: inherit;
   font-weight: bold;
   text-align: -internal-center;
 }
 
-
-
-.whitespace-no-wrap {
+.itemi {
   white-space: nowrap;
-}
-.text-blue-900 {
-  --text-opacity: 1;
   color: #2a4365;
   color: rgba(42,67,101,var(--text-opacity));
-}
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-.leading-5 {
+  padding: 1rem 0.5rem;
   line-height: 1.25rem;
-}
-.text-sm {
   font-size: .875rem;
-}
-.border-b {
   border-bottom-width: 1px;
-}
-.border-gray-500 {
   --border-opacity: 1;
   border-color: #a0aec0;
-  border-color: rgba(160,174,192,var(--border-opacity));
-}
-*, ::after, ::before {
   box-sizing: border-box;
-  border-width: 0;
   border-style: solid;
-  border-color: #e2e8f0;
-}
-td {
   display: table-cell;
   vertical-align: inherit;
 }
 
-
-
+.uuuu {
+  white-space: nowrap;
+  --text-opacity: 1;
+  color: #2a4365;
+  color: rgba(42,67,101,var(--text-opacity));
+  padding: 1rem 1.5rem;
+  line-height: 1.25rem;
+  font-size: .875rem;
+  border-bottom-width: 1px;
+  border-color: #a0aec0;
+  border-color: rgba(160,174,192,var(--border-opacity));
+}
 
 
 .text-green-900 {
@@ -582,7 +533,6 @@ td {
 .text-xs {
   font-size: .75rem;
 }
-
 
 .text-red-900 {
   --text-opacity: 1;
