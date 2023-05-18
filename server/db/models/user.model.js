@@ -1,6 +1,6 @@
-import DataTypes from 'sequelize';
+const DataTypes = require('sequelize').DataTypes;
 
-export default function addUserTable(sequelize) {
+module.exports = function addUserTable(sequelize) {
     sequelize.define('user', {
         id: {
             type: DataTypes.INTEGER,

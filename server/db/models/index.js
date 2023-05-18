@@ -1,8 +1,9 @@
-export addCommentTable from './comment.model';
-export addCourse from './course.model';
-export addMarkTable from './marks.model';
-export addUserTable from './user.model';
-export addCompletionTable from './completion.model';
+exports.addCommentTable = require('./comment.model');
+exports.addCourse = require('./course.model');
+exports.addMarkTable = require('./marks.model');
+exports.addUserTable = require('./user.model');
+exports.addCompletionTable = require('./completion.model');
+
 
 /*
 import { Comment } from '/server/db/models/Comment'

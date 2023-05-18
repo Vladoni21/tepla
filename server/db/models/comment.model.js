@@ -1,6 +1,6 @@
-import DataTypes from 'sequelize';
+const DataTypes = require('sequelize').DataTypes;
 
-export default function addCommentTable(sequelize) {
+module.exports = function addCommentTable(sequelize) {
     sequelize.define('comment', {
         id: {
             type: DataTypes.INTEGER,

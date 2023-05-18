@@ -1,6 +1,6 @@
-import DataTypes from 'sequelize';
+const DataTypes = require('sequelize').DataTypes;
 
-export default function addCompletionTable(sequelize) {
+module.exports = function addCompletionTable(sequelize) {
     sequelize.define('completion', {
         id: {
             type: DataTypes.INTEGER,

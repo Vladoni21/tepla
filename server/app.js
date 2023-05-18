@@ -1,9 +1,9 @@
-import express from 'express';
-import createError from 'http-errors';
-import cookieParser from 'cookie-parser';
-import logger from 'morgan';
+const express = require('express');
+const createError = require('http-errors');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-import router from './routes';
+const router = require('./routes');
 
 const app = express();
 
@@ -29,4 +29,4 @@ app.use((req, res, next) => {
     res.status(err.status || 500);
 });
 
-export default app;
+module.exports = app;

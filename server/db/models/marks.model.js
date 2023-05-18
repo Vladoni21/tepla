@@ -1,6 +1,6 @@
-import DataTypes from 'sequelize';
+const DataTypes = require('sequelize').DataTypes;
 
-export default function addMarkTable(sequelize) {
+module.exports = function addMarkTable(sequelize) {
     sequelize.define('cark', {
         id: {
             type: DataTypes.INTEGER,

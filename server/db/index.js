@@ -1,8 +1,8 @@
-import {Sequelize} from 'sequelize';
+const Sequelize = require('sequelize').Sequelize;
 
-import config from './config';
-import * as modelAdders from './models';
-import addAssociations from './associations';
+const config = require('./config');
+const modelAdders = require('./models');
+const addAssociations = require('./associations');
 
 const db = new Sequelize(
     config.host, config.username, config.password, {
@@ -31,4 +31,4 @@ for (const modelAdder of Object.values(modelAdders)) {
 }
 addAssociations(db);
 
-export default db;
+module.exports = db;

@@ -1,4 +1,4 @@
-export default function addAssociations(sequelize) {
+module.exports = function addAssociations(sequelize) {
     const { User, Comment, Mark, Course, Completion } = sequelize.models;
 
     Comment.belongsTo(User);
