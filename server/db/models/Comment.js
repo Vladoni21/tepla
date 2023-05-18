@@ -1,6 +1,6 @@
-import { DataTypes } from "sequelize";
+import {DataTypes} from 'sequelize';
 
-import sequelize from "../sequelize";
+import sequelize from '../sequelize';
 
 export default sequelize.define('Comment', {
     id: {
