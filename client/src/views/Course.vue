@@ -1,6 +1,5 @@
 <template>
-  <section style="padding-top: 213px;">
-    <div style="position:relative">
+  <section>
       <div class="grid">
         <div class="splashImageContainer"><img
                   src="https://cdn.discordapp.com/discovery-splashes/916379725201563759/15c1964c1234218f136b994d0cc7b0dd.jpg?size=2048"
@@ -191,7 +190,6 @@
           </div>
         </div>
       </div>
-    </div>
   </section>
 </template>
 

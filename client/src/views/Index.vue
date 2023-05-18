@@ -4,7 +4,7 @@
     <Plug v-if="isPlugVisible"/>
     <section class="content" v-if="!isPlugVisible">
       <Sidebar/>
-      <Profile/>
+      <Course/>
     </section>
     <Footer v-if="!isPlugVisible"/>
   </main>
@@ -60,10 +60,10 @@ export default {
 
 <style>
 .content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 100%;
 }
 </style>
