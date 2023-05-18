@@ -1,15 +1,15 @@
 import DataTypes from 'sequelize';
 
-export default function addMarkTable(sequelize) {
-    sequelize.define('Mark', {
+export default function addCommentTable(sequelize) {
+    sequelize.define('comment', {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true,
             allowNull: false
         },
-        estimation: {
-            type: DataTypes.INTEGER,
+        filling: {
+            type: DataTypes.TEXT,
             allowNull: false
         },
         author_id: {
@@ -27,4 +27,4 @@ export default function addMarkTable(sequelize) {
         timestamps: true,
         updatedAt: 'updateTimestamp'
     });
-}
+};

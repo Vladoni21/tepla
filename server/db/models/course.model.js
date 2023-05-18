@@ -1,7 +1,7 @@
 import DataTypes from 'sequelize';
 
 export default function addCourseTable(sequelize) {
-    sequelize.define('Course', {
+    sequelize.define('course', {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,

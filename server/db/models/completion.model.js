@@ -1,7 +1,7 @@
 import DataTypes from 'sequelize';
 
 export default function addCompletionTable(sequelize) {
-    sequelize.define('Completion', {
+    sequelize.define('completion', {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,

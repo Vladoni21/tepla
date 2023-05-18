@@ -1,8 +1,8 @@
-export addCommentTable from './Comment';
-export addCourse from './Course';
-export addMarkTable from './Mark';
-export addUserTable from './User';
-export addCompletionTable from './Completion';
+export addCommentTable from './comment.model';
+export addCourse from './course.model';
+export addMarkTable from './marks.model';
+export addUserTable from './user.model';
+export addCompletionTable from './completion.model';
 
 /*
 import { Comment } from '/server/db/models/Comment'

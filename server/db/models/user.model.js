@@ -1,7 +1,7 @@
 import DataTypes from 'sequelize';
 
 export default function addUserTable(sequelize) {
-    sequelize.define('User', {
+    sequelize.define('user', {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
