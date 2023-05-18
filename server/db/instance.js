@@ -1,7 +1,9 @@
 import * as models from './models'
 
+models.Comment.belongsTo(models.User)
+
 // Определяем автора курса (Человек может быть автором нескольки курсов)
-Course.hasOne(models.User)
+models.Course.hasOne(models.User)
 models.User.belongsTo(models.Course)
 
 // Создаём промежуточную таблицу для записей прохождений курсов

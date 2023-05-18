@@ -1,8 +1,8 @@
-export * from './Comment';
-export * from './Course';
-export * from './Mark';
-export * from './User';
-export * from './Completion';
+export Comment from './Comment';
+export Course from './Course';
+export Mark from './Mark';
+export User from './User';
+export Completion from './Completion';
 
 /*
 import { Comment } from '/server/db/models/Comment'
