@@ -15,6 +15,14 @@ const db = new Sequelize(
             collate: 'utf8_general_ci',
             freezeTableName: true
         },
+        pool: {
+            max: 5,
+            min: 0,
+            idle: 10000,
+            acquire: 5000,
+            evict: 1000
+        },
+        timezone: '+03:00',
     },
 );
 
