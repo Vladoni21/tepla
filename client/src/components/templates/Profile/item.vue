@@ -10,16 +10,16 @@
     <td>
       <div class="text-sm leading-5 text-blue-900">Damilare Anjorin</div>
     </td>
-    <td class="text-blue-900 text-sm leading-5">damilareanjorin1@gmail.com</td>
-    <td class="text-blue-900 text-sm leading-5">+2348106420637</td>
-    <td class="text-blue-900 text-sm leading-5">
-      <span style="font-weight: 600; line-height: 1.25; position: relative;" class="relative inline-block px-3 py-1 font-semibold text-green leading-tight">
-        <span class="bg absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
+    <td class="inform">damilareanjorin1@gmail.com</td>
+    <td class="inform">+2348106420637</td>
+    <td class="inform">
+      <span style="font-weight: 600; line-height: 1.25; position: relative;" class="text-green stat">
+        <span class="bg"/>
         <span>active</span>
       </span>
     </td>
-    <td class="text-blue-900 text-sm leading-5">September 12</td>
-    <td class="text-right text-sm leading-5">
+    <td class="inform">September 12</td>
+    <td class="inform">
       <button>View Details</button>
     </td>
   </tr>
@@ -40,6 +40,20 @@ td {
   border-color: #a0aec0;
   border-color: rgba(160,174,192,var(--border-opacity));
 }
+.inform {
+  --text-opacity: 1;
+  color: rgba(42,67,101,var(--text-opacity));
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+.stat {
+  position: relative;
+  padding: 0.25rem 0.75rem;
+  line-height: 1.25;
+  font-weight: 600;
+  display: inline-block;
+}
+
 button {
   transition-duration: .3s;
   transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
