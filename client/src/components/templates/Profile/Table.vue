@@ -151,6 +151,7 @@
             <button class="px-5 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">View Details</button>
           </td>
         </tr>
+        <Item/>
         </tbody>
       </table>
       <div class="sm:flex-1 sm:flex sm:items-center sm:justify-between mt-4 work-sans">
@@ -200,8 +201,11 @@
 </template>
 
 <script>
+import Item from "./item.vue";
+
 export default {
-  name: "Table"
+  name: "Table",
+  components: {Item}
 }
 </script>
 
