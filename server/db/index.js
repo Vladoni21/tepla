@@ -5,11 +5,12 @@ const modelAdders = require('./models');
 const addAssociations = require('./associations');
 
 const db = new Sequelize(
-    config.host, config.username, config.password, {
+    config.database, config.username, config.password, {
         host: config.host,
         port: config.port,
         dialect: config.dialect,
-        logging: true,
+        dialectModule: pg,
+        logging: console.log,
         define: {
             charset: 'utf8',
             collate: 'utf8_general_ci',
