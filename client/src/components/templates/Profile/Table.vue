@@ -1,129 +1,21 @@
 <template>
-  <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8">
-    <div class="f_div">
-      <div class="flex justify-between">
-        <div class="inline-flex border rounded w-7/12 px-2 lg:px-6 h-12 bg-transparent">
-          <div class="flex flex-wrap items-stretch w-full h-full mb-6 relative">
-            <div class="flex">
-                                    <span
-                                        class="flex items-center leading-normal bg-transparent rounded rounded-r-none border border-r-0 border-none lg:px-3 py-2 whitespace-no-wrap text-grey-dark text-sm">
-                                        <svg width="18" height="18" class="w-4 lg:w-auto" viewBox="0 0 18 18"
-                                             fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8.11086 15.2217C12.0381 15.2217 15.2217 12.0381 15.2217 8.11086C15.2217 4.18364 12.0381 1 8.11086 1C4.18364 1 1 4.18364 1 8.11086C1 12.0381 4.18364 15.2217 8.11086 15.2217Z"
-                                                stroke="#455A64" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M16.9993 16.9993L13.1328 13.1328" stroke="#455A64"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </span>
-            </div>
-            <input type="text"
-                   class="flex-shrink flex-grow flex-auto leading-normal tracking-wide w-px flex-1 border border-none border-l-0 rounded rounded-l-none px-3 relative focus:outline-none text-xxs lg:text-xs lg:text-base text-gray-500 font-thin"
-                   placeholder="Search">
-          </div>
-        </div>
-      </div>
-    </div>
-    <THead/>
-    <div class="s_div">
-      <table class="min-w-full">
+  <section>
+    <article class="searchbar_table">
+      <ASearch/>
+    </article>
+    <article class="context_table">
+      <table>
         <thead>
         <tr>
-          <th class="f_lo">ID</th>
-          <th class="f_lo">Fullname</th>
-          <th class="f_lo">Email</th>
-          <th class="f_lo">Phone</th>
-          <th class="f_lo">Status</th>
-          <th class="f_lo">Created At</th>
-          <th class="f_lo"></th>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Subject</th>
+          <th>Secret</th>
+          <th>Status</th>
+          <th>Created At</th>
+          <th></th>
         </tr>
         </thead>
-        <tbody class="bg-white">
-          <tr>
-          <td class="uuuu">
-            <div class="flex items-center">
-              <div>
-                <div class="text-sm leading-5 text-gray-800">#1</div>
-              </div>
-            </div>
-          </td>
-          <td class="uuuu">
-            <div class="text-sm leading-5 text-blue-900">Damilare Anjorin</div>
-          </td>
-          <td class="uuuu">damilareanjorin1@gmail.com</td>
-          <td class="uuuu">+2348106420637</td>
-          <td class="uuuu">
-                                        <span
-                                            class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                                        <span class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                                        <span class="relative text-xs">active</span>
-                                    </span>
-          </td>
-          <td class="li_data">September 12</td>
-          <td class="li_btn">
-            <button
-                class="px-5 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">
-              View Details
-            </button>
-          </td>
-        </tr>
-          <tr>
-          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-            <div class="flex items-center">
-              <div>
-                <div class="text-sm leading-5 text-gray-800">#1</div>
-              </div>
-            </div>
-          </td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-            <div class="text-sm leading-5 text-blue-900">Damilare Anjorin</div>
-          </td>
-          <td class="uuuu">damilareanjorin1@gmail.com</td>
-          <td class="uuuu">+2348106420637</td>
-          <td class="uuuu">
-                                        <span
-                                            class="relative inline-block px-3 py-1 font-semibold text-red-900 leading-tight">
-                                        <span class="absolute inset-0 bg-red-200 opacity-50 rounded-full"></span>
-                                        <span class="relative text-xs">not active</span>
-                                    </span>
-          </td>
-          <td class="li_data">September 12</td>
-          <td class="li_btn">
-            <button
-                class="px-5 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">
-              View Details
-            </button>
-          </td>
-        </tr>
-          <tr>
-          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-            <div class="flex items-center">
-              <div>
-                <div class="text-sm leading-5 text-gray-800">#1</div>
-              </div>
-            </div>
-          </td>
-          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-            <div class="text-sm leading-5 text-blue-900">Damilare Anjorin</div>
-          </td>
-          <td class="uuuu">damilareanjorin1@gmail.com</td>
-          <td class="uuuu">+2348106420637</td>
-          <td class="uuuu">
-                                        <span
-                                            class="relative inline-block px-3 py-1 font-semibold text-orange-900 leading-tight">
-                                        <span class="absolute inset-0 bg-orange-200 opacity-50 rounded-full"></span>
-                                        <span class="relative text-xs">disabled</span>
-                                    </span>
-          </td>
-          <td class="li_data">September 12</td>
-          <td class="li_btn">
-            <button
-                class="px-5 py-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">
-              View Details
-            </button>
-          </td>
-        </tr>
-        </tbody>
         <TBody v-bind:arr="own_courses"/>
       </table>
       <div class="sm:flex-1 sm:flex sm:items-center sm:justify-between mt-4 work-sans">
@@ -179,24 +71,24 @@
           </nav>
         </div>
       </div>
-    </div>
-  </div>
+    </article>
+  </section>
 </template>
 
 <script>
 import position from "./TItem.vue";
-import THead from "./THead.vue";
 import TBody from "./TBody.vue";
+import ASearch from "./ASearch.vue";
 
 export default {
   name: "Table",
-  components: {TBody, THead, position},
+  components: {ASearch, TBody, position},
   data() {
     return {
       own_courses: [
-        {id: 1, name: "Разработка на JS", description: "code", course_id: "000000001", status: "active"},
-        {id: 2, name: "Разработка на JS", description: "code", course_id: "000000001", status: "disabled"},
-        {id: 3, name: "Разработка на JS", description: "code", course_id: "000000001", status: "rejected"},
+        {id: 1, name: "Разработка на JS", subject: "code", course_id: "000000001", status: "active"},
+        {id: 2, name: "Разработка на JS", subject: "code", course_id: "000000001", status: "disabled"},
+        {id: 3, name: "Разработка на JS", subject: "code", course_id: "000000001", status: "rejected"},
       ],
     }
   }
@@ -204,7 +96,7 @@ export default {
 </script>
 
 <style scoped>
-.f_div {
+.searchbar_table {
   width: 100%;
   vertical-align: middle;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
@@ -419,7 +311,7 @@ export default {
   border-radius: 0.25rem;
 }
 
-.s_div {
+.context_table {
   vertical-align: middle;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
   padding-top: 0.75rem;
@@ -433,37 +325,12 @@ export default {
   background-color: #fff;
 }
 
-.min-w-full {
-  min-width: 100%;
-}
 
 table {
+  min-width: 100%;
   border-collapse: collapse;
 }
-
-.li_btn {
-  white-space: nowrap;
-  text-align: right;
-
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-
-  line-height: 1.25rem;
-
-  font-size: .875rem;
-
-  border-bottom-width: 1px;
-
-  --border-opacity: 1;
-  border-color: #a0aec0;
-  border-color: rgba(160, 174, 192, var(--border-opacity));
-}
-
-
-.f_lo {
+table thead tr th {
   letter-spacing: .05em;
   --text-opacity: 1;
   color: #4299e1;
