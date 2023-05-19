@@ -4,6 +4,6 @@ const express = require('express');
 
 const router = new express.Router();
 
-router.post('/registration', controller().registration);
+// router.post('/registration', controller().registration);
 
 module.exports = router;

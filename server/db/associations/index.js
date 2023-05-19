@@ -1,26 +1,26 @@
 module.exports = function addAssociations(sequelize) {
     const { User, Comment, Mark, Course, Completion } = sequelize.models;
 
-    Comment.belongsTo(User);
-
-    // Определяем автора курса (Человек может быть автором нескольки курсов)
-    Course.hasOne(User);
-    User.belongsTo(Course);
-
-    // Создаём промежуточную таблицу для записей прохождений курсов
-    // Потом я расширю подгрузку прохождений
-    Course.belongsToMany(User, {through: Completion});
-    User.belongsToMany(Course, {through: Completion});
-
-    // У каждого курса есть коментарии, а каждый коментарий относится
-    // к одному курсу
-    Course.hasMany(Comment);
-    Comment.belongsTo(Course);
-
-    // У каждого курса есть отметки по пятибальной(шести xD) шкале,
-    //  а каждая отметка относится к одному курсу
-    Course.hasMany(Mark);
-    Mark.belongsTo(Course);
+    // Comment.belongsTo(User);
+    //
+    // // Определяем автора курса (Человек может быть автором нескольки курсов)
+    // Course.hasOne(User);
+    // User.belongsTo(Course);
+    //
+    // // Создаём промежуточную таблицу для записей прохождений курсов
+    // // Потом я расширю подгрузку прохождений
+    // Course.belongsToMany(User, {through: Completion});
+    // User.belongsToMany(Course, {through: Completion});
+    //
+    // // У каждого курса есть коментарии, а каждый коментарий относится
+    // // к одному курсу
+    // Course.hasMany(Comment);
+    // Comment.belongsTo(Course);
+    //
+    // // У каждого курса есть отметки по пятибальной(шести xD) шкале,
+    // //  а каждая отметка относится к одному курсу
+    // Course.hasMany(Mark);
+    // Mark.belongsTo(Course);
 };
 
 // function addCommentBelongsToUserAssociation(sequelize) {
