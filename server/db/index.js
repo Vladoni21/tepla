@@ -14,8 +14,7 @@ const db = new Sequelize(
         logging: console.log,
         define: {
             charset: 'utf8',
-            collate: 'utf8_general_ci',
-            freezeTableName: true
+            collate: 'utf8_general_ci'
         },
         pool: {
             max: 5,
