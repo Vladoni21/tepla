@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize').Sequelize;
+const pg = require('pg');
 
 const config = require('./config');
 const modelAdders = require('./models');
@@ -26,6 +27,12 @@ const db = new Sequelize(
         timezone: '+03:00',
     },
 );
+
+// db.authenticate().then(() => {
+//     console.log('Connection successful.');
+// }, () => {
+//     console.log('Connection failed.');
+// });
 
 for (const modelAdder of Object.values(modelAdders)) {
     modelAdder(db);
