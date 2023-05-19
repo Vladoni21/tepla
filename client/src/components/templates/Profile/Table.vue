@@ -24,6 +24,7 @@
         </div>
       </div>
     </div>
+    <THead/>
     <div class="s_div">
       <table class="min-w-full">
         <thead>
@@ -122,8 +123,8 @@
             </button>
           </td>
         </tr>
-          <Item/>
         </tbody>
+        <TBody v-bind:arr="own_courses"/>
       </table>
       <div class="sm:flex-1 sm:flex sm:items-center sm:justify-between mt-4 work-sans">
         <div>
@@ -183,11 +184,22 @@
 </template>
 
 <script>
-import Item from "./item.vue";
+import position from "./TItem.vue";
+import THead from "./THead.vue";
+import TBody from "./TBody.vue";
 
 export default {
   name: "Table",
-  components: {Item}
+  components: {TBody, THead, position},
+  data() {
+    return {
+      own_courses: [
+        {id: 1, name: "Разработка на JS", description: "code", course_id: "000000001", status: "active"},
+        {id: 2, name: "Разработка на JS", description: "code", course_id: "000000001", status: "disabled"},
+        {id: 3, name: "Разработка на JS", description: "code", course_id: "000000001", status: "rejected"},
+      ],
+    }
+  }
 }
 </script>
 

@@ -3,19 +3,19 @@
     <td>
       <div class="flex items-center">
         <div>
-          <div class="text-sm leading-5 text-gray-800">#1</div>
+          <div class="text-sm leading-5 text-gray-800">{{item.id}}</div>
         </div>
       </div>
     </td>
     <td>
-      <div class="text-sm leading-5 text-blue-900">Damilare Anjorin</div>
+      <div class="text-sm leading-5 text-blue-900">{{item.name}}</div>
     </td>
-    <td class="inform">damilareanjorin1@gmail.com</td>
-    <td class="inform">+2348106420637</td>
+    <td class="inform">{{item.description}}</td>
+    <td class="inform">{{item.course_id}}</td>
     <td class="inform">
-      <span style="font-weight: 600; line-height: 1.25; position: relative;" class="text-green stat">
+      <span class="status" v-bind:class="item.status">
         <span class="bg"/>
-        <span>active</span>
+        <span class="text">{{ item.status }}</span>
       </span>
     </td>
     <td class="inform">September 12</td>
@@ -27,11 +27,24 @@
 
 <script>
 export default {
-  name: "item"
+  name: "TItem",
+  props: {
+    item: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 
 <style scoped>
+*, ::after, ::before {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e2e8f0;
+}
+
 td {
   white-space: nowrap;
   padding: 1rem 1.5rem;
@@ -46,7 +59,7 @@ td {
   font-size: .875rem;
   line-height: 1.25rem;
 }
-.stat {
+.status {
   position: relative;
   padding: 0.25rem 0.75rem;
   line-height: 1.25;
@@ -100,23 +113,27 @@ button:hover {
   bottom: 0;
   left: 0;
 }
+.text {
+  font-size: .75rem;
+  position: relative;
+}
 
-.text-orange {
+.disabled {
   color: rgba(123,52,30,var(--text-opacity));
 }
-.text-orange .bg {
+.disabled .bg {
   background-color: rgba(254,235,200,var(--bg-opacity));
 }
-.text-green {
+.active {
   color: rgba(42,67,101,var(--text-opacity));
 }
-.text-green .bg {
+.active .bg {
   background-color: rgba(198,246,213,var(--bg-opacity));
 }
-.text-red {
+.rejected {
   color: rgba(116,42,42,var(--text-opacity));
 }
-.text-red .bg {
+.rejected .bg {
   background-color: rgba(254,215,215,var(--bg-opacity));
 }
 </style>
