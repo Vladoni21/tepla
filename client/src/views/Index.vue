@@ -4,7 +4,7 @@
     <Plug v-if="isPlugVisible"/>
     <section class="content" v-if="!isPlugVisible">
       <Sidebar/>
-      <Course/>
+      <Profile/>
     </section>
     <Footer v-if="!isPlugVisible"/>
   </main>

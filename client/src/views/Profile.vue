@@ -10,10 +10,9 @@
       <Account/>
     </article>
     <section style="min-width: 1370px;" class="scope">
-      <Courses/>
+      <Table/>
       <Creator/>
     </section>
-    <Table/>
   </section>
 </template>
 
@@ -21,13 +20,12 @@
 import Image from "../components/templates/Profile/Image.vue";
 import Badge from "../components/templates/Profile/Badge.vue";
 import Account from "../components/templates/Profile/Account.vue";
-import Courses from "../components/templates/Profile/Courses.vue";
 import Creator from "../components/templates/Profile/Creator.vue"
 import Table from "../components/templates/Profile/Table.vue";
 
 export default {
   name: "Profile",
-  components: {Table, Creator, Courses, Account, Image, Badge}
+  components: {Table, Creator, Account, Image, Badge}
 }
 </script>
 

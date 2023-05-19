@@ -1,5 +1,5 @@
 <template>
-  <section style="width: 80%;">
+  <section style="width: 80%; height: 500px; border-radius: 15px;">
     <article class="searchbar_table">
       <ASearch/>
     </article>
