@@ -18,9 +18,10 @@
         <span class="text">{{ item.status }}</span>
       </span>
     </td>
-    <td class="inform">September 12</td>
-    <td class="inform">
-      <button>View Details</button>
+    <td class="inform">{{ item.created_at }}</td>
+    <td class="inform" style="text-align: right; padding-left: 0;">
+      <button class="view-button">View Details</button>
+      <button class="trash-button"><i class="fa fa-trash"></i></button>
     </td>
   </tr>
 </template>
@@ -71,12 +72,10 @@ button {
   transition-duration: .3s;
   transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
   --text-opacity: 1;
-  color: #4299e1;
   padding: 0.5rem 1.25rem;
   border-width: 1px;
   border-radius: 0.25rem;
   --border-opacity: 1;
-  border-color: #4299e1;
   line-height: inherit;
   cursor: pointer;
   background-color: transparent;
@@ -85,8 +84,26 @@ button {
 button:hover {
   --bg-opacity: 1;
   color: #fff;
+}
+
+.view-button {
+  color: #4299e1;
+  border-color: #4299e1;
+}
+.view-button:hover {
   background-color: #2b6cb0;
 }
+
+.trash-button {
+  margin-left: 20px;
+  color: #dd2b0e;
+  border-color: #dd2b0e;
+}
+.trash-button:hover {
+  background-color: #c91c00;
+}
+
+
 
 
 .text-blue-900 {
