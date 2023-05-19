@@ -1,25 +1,25 @@
 <template>
   <tr>
-    <td>
+    <td style="width: 7%;">
       <div class="flex items-center">
         <div>
-          <div class="text-sm leading-5 text-gray-800">{{item.id}}</div>
+          <div class="text-sm leading-5 text-gray-800">{{ item.count }}</div>
         </div>
       </div>
     </td>
-    <td>
+    <td style="width: 23%;">
       <div class="text-sm leading-5 text-blue-900">{{item.name}}</div>
     </td>
-    <td class="inform">{{item.subject}}</td>
-    <td class="inform">{{item.course_id}}</td>
-    <td class="inform">
+    <td class="inform" style="width: 12%;">{{ item.subject }}</td>
+    <td class="inform" style="width: 10%;">{{ item.course_id }}</td>
+    <td class="inform" style="width: 10%;">
       <span class="status" v-bind:class="item.status">
         <span class="bg"/>
         <span class="text">{{ item.status }}</span>
       </span>
     </td>
-    <td class="inform">{{ item.created_at }}</td>
-    <td class="inform" style="text-align: right; padding-left: 0;">
+    <td class="inform" style="width: 15%;">{{ item.created_at }}</td>
+    <td class="inform" style="text-align: right; width: 23%;">
       <button class="view-button">View Details</button>
       <button class="trash-button"><i class="fa fa-trash"></i></button>
     </td>
@@ -48,7 +48,7 @@ export default {
 
 td {
   white-space: nowrap;
-  padding: 1rem 1.5rem;
+  padding: 10px 15px;
   border-bottom-width: 1px;
   --border-opacity: 1;
   border-color: #a0aec0;
