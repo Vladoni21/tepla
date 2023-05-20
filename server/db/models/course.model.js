@@ -1,40 +1,16 @@
 const DataTypes = require('sequelize').DataTypes;
 
 module.exports = function addCourseTable(sequelize) {
-    sequelize.define('course', {
-        id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true,
-            allowNull: false
-        },
-        author_id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
-        },
-        title_name: {
+    sequelize.define('Course', {
+        title: {
             type: DataTypes.STRING(40),
             allowNull: false
         },
         description: {
             type: DataTypes.TEXT,
-            allowNull: false
-        },
-        subject: {
-            type: DataTypes.CHAR(2),
-            allowNull: false
-        },
-        order: {
-            type: DataTypes.CHAR(600),
-            allowNull: true
-        },
-        lvl: {
-            type: DataTypes.CHAR(1),
-            allowNull: false,
-            default: 0
         }
     }, {
+        tableName: 'courses',
         createdAt: true,
         timestamps: true,
         updatedAt: 'updateTimestamp'
