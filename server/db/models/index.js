@@ -1,8 +1,7 @@
-// exports.addCommentTable = require('./comment.model');
-// exports.addCourse = require('./course.model');
-// exports.addMarkTable = require('./marks.model');
+exports.addCommentTable = require('./comment.model');
+exports.addCourseTable = require('./course.model');
 exports.addUserTable = require('./user.model');
-// exports.addCompletionTable = require('./completion.model');
+exports.addCompletionTable = require('./completion.model');
 
 
 /*
