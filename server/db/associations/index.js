@@ -1,5 +1,15 @@
 module.exports = function addAssociations(sequelize) {
-    const { User, Comment, Mark, Course, Completion } = sequelize.models;
+    const {User, Course, Completion, Comment} = sequelize.models;
+
+    // Определяем автора курса (Человек может быть автором нескольки курсов)
+    User.hasMany(Course, {
+        as: 'courses',
+        foreignKey: 'userId'
+    });
+    Course.belongsTo(User, {
+        as: 'author',
+        foreignKey: 'userId'
+    });
 
     // Comment.belongsTo(User);
     //
