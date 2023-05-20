@@ -1,13 +1,7 @@
 const DataTypes = require('sequelize').DataTypes;
 
 module.exports = function addUserTable(sequelize) {
-    sequelize.define('user', {
-        id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true,
-            allowNull: false
-        },
+    sequelize.define('User', {
         username: {
             type: DataTypes.STRING,
             allowNull: false
@@ -16,15 +10,12 @@ module.exports = function addUserTable(sequelize) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        password: {
+        password_hash: {
             type: DataTypes.STRING,
-            allowNull: false
-        },
-        mode: {
-            type: DataTypes.CHAR(1),
             allowNull: false
         }
     }, {
+        tableName: 'users',
         createdAt: true,
         timestamps: true,
         updatedAt: 'updateTimestamp'
