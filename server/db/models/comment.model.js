@@ -1,28 +1,13 @@
 const DataTypes = require('sequelize').DataTypes;
 
 module.exports = function addCommentTable(sequelize) {
-    sequelize.define('comment', {
-        id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true,
-            allowNull: false
-        },
-        filling: {
+    sequelize.define('Comment', {
+        content: {
             type: DataTypes.TEXT,
             allowNull: false
-        },
-        author_id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
-        },
-        course_id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
-        },
+        }
     }, {
+        tableName: 'comments',
         createdAt: true,
         timestamps: true,
         updatedAt: 'updateTimestamp'
