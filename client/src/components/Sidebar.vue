@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import Tag from "../containers/Tag.vue";
-import Grid from "../containers/Grid.vue";
+import Tag from "./containers/Tag.vue";
+import Grid from "./containers/Grid.vue";
 
 export default {
   name: "SideBar",
