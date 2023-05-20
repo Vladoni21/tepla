@@ -11,26 +11,43 @@ module.exports = function addAssociations(sequelize) {
         foreignKey: 'userId'
     });
 
-    // Comment.belongsTo(User);
-    //
-    // // Определяем автора курса (Человек может быть автором нескольки курсов)
-    // Course.hasOne(User);
-    // User.belongsTo(Course);
-    //
-    // // Создаём промежуточную таблицу для записей прохождений курсов
-    // // Потом я расширю подгрузку прохождений
-    // Course.belongsToMany(User, {through: Completion});
-    // User.belongsToMany(Course, {through: Completion});
-    //
-    // // У каждого курса есть коментарии, а каждый коментарий относится
-    // // к одному курсу
-    // Course.hasMany(Comment);
-    // Comment.belongsTo(Course);
-    //
-    // // У каждого курса есть отметки по пятибальной(шести xD) шкале,
-    // //  а каждая отметка относится к одному курсу
-    // Course.hasMany(Mark);
-    // Mark.belongsTo(Course);
+    // Создаём промежуточную таблицу для записей прохождений курсов
+    // Потом я расширю подгрузку прохождений
+    Course.belongsToMany(User, {
+        through: {
+            model: Completion,
+            as: 'student',
+            unique: true
+        },
+        foreignKey: 'courseId'
+    });
+    User.belongsToMany(Course, {
+        through: {
+            model: Completion,
+            as: 'course',
+            unique: true
+        },
+        foreignKey: 'userId'
+    });
+
+    // У каждого курса есть коментарии, а каждый коментарий относится
+    // к одному курсу
+    Course.hasMany(Comment, {
+        as: 'comments',
+        foreignKey: 'courseId'
+    });
+    Comment.belongsTo(Course, {
+        as: 'course',
+        foreignKey: 'courseId'
+    });
+    User.hasMany(Comment, {
+        as: 'comments',
+        foreignKey: 'userId'
+    });
+    Comment.belongsTo(User, {
+        as: 'author',
+        foreignKey: 'userId'
+    });
 };
 
 // function addCommentBelongsToUserAssociation(sequelize) {
