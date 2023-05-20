@@ -46,8 +46,8 @@ export default {
 .card-list {
   width: 100%;
   max-width: 400px;
-  height: 500px;
-  margin-left: 2rem;
+  height: 440px;
+  margin-right: 2rem;
 }
 
 .card {
@@ -119,7 +119,6 @@ label, p {
 }
 
 .text-center {
-  margin-top: 55px;
   text-align: center;
   padding: 20px;
 }

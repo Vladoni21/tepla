@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import Logo from "../templates/sub/navigation/NavLogo.vue";
-import LogBtn from "../templates/sub/navigation/NavBtn.vue";
-import SearchBar from "../templates/sub/navigation/NavSearch.vue";
+import Logo from "./templates/sub/navigation/NavLogo.vue";
+import LogBtn from "./templates/sub/navigation/NavBtn.vue";
+import SearchBar from "./templates/sub/navigation/NavSearch.vue";
 
 
 export default {

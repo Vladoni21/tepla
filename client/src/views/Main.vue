@@ -151,8 +151,8 @@
 <script>
 import expert from "../components/img/expert.jpg";
 import Grid from "../components/containers/Grid.vue";
-import Navbar from "../components/bars/Header.vue";
-import SideBar from "../components/bars/Sidebar.vue";
+import Navbar from "../components/Header.vue";
+import SideBar from "../components/Sidebar.vue";
 import PopUp from "../components/containers/PopUp.vue";
 import selector from "../components/blocks/puzzle/selector.vue";
 import answer from "../components/blocks/puzzle/answer.vue";
