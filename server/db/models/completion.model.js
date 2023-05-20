@@ -1,15 +1,32 @@
 const DataTypes = require('sequelize').DataTypes;
 
 module.exports = function addCompletionTable(sequelize) {
-    sequelize.define('completion', {
-        id: {
+    sequelize.define('Completion', {
+        userId: {
             type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true,
-            allowNull: false
+            foreignKey: true,
+            allowNull: false,
+            references: {
+                model: 'users',
+                key: 'id'
+            }
         },
-        // потом будет что-то новое
+        courseId: {
+            type: DataTypes.INTEGER,
+            foreignKey: true,
+            allowNull: false,
+            references: {
+                model: 'courses',
+                key: 'id'
+            }
+        },
+        completed: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
+        }
     }, {
+        tableName: 'completions',
         createdAt: true,
         timestamps: true,
         updatedAt: 'updateTimestamp'
