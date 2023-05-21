@@ -16,29 +16,9 @@
         <b/>
         <a href="#">
           <span class="icon">
-            <ion-icon name="person-outline"></ion-icon>
-          </span>
-          <span class="title">Profile</span>
-        </a>
-      </div>
-      <div class="list">
-        <b/>
-        <b/>
-        <a href="#">
-          <span class="icon">
             <ion-icon name="chatbubbles-outline"></ion-icon>
           </span>
           <span class="title">Courses</span>
-        </a>
-      </div>
-      <div class="list">
-        <b/>
-        <b/>
-        <a href="#">
-          <span class="icon">
-            <ion-icon name="settings-outline"></ion-icon>
-          </span>
-          <span class="title">Settings</span>
         </a>
       </div>
       <div class="list">
@@ -62,6 +42,16 @@
         </a>
       </div>
       <div class="list">
+        <b/>
+        <b/>
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="calendar-number-outline"></ion-icon>
+          </span>
+          <span class="title">Credits</span>
+        </a>
+      </div>
+      <div class="list" style="margin-top: 1020px;">
         <b/>
         <b/>
         <a href="#">
