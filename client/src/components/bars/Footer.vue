@@ -1,65 +1,67 @@
 <template>
-  <footer class="footer">
-    <div class="content">
-      <div class="top">
-        <div class="logo-details">
-          <i class="fa fa-slack"></i>
-          <span class="logo_name">TeaPLA</span>
-        </div>
-        <div class="media-icons">
+  <footer>
+    <section class="footer">
+      <article class="content">
+        <div class="top">
+          <div class="logo-details">
+            <i class="fa fa-slack"></i>
+            <span class="logo_name">TeaPLA</span>
+          </div>
+          <div class="media-icons">
             <a href="#"><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
             <a href="#"><i class="fa fa-instagram"></i></a>
             <a href="#"><i class="fa fa-vk"></i></a>
             <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
         </div>
-      </div>
-      <br>
-      <div class="link-boxes">
-        <ul class="box">
-          <li class="link_name">Компания</li>
-          <li><a href="#">Домой</a></li>
-          <li><a href="#">Контакты</a></li>
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Начать</a></li>
-        </ul>
-        <ul class="box">
-          <li class="link_name">Сервисы</li>
-          <li><a href="#">Дизайн</a></li>
-          <li><a href="#">Анализ данных</a></li>
-          <li><a href="#">Вёрстка сайтов</a></li>
-          <li><a href="#">Программирование</a></li>
-        </ul>
-        <ul class="box">
-          <li class="link_name">Аккаунт</li>
-          <li><a href="#">Профиль</a></li>
-          <li><a href="#">Мой Аккаунт</a></li>
-          <li><a href="#">Предпочтения</a></li>
-          <li><a href="#">Покупки</a></li>
-        </ul>
-        <ul class="box">
-          <li class="link_name">Курсы</li>
-          <li><a href="#">HTML & CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">Django</a></li>
-          <li><a href="#">Python</a></li>
-        </ul>
-        <ul class="box input-box">
-          <li class="link_name">Узнать больше</li>
-          <li><input type="text" placeholder="Введите вашу почту"></li>
-          <li><input type="button" value="Подписаться"></li>
-        </ul>
-      </div>
-    </div>
-    <div class="bottom-details">
-      <div class="bottom_text">
-        <span class="copyright_text">Copyright © 2023 <a href="#">TeaPLA</a>All rights reserved</span>
-        <span class="policy_terms">
+        <br>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">Компания</li>
+            <li><a href="#">Домой</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Начать</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Сервисы</li>
+            <li><a href="#">Дизайн</a></li>
+            <li><a href="#">Анализ данных</a></li>
+            <li><a href="#">Вёрстка сайтов</a></li>
+            <li><a href="#">Программирование</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Аккаунт</li>
+            <li><a href="#">Профиль</a></li>
+            <li><a href="#">Мой Аккаунт</a></li>
+            <li><a href="#">Предпочтения</a></li>
+            <li><a href="#">Покупки</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Курсы</li>
+            <li><a href="#">HTML & CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">Django</a></li>
+            <li><a href="#">Python</a></li>
+          </ul>
+          <ul class="box input-box">
+            <li class="link_name">Узнать больше</li>
+            <li><input type="text" placeholder="Введите вашу почту"></li>
+            <li><input type="button" value="Подписаться"></li>
+          </ul>
+        </div>
+      </article>
+      <article class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text">Copyright © 2023 <a href="#">TeaPLA</a>All rights reserved</span>
+          <span class="policy_terms">
           <a href="#">Privacy policy</a>
           <a href="#">Terms & condition</a>
         </span>
-      </div>
-    </div>
+        </div>
+      </article>
+    </section>
   </footer>
 </template>
 
@@ -72,11 +74,16 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-.footer{
-  background: #140B5C;
+footer {
   width: 100%;
-  bottom: 0;
-  left: 0;
+  margin-bottom: 20px;
+}
+
+.footer{
+  background: #414bbc;
+  width: 70%;
+  margin: auto;
+  border-radius: 20px;
 }
 
 .footer .content{
@@ -210,7 +217,7 @@ footer .content .link-boxes .box{
   width: calc(100% + 55px);
   outline: none;
   border: 2px solid #AFAFB6;
-  background: #140B5C;
+  background: #4d5bf9;
   border-radius: 4px;
   padding: 0 15px;
   font-size: 15px;
@@ -223,7 +230,7 @@ footer .content .link-boxes .box{
 }
 .link-boxes .input-box input[type="button"]{
   background: #fff;
-  color: #140B5C;
+  color: #4d5bf9;
   border: none;
   font-size: 18px;
   font-weight: 500;
@@ -237,7 +244,9 @@ footer .content .link-boxes .box{
 }
 footer .bottom-details{
   width: 100%;
-  background: #0F0844;
+  background: #3f37c9;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 footer .bottom-details .bottom_text{
   max-width: 1250px;
