@@ -3,7 +3,7 @@
     <Plug v-if="isPlugVisible"/>
     <section class="content" v-if="!isPlugVisible">
       <Sidebar/>
-      <Display/>
+      <Step/>
     </section>
     <Footer v-if="!isPlugVisible"/>
   </main>
@@ -21,11 +21,14 @@ import Footer from "../components/bars/Footer.vue";
 import Course from "../views/Course.vue";
 import Sidebar from "../components/bars/Sidebar.vue";
 import Display from "./Display.vue";
+import Context from "./Context.vue";
+import Step from "./Step.vue";
 
 
 export default {
   name: 'app',
   components: {
+    Context,
     Course,
     Footer,
     Profile,
@@ -34,7 +37,8 @@ export default {
     Sidebar,
     Main,
     Home,
-    Display
+    Display,
+    Step
   },
   data() {
     return {
