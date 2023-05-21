@@ -1,21 +1,33 @@
-const Router = require('express');
-const controller = require('server/controller/auth.js');
+const express = require('express');
+const bcrypt = require('bcrypt');
 
-const router = new Router()
+const db = require('../db');
 
-router.post('/registration', controller.authController.registration);
+// const controller = require('../controllers/auth.controller');
 
-module.exports = router
+const router = new express.Router();
 
-/*
-var express = require('express');
-var router = express.Router();
-const controller = require('server/controller/auth.js');
+router.post('/register', (req, res) => {
+    db.models.User.create(
+        req.body,
+        {
+            fields: ['username', 'email', 'password']
+        }
+    )
+        .then(
+            user => {
+                res.status(201);
+            }
+        )
+        .catch(
+            error => {
+                res.status(500);
+            }
+        );
+});
 
-router.post('/', function(req, res, next) {
-    res.render('registration', { title: 'Express' });
-    controller.authController.registration
+router.post('/login', async (req, res) => {
+
 });
 
 module.exports = router;
- */
