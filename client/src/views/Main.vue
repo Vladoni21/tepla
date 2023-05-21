@@ -1,8 +1,5 @@
 <link rel="stylesheet" href="../../../../Desktop/desgin/css/style.css">
 <template>
-    <!--header class="header">
-      <Navbar/>
-    </header-->
     <section class="Main">
       <section class="home-grid">
         <div class="box-container">
@@ -151,14 +148,12 @@
 <script>
 import expert from "../components/img/expert.jpg";
 import Grid from "../components/containers/Grid.vue";
-import Navbar from "../components/bars/Header.vue";
-import SideBar from "../components/bars/Sidebar.vue";
 import PopUp from "../components/containers/PopUp.vue";
 import selector from "../components/blocks/puzzle/selector.vue";
 import answer from "../components/blocks/puzzle/answer.vue";
 
 export default {
-    components: {answer, selector, PopUp, SideBar, Navbar, Grid},
+    components: {answer, selector, PopUp, Grid},
     data() {
         return {
             image: expert,
