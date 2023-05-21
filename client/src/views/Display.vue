@@ -1,198 +1,186 @@
 <template>
-  <div _ngcontent-vru-c202="" id="scrollableArea" tabindex="1000" class="content__wrapper ng-tns-c202-0">
-    <main _ngcontent-vru-c202="" class="content__main ng-tns-c202-0">
-      <router-outlet _ngcontent-vru-c202="" class="ng-tns-c202-0"></router-outlet>
-      <app-course-page _nghost-vru-c209="" class="ng-star-inserted">
-        <router-outlet _ngcontent-vru-c209=""></router-outlet>
-        <app-courses-page _nghost-vru-c227="" class="ng-star-inserted">
-          <div _ngcontent-vru-c227="" class="courses-page page">
-            <div _ngcontent-vru-c227="" class="courses-page__content page__main">
-              <app-marketing-banner _ngcontent-vru-c227=""
-                                    description="Learn UX design skills with focused micro-courses and receive a certificate of completion to demonstrate your proficiency."
-                                    imagename="marketing-banner-courses" class="page__marketing-banner ng-star-inserted"
-                                    _nghost-vru-c224="">
-                <section _ngcontent-vru-c224="" class="marketing-banner"><!---->
-                  <div _ngcontent-vru-c224="" class="marketing-banner__content">
-                    <svg-icon _ngcontent-vru-c224="" icon="logo-short-transparent" class="marketing-banner__logo"
-                              _nghost-vru-c130="">
-                      <svg _ngcontent-vru-c130="" class="svg-icon">
-                        <use _ngcontent-vru-c130="" href="#logo-short-transparent"></use>
-                      </svg>
-                    </svg-icon>
-                    <h2 _ngcontent-vru-c224="" class="marketing-banner__title">Interactive UX design courses</h2>
-                    <p _ngcontent-vru-c224="" class="marketing-banner__description">Learn UX design skills with focused
-                      micro-courses and receive a certificate of completion to demonstrate your proficiency.</p>
-                    <button _ngcontent-vru-c224="" type="button"
-                            class="marketing-banner__action btn _small _white ng-star-inserted"> Get started for free
-                    </button><!----></div><!----></section>
-              </app-marketing-banner><!----><!----><!---->
-              <div _ngcontent-vru-c227="" class="page__section-info _with-tabs _first ng-star-inserted">
-                <div _ngcontent-vru-c227="" class="page__section-info-title-wrapper _center-align">
-                  <app-action-group _ngcontent-vru-c227="" class="page__tabs" _nghost-vru-c221="">
-                    <div _ngcontent-vru-c221="" class="action-group">
-                      <div _ngcontent-vru-c221="" class="action-group__wrapper">
-                        <div _ngcontent-vru-c221="" class="action-group__items">
-                          <div _ngcontent-vru-c221="" class="action-group__item btn _extra-small ng-star-inserted"
-                               content="Discover">Discover
-                          </div>
-                          <div _ngcontent-vru-c221=""
-                               class="action-group__item btn _extra-small _transparent _font-weight-normal ng-star-inserted"
-                               content="Beginner">Beginner
-                          </div>
-                          <div _ngcontent-vru-c221=""
-                               class="action-group__item btn _extra-small _transparent _font-weight-normal ng-star-inserted"
-                               content="Intermediate">Intermediate
-                          </div>
-                          <div _ngcontent-vru-c221=""
-                               class="action-group__item btn _extra-small _transparent _font-weight-normal ng-star-inserted"
-                               content="Advanced">Advanced
-                          </div><!----></div>
-                      </div><!----><!----></div>
-                  </app-action-group><!----></div>
+  <section id="scrollableArea" tabindex="1000" class="content__wrapper ng-tns-c202-0">
+    <article class="courses-page page">
+            <div class="courses-page__content page__main">
+              <div
+                  description="Learn UX design skills with focused micro-courses and receive a certificate of completion to demonstrate your proficiency."
+                  imagename="marketing-banner-courses" class="page__marketing-banner">
+                <section class="marketing-banner">
+                  <div class="marketing-banner__content">
+                    <h2 class="marketing-banner__title">Interactive UX design courses</h2>
+                    <p class="marketing-banner__description">Learn UX design skills with focused micro-courses and receive a certificate of completion to demonstrate your proficiency.</p>
+                  </div>
+                </section>
               </div>
-              <div _ngcontent-vru-c227="" class="page__items ng-star-inserted"><!---->
-                <Card/>
-              </div><!----><!----><!---->
-              <app-action-banner _ngcontent-vru-c227=""
-                                 description="Learn on-demand professional design skills in just 5 minutes per day."
-                                 buttontext="Start for free" class="page__action-banner ng-star-inserted"
-                                 _nghost-vru-c206="">
-                <div _ngcontent-vru-c206="" class="action-banner">
-                  <div _ngcontent-vru-c206="" class="action-banner__info">
-                    <div _ngcontent-vru-c206="" class="action-banner__info-title"> Build your UX design skills online
+              <div class="page__section-info _with-tabs _first">
+                <div class="page__section-info-title-wrapper _center-align">
+                  <app-action-group class="page__tabs">
+                    <div class="action-group">
+                      <div class="action-group__wrapper">
+                        <div class="action-group__items">
+                          <div class="action-group__item btn _extra-small" content="Discover">Discover</div>
+                          <div class="action-group__item btn _extra-small _transparent _font-weight-normal" content="Beginner">Beginner</div>
+                          <div class="action-group__item btn _extra-small _transparent _font-weight-normal" content="Intermediate">Intermediate</div>
+                          <div class="action-group__item btn _extra-small _transparent _font-weight-normal" content="Advanced">Advanced</div>
+                        </div>
+                      </div>
                     </div>
-                    <div _ngcontent-vru-c206="" class="action-banner__description ng-star-inserted"> Learn on-demand
-                      professional design skills in just 5 minutes per day.
-                    </div><!----><!----></div>
-                  <div _ngcontent-vru-c206="" class="action-banner__controls"><!----><a _ngcontent-vru-c206=""
-                                                                                        target="_blank"
-                                                                                        class="action-banner__controls-item btn _extra-small ng-star-inserted"
-                                                                                        href="https://uxcel.com/ux-certification">
-                    <!----><span _ngcontent-vru-c206="" class="btn__text action-banner__controls-item-text"> Start for free </span></a>
-                    <!----><!----><!----><!----><!----><!----><!----><!----></div>
-                </div><!----><!----></app-action-banner>
-              <div _ngcontent-vru-c227="" class="additional-section ng-star-inserted">
-                <div _ngcontent-vru-c227="" class="additional-section__title">FAQs</div>
-                <app-expansion-panel _ngcontent-vru-c227=""
-                                     class="additional-section__content card _with-padding ng-tns-c214-2 ng-star-inserted"
-                                     _nghost-vru-c214="">
-                  <ul _ngcontent-vru-c214="" class="expansion-panel ng-tns-c214-2">
-                    <li _ngcontent-vru-c214="" class="expansion-panel__item ng-tns-c214-2 _medium ng-star-inserted">
-                      <div _ngcontent-vru-c214="" class="expansion-panel__item-header ng-tns-c214-2"><span
-                          _ngcontent-vru-c214="" class="expansion-panel__item-header-title ng-tns-c214-2">How are Uxcel courses different from other platforms?</span>
-                        <svg-icon _ngcontent-vru-c214="" class="expansion-panel__item-header-arrow ng-tns-c214-2"
-                                  _nghost-vru-c130="">
-                          <svg _ngcontent-vru-c130="" class="svg-icon">
-                            <use _ngcontent-vru-c130="" href="#plus"></use>
-                          </svg>
-                        </svg-icon>
-                      </div>
-                      <section _ngcontent-vru-c214=""
-                               class="expansion-panel__item-description ng-tns-c214-2 ng-trigger ng-trigger-showHideContent"
-                               style="height: 0px; margin-top: 0px;">At Uxcel, we prioritize efficient learning. That's
-                        why we don't create lengthy videos; we believe students learn much faster through reading than
-                        through watching videos. Additionally, we focus only on the most important pieces of
-                        information, so you can learn faster and retain the information for longer. Finally, everything
-                        on Uxcel is interactive, which means you'll be more engaged and have fun while improving your
-                        skills.
-                      </section>
-                    </li>
-                    <li _ngcontent-vru-c214="" class="expansion-panel__item ng-tns-c214-2 _medium ng-star-inserted">
-                      <div _ngcontent-vru-c214="" class="expansion-panel__item-header ng-tns-c214-2"><span
-                          _ngcontent-vru-c214="" class="expansion-panel__item-header-title ng-tns-c214-2">Are Uxcel design courses free?</span>
-                        <svg-icon _ngcontent-vru-c214="" class="expansion-panel__item-header-arrow ng-tns-c214-2"
-                                  _nghost-vru-c130="">
-                          <svg _ngcontent-vru-c130="" class="svg-icon">
-                            <use _ngcontent-vru-c130="" href="#plus"></use>
-                          </svg>
-                        </svg-icon>
-                      </div>
-                      <section _ngcontent-vru-c214=""
-                               class="expansion-panel__item-description ng-tns-c214-2 ng-trigger ng-trigger-showHideContent"
-                               style="height: 0px; margin-top: 0px;">Uxcel offers both free and paid courses. For Pro
-                        courses, you can complete the first level for free to see if it's the right fit for you. If you
-                        decide to upgrade to a Pro subscription, you'll gain complete access to the Uxcel learning
-                        library, which includes courses, lessons, assessments, and challenges.
-                      </section>
-                    </li>
-                    <li _ngcontent-vru-c214="" class="expansion-panel__item ng-tns-c214-2 _medium ng-star-inserted">
-                      <div _ngcontent-vru-c214="" class="expansion-panel__item-header ng-tns-c214-2"><span
-                          _ngcontent-vru-c214="" class="expansion-panel__item-header-title ng-tns-c214-2">Why should I take a UX design course?</span>
-                        <svg-icon _ngcontent-vru-c214="" class="expansion-panel__item-header-arrow ng-tns-c214-2"
-                                  _nghost-vru-c130="">
-                          <svg _ngcontent-vru-c130="" class="svg-icon">
-                            <use _ngcontent-vru-c130="" href="#plus"></use>
-                          </svg>
-                        </svg-icon>
-                      </div>
-                      <section _ngcontent-vru-c214=""
-                               class="expansion-panel__item-description ng-tns-c214-2 ng-trigger ng-trigger-showHideContent"
-                               style="height: 0px; margin-top: 0px;">Taking a UX design course can help you develop the
-                        skills and knowledge needed to create user-centered designs that meet the needs of your target
-                        audience. These courses can also be a valuable addition to your resume and may help you land a
-                        job in the field or advance your career.
-                      </section>
-                    </li>
-                    <li _ngcontent-vru-c214="" class="expansion-panel__item ng-tns-c214-2 _medium ng-star-inserted">
-                      <div _ngcontent-vru-c214="" class="expansion-panel__item-header ng-tns-c214-2"><span
-                          _ngcontent-vru-c214="" class="expansion-panel__item-header-title ng-tns-c214-2">Are there prerequisites for taking a design course on Uxcel?</span>
-                        <svg-icon _ngcontent-vru-c214="" class="expansion-panel__item-header-arrow ng-tns-c214-2"
-                                  _nghost-vru-c130="">
-                          <svg _ngcontent-vru-c130="" class="svg-icon">
-                            <use _ngcontent-vru-c130="" href="#plus"></use>
-                          </svg>
-                        </svg-icon>
-                      </div>
-                      <section _ngcontent-vru-c214=""
-                               class="expansion-panel__item-description ng-tns-c214-2 ng-trigger ng-trigger-showHideContent"
-                               style="height: 0px; margin-top: 0px;">There are no prerequisites for taking a design
-                        course on Uxcel, although the courses vary in difficulty of concepts and skill level. For those
-                        just starting their career, we recommend beginning with our beginner courses.
-                      </section>
-                    </li>
-                    <li _ngcontent-vru-c214="" class="expansion-panel__item ng-tns-c214-2 _medium ng-star-inserted">
-                      <div _ngcontent-vru-c214="" class="expansion-panel__item-header ng-tns-c214-2"><span
-                          _ngcontent-vru-c214="" class="expansion-panel__item-header-title ng-tns-c214-2">Will I get a certificate?</span>
-                        <svg-icon _ngcontent-vru-c214="" class="expansion-panel__item-header-arrow ng-tns-c214-2"
-                                  _nghost-vru-c130="">
-                          <svg _ngcontent-vru-c130="" class="svg-icon">
-                            <use _ngcontent-vru-c130="" href="#plus"></use>
-                          </svg>
-                        </svg-icon>
-                      </div>
-                      <section _ngcontent-vru-c214=""
-                               class="expansion-panel__item-description ng-tns-c214-2 ng-trigger ng-trigger-showHideContent"
-                               style="height: 0px; margin-top: 0px;">Uxcel is proud to offer every course with a
-                        shareable certificate of completion. This certificate can be used as a powerful tool to showcase
-                        your newly acquired design skills and knowledge, thereby helping you advance your design career.
-                        You can add the certificate to your LinkedIn profile, resume, or portfolio, all of which can be
-                        viewed by potential employers. In addition, you can share the certificate with friends and
-                        colleagues to let them know about your accomplishments and encourage them to take the course
-                        themselves. With Uxcel's certificate of completion, your design skills will be recognized and
-                        valued in the industry.
-                      </section>
-                    </li><!----></ul>
-                </app-expansion-panel>
-              </div><!----><!----><!----><!----></div>
-            <div _ngcontent-vru-c227="" class="page__aside courses-page__aside">
-              <app-courses-filter _ngcontent-vru-c227="" _nghost-vru-c226="">
-                <app-sidenav _ngcontent-vru-c226="" class="page-filter__sidenav ng-tns-c198-1 ng-star-inserted"
-                             _nghost-vru-c198=""><!----><!----></app-sidenav><!----><!----><!----><!---->
-              </app-courses-filter>
+                  </app-action-group>
+                </div>
+              </div>
+              <div class="page__items">
+                <Slip/>
+                <Slip/>
+                <Slip/>
+                <Slip/>
+                <Slip/>
+                <Slip/>
+              </div>
             </div>
-          </div><!----><!----><!----><!----><!----><!----></app-courses-page><!----></app-course-page><!----></main>
-  </div>
+          </article>
+  </section>
 </template>
 
 <script>
-import Card from "../components/containers/Card.vue";
+import Slip from "../components/templates/Display/Slip.vue";
 
 export default {
   name: "Display",
-  components: {Card}
+  components: {Slip}
 }
 </script>
 
 <style scoped>
+.content__wrapper {
+  width: 70%;
+}
 
+.page {
+  display: flex;
+  padding: 32px 0;
+  height: 100%;
+
+}
+
+.page__marketing-banner {
+  padding: 1em 3em 2em 3em;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 4.2px;
+  box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
+}
+.marketing-banner {
+  padding: 20px;
+}
+
+.courses-page__content {
+  position: relative;
+  min-width: 0;
+}
+.page__main {
+  flex-grow: 1;
+}
+
+._tablet .page__section-info._with-tabs, ._mobile .page__section-info._with-tabs {
+  margin-bottom: 24px;
+}
+.page__section-info {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0;
+  padding: 12px 0;
+  background-color: #fff;
+  border-radius: 4.2px;
+  box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+.page__section-info-title-wrapper._center-align {
+  align-items: center;
+}
+.page__section-info-title-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  --tabs-smooth-gradient-color: var(--grey-100);
+}
+
+.action-group__wrapper {
+  flex-grow: 1;
+  display: flex;
+  transition: -webkit-transform .2s cubic-bezier(.25,.01,.25,1) 0s;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0 var(--action-group-inner-padding);
+}
+
+.action-group__items {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+}
+
+.action-group__item:not(:last-child) {
+  margin-right: 2px;
+}
+
+.action-group__item {
+   display: flex;
+   flex-direction: column;
+   flex-shrink: 0;
+ }
+.btn._extra-small {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  height: 36px;
+  border-radius: 8px;
+  padding: 0 12px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: var(--black);
+  cursor: pointer;
+  background: var(--black-100);
+  transition: background-color .2s cubic-bezier(.25,.01,.25,1) 0s,color .2s cubic-bezier(.25,.01,.25,1) 0s;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+  height: 64px;
+}
+
+.action-group__item._font-weight-normal {
+  font-weight: 400;
+}
+
+.action-group__item:before {
+  display: block;
+  content: attr(content);
+  font-weight: 700;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.page__items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 </style>

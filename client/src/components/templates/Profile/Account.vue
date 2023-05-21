@@ -230,10 +230,10 @@ select option {
 .container {
   max-width: 38em;
   padding: 1em 3em 2em 3em;
-  margin: 0em auto;
+  margin: 0 auto;
   background-color: #fff;
   border-radius: 4.2px;
-  box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
 }
 
 .row {
