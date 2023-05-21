@@ -51,7 +51,6 @@
 </template>
 
 <script>
-import Navbar from "../components/bars/Header.vue";
 import expert from "../components/img/expert.jpg";
 import Grid from "../components/containers/Grid.vue";
 import Card from "../components/containers/Card.vue";
@@ -86,7 +85,6 @@ export default {
     },
     name: "Home",
     components: {
-        Navbar,
         Grid,
         Card
     }
