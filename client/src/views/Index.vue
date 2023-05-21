@@ -3,7 +3,7 @@
     <Plug v-if="isPlugVisible"/>
     <section class="content" v-if="!isPlugVisible">
       <Sidebar/>
-      <Profile/>
+      <Display/>
     </section>
     <Footer v-if="!isPlugVisible"/>
   </main>
@@ -20,6 +20,7 @@ import Profile from "./Profile.vue";
 import Footer from "../components/bars/Footer.vue";
 import Course from "../views/Course.vue";
 import Sidebar from "../components/bars/Sidebar.vue";
+import Display from "./Display.vue";
 
 
 export default {
@@ -33,6 +34,7 @@ export default {
     Sidebar,
     Main,
     Home,
+    Display
   },
   data() {
     return {
