@@ -51,7 +51,7 @@
           <span class="title">Credits</span>
         </a>
       </div>
-      <div class="list" style="margin-top: 1020px;">
+      <div class="list" style="margin-top: 1000px;">
         <b/>
         <b/>
         <a href="#">
@@ -107,7 +107,7 @@ export default {
   Left: 0;
   width: 100%;
   padding-Left: 5px;
-  padding-top: 50px;
+  padding-top: 70px;
 }
 
 .navigation nav div {
