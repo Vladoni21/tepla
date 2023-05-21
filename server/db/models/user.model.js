@@ -1,20 +1,30 @@
-const DataTypes = require('sequelize').DataTypes;
+const {DataTypes, Model} = require('sequelize');
+const bcrypt = require('bcrypt');
 
 module.exports = function addUserTable(sequelize) {
-    sequelize.define('User', {
+    class User extends Model {}
+
+    User.init({
         username: {
             type: DataTypes.STRING,
             allowNull: false
         },
         email: {
             type: DataTypes.STRING,
+            validate: {
+                isEmail: true
+            },
             allowNull: false
         },
-        password_hash: {
+        password: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            set(value) {
+                this.setDataValue('password', bcrypt.hashSync(value, 10));
+            }
         }
     }, {
+        sequelize,
         tableName: 'users',
         createdAt: true,
         timestamps: true,
