@@ -11,7 +11,7 @@
           <span class="title">Home</span>
         </a>
       </div>
-      <div class="list">
+      <div class="list" style="margin-top: 20px;">
         <b/>
         <b/>
         <a href="#">
@@ -51,7 +51,7 @@
           <span class="title">Credits</span>
         </a>
       </div>
-      <div class="list" style="margin-top: 1000px;">
+      <div class="list" style="margin-top: 20px;">
         <b/>
         <b/>
         <a href="#">
