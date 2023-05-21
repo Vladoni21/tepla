@@ -43,10 +43,11 @@
 
 <script>
 import Slip from "../components/templates/Display/Slip.vue";
+import Menu from "../components/templates/Display/Menu.vue";
 
 export default {
   name: "Display",
-  components: {Slip}
+  components: {Menu, Slip}
 }
 </script>
 
@@ -181,6 +182,6 @@ export default {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-evenly;
 }
 </style>
