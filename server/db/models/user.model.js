@@ -2,7 +2,11 @@ const {DataTypes, Model} = require('sequelize');
 const bcrypt = require('bcrypt');
 
 module.exports = function addUserTable(sequelize) {
-    class User extends Model {}
+    class User extends Model {
+        async authenticate(password) {
+            return await bcrypt.compare(password, this.password);
+        }
+    }
 
     User.init({
         username: {
