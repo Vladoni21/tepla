@@ -264,4 +264,10 @@ img {
 .bg-color-purple {
   background-color: #5627FF;
 }
+
+.card._clickable:hover {
+  cursor: pointer;
+  transform: translate3d(0,-2px,0);
+  box-shadow: 0 8px 16px #201e1e7a;
+}
 </style>
