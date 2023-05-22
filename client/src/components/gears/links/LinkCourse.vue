@@ -1,22 +1,20 @@
 <template>
     <div v-bind:class="item.class">
-        <i class="material-icons" v-bind:icon="item.icon">{{item.icon}}</i>
+        <i class="material-icons" v-bind:icon="item.icon">{{ item.icon }}</i>
         <div>
-            <h6>{{item.title}}</h6>
+            <h6>{{ item.title }}</h6>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "LinkCourse",
-    props: {
+    name: 'LinkCourse', props: {
         item: {
-            type: Object,
-            required: true
-        }
-    }
-}
+            type: Object, required: true,
+        },
+    },
+};
 </script>
 
 <style scoped>
@@ -28,6 +26,7 @@ export default {
     box-shadow: 0px 0px 24px #4cbbb2;
     height: 100%;
 }
+
 .material-icons {
     padding-top: 5px;
     font-size: 3rem;

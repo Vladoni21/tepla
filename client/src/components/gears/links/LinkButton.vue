@@ -1,20 +1,18 @@
 <template>
     <a v-bind:class="item.class" v-bind:href="item.href">
-        <i class="material-icons" v-bind:icon="item.icon">{{item.icon}}</i>
-        <span v-text="item.title"/>
+        <i class="material-icons" v-bind:icon="item.icon">{{ item.icon }}</i>
+        <span v-text="item.title" />
     </a>
 </template>
 
 <script>
 export default {
-    name: "LinkButton",
-    props: {
+    name: 'LinkButton', props: {
         item: {
-            type: Object,
-            required: true
-        }
-    }
-}
+            type: Object, required: true,
+        },
+    },
+};
 </script>
 
 <style scoped>
@@ -25,21 +23,24 @@ export default {
     font-size: 1.5rem;
 }
 
-.default i{
+.default i {
     margin-right: 1rem;
     color: white;
 }
-.default span{
+
+.default span {
     color: white;
 }
 
-.default a:hover{
+.default a:hover {
     background-color: #5FA8D3;
 }
-.default a:hover span{
-    color:white;
+
+.default a:hover span {
+    color: white;
 }
-.default a:hover i{
+
+.default a:hover i {
     color: white;
 }
 
@@ -51,10 +52,12 @@ export default {
     font-size: 1.2rem;
 
 }
+
 .nav_link span {
     color: white;
     padding-left: 5px;
 }
+
 .material-icons {
     padding-top: 5px;
     font-size: 3rem;

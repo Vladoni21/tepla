@@ -14,8 +14,8 @@
 
 <script>
 export default {
-    name: "img_loader"
-}
+    name: 'img_loader',
+};
 </script>
 
 <style scoped>

@@ -1,195 +1,250 @@
-<link rel="stylesheet" href="../../../../Desktop/desgin/css/style.css">
+<link href="../../../../Desktop/desgin/css/style.css" rel="stylesheet">
 <template>
     <section class="Main">
-      <section class="home-grid">
-        <div class="box-container">
-          <div class="box">
-            <h3 class="title">Лайки и коментарии</h3>
-            <p class="likes">Всего лайков: <span>25</span></p>
-            <a href="#" class="inline-btn">Посмотреть лайки</a>
-            <p class="likes">Всего коментариев: <span>12</span></p>
-            <a href="#" class="inline-btn">Коментарии</a>
-            <p class="likes">Сохраненные записи: <span>4</span></p>
-            <a href="#" class="inline-btn">Записи</a>
-          </div>
-          <div class="box">
-            <h3 class="title">Топ категорий</h3>
-            <div class="flex">
-              <Grid v-bind:arr="sidebar_top_categories"/>
-            </div>
-          </div>
-          <div class="box">
-            <h3 class="title">Популярные курсы</h3>
-            <div class="flex">
-              <Grid v-bind:arr="sidebar_top_courses"/>
-            </div>
-          </div>
-          <div class="box">
-            <h3 class="title">Селектор</h3>
-            <div class="flex">
-              <selector style="width: 300px; height: 45px" v-bind:arr="sel"/>
-            </div>
-          </div>
-            <div class="box">
-                <h3 class="title">Ответы</h3>
-                <div class="flex">
-                    <answer/>
+        <section class="home-grid">
+            <div class="box-container">
+                <div class="box">
+                    <h3 class="title">Лайки и коментарии</h3>
+                    <p class="likes">Всего лайков: <span>25</span></p>
+                    <a class="inline-btn" href="#">Посмотреть лайки</a>
+                    <p class="likes">Всего коментариев: <span>12</span></p>
+                    <a class="inline-btn" href="#">Коментарии</a>
+                    <p class="likes">Сохраненные записи: <span>4</span></p>
+                    <a class="inline-btn" href="#">Записи</a>
+                </div>
+                <div class="box">
+                    <h3 class="title">Топ категорий</h3>
+                    <div class="flex">
+                        <Grid v-bind:arr="sidebar_top_categories" />
+                    </div>
+                </div>
+                <div class="box">
+                    <h3 class="title">Популярные курсы</h3>
+                    <div class="flex">
+                        <Grid v-bind:arr="sidebar_top_courses" />
+                    </div>
+                </div>
+                <div class="box">
+                    <h3 class="title">Селектор</h3>
+                    <div class="flex">
+                        <selector style="width: 300px; height: 45px" v-bind:arr="sel" />
+                    </div>
+                </div>
+                <div class="box">
+                    <h3 class="title">Ответы</h3>
+                    <div class="flex">
+                        <answer />
+                    </div>
+                </div>
+                <div class="box">
+                    <h3 class="title">Стать преподавателем</h3>
+                    <p class="tutor">Рыбий текст</p>
+                    <a class="inline-btn" href="#">Начать</a>
                 </div>
             </div>
-          <div class="box">
-            <h3 class="title">Стать преподавателем</h3>
-            <p class="tutor">Рыбий текст</p>
-            <a href="#" class="inline-btn">Начать</a>
-          </div>
-        </div>
-      </section>
-      <!-- Courses -->
-      <section id="courses">
-        <h1 class="heading">Наши курсы</h1>
-        <div class="box-container">
-          <div class="box">
-            <div class="tutor">
-              <!--img src="images/pic-2.jpg" alt=""-->
-              <div class="info">
-                <h3>Райан Гослинг</h3>
-                <span>21-10-2022</span>
-              </div>
+        </section>
+        <!-- Courses -->
+        <section id="courses">
+            <h1 class="heading">Наши курсы</h1>
+            <div class="box-container">
+                <div class="box">
+                    <div class="tutor">
+                        <!--img src="images/pic-2.jpg" alt=""-->
+                        <div class="info">
+                            <h3>Райан Гослинг</h3>
+                            <span>21-10-2022</span>
+                        </div>
+                    </div>
+                    <div class="thumb">
+                        <!--img src="images/thumb-1.png" alt=""-->
+                        <span>10 видео</span>
+                    </div>
+                    <h3 class="title">Курс HTML</h3>
+                    <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+                </div>
+                <div class="box">
+                    <div class="tutor">
+                        <!--img src="images/pic-3.jpg" alt=""-->
+                        <div class="info">
+                            <h3>Райан Гослинг</h3>
+                            <span>21-10-2022</span>
+                        </div>
+                    </div>
+                    <div class="thumb">
+                        <!--img src="images/thumb-2.png" alt=""-->
+                        <span>10 видео</span>
+                    </div>
+                    <h3 class="title">Курс CSS</h3>
+                    <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+                </div>
+                <div class="box">
+                    <div class="tutor">
+                        <!--img src="images/pic-4.jpg" alt=""-->
+                        <div class="info">
+                            <h3>Райан Гослинг</h3>
+                            <span>21-10-2022</span>
+                        </div>
+                    </div>
+                    <div class="thumb">
+                        <!--img src="images/thumb-3.png" alt=""-->
+                        <span>10 видео</span>
+                    </div>
+                    <h3 class="title">Курс JS</h3>
+                    <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+                </div>
+                <div class="box">
+                    <div class="tutor">
+                        <!--img src="images/pic-5.jpg" alt=""-->
+                        <div class="info">
+                            <h3>Райан Гослинг</h3>
+                            <span>21-10-2022</span>
+                        </div>
+                    </div>
+                    <div class="thumb">
+                        <!--img src="images/thumb-4.png" alt=""-->
+                        <span>10 видео</span>
+                    </div>
+                    <h3 class="title">Курс Boostrap</h3>
+                    <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+                </div>
+                <div class="box">
+                    <div class="tutor">
+                        <!--img src="images/pic-6.jpg" alt=""-->
+                        <div class="info">
+                            <h3>Райан Гослинг</h3>
+                            <span>21-10-2022</span>
+                        </div>
+                    </div>
+                    <div class="thumb">
+                        <!--img src="images/thumb-5.png" alt=""-->
+                        <span>10 видео</span>
+                    </div>
+                    <h3 class="title">Курс JQuery</h3>
+                    <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+                </div>
+                <div class="box">
+                    <div class="tutor">
+                        <!--img src="images/pic-7.jpg" alt=""-->
+                        <div class="info">
+                            <h3>Райан Гослинг</h3>
+                            <span>21-10-2022</span>
+                        </div>
+                    </div>
+                    <div class="thumb">
+                        <!--img src="images/thumb-6.png" alt=""-->
+                        <span>10 видео</span>
+                    </div>
+                    <h3 class="title">Курс SASS</h3>
+                    <!--a href="playlist.html" class="inline-btn">view playlist</a-->
+                </div>
             </div>
-            <div class="thumb">
-              <!--img src="images/thumb-1.png" alt=""-->
-              <span>10 видео</span>
+            <div class="more-btn">
+                <!--a href="courses.html" class="inline-option-btn">view all courses</a-->
             </div>
-            <h3 class="title">Курс HTML</h3>
-            <!--a href="playlist.html" class="inline-btn">view playlist</a-->
-          </div>
-          <div class="box">
-            <div class="tutor">
-              <!--img src="images/pic-3.jpg" alt=""-->
-              <div class="info">
-                <h3>Райан Гослинг</h3>
-                <span>21-10-2022</span>
-              </div>
-            </div>
-            <div class="thumb">
-              <!--img src="images/thumb-2.png" alt=""-->
-              <span>10 видео</span>
-            </div>
-            <h3 class="title">Курс CSS</h3>
-            <!--a href="playlist.html" class="inline-btn">view playlist</a-->
-          </div>
-          <div class="box">
-            <div class="tutor">
-              <!--img src="images/pic-4.jpg" alt=""-->
-              <div class="info">
-                <h3>Райан Гослинг</h3>
-                <span>21-10-2022</span>
-              </div>
-            </div>
-            <div class="thumb">
-              <!--img src="images/thumb-3.png" alt=""-->
-              <span>10 видео</span>
-            </div>
-            <h3 class="title">Курс JS</h3>
-            <!--a href="playlist.html" class="inline-btn">view playlist</a-->
-          </div>
-          <div class="box">
-            <div class="tutor">
-              <!--img src="images/pic-5.jpg" alt=""-->
-              <div class="info">
-                <h3>Райан Гослинг</h3>
-                <span>21-10-2022</span>
-              </div>
-            </div>
-            <div class="thumb">
-              <!--img src="images/thumb-4.png" alt=""-->
-              <span>10 видео</span>
-            </div>
-            <h3 class="title">Курс Boostrap</h3>
-            <!--a href="playlist.html" class="inline-btn">view playlist</a-->
-          </div>
-          <div class="box">
-            <div class="tutor">
-              <!--img src="images/pic-6.jpg" alt=""-->
-              <div class="info">
-                <h3>Райан Гослинг</h3>
-                <span>21-10-2022</span>
-              </div>
-            </div>
-            <div class="thumb">
-              <!--img src="images/thumb-5.png" alt=""-->
-              <span>10 видео</span>
-            </div>
-            <h3 class="title">Курс JQuery</h3>
-            <!--a href="playlist.html" class="inline-btn">view playlist</a-->
-          </div>
-          <div class="box">
-            <div class="tutor">
-              <!--img src="images/pic-7.jpg" alt=""-->
-              <div class="info">
-                <h3>Райан Гослинг</h3>
-                <span>21-10-2022</span>
-              </div>
-            </div>
-            <div class="thumb">
-              <!--img src="images/thumb-6.png" alt=""-->
-              <span>10 видео</span>
-            </div>
-            <h3 class="title">Курс SASS</h3>
-            <!--a href="playlist.html" class="inline-btn">view playlist</a-->
-          </div>
-        </div>
-        <div class="more-btn">
-          <!--a href="courses.html" class="inline-option-btn">view all courses</a-->
-        </div>
-      </section>
+        </section>
     </section>
 </template>
 
 <script>
-import expert from "../components/img/expert.jpg";
-import Grid from "../components/containers/Grid.vue";
-import PopUp from "../components/containers/PopUp.vue";
-import selector from "../components/blocks/puzzle/selector.vue";
-import answer from "../components/blocks/puzzle/answer.vue";
+import expert from '../components/img/expert.jpg';
+import Grid from '../components/containers/Grid.vue';
+import PopUp from '../components/containers/PopUp.vue';
+import selector from '../components/blocks/puzzle/selector.vue';
+import answer from '../components/blocks/puzzle/answer.vue';
 
 export default {
-    components: {answer, selector, PopUp, Grid},
-    data() {
+    components: { answer, selector, PopUp, Grid }, data() {
         return {
             image: expert,
-            sidebar_top_categories: [
-                {id: 1, title: "Разработка", icon: "code", href: "#", class: "default", gear: "LinkButton"},
-                {id: 2, title: "Бизнес", icon: "sell", href: "#", class: "default", gear: "LinkButton"},
-                {id: 3, title: "Дизайн", icon: "design_services", href: "#", class: "default", gear: "LinkButton"},
-                {id: 4, title: "Маркетинг", icon: "trending_up", href: "#", class: "default", gear: "LinkButton"},
-                {id: 5, title: "Музыка", icon: "music_note", href: "#", class: "default", gear: "LinkButton"},
-                {id: 6, title: "Фото", icon: "camera", href: "#", class: "default", gear: "LinkButton"},
-                {id: 7, title: "ПО", icon: "web_asset", href: "#", class: "default", gear: "LinkButton"},
-                {id: 8, title: "Наука", icon: "science", href: "#", class: "default", gear: "LinkButton"}
-            ],
-            sidebar_top_courses: [
-                {id: 1, title: "", icon: "html", href: "#", class: "default", gear: "LinkButton"},
-                {id: 2, title: "", icon: "css", href: "#", class: "default", gear: "LinkButton"},
-                {id: 3, title: "", icon: "javascript", href: "#", class: "default", gear: "LinkButton"},
-                {id: 4, title: "react", icon: "code", href: "#", class: "default", gear: "LinkButton"},
-                {id: 5, title: "", icon: "php", href: "#", class: "default", gear: "LinkButton"},
-                {id: 6, title: "bootstrap", icon: "code", href: "#", class: "default", gear: "LinkButton"}
-            ],
-            sidebar_menu: [
-                {id: 1, title: "Домой", icon: "home", href: "#", class: "nav_link", gear: "LinkButton"},
-                {id: 2, title: "О нас", icon: "question", href: "#", class: "nav_link", gear: "LinkButton"},
-                {id: 3, title: "Курсы", icon: "graduation-cap", href: "#", class: "nav_link", gear: "LinkButton"},
-                {id: 4, title: "Учителя", icon: "chalkboard-user", href: "#", class: "nav_link", gear: "LinkButton"},
-                {id: 5, title: "Поддержка", icon: "headset", href: "#", class: "nav_link", gear: "LinkButton"}
-            ],
-            sel: [
-              {id: 1, title: "Помоги мне", icon: "home", value: "a"},
-              {id: 1, title: "Пожалуйста", icon: "home", value: "b"}
-            ]
-        }
-    },
-    name: "Main"
-}
+            sidebar_top_categories: [{
+                id: 1,
+                title: 'Разработка',
+                icon: 'code',
+                href: '#',
+                class: 'default',
+                gear: 'LinkButton',
+            }, { id: 2, title: 'Бизнес', icon: 'sell', href: '#', class: 'default', gear: 'LinkButton' }, {
+                id: 3,
+                title: 'Дизайн',
+                icon: 'design_services',
+                href: '#',
+                class: 'default',
+                gear: 'LinkButton',
+            }, {
+                id: 4,
+                title: 'Маркетинг',
+                icon: 'trending_up',
+                href: '#',
+                class: 'default',
+                gear: 'LinkButton',
+            }, { id: 5, title: 'Музыка', icon: 'music_note', href: '#', class: 'default', gear: 'LinkButton' }, {
+                id: 6,
+                title: 'Фото',
+                icon: 'camera',
+                href: '#',
+                class: 'default',
+                gear: 'LinkButton',
+            }, { id: 7, title: 'ПО', icon: 'web_asset', href: '#', class: 'default', gear: 'LinkButton' }, {
+                id: 8,
+                title: 'Наука',
+                icon: 'science',
+                href: '#',
+                class: 'default',
+                gear: 'LinkButton',
+            }],
+            sidebar_top_courses: [{
+                id: 1,
+                title: '',
+                icon: 'html',
+                href: '#',
+                class: 'default',
+                gear: 'LinkButton',
+            }, { id: 2, title: '', icon: 'css', href: '#', class: 'default', gear: 'LinkButton' }, {
+                id: 3,
+                title: '',
+                icon: 'javascript',
+                href: '#',
+                class: 'default',
+                gear: 'LinkButton',
+            }, { id: 4, title: 'react', icon: 'code', href: '#', class: 'default', gear: 'LinkButton' }, {
+                id: 5,
+                title: '',
+                icon: 'php',
+                href: '#',
+                class: 'default',
+                gear: 'LinkButton',
+            }, { id: 6, title: 'bootstrap', icon: 'code', href: '#', class: 'default', gear: 'LinkButton' }],
+            sidebar_menu: [{
+                id: 1,
+                title: 'Домой',
+                icon: 'home',
+                href: '#',
+                class: 'nav_link',
+                gear: 'LinkButton',
+            }, { id: 2, title: 'О нас', icon: 'question', href: '#', class: 'nav_link', gear: 'LinkButton' }, {
+                id: 3,
+                title: 'Курсы',
+                icon: 'graduation-cap',
+                href: '#',
+                class: 'nav_link',
+                gear: 'LinkButton',
+            }, {
+                id: 4,
+                title: 'Учителя',
+                icon: 'chalkboard-user',
+                href: '#',
+                class: 'nav_link',
+                gear: 'LinkButton',
+            }, { id: 5, title: 'Поддержка', icon: 'headset', href: '#', class: 'nav_link', gear: 'LinkButton' }],
+            sel: [{ id: 1, title: 'Помоги мне', icon: 'home', value: 'a' }, {
+                id: 1,
+                title: 'Пожалуйста',
+                icon: 'home',
+                value: 'b',
+            }],
+        };
+    }, name: 'Main',
+};
 </script>
 
 <style scoped>
@@ -209,9 +264,9 @@ html {
 }
 
 .Main {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 6rem 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
 }
 
 section {
@@ -530,8 +585,9 @@ section {
 .home-grid .box-container .likes span {
     color: #FFFFFF;
 }
+
 /* courses */
-#courses h1{
+#courses h1 {
     color: #FFFFFF;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -541,6 +597,7 @@ section {
     background: linear-gradient(71deg, #5FA8D3, rgba(19, 88, 220, 0.35), #5FA8D3);
     box-shadow: 0px 0px 24px #a0dfee;
 }
+
 #courses .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -616,40 +673,42 @@ section {
 }
 
 .mask {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.3s ease;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
 }
 
 .shadow-enter,
 .shadow-leave-active {
-  opacity: 0;
-  --webkit--transform: scale(1.1);
-  transform: scale(1.1);
+    opacity: 0;
+    --webkit--transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .popup-enter-active {
-  animation: popup-in 0.5s;
+    animation: popup-in 0.5s;
 }
+
 .popup-leave-active {
-  animation: popup-in 0.5s reverse;
+    animation: popup-in 0.5s reverse;
 }
+
 @keyframes popup-in {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.25);
-  }
-  100% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 </style>

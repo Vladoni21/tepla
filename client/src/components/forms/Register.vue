@@ -1,26 +1,26 @@
 <template xmlns="http://www.w3.org/1999/html">
     <article class="wizard-form">
-        <form class="form-register" action="#" method="post">
-            <section id="form-total" role="application" class="wizard clearfix vertical content-back">
+        <form action="#" class="form-register" method="post">
+            <section id="form-total" class="wizard clearfix vertical content-back" role="application">
                 <div class="steps clearfix">
                     <ul role="tablist">
-                        <li role="tab" aria-disabled="false" class="first current" aria-selected="true"><a
-                                id="form-total-t-0" href="#form-total-h-0" aria-controls="form-total-p-0"><span
+                        <li aria-disabled="false" aria-selected="true" class="first current" role="tab"><a
+                                id="form-total-t-0" aria-controls="form-total-p-0" href="#form-total-h-0"><span
                                 class="current-info audible"> </span>
                             <div class="title">
                                 <p class="step-icon"><span>01</span></p>
                                 <span class="step-text">Основная информация</span>
                             </div>
                         </a></li>
-                        <li role="tab" aria-disabled="false"><a id="form-total-t-1" href="#form-total-h-1"
-                                                                aria-controls="form-total-p-1">
+                        <li aria-disabled="false" role="tab"><a id="form-total-t-1" aria-controls="form-total-p-1"
+                                                                href="#form-total-h-1">
                             <div class="title">
                                 <p class="step-icon"><span>02</span></p>
                                 <span class="step-text">Тематика курса</span>
                             </div>
                         </a></li>
-                        <li role="tab" aria-disabled="false" class="last"><a id="form-total-t-2" href="#form-total-h-2"
-                                                                             aria-controls="form-total-p-2">
+                        <li aria-disabled="false" class="last" role="tab"><a id="form-total-t-2" aria-controls="form-total-p-2"
+                                                                             href="#form-total-h-2">
                             <div class="title">
                                 <p class="step-icon"><span>03</span></p>
                                 <span class="step-text">Уровень сложности</span>
@@ -29,12 +29,12 @@
                     </ul>
                 </div>
                 <div class="content clearfix">
-                    <h2 id="form-total-h-0" tabindex="-1" class="title current">
+                    <h2 id="form-total-h-0" class="title current" tabindex="-1">
                         <p class="step-icon"><span>01</span></p>
                         <span class="step-text">Peronal Infomation</span>
                     </h2>
-                    <section id="form-total-p-0" role="tabpanel" aria-labelledby="form-total-h-0" class="body current"
-                             aria-hidden="false">
+                    <section id="form-total-p-0" aria-hidden="false" aria-labelledby="form-total-h-0" class="body current"
+                             role="tabpanel">
                         <div class="inner">
                             <div class="wizard-header">
                                 <h3 class="heading">Основная Информация</h3>
@@ -44,15 +44,15 @@
                                 <div class="form-holder">
                                     <fieldset>
                                         <legend>Название</legend>
-                                        <input type="text" class="form-control" id="first-name" name="first-name"
-                                               placeholder="Название курса" required="">
+                                        <input id="first-name" class="form-control" name="first-name" placeholder="Название курса"
+                                               required="" type="text">
                                     </fieldset>
                                 </div>
                                 <div class="form-holder">
                                     <fieldset>
                                         <legend>Тег</legend>
-                                        <input type="text" class="form-control" id="last-name" name="last-name"
-                                               placeholder="Тег" required="">
+                                        <input id="last-name" class="form-control" name="last-name" placeholder="Тег"
+                                               required="" type="text">
                                     </fieldset>
                                 </div>
                             </div>
@@ -60,9 +60,9 @@
                                 <div class="form-holder form-holder-2">
                                     <fieldset>
                                         <legend>Ссылка на видеоурок</legend>
-                                        <input type="text" name="your_email" id="your_email" class="form-control"
-                                               pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="example.com"
-                                               required="">
+                                        <input id="your_email" class="form-control" name="your_email" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
+                                               placeholder="example.com" required=""
+                                               type="text">
                                     </fieldset>
                                 </div>
                             </div>
@@ -70,30 +70,30 @@
                                 <div class="form-holder form-holder-2">
                                     <fieldset>
                                         <legend>Описание</legend>
-                                        <input type="text" class="form-control" id="phone" name="phone"
-                                               placeholder="Описание курса" required="">
+                                        <input id="phone" class="form-control" name="phone" placeholder="Описание курса"
+                                               required="" type="text">
                                     </fieldset>
                                 </div>
                             </div>
                             <div class="form-row form-row-date">
                                 <div class="form-holder form-holder-2">
                                     <label class="special-label">Birth Date:</label>
-                                    <select name="month" id="month">
-                                        <option value="MM" disabled="" selected="">MM</option>
+                                    <select id="month" name="month">
+                                        <option disabled="" selected="" value="MM">MM</option>
                                         <option value="16">16</option>
                                         <option value="17">17</option>
                                         <option value="18">18</option>
                                         <option value="19">19</option>
                                     </select>
-                                    <select name="date" id="date">
-                                        <option value="DD" disabled="" selected="">DD</option>
+                                    <select id="date" name="date">
+                                        <option disabled="" selected="" value="DD">DD</option>
                                         <option value="Feb">Feb</option>
                                         <option value="Mar">Mar</option>
                                         <option value="Apr">Apr</option>
                                         <option value="May">May</option>
                                     </select>
-                                    <select name="year" id="year">
-                                        <option value="YYYY" disabled="" selected="">YYYY</option>
+                                    <select id="year" name="year">
+                                        <option disabled="" selected="" value="YYYY">YYYY</option>
                                         <option value="2017">2017</option>
                                         <option value="2016">2016</option>
                                         <option value="2015">2015</option>
@@ -104,54 +104,56 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-holder form-holder-2">
-                                    <input type="text" class="form-control input-border" id="ssn" name="ssn"
-                                           placeholder="SSN" required="">
+                                    <input id="ssn" class="form-control input-border" name="ssn" placeholder="SSN"
+                                           required="" type="text">
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <h2 id="form-total-h-1" tabindex="-1" class="title">
+                    <h2 id="form-total-h-1" class="title" tabindex="-1">
                         <p class="step-icon"><span>02</span></p>
                         <span class="step-text">Connect Bank Account</span>
                     </h2>
-                    <section id="form-total-p-1" role="tabpanel" aria-labelledby="form-total-h-1" class="body"
-                             aria-hidden="true" style="display: none;">
+                    <section id="form-total-p-1" aria-hidden="true" aria-labelledby="form-total-h-1" class="body"
+                             role="tabpanel" style="display: none;">
                         <div class="inner">
                             <div class="wizard-header">
                                 <h3 class="heading">Выберите тематику вашего курса</h3>
-                                <p>Из предложенных ниже карточек выберите наиболее подходящую для вашего курса или укажите иной вариант в поле выше</p>
+                                <p>Из предложенных ниже карточек выберите наиболее подходящую для вашего курса или
+                                    укажите иной вариант в поле выше</p>
                             </div>
                             <div class="form-row">
                                 <div class="form-holder form-holder-1">
-                                    <input type="text" name="find_bank" id="find_bank" placeholder="Укажите тематику вашего курса"
-                                           class="form-control" required="">
+                                    <input id="find_bank" class="form-control" name="find_bank"
+                                           placeholder="Укажите тематику вашего курса"
+                                           required="" type="text">
                                 </div>
                             </div>
                             <div class="form-row-total">
                                 <div class="form-row">
                                     <div class="form-holder form-holder-2 form-holder-3">
-                                        <input type="radio" class="radio" name="bank-1" id="bank-1" value="bank-1"
-                                               checked="">
+                                        <input id="bank-1" checked="" class="radio" name="bank-1" type="radio"
+                                               value="bank-1">
                                         <label class="bank-images label-above bank-1-label" for="bank-1">
                                         </label>
-                                        <input type="radio" class="radio" name="bank-2" id="bank-2" value="bank-2">
+                                        <input id="bank-2" class="radio" name="bank-2" type="radio" value="bank-2">
                                         <label class="bank-images label-above bank-2-label" for="bank-2">
                                         </label>
-                                        <input type="radio" class="radio" name="bank-3" id="bank-3" value="bank-3">
+                                        <input id="bank-3" class="radio" name="bank-3" type="radio" value="bank-3">
                                         <label class="bank-images label-above bank-3-label" for="bank-3">
                                         </label>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-holder form-holder-2 form-holder-3">
-                                        <input type="radio" class="radio" name="bank-4" id="bank-4" value="bank-4">
+                                        <input id="bank-4" class="radio" name="bank-4" type="radio" value="bank-4">
                                         <label class="bank-images bank-4-label" for="bank-4">
                                         </label>
-                                        <input type="radio" class="radio" name="bank-5" id="bank-5" value="bank-5">
+                                        <input id="bank-5" class="radio" name="bank-5" type="radio" value="bank-5">
                                         <label class="bank-images bank-5-label" for="bank-5">
                                         </label>
-                                        <input type="radio" class="radio" name="bank-6" id="bank-6" value="bank-6">
+                                        <input id="bank-6" class="radio" name="bank-6" type="radio" value="bank-6">
                                         <label class="bank-images bank-6-label" for="bank-6">
                                         </label>
                                     </div>
@@ -160,39 +162,41 @@
                         </div>
                     </section>
 
-                    <h2 id="form-total-h-2" tabindex="-1" class="title">
+                    <h2 id="form-total-h-2" class="title" tabindex="-1">
                         <p class="step-icon"><span>03</span></p>
                         <span class="step-text">Set Financial Goals</span>
                     </h2>
-                    <section id="form-total-p-2" role="tabpanel" aria-labelledby="form-total-h-2" class="body"
-                             aria-hidden="true" style="display: none;">
+                    <section id="form-total-p-2" aria-hidden="true" aria-labelledby="form-total-h-2" class="body"
+                             role="tabpanel" style="display: none;">
                         <div class="inner">
                             <div class="wizard-header">
                                 <h3 class="heading">Выберите уровень сложности для вашего курса</h3>
                             </div>
                             <div class="form-row">
                                 <div class="form-holder form-holder-2">
-                                    <input type="radio" class="radio" name="radio1" id="plan-1" value="plan-1">
+                                    <input id="plan-1" class="radio" name="radio1" type="radio" value="plan-1">
                                     <label class="plan-icon plan-1-label" for="plan-1">
                                     </label>
                                     <div class="plan-total">
                                         <span class="plan-title">Школьный уровень</span>
                                         <p class="plan-text">Наиболее простой уровень сложности для понимания основ</p>
                                     </div>
-                                    <input type="radio" class="radio" name="radio1" id="plan-2" value="plan-2">
+                                    <input id="plan-2" class="radio" name="radio1" type="radio" value="plan-2">
                                     <label class="plan-icon plan-2-label" for="plan-2">
                                     </label>
                                     <div class="plan-total">
                                         <span class="plan-title">Продвинутый уровень</span>
-                                        <p class="plan-text">Средний уровень, подходящий для большинства обучающихся. Более углубленное изучение в предметной области</p>
+                                        <p class="plan-text">Средний уровень, подходящий для большинства обучающихся.
+                                            Более углубленное изучение в предметной области</p>
                                     </div>
-                                    <input type="radio" class="radio" name="radio1" id="plan-3" value="plan-3"
-                                           checked="">
+                                    <input id="plan-3" checked="" class="radio" name="radio1" type="radio"
+                                           value="plan-3">
                                     <label class="plan-icon plan-3-label" for="plan-3">
                                     </label>
                                     <div class="plan-total">
                                         <span class="plan-title">Экспертный уровень</span>
-                                        <p class="plan-text">Наиболее сложный уровень для полного понимания предметной области на профессиональном уровне</p>
+                                        <p class="plan-text">Наиболее сложный уровень для полного понимания предметной
+                                            области на профессиональном уровне</p>
                                     </div>
                                 </div>
                             </div>
@@ -200,18 +204,18 @@
                     </section>
                 </div>
                 <div class="actions clearfix">
-                    <ul role="menu" aria-label="Pagination">
-                        <li class="disabled" aria-disabled="true" @click="previous">
+                    <ul aria-label="Pagination" role="menu">
+                        <li aria-disabled="true" class="disabled" @click="previous">
                             <a href="#previous" role="menuitem">Back Step</a>
                         </li>
-                        <li aria-hidden="false" aria-disabled="false" @click="next">
+                        <li aria-disabled="false" aria-hidden="false" @click="next">
                             <a href="#next" role="menuitem">
-                                <i class="zmdi zmdi-arrow-right"/>
+                                <i class="zmdi zmdi-arrow-right" />
                             </a>
                         </li>
                         <li aria-hidden="true" style="display: none;" @click="finish">
                             <a href="#finish" role="menuitem">
-                                <i class="zmdi zmdi-check"/>
+                                <i class="zmdi zmdi-check" />
                             </a>
                         </li>
                     </ul>
@@ -224,42 +228,36 @@
 <script>
 
 export default {
-    name: "Register",
-    data() {
+    name: 'Register', data() {
         return {
-            isInfoDone: false,
-            isTagDone: false,
-            isPlanDone: false,
-            progress: 0
-        }
-    },
-    methods: {
+            isInfoDone: false, isTagDone: false, isPlanDone: false, progress: 0,
+        };
+    }, methods: {
         next: function () {
             if (this.progress < 2) {
                 this.progress++;
                 if (this.progress === 1) {
-                    document.getElementById('form-total-p-0').style.display = "none";
-                    document.getElementById('form-total-p-1').style.display = "block";
+                    document.getElementById('form-total-p-0').style.display = 'none';
+                    document.getElementById('form-total-p-1').style.display = 'block';
                 } else if (this.progress === 2) {
-                    document.getElementById('form-total-p-1').style.display = "none";
-                    document.getElementById('form-total-p-2').style.display = "block";
+                    document.getElementById('form-total-p-1').style.display = 'none';
+                    document.getElementById('form-total-p-2').style.display = 'block';
                 }
             }
-        },
-        previous: function () {
+        }, previous: function () {
             if (this.progress > 0) {
                 this.progress--;
                 if (this.progress === 1) {
-                    document.getElementById('form-total-p-2').style.display = "none";
-                    document.getElementById('form-total-p-1').style.display = "block";
+                    document.getElementById('form-total-p-2').style.display = 'none';
+                    document.getElementById('form-total-p-1').style.display = 'block';
                 } else if (this.progress === 0) {
-                    document.getElementById('form-total-p-1').style.display = "none";
-                    document.getElementById('form-total-p-0').style.display = "block";
+                    document.getElementById('form-total-p-1').style.display = 'none';
+                    document.getElementById('form-total-p-0').style.display = 'block';
                 }
             }
         },
     },
-}
+};
 </script>
 
 <style scoped>

@@ -4,19 +4,19 @@
         <form @submit.prevent="changeDetails">
             <div class="form-group">
                 <span>Nick</span>
-                <input class="form-field" type="text" v-model="form.username" placeholder="Отображаемое имя" />
+                <input v-model="form.username" class="form-field" placeholder="Отображаемое имя" type="text" />
             </div>
             <div class="form-group">
                 <span>@</span>
-                <input class="form-field" type="email" v-model="form.email" placeholder="Почта" />
+                <input v-model="form.email" class="form-field" placeholder="Почта" type="email" />
             </div>
             <div class="form-group">
                 <span>🔑</span>
-                <input class="form-field" type="password" v-model="form.password" placeholder="Пароль" />
+                <input v-model="form.password" class="form-field" placeholder="Пароль" type="password" />
             </div>
             <div class="form-group">
                 <span>#</span>
-                <input class="form-field" type="number" disabled v-model="form.id" placeholder="ID" />
+                <input v-model="form.id" class="form-field" disabled placeholder="ID" type="number" />
             </div>
             <Button color="blue" text="Сохранить" />
         </form>

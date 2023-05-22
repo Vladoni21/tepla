@@ -1,15 +1,15 @@
 <template>
     <section class="container">
-        <input type="search" class="input" placeholder="..." aria-label="Search"
-               aria-describedby="search-addon"/>
-        <a href="#" class="button">Ответить</a>
+        <input aria-describedby="search-addon" aria-label="Search" class="input" placeholder="..."
+               type="search" />
+        <a class="button" href="#">Ответить</a>
     </section>
 </template>
 
 <script>
 export default {
-    name: "SearchBar"
-}
+    name: 'SearchBar',
+};
 </script>
 
 <style scoped>
@@ -26,21 +26,23 @@ export default {
 }
 
 .input {
-    outline:none;
-    border: rgba(0,0,0,0);
+    outline: none;
+    border: rgba(0, 0, 0, 0);
     width: 100%;
     text-align: start;
     padding-left: 30px;
     font-size: 20px;
-    border-bottom: 3px solid rgba(0,0,0,0);
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
     transition: 0.5s;
 }
+
 .input:hover {
     border-bottom: 3px solid #5FA8D3;
 }
+
 .button {
     padding: 15px 25px;
-    background-color: rgba(96,160,210,0.1);
+    background-color: rgba(96, 160, 210, 0.1);
     margin: 0;
 }
 </style>

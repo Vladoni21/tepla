@@ -1,23 +1,22 @@
 <template>
     <header class="header">
-        <Logo/>
+        <Logo />
         <div style="margin: 0 -10px 0 0; height: 60px; width: 430px; display: flex; justify-content: space-around">
-          <SearchBar/>
-          <LogBtn icon="person"/>
+            <SearchBar />
+            <LogBtn icon="person" />
         </div>
     </header>
 </template>
 
 <script>
-import Logo from "../templates/sub/navigation/NavLogo.vue";
-import LogBtn from "../templates/sub/navigation/NavBtn.vue";
-import SearchBar from "../templates/sub/navigation/NavSearch.vue";
+import Logo from '../templates/sub/navigation/NavLogo.vue';
+import LogBtn from '../templates/sub/navigation/NavBtn.vue';
+import SearchBar from '../templates/sub/navigation/NavSearch.vue';
 
 
 export default {
-    name: "Navbar",
-    components: {LogBtn, SearchBar, Logo}
-}
+    name: 'Navbar', components: { LogBtn, SearchBar, Logo },
+};
 </script>
 
 <style scoped>
