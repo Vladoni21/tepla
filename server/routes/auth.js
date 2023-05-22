@@ -33,7 +33,7 @@ router.post('/login', async (req, res) => {
     if (user) {
         user.authenticate(req.body.password).then(valid => {
             if (valid) {
-                req.session.valid = valid;
+                req.session.valid = true;
                 req.session.user = user;
                 res.status(200);
             } else {

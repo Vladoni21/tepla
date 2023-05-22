@@ -14,10 +14,14 @@ app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 
 app.use(session({
+    name: 'main-session',
     secret: 'verysecretcookieencryptor',
-    resave: true,
+    resave: false,
     saveUninitialized: false,
-    cookie: {maxAge: 30 * 24 * 60 * 60 * 1000}
+    cookie: {
+        maxAge: 30 * 24 * 60 * 60 * 1000,
+        secure: false
+    }
 }));
 
 app.use('/', router);
