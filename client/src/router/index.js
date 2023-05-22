@@ -13,5 +13,10 @@ export default createRouter({
             path: '/test',
             component: () => import('../views/Course.vue')
         },
+        {
+            name: 'profile',
+            path: '/profile',
+            component: () => import('../views/Profile.vue')
+        }
     ]
 })
