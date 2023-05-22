@@ -1,24 +1,21 @@
 <template>
     <div v-bind:class="item.class">
-        <img v-bind:src="item.img" alt="">
-        <h6>{{item.name}}</h6>
-        <p>{{item.description}}</p>
+        <img alt="" v-bind:src="item.img">
+        <h6>{{ item.name }}</h6>
+        <p>{{ item.description }}</p>
     </div>
 </template>
 
 <script>
-import expert from "../../img/expert.jpg";
 
 
 export default {
-    name: "LinkExpert",
-    props: {
+    name: 'LinkExpert', props: {
         item: {
-            type: Object,
-            required: true
-        }
-    }
-}
+            type: Object, required: true,
+        },
+    },
+};
 </script>
 
 <style scoped>
@@ -29,9 +26,11 @@ export default {
     padding-top: 30px;
     border-radius: 5px;
 }
+
 .top_experts h6 {
     font-size: 1.2em;
 }
+
 .top_experts img {
     width: 100px;
     height: 100px;

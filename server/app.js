@@ -2,6 +2,7 @@ const express = require('express');
 const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const session = require('express-session');
 
 const router = require('./routes');
 
@@ -9,8 +10,19 @@ const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
+
+app.use(session({
+    name: 'main-session',
+    secret: 'verysecretcookieencryptor',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        maxAge: 30 * 24 * 60 * 60 * 1000,
+        secure: false
+    }
+}));
 
 app.use('/', router);
 

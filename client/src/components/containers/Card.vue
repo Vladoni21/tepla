@@ -1,21 +1,19 @@
 <template>
-        <section class="container">
-            <article v-for="i of arr" v-bind:class="i.grid">
-                <component v-bind:is="i.gear" v-bind:item="i"/>
-            </article>
-        </section>
+    <section class="container">
+        <article v-for="i of arr" v-bind:class="i.grid">
+            <component v-bind:is="i.gear" v-bind:item="i" />
+        </article>
+    </section>
 </template>
 
 <script>
-import CardBenefit from "../gears/cards/CardBenefit.vue";
-import CardBranch from "../gears/cards/CardBranch.vue";
+import CardBenefit from '../gears/cards/CardBenefit.vue';
+import CardBranch from '../gears/cards/CardBranch.vue';
 
 
 export default {
-    name: "Card",
-    props: ['arr'],
-    components: {CardBenefit, CardBranch}
-}
+    name: 'Card', props: ['arr'], components: { CardBenefit, CardBranch },
+};
 </script>
 
 <style scoped>

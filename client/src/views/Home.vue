@@ -2,12 +2,12 @@
     <section class="Home">
         <article class="login">
             <div class="text">
-              <h2>Добро пожаловать!</h2>
-              <p>TEAPLA - это уникальная обучающая платформа, где вы можете научиться чему угодно в любое время и в
-                любом
-                месте. Узнайте что угодно: начиная от изучения языков и заканчивая программированием, маркетингом,
-                финансами и
-                предпринимательством. </p>
+                <h2>Добро пожаловать!</h2>
+                <p>TEAPLA - это уникальная обучающая платформа, где вы можете научиться чему угодно в любое время и в
+                    любом
+                    месте. Узнайте что угодно: начиная от изучения языков и заканчивая программированием, маркетингом,
+                    финансами и
+                    предпринимательством. </p>
             </div>
         </article>
         <!--features-->
@@ -34,14 +34,14 @@
         <article id="course">
             <h1>Наши популярные курсы</h1>
             <div class="course-box">
-                <Grid v-bind:arr="top_courses"/>
+                <Grid v-bind:arr="top_courses" />
             </div>
         </article>
         <!--Profiles-->
         <article id="experts">
             <h1>Наши лучшие преподаватели</h1>
             <div class="expert-box">
-                <Grid v-bind:arr="top_experts"/>
+                <Grid v-bind:arr="top_experts" />
             </div>
         </article>
     </section>
@@ -51,46 +51,132 @@
 </template>
 
 <script>
-import Navbar from "../components/bars/Header.vue";
-import expert from "../components/img/expert.jpg";
-import Grid from "../components/containers/Grid.vue";
-import Card from "../components/containers/Card.vue";
+import expert from '../components/img/expert.jpg';
+import Grid from '../components/containers/Grid.vue';
+import Card from '../components/containers/Card.vue';
 
 export default {
     data() {
         return {
             image: expert,
-            top_courses: [
-                {id: 1, title: "Django разработчик", icon: "code", href: "#", class: "top_courses", gear: "LinkCourse"},
-                {id: 2, title: "Python разработчик", icon: "code", href: "#", class: "top_courses", gear: "LinkCourse"},
-                {id: 3, title: "JavaScript разработчик", icon: "code", href: "#", class: "top_courses", gear: "LinkCourse"},
-                {id: 4, title: "Математика", icon: "calculate", href: "#", class: "top_courses", gear: "LinkCourse"},
-                {id: 5, title: "Английский язык", icon: "translate", href: "#", class: "top_courses", gear: "LinkCourse"},
-                {id: 6, title: "Немецкий язык", icon: "translate", href: "#", class: "top_courses", gear: "LinkCourse"}
-            ],
-            top_experts: [
-                {id: 1, name: "Райан Гослинг", description: "Data science аналитик", img: expert, alt: "", href: "#", class: "top_experts", gear: "LinkExpert"},
-                {id: 2, name: "Райан Гослинг", description: "Сдал профильную метематику на 100 баллов", img: expert, alt: "", href: "#", class: "top_experts", gear: "LinkExpert"},
-                {id: 3, name: "Райан Гослинг", description: "JavaScript разработчик", img: expert, alt: "", href: "#", class: "top_experts", gear: "LinkExpert"},
-                {id: 4, name: "Райан Гослинг", description: "Дед немец, поэтому учитель немецкого", img: expert, alt: "", href: "#", class: "top_experts", gear: "LinkExpert"}
-            ],
-            test: [
-                {id: 1, gear: "CardBenefit", grid: "grid_benefit", class: "bg-green-box", description: "Hubble lets users borrow USDH for a one-time 0.5% fee. No variable\n" +
-                        " rates. No interest charged, ever.", title: "Zero-cost Possibilities", icon: ""},
-                {id: 2, gear: "CardBenefit", grid: "grid_benefit", class: "bg-white-box", description: "Deposit a variety of assets on Hubble, raise your collateral ratio, and unlock the liquidity in your wallet.", title: "Multi-Asset Collateral", icon: ""},
-                {id: 3, gear: "CardBenefit", grid: "grid_benefit", class: "bg-yellow-box", description: "While your collateral is deposited, delegate it to earn the highest yield available in the Solana ecosystem.", title: "Get Yield on Deposits", icon: ""},
-                {id: 4, gear: "CardBenefit", grid: "grid_benefit", class: "bg-blue-box", description: "Hubble’s capital-efficient 110% collateral ratio lets users leverage up to 11x on their deposits.", title: "Get up to 11x Leverage", icon: ""},
-                {id: 5, gear: "CardBranch", grid: "grid_branch", class: "", icon: ""}
-            ]
-        }
+            top_courses: [{
+                id: 1,
+                title: 'Django разработчик',
+                icon: 'code',
+                href: '#',
+                class: 'top_courses',
+                gear: 'LinkCourse',
+            }, {
+                id: 2,
+                title: 'Python разработчик',
+                icon: 'code',
+                href: '#',
+                class: 'top_courses',
+                gear: 'LinkCourse',
+            }, {
+                id: 3,
+                title: 'JavaScript разработчик',
+                icon: 'code',
+                href: '#',
+                class: 'top_courses',
+                gear: 'LinkCourse',
+            }, {
+                id: 4,
+                title: 'Математика',
+                icon: 'calculate',
+                href: '#',
+                class: 'top_courses',
+                gear: 'LinkCourse',
+            }, {
+                id: 5,
+                title: 'Английский язык',
+                icon: 'translate',
+                href: '#',
+                class: 'top_courses',
+                gear: 'LinkCourse',
+            }, {
+                id: 6,
+                title: 'Немецкий язык',
+                icon: 'translate',
+                href: '#',
+                class: 'top_courses',
+                gear: 'LinkCourse',
+            }],
+            top_experts: [{
+                id: 1,
+                name: 'Райан Гослинг',
+                description: 'Data science аналитик',
+                img: expert,
+                alt: '',
+                href: '#',
+                class: 'top_experts',
+                gear: 'LinkExpert',
+            }, {
+                id: 2,
+                name: 'Райан Гослинг',
+                description: 'Сдал профильную метематику на 100 баллов',
+                img: expert,
+                alt: '',
+                href: '#',
+                class: 'top_experts',
+                gear: 'LinkExpert',
+            }, {
+                id: 3,
+                name: 'Райан Гослинг',
+                description: 'JavaScript разработчик',
+                img: expert,
+                alt: '',
+                href: '#',
+                class: 'top_experts',
+                gear: 'LinkExpert',
+            }, {
+                id: 4,
+                name: 'Райан Гослинг',
+                description: 'Дед немец, поэтому учитель немецкого',
+                img: expert,
+                alt: '',
+                href: '#',
+                class: 'top_experts',
+                gear: 'LinkExpert',
+            }],
+            test: [{
+                id: 1,
+                gear: 'CardBenefit',
+                grid: 'grid_benefit',
+                class: 'bg-green-box',
+                description: 'Hubble lets users borrow USDH for a one-time 0.5% fee. No variable\n' + ' rates. No interest charged, ever.',
+                title: 'Zero-cost Possibilities',
+                icon: '',
+            }, {
+                id: 2,
+                gear: 'CardBenefit',
+                grid: 'grid_benefit',
+                class: 'bg-white-box',
+                description: 'Deposit a variety of assets on Hubble, raise your collateral ratio, and unlock the liquidity in your wallet.',
+                title: 'Multi-Asset Collateral',
+                icon: '',
+            }, {
+                id: 3,
+                gear: 'CardBenefit',
+                grid: 'grid_benefit',
+                class: 'bg-yellow-box',
+                description: 'While your collateral is deposited, delegate it to earn the highest yield available in the Solana ecosystem.',
+                title: 'Get Yield on Deposits',
+                icon: '',
+            }, {
+                id: 4,
+                gear: 'CardBenefit',
+                grid: 'grid_benefit',
+                class: 'bg-blue-box',
+                description: 'Hubble’s capital-efficient 110% collateral ratio lets users leverage up to 11x on their deposits.',
+                title: 'Get up to 11x Leverage',
+                icon: '',
+            }, { id: 5, gear: 'CardBranch', grid: 'grid_branch', class: '', icon: '' }],
+        };
+    }, name: 'Home', components: {
+        Grid, Card,
     },
-    name: "Home",
-    components: {
-        Navbar,
-        Grid,
-        Card
-    }
-}
+};
 </script>
 
 <style scoped>
@@ -198,10 +284,12 @@ export default {
     color: white;
     padding-left: 5px;
 }
+
 .material-icons {
     padding-top: 5px;
     font-size: 3rem;
 }
+
 /* course */
 #course {
     margin-top: 50px;
