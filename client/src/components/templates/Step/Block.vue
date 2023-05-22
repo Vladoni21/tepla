@@ -1,8 +1,7 @@
 <template>
-  <div class="course__card ng-star-inserted" id="design-foundationswhat-is-ux-design-317">
-    <app-lesson-card style="--course-color:#5627FF;">
-      <section class="lesson-card _clickable">
-        <figure class="lesson-card__image-wrapper ng-star-inserted"><img
+    <section class="course__card" id="design-foundationswhat-is-ux-design-317">
+      <article class="lesson-card _clickable">
+        <figure class="lesson-card__image-wrapper"><img
             class="lesson-card__image ng-star-inserted"
             srcset="https://img.uxcel.com/lessons/what-is-ux-design-1680599838421-2x.svg 1x, https://img.uxcel.com/lessons/what-is-ux-design-1680599838421-2x.svg 2x"
             src="https://img.uxcel.com/lessons/what-is-ux-design-1680599838421-2x.svg"
@@ -25,45 +24,8 @@
               <use href="#checkmark"></use>
             </svg>
           </svg-icon>
-        </div></section>
-      <div class="lesson-card__hover-popover ng-star-inserted">
-        <div class="lesson-card__hover-popover-actions">
-          <button title="Read theory" class="btn _small _icon-only _rounded _white _with-border _content-back lesson-card__hover-popover-action ng-star-inserted">
-            <svg-icon icon="book-outline" class="btn__icon" >
-              <svg class="svg-icon">
-                <use href="#book-outline"></use>
-              </svg>
-            </svg-icon>
-          </button>
-          <button title="Start quiz"
-                  class="btn _small _icon-only _rounded _purple lesson-card__hover-popover-action ng-star-inserted">
-            <svg-icon icon="play" class="btn__icon" >
-              <svg class="svg-icon">
-                <use href="#play"></use>
-              </svg>
-            </svg-icon>
-          </button></div>
-      </div>
-      <div class="lesson-card__touch-popover lesson-card-popover _hidden">
-        <button class="btn _small _black-secondary lesson-card__touch-popover-action">
-          <svg-icon icon="book-outline" class="btn__icon lesson-card__touch-popover-action-icon"
-          >
-            <svg class="svg-icon">
-              <use href="#book-outline"></use>
-            </svg>
-          </svg-icon>
-          <span class="btn__text">Read theory</span></button>
-        <button
-            class="btn _small _white _content-back lesson-card__touch-popover-action _main ng-star-inserted">
-          <svg-icon icon="play" class="btn__icon lesson-card__touch-popover-action-icon">
-            <svg class="svg-icon">
-              <use href="#play"></use>
-            </svg>
-          </svg-icon>
-          <span class="btn__text">Start quiz</span><span class="btn__badge lesson-card__touch-popover-action-badge ng-star-inserted"> +250 </span>
-        </button></div>
-    </app-lesson-card>
-  </div>
+        </div></article>
+    </section>
 </template>
 
 <script>
@@ -73,5 +35,112 @@ export default {
 </script>
 
 <style scoped>
+.course__card:not(:last-child) {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.lesson-card._clickable {
+  cursor: pointer;
+}
+.lesson-card {
+  display: flex;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+  padding: 24px;
+  background-color: #ffffffcf;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 4px solid rgba(0,0,0,0.25);
+}
+.lesson-card._clickable:hover {
+  cursor: pointer;
+  transform: translate3d(0,-2px,0);
+  box-shadow: 0 8px 16px #201e1e7a;
+}
+
+.lesson-card__image-wrapper {
+  width: 44px;
+  height: 44px;
+  margin-right: 16px;
+}
+.lesson-card__image-wrapper {
+   position: relative;
+   width: 64px;
+   height: 64px;
+   flex-shrink: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   margin-right: 20px;
+}
+
+.lesson-card__image {
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  transition: -webkit-transform .2s cubic-bezier(.25,.01,.25,1) 0s;
+  transition: transform .2s cubic-bezier(.25,.01,.25,1) 0s;
+  transition: transform .2s cubic-bezier(.25,.01,.25,1) 0s,-webkit-transform .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+figure {
+  margin: 0;
+  font-weight: 400;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.lesson-card__content {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.lesson-card__name-wrapper {
+  display: flex;
+}
+.lesson-card__name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  word-break: break-all;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--black);
+  transition: color .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.lesson-card__status-icon-wrapper {
+   border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.24);
+}
+.lesson-card__status {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-shrink: 0;
+   margin-left: 16px;
+   width: 22px;
+   height: 22px;
+}
+
+.lesson-card__status-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--white);
+  display: flex;
+}
+
+.svg-icon {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  fill: currentColor;
+}
 
 </style>

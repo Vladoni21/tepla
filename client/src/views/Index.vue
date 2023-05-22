@@ -3,7 +3,7 @@
     <Plug v-if="isPlugVisible"/>
     <section class="content" v-if="!isPlugVisible">
       <Sidebar/>
-      <Step/>
+      <Context/>
     </section>
     <Footer v-if="!isPlugVisible"/>
   </main>

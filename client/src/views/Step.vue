@@ -1,5 +1,5 @@
 <template>
-  <section class="course__level ng-star-inserted">
+  <section class="content-back course__level ng-star-inserted">
     <header class="course__level-header">
       <div class="course__level-header-subtitle"> Level 1</div>
       <h2 class="course__level-header-title"> Getting Started with UX Design </h2>
@@ -34,6 +34,10 @@ export default {
 </script>
 
 <style scoped>
+.course__level {
+  height: fit-content;
+}
+
 .course__level:not(:last-child) {
   margin-bottom: 40px;
 }
@@ -82,7 +86,21 @@ export default {
   width: auto;
   height: auto;
 }
+
 img {
   border-style: none;
+}
+
+.content-back {
+  background-color: rgba(255,255,255,0.13);
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 20px rgba(8,7,16,0.6);
+  padding: 50px 35px;
 }
 </style>
