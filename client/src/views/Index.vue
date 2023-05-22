@@ -2,8 +2,12 @@
   <main id="app">
     <Plug v-if="isPlugVisible"/>
     <section class="content" v-if="!isPlugVisible">
-      <Sidebar/>
-      <Context/>
+      <aside>
+        <Sidebar/>
+      </aside>
+      <section style="width: 70%">
+        <Context/>
+      </section>
     </section>
     <Footer v-if="!isPlugVisible"/>
   </main>

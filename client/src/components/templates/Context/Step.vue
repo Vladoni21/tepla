@@ -1,6 +1,7 @@
 <template>
   <section class="content-back course__level ng-star-inserted">
     <header class="course__level-header">
+      <article>
       <div class="course__level-header-subtitle"> Level 1</div>
       <h2 class="course__level-header-title"> Getting Started with UX Design </h2>
       <div class="course__level-header-text ng-star-inserted">
@@ -8,16 +9,17 @@
         design, including its importance, principles, and process. Explore user research, personas, user journeys,
         wireframes, and more!
       </div>
+      </article>
     </header>
-    <div class="course__level-content">
+    <article class="course__level-content">
       <Block/>
       <Block/>
       <Block/>
-    </div>
+    </article>
     <footer class="course__level-footer ng-star-inserted">
       <img
           class="course__level-footer-image"
-          src="./assets/images/courses/course-path-first.svg"
+          src="https://app.uxcel.com/assets/images/courses/course-path-first.svg"
           alt="Course Path Level 0"
       >
     </footer>
@@ -45,6 +47,10 @@ export default {
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
+  background-color: #FFFFFF;
+  padding: 40px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 .course__level-header-subtitle {
   margin-bottom: 8px;
@@ -53,7 +59,7 @@ export default {
   line-height: 16px;
   letter-spacing: .5px;
   text-transform: uppercase;
-  color: var(--black-600);
+  color: black;
 }
 .course__level-header-title {
   font-size: 20px;
@@ -66,7 +72,7 @@ export default {
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  color: var(--black-800);
+  color: black;
   white-space: pre-wrap;
 }
 .course__level-content {
@@ -93,14 +99,10 @@ img {
 
 .content-back {
   background-color: rgba(255,255,255,0.13);
-  position: absolute;
-  transform: translate(-50%,-50%);
-  top: 50%;
-  left: 50%;
-  border-radius: 10px;
+  border-radius: 20px;
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255,255,255,0.1);
   box-shadow: 0 0 20px rgba(8,7,16,0.6);
-  padding: 50px 35px;
+  padding-bottom: 40px;
 }
 </style>

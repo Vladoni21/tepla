@@ -35,6 +35,9 @@ export default {
 </script>
 
 <style scoped>
+.course__card {
+  margin: 0 35px;
+}
 .course__card:not(:last-child) {
   margin-bottom: 16px;
   position: relative;
