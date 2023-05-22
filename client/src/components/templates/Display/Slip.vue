@@ -14,20 +14,16 @@
         <div class="content-card__subtitle ">Course</div>
         <div class="course-preview__title-wrapper"><h3
             class="content-card__title course-preview__title "
-            title="UX Design Foundations">UX Design Foundations</h3></div>
-        <div class="content-card__description ">Learn the basics of UX design
-          &amp; key foundational concepts with this online intro course. With 25 lessons, you’ll learn principles,
-          elements, terminology, &amp; more!
+            title="UX Design Foundations">{{ item.title }}</h3></div>
+        <div class="content-card__description">
+            {{ item.description }}
         </div>
         <div class="content-card__metadata metadata _small ">
-          <div class="metadata__item ">
-            <span class="metadata__item-text">Pro</span>
+          <div class="metadata__item "><span
+              class="metadata__item-text _truncatable"> {{ item.level }} </span>
           </div>
           <div class="metadata__item "><span
-              class="metadata__item-text _truncatable"> Beginner </span>
-          </div>
-          <div class="metadata__item "><span
-              class="metadata__item-text"> 6 hours </span>
+              class="metadata__item-text"> {{ item.time }} </span>
           </div>
         </div>
       </div>
@@ -36,8 +32,15 @@
 </template>
 
 <script>
+
 export default {
-  name: "Slip"
+  name: "Slip",
+  props: {
+    item: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 
@@ -208,6 +211,12 @@ img {
   overflow: hidden;
   margin-top: 8px;
   height: 77px;
+}
+.content-card__description .mask {
+  background: linear-gradient(rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.62));
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .content-card__metadata {
