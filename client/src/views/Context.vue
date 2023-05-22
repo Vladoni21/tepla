@@ -1,5 +1,5 @@
 <template>
-  <section class="content__wrapper ng-tns-c202-0">
+  <section class="content__wrapper">
     <section class="content__main">
           <article class="feature-header"
                style="background-color: rgb(86, 39, 255);">

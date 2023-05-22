@@ -29,12 +29,7 @@
                 </div>
               </div>
               <div class="page__items">
-                <Slip/>
-                <Slip/>
-                <Slip/>
-                <Slip/>
-                <Slip/>
-                <Slip/>
+                <Slip v-for="i of arr" v-bind:item="i"/>
               </div>
             </div>
           </article>
@@ -47,13 +42,14 @@ import Menu from "../components/templates/Display/Menu.vue";
 
 export default {
   name: "Display",
-  components: {Menu, Slip}
+  components: {Menu, Slip},
+  props: ["arr"]
 }
 </script>
 
 <style scoped>
 .content__wrapper {
-  width: 70%;
+  width: 100%;
 }
 
 .page {
