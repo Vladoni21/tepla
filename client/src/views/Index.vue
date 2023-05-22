@@ -22,7 +22,7 @@ import Course from "../views/Course.vue";
 import Sidebar from "../components/bars/Sidebar.vue";
 import Display from "./Display.vue";
 import Context from "./Context.vue";
-import Step from "./Step.vue";
+import Step from "../components/templates/Context/Step.vue";
 
 
 export default {

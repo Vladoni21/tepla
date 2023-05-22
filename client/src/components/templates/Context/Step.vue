@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Block from "../components/templates/Step/Block.vue";
+import Block from "./Step/Block.vue";
 
 export default {
   name: "Step",
