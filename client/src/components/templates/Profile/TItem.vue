@@ -20,7 +20,7 @@
     </td>
     <td class="inform" style="width: 15%;">{{ item.created_at }}</td>
     <td class="inform" style="text-align: right; width: 23%;">
-      <button class="view-button">View Details</button>
+      <button class="view-button"><router-link to="course">View Details</router-link></button>
       <button class="trash-button"><i class="fa fa-trash"></i></button>
     </td>
   </tr>

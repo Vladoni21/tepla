@@ -29,7 +29,7 @@
                 </div>
               </div>
               <div class="page__items">
-                <Slip v-for="i of arr" v-bind:item="i"/>
+                <Slip v-for="i of courses" v-bind:item="i"/>
               </div>
             </div>
           </article>
@@ -39,11 +39,53 @@
 <script>
 import Slip from "../components/templates/Display/Slip.vue";
 import Menu from "../components/templates/Display/Menu.vue";
+import expert from "@/components/img/expert.jpg";
 
 export default {
   name: "Display",
   components: {Menu, Slip},
-  props: ["arr"]
+  data() {
+    return {
+      courses: [
+        { id: "1",
+          title: "UX Design Foundations",
+          description: "Learn the basics of UX design & key foundational concepts with this online intro course. With 25 lessons, you’ll learn principles, elements, terminology, & more!",
+          level: "Beginner",
+          time: "6 hours"
+        },
+        { id: "2",
+          title: "Design Terminology",
+          description: "This course is a perfect introduction to design terminology for all professional backgrounds. Learn the most commonly used UI and UX design, graphic design, and marketing terms to ensure smooth collaboration with other designers, developers, and stakeholders.",
+          level: "Beginner",
+          time: "3 hours"
+        },
+        { id: "3",
+          title: "Figma",
+          description: "Test your knowledge of how Figma helps teams collaboratively brainstorm, build, test, and share designs, and see how you stack up against designers worldwide.",
+          level: "Advanced",
+          time: "12 hours"
+        },
+        { id: "4",
+          title: "UX Design Foundations",
+          description: "Learn the basics of UX design & key foundational concepts with this online intro course. With 25 lessons, you’ll learn principles, elements, terminology, & more!",
+          level: "Intermediate",
+          time: "6 hours"
+        },
+        { id: "5",
+          title: "CSS for Designers",
+          description: "Learn the fundamentals of CSS to communicate your designs with developers or create your own websites.",
+          level: "Beginner",
+          time: "4 hours"
+        },
+        { id: "6",
+          title: "Design Composition",
+          description: "Unleash your creativity and elevate your design skills with our composition course.",
+          level: "Discover",
+          time: "2 hours"
+        }
+      ]
+    }
+  },
 }
 </script>
 

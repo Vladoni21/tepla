@@ -9,14 +9,24 @@ export default createRouter({
             component: () => import('../views/Index.vue')
         },
         {
-            name: 'plug',
-            path: '/test',
+            name: 'course',
+            path: '/course',
             component: () => import('../views/Course.vue')
         },
         {
             name: 'profile',
             path: '/profile',
             component: () => import('../views/Profile.vue')
+        },
+        {
+            name: 'display',
+            path: '/display',
+            component: () => import('../views/Display.vue')
+        },
+        {
+            name: 'context',
+            path: '/context',
+            component: () => import('../views/Context.vue')
         },
     ]
 })

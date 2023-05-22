@@ -18,7 +18,7 @@
           <span class="icon">
             <ion-icon name="chatbubbles-outline"></ion-icon>
           </span>
-          <span class="title">Courses</span>
+          <span class="title"><router-link to="display">Courses</router-link></span>
         </a>
       </div>
       <div class="list">

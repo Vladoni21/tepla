@@ -1,7 +1,7 @@
 import Vue, {createApp} from 'vue';
 import {createPinia} from 'pinia';
 
-import App from './App.vue';
+import App from '../src/views/Index.vue';
 
 import {fas} from '@fortawesome/free-solid-svg-icons';
 import {library} from '@fortawesome/fontawesome-svg-core';

@@ -9,7 +9,7 @@
             alt="UX Design Foundations Course">
         </app-svg-image>
       </div>
-      <span class="badge _grey content-card__status _medium "> POPULAR </span>
+      <span class="badge _grey content-card__status _medium "> <router-link to="context"> VIEW </router-link> </span>
       <div class="content-card__info">
         <div class="content-card__subtitle ">Course</div>
         <div class="course-preview__title-wrapper"><h3

@@ -6,7 +6,7 @@
         <Sidebar/>
       </aside>
       <section style="width: 70%">
-        <Display v-bind:arr="courses"/>
+        <router-view/>
       </section>
     </section>
     <Footer v-if="!isPlugVisible"/>
