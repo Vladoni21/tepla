@@ -58,16 +58,20 @@
           <span class="icon">
             <ion-icon name="log-out-outline"></ion-icon>
           </span>
-          <span class="title">Sing In/Up</span>
+          <span class="title" @click="showWel">Sing In/Up</span>
         </a>
       </div>
     </nav>
+    <PopUp is="Welcome" v-bind:func="showWel" v-bind:req="isWelVisible"/>
   </section>
 </template>
 
 <script>
+import PopUp from "@/components/containers/PopUp.vue";
+
 export default {
   name: "Sidepanel",
+  components: {PopUp},
   mounted() {
     let list = document.querySelectorAll('.list');
     for (let i = 0; i < list.length; i++) {
@@ -79,7 +83,17 @@ export default {
         list[i].className = "list active";
       }
     }
-  }
+  },
+  data() {
+    return {
+      isWelVisible: false
+    }
+  },
+  methods: {
+    showWel() {
+      this.isWelVisible = !this.isWelVisible
+    }
+  },
 }
 </script>
 
