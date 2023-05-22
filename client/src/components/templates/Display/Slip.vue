@@ -56,7 +56,6 @@ export default {
 }
 
 .content-card {
-  position: relative;
   height: 100%;
 }
 
@@ -76,7 +75,6 @@ export default {
 }
 
 .course-preview:not(._minimized-view) .course-preview__content {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -233,7 +231,6 @@ img {
 }
 
 .metadata__item {
-  position: relative;
   display: flex;
   align-items: center;
 }

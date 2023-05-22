@@ -113,7 +113,6 @@ export default {
 }
 
 .courses-page__content {
-  position: relative;
   min-width: 0;
 }
 .page__main {
