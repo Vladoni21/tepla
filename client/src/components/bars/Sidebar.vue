@@ -38,7 +38,7 @@
           <span class="icon">
             <ion-icon name="lock-closed-outline"></ion-icon>
           </span>
-          <span class="title">Account</span>
+            <span class="title"><router-link to="profile">Account</router-link></span>
         </a>
       </div>
       <div class="list">

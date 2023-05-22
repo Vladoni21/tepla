@@ -17,6 +17,6 @@ export default createRouter({
             name: 'profile',
             path: '/profile',
             component: () => import('../views/Profile.vue')
-        }
+        },
     ]
 })
