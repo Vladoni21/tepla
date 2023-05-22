@@ -121,10 +121,9 @@ export default {
 <style scoped>
 .page__aside {
   flex-shrink: 0;
-  margin-left: 32px;
-  padding-top: 20px;
-  padding-right: 20px;
-  width: 408px;
+  margin-top: 20px;
+  height: fit-content;
+  width: 485px;
 }
 
 .learning-aside__profile {

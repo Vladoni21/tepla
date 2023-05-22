@@ -1,5 +1,5 @@
 <template>
-  <section class="content-back course__level ng-star-inserted">
+  <section class="course__level ng-star-inserted">
     <header class="course__level-header">
       <article>
       <div class="course__level-header-subtitle"> Level 1</div>
@@ -40,17 +40,20 @@ export default {
   height: fit-content;
 }
 
-.course__level:not(:last-child) {
-  margin-bottom: 40px;
+.course__level {
+  margin-bottom: 30px;
 }
+.course__level:not(:last-child) {
+  margin-bottom: 80px;
+}
+
 .course__level-header {
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
   background-color: #FFFFFF;
   padding: 40px;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-radius: 20px;
 }
 .course__level-header-subtitle {
   margin-bottom: 8px;
@@ -95,14 +98,5 @@ export default {
 
 img {
   border-style: none;
-}
-
-.content-back {
-  background-color: rgba(255,255,255,0.13);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255,255,255,0.1);
-  box-shadow: 0 0 20px rgba(8,7,16,0.6);
-  padding-bottom: 40px;
 }
 </style>

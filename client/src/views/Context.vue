@@ -31,7 +31,7 @@
           </article>
           <article class="course page">
             <div class="course__wrapper">
-              <div class="page__main">
+              <div class="page__main content-back">
                 <Step/>
                 <Step/>
                 <Step/>
@@ -203,7 +203,9 @@ export default {
 }
 .course__wrapper {
   display: flex;
-  max-height: 1110px;
+  max-height: 1040px;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .page {
@@ -214,7 +216,17 @@ export default {
 .page__main {
   overflow-y: scroll;
   padding: 20px;
+  margin-top: 20px;
   max-height: inherit;
+}
+
+.content-back {
+  background-color: rgba(255,255,255,0.13);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 20px rgba(8,7,16,0.6);
+  padding-bottom: 40px;
 }
 
 ::-webkit-scrollbar {

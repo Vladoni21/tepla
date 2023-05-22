@@ -36,10 +36,7 @@ export default {
 
 <style scoped>
 .course__card {
-  margin: 0 35px;
-}
-.course__card:not(:last-child) {
-  margin-bottom: 16px;
+  margin: 16px 35px;
   position: relative;
 }
 
@@ -51,10 +48,9 @@ export default {
   align-items: center;
   -webkit-tap-highlight-color: transparent;
   padding: 24px;
-  background-color: #ffffffcf;
+  background-color: #fff;
   border-radius: 20px;
   overflow: hidden;
-  border: 4px solid rgba(0,0,0,0.25);
 }
 .lesson-card._clickable:hover {
   cursor: pointer;
