@@ -1,6 +1,6 @@
 <template>
     <main id="app">
-        <Plug v-if="isPlugVisible" />
+        <!-- <Plug v-if="isPlugVisible" />
         <section v-if="!isPlugVisible" class="content">
             <aside>
                 <Sidebar />
@@ -9,7 +9,8 @@
                 <router-view />
             </section>
         </section>
-        <Footer v-if="!isPlugVisible" />
+        <Footer v-if="!isPlugVisible" /> -->
+        <router-view />
     </main>
 </template>
 

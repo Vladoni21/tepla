@@ -10,6 +10,11 @@ export default createRouter({
     }, {
         name: 'display', path: '/display', component: () => import('../views/Display.vue'),
     }, {
-        name: 'context', path: '/context', component: () => import('../views/Context.vue'),
-    }],
+        name: 'context', path: '/context', component: () => import('../views/Context.vue'), 
+    },{
+        name: 'courses', path: '/courses', component: () => import('../views/Courses.vue'), 
+    },{
+        path: '/courses/:courseID', component: () => import('../views/Course1.vue'), 
+    }
+],
 });
