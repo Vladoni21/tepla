@@ -20,7 +20,7 @@
                     </div>
                     <div class="row aboutBodyContainer">
                         <div class="aboutBody aboutFlexCol">
-                            <div class="aboutFlexRow aboutGuildNameContainer">
+                            <div class="aboutFlexRow abgit push -u origin mainoutGuildNameContainer">
                                 <div class="aboutGuildBadge"></div>
                                 <h1 class="aboutGuildName displayText">JS Programming</h1></div>
                             <p class="aboutGuildDescriptionDesktop displayText">Sui is a Layer 1 blockchain
@@ -36,73 +36,6 @@
                                     <div class="dotOffline dotOnline" />
                                     <div class="HeaderSecondary">752&nbsp;627
                                         <!-- --> <!-- -->Members
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="aboutFlexRow guildJoinReasonsContainer">
-                                <div class="grid">
-                                    <div class="row" style="padding: 0;">
-                                        <div class="guildJoinReason guildJoinReasonContainer">
-                                            <div class="iconContainer"><img alt=""
-                                                                            class="guildJoinReasonEmojiIcon"
-                                                                            src="/assets/df8b5c1e4abb97e748071aeb28f1ba38.svg"></div>
-                                            <div class="guildJoinReasonTextContainer">
-                                                <div style="font-size: 12px; line-height: 16px;">How chatty?</div>
-                                                <div style="font-size: 16px; line-height: 20px;">Like a busy coffee
-                                                    shop
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="guildJoinReason guildJoinReasonContainer">
-                                            <div class="iconContainer"><img alt=""
-                                                                            class="guildJoinReasonEmojiIcon"
-                                                                            src="/assets/7be2358758e81e1ab253eb071a9527c7.svg"></div>
-                                            <div class="guildJoinReasonTextContainer">
-                                                <div style="font-size: 12px; line-height: 16px;">Server created</div>
-                                                <div style="font-size: 16px; line-height: 20px;">11/11/11</div>
-                                            </div>
-                                        </div>
-                                        <div class="guildJoinReason guildJoinReasonContainer">
-                                            <div class="iconContainer"><img alt=""
-                                                                            class="guildJoinReasonEmojiIcon"
-                                                                            src="/assets/a6d05968d7706183143518d96c9f066e.svg"></div>
-                                            <div class="guildJoinReasonTextContainer">
-                                                <div style="font-size: 12px; line-height: 16px;">Meet other developers
-                                                </div>
-                                                <div style="font-size: 16px; line-height: 20px;"></div>
-                                            </div>
-                                        </div>
-                                        <div class="guildJoinReason guildJoinReasonContainer">
-                                            <div class="iconContainer"><img alt=""
-                                                                            class="guildJoinReasonEmojiIcon"
-                                                                            src="/assets/9515c498b6c2e3d2e3e3b5ad73b6c22f.svg"></div>
-                                            <div class="guildJoinReasonTextContainer">
-                                                <div style="font-size: 12px; line-height: 16px;">Learn everything there
-                                                    is to know about Sui
-                                                </div>
-                                                <div style="font-size: 16px; line-height: 20px;"></div>
-                                            </div>
-                                        </div>
-                                        <div class="guildJoinReason guildJoinReasonContainer">
-                                            <div class="iconContainer"><img alt=""
-                                                                            class="guildJoinReasonEmojiIcon"
-                                                                            src="/assets/0634b5f01a88a0121bed072779e81bd6.svg"></div>
-                                            <div class="guildJoinReasonTextContainer">
-                                                <div style="font-size: 12px; line-height: 16px;">Be notified of the
-                                                    latest announcements about Sui
-                                                </div>
-                                                <div style="font-size: 16px; line-height: 20px;"></div>
-                                            </div>
-                                        </div>
-                                        <div class="guildJoinReason guildJoinReasonContainer">
-                                            <div class="iconContainer"><img alt=""
-                                                                            class="guildJoinReasonEmojiIcon"
-                                                                            src="/assets/212e30e47232be03033a87dc58edaa95.svg"></div>
-                                            <div class="guildJoinReasonTextContainer">
-                                                <div style="font-size: 12px; line-height: 16px;"></div>
-                                                <div style="font-size: 16px; line-height: 20px;"></div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
